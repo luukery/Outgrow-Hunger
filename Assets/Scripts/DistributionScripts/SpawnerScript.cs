@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class SpawnerScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private bool isSpawned = false;
@@ -18,9 +18,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             isSpawned = true;
             // npc needs to be random
-            int npc = 0;
-            Instantiate(NPCList.transform.GetChild(0));
-        }
+            // int rnadnumer = 0;
+            GameObject npc = Instantiate(NPCList.transform.GetChild(0).gameObject, new Vector3 (0, -4), Quaternion.identity);
+            NPCScript npcScript = npc.GetComponent<NPCScript>();
+            npcScript.WalkUp = true;
+        }   
     }
 
 
