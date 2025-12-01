@@ -1,17 +1,21 @@
-name: Unity Compile Check
+name: Unity Build
 
 on:
   pull_request:
     branches: [ main, Development ]
 
 jobs:
-  compile:
+  build:
     runs-on: ubuntu-latest
+
+    env:
+      UNITY_DISABLE_LICENSE: true
 
     steps:
       - uses: actions/checkout@v4
 
-      - uses: game-ci/unity-test-runner@v4
+      - uses: game-ci/unity-builder@v4
         with:
           unityVersion: 6000.2.2f1
-          testMode: editmode
+          targetPlatform: StandaloneWindows64
+          buildName: OutgrowHunger
