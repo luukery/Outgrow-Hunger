@@ -1,12 +1,15 @@
-name: Unity Compile Check
+name: Unity Build
 
 on:
   pull_request:
     branches: [ main, Development ]
 
 jobs:
-  compile:
+  build:
     runs-on: ubuntu-latest
+
+    env:
+      UNITY_DISABLE_LICENSE: true
 
     steps:
       - uses: actions/checkout@v4
