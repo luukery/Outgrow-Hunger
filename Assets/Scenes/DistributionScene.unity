@@ -419,6 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   NPCList: {fileID: 794568483}
+  distributionmanager: {fileID: 1394317663}
 --- !u!4 &296994702
 Transform:
   m_ObjectHideFlags: 0
@@ -1283,6 +1284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCScript
   WalkUp: 0
+  Talking: 0
 --- !u!1 &985358973
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,6 +2087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b703f607f8a821c489b091c4a60406f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Distributionmanager
+  currentNPC: {fileID: 0}
 --- !u!1 &1415866964
 GameObject:
   m_ObjectHideFlags: 0
