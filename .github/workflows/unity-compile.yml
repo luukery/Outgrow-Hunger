@@ -1,19 +1,16 @@
-name: Unity Build
+name: Unity Compile Check
 
 on:
   pull_request:
     branches: [ main, Development ]
 
 jobs:
-  compile:
+  test:
     runs-on: ubuntu-latest
-
-    env:
-      UNITY_DISABLE_LICENSE: true
 
     steps:
       - uses: actions/checkout@v4
-
+      
       - uses: game-ci/unity-test-runner@v4
         with:
           unityVersion: 6000.2.2f1
