@@ -2,12 +2,11 @@ name: Unity Compile Check
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ main, Development ]
 
 jobs:
   compile:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
