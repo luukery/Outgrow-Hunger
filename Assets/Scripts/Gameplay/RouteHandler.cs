@@ -59,11 +59,14 @@ public class RouteHandler : MonoBehaviour
 
     List<Route> GenerateRoutes()
     {
-        float shortRouteTravelTime = Random.Range(2f, 4f);
-        shortRouteTravelTime = Mathf.Round(shortRouteTravelTime * 4f) / 4f;
+        // Generate travel times rounded to the nearest 0.25
+        float shortRouteTravelTime = Mathf.Round(Random.Range(2f, 4f) * 4f) / 4f;
 
-        float mediumRouteTravelTime = Random.Range(4, 6) * 4 % 1 / 4;
+        float mediumRouteTravelTime = Random.Range(4f, 6f);
+        mediumRouteTravelTime = Mathf.Round(mediumRouteTravelTime * 4f) / 4f;
+
         float longRouteTravelTime = Random.Range(6, 8) * 4 % 1 / 4;
+        longRouteTravelTime = Mathf.Round(longRouteTravelTime * 4f) / 4f;
 
         Route shortRoute = new("Short Route", shortRouteTravelTime);
         Route mediumRoute = new("Medium Route", mediumRouteTravelTime);
