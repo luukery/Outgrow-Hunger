@@ -5,7 +5,7 @@ on:
     branches: [ main, Development ]
 
 jobs:
-  build:
+  compile:
     runs-on: ubuntu-latest
 
     env:
