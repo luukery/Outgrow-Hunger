@@ -880,6 +880,7 @@ RectTransform:
   m_LocalScale: {x: 1.00875, y: 1.00875, z: 1.00875}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1952443646}
   - {fileID: 517700886}
   - {fileID: 1020141922}
   - {fileID: 1763549948}
@@ -1285,6 +1286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCScript
   WalkUp: 0
   Talking: 0
+  canvas: {fileID: 726788835}
 --- !u!1 &985358973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,7 +1479,7 @@ GameObject:
   - component: {fileID: 1020141924}
   - component: {fileID: 1020141923}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DialogueText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2011,38 +2013,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1305832244
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1305832245}
-  m_Layer: 0
-  m_Name: DialogueBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1305832245
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305832244}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.77874, y: 0.09766, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1952443646}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1394317661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,7 +2502,7 @@ GameObject:
   - component: {fileID: 1952443646}
   - component: {fileID: 1952443647}
   m_Layer: 0
-  m_Name: MainDialogueBox
+  m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2547,11 +2517,11 @@ Transform:
   m_GameObject: {fileID: 1952443645}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1287398, y: 0.61234, z: 0}
-  m_LocalScale: {x: 5.9692507, y: 6.44325, z: 1}
+  m_LocalPosition: {x: -395.39035, y: -224.32715, z: 0}
+  m_LocalScale: {x: 5.917473, y: 6.387361, z: 0.9913259}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1305832245}
+  m_Father: {fileID: 726788836}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1952443647
 SpriteRenderer:
@@ -2713,4 +2683,3 @@ SceneRoots:
   - {fileID: 443068162}
   - {fileID: 296994702}
   - {fileID: 794568484}
-  - {fileID: 1305832245}
