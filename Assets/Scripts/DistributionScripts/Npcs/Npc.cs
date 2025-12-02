@@ -75,10 +75,14 @@ public class NPC : MonoBehaviour
     public void DebugPrint()
     {
         foreach (KeyValuePair<FoodTypes, int> entry in Needs)
-            Debug.Log("Need: " + entry.Key + " = " + entry.Value);
+        {
+            FoodTypes type = entry.Key;
+            int need = entry.Value;
+            int request = Request[type];
 
-        foreach (KeyValuePair<FoodTypes, int> entry in Request)
-            Debug.Log("Request: " + entry.Key + " = " + entry.Value);
+            Debug.Log(type + " | Need: " + need + " | Request: " + request);
+        }
+
     }
 
 }

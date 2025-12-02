@@ -12,7 +12,6 @@ public class SpawnerScript : MonoBehaviour
         distributionmanager.UpdateNPC(npc);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
