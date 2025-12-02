@@ -5,17 +5,123 @@ using System.Data.SqlTypes;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+<<<<<<< Updated upstream
+=======
+using UnityEngine.UIElements;
+using UnityEngine.UI;
+>>>>>>> Stashed changes
 
 public class Inventory : MonoBehaviour
 {
     public List<Food> foods = new List<Food>();
 
+<<<<<<< Updated upstream
+=======
+    public InventoryVisualiser vis;
+
+>>>>>>> Stashed changes
     //Inventory handeling
     public int maxCapacity;
     public int currentCapacity;
 
 
+<<<<<<< Updated upstream
 
+=======
+    
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (TryAddFoodToInventory(new Food(FoodType.Type.Meat, Food.Quality.Medium, 1, "Porkchops")))
+            {
+                Debug.Log("Added food to inventory.");
+            }
+            else
+            {
+                Debug.Log("Not enough capacity to add food.");
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if (TryAddFoodToInventory(new Food(FoodType.Type.Fish, Food.Quality.Medium, 1, "Tuna")))
+            {
+                Debug.Log("Added food to inventory.");
+            }
+            else
+            {
+                Debug.Log("Not enough capacity to add food.");
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if (TryAddFoodToInventory(new Food(FoodType.Type.Canned, Food.Quality.Medium, 1, "Beans")))
+            {
+                Debug.Log("Added food to inventory.");
+            }
+            else
+            {
+                Debug.Log("Not enough capacity to add food.");
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            if (TryAddFoodToInventory(new Food(FoodType.Type.Fruit, Food.Quality.Medium, 1, "Grape")))
+            {
+                Debug.Log("Added food to inventory.");
+            }
+            else
+            {
+                Debug.Log("Not enough capacity to add food.");
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (TryAddFoodToInventory(new Food(FoodType.Type.Vegetable, Food.Quality.Medium, 1, "Pumpkin")))
+            {
+                Debug.Log("Added food to inventory.");
+            }
+            else
+            {
+                Debug.Log("Not enough capacity to add food.");
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            if (TryAddFoodToInventory(new Food(FoodType.Type.Bread, Food.Quality.Medium, 1, "Baguette")))
+            {
+                Debug.Log("Added food to inventory.");
+            }
+            else
+            {
+                Debug.Log("Not enough capacity to add food.");
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (TryAddFoodToInventory(new Food(FoodType.Type.Water, Food.Quality.Medium, 1, "Bottle")))
+            {
+                Debug.Log("Added food to inventory.");
+            }
+            else
+            {
+                Debug.Log("Not enough capacity to add food.");
+            }
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Debug.Log("Current Capacity: " + currentCapacity + " / " + maxCapacity);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            vis.SetProgressBar(this);
+        }
+    }
+>>>>>>> Stashed changes
 
     //Boolean logic || een aantal methods die ook in de normale locig staan, maar dan als een true/false voor het wel en niet lukken. 
     public bool TryAddFoodToInventory(Food food)
@@ -66,6 +172,7 @@ public class Inventory : MonoBehaviour
     }
 }
 
+<<<<<<< Updated upstream
 public class InventoryVisualiser
 {
     private List<Food> ActiveInventory;
@@ -110,3 +217,6 @@ public class InventoryVisualiser
 
     }
 }
+=======
+
+>>>>>>> Stashed changes
