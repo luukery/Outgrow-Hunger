@@ -24,12 +24,14 @@ public class RouteHandler : MonoBehaviour
         public string RouteName { get; set; }
         public float TravelTime { get; set; }
         public int EventChance { get; set; }
+        public string EventText { get; set; }
 
-        public Route(string routeName, float travelTime, int eventChance)
+        public Route(string routeName, float travelTime, int eventChance, string eventDescription = "No event yet")
         {
             RouteName = routeName;
             TravelTime = travelTime;
             EventChance = eventChance;
+            EventText = eventDescription;
         }
     }
 
@@ -61,20 +63,19 @@ public class RouteHandler : MonoBehaviour
 
     void HandleRouteSelection(Route route)
     {
-        if (EventHappened(route))
-        {
-            resultText.text = $"EVENT HAPPENED!\n{GetRandomEvent()}";
-        }
-        else
-        {
-            resultText.text = "No event occurred. Safe travels!";
-        }
+        resultText.text = route.EventText;
     }
 
-    string GetRandomEvent()
+    string GetRandomEvent(int eventChance)
     {
-        float roll = Random.value;
-        string rarity = roll < 0.55f ? "Common" : roll < 0.85f ? "Uncommon" : "Rare";
+        int happenedRoll = Random.Range(1, 101);
+        if (happenedRoll > eventChance)
+        {
+            return "no event happened";
+        }
+
+        float rarityRoll = Random.value;
+        string rarity = rarityRoll < 0.55f ? "Common" : rarityRoll < 0.85f ? "Uncommon" : "Rare";
 
         int index = Random.Range(0, eventsList.Count);
         return $"{rarity}: {eventsList[index]}";
@@ -86,20 +87,18 @@ public class RouteHandler : MonoBehaviour
         float mediumRouteTravelTime = Mathf.Round(Random.Range(4f, 6f) * 4f) / 4f;
         float longRouteTravelTime = Mathf.Round(Random.Range(6f, 8f) * 4f) / 4f;
 
-        int shortRouteEventChance = Random.Range(80, 91);
-        int mediumRouteEventChance = Random.Range(60, 71);
-        int longRouteEventChance = Random.Range(30, 51);
+        int shortRouteEventChance = 75;
+        int mediumRouteEventChance = 55;
+        int longRouteEventChance = 35;
 
-        Route shortRoute = new("Short Route", shortRouteTravelTime, shortRouteEventChance);
-        Route mediumRoute = new("Medium Route", mediumRouteTravelTime, mediumRouteEventChance);
-        Route longRoute = new("Long Route", longRouteTravelTime, longRouteEventChance);
+        string shortRouteEvent = GetRandomEvent(shortRouteEventChance);
+        string mediumRouteEvent = GetRandomEvent(mediumRouteEventChance);
+        string longRouteEvent = GetRandomEvent(longRouteEventChance);
+
+        Route shortRoute = new("Short Route", shortRouteTravelTime, shortRouteEventChance, shortRouteEvent);
+        Route mediumRoute = new("Medium Route", mediumRouteTravelTime, mediumRouteEventChance, mediumRouteEvent);
+        Route longRoute = new("Long Route", longRouteTravelTime, longRouteEventChance, longRouteEvent);
 
         return new List<Route> { shortRoute, mediumRoute, longRoute };
-    }
-
-    bool EventHappened(Route route)
-    {
-        int roll = Random.Range(1, 101);
-        return roll <= route.EventChance;
     }
 }
