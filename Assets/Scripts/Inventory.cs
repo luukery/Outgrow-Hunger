@@ -123,7 +123,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    //Boolean logic || een aantal methods die ook in de normale locig staan, maar dan als een true/false voor het wel en niet lukken. 
+    //Boolean logic || A few methods that try and do something. They return true when possibla and complete the action. They return false and dont do anything (yet) when impossible. 
     public bool TryAddFoodToInventory(Food food)
     {
         if ((currentCapacity + food.size) > maxCapacity)
@@ -147,7 +147,7 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    //LOGIC || basically de methods die hele simpele logica doen. Inklappen en niet meer naar kijken
+    //LOGIC || The PRIVATE methods that actually do the adding and removing from inventory.
     private void AddFoodToInventory(Food food)
     {
         foods.Add(food);
@@ -170,6 +170,40 @@ public class Inventory : MonoBehaviour
     {
         return foods.FindAll(f => f.foodQuality == quality);
     }
+    
+    public bool CanSatisfyRequest(int amountRequested, FoodType.Type type)
+    {
+        int totalAvailable = 0;
+        foreach (Food food in GetFoodsByType(type))
+        {
+            totalAvailable += food.size;
+            if (totalAvailable >= amountRequested)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public bool CanSatisfyRequest(int amountRequested, FoodType.Type type, Food.Quality quality)
+    {
+        int totalAvailable = 0;
+        foreach (Food food in GetFoodsByType(type))
+        {
+            if (food.foodQuality == quality)
+            {
+                totalAvailable += food.size;
+                if (totalAvailable >= amountRequested)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
 }
+
+
 
 

@@ -6,6 +6,7 @@ public class Food : MonoBehaviour
     public int size;//The amount of space it takes up in the inventory. 
     public string name; //Porkchops, broccoli, tuna etc. Not the food type but the name of the actual food. 
     public FoodType.Type foodType;
+    public Quality foodQuality;
 
     public Food (FoodType.Type type, Quality quality, int size, string name)
     {
@@ -22,7 +23,6 @@ public class Food : MonoBehaviour
         Spoiled
     }
 
-    public Quality foodQuality;
 
 
 

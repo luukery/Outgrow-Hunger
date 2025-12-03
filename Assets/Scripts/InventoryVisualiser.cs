@@ -107,6 +107,8 @@ public class InventoryVisualiser : MonoBehaviour
 
 		Tuple<int[], Inventory> iets = SortFoodByTypeWithSize(SelectedInventory);
 
+
+
 		for (int i = 0; i < Enum.GetValues(typeof(FoodType.Type)).Length; i++)//do seven times as we have 7 food types
 		{
             //happens once every type
