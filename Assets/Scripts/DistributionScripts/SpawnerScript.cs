@@ -1,31 +1,20 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class SpawnerScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private bool isSpawned = false;
     public GameObject NPCList;
+    public Distributionmanager distributionmanager;
+    public GameObject NPC;
 
     void Start()
+    {
+        GameObject npc = Instantiate(NPC, new Vector3(0, -4), Quaternion.identity);
+        distributionmanager.UpdateNPC(npc);
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (!isSpawned)
-        {
-            isSpawned = true;
-            // npc needs to be random
-            int npc = 0;
-            Instantiate(NPCList.transform.GetChild(0));
-        }
-    }
-
-
-    void Despawn()
-    {
-        isSpawned = false;
-    }
 }
