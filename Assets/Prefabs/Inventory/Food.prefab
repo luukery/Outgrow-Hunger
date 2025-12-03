@@ -10,10 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7547848292722049799}
   - component: {fileID: 8222780169302678801}
-<<<<<<< Updated upstream
-=======
   - component: {fileID: 7862797244479633175}
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Food
   m_TagString: Untagged
@@ -21,39 +18,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
---- !u!4 &7547848292722049799
-Transform:
-=======
 --- !u!224 &7547848292722049799
 RectTransform:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6012976707762713191}
-<<<<<<< Updated upstream
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.54338, y: -0.3518, z: 0}
-=======
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.54338, y: -0.3518}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> Stashed changes
 --- !u!114 &8222780169302678801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,10 +49,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8614ae0ff1a06de448588ad4df424eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Food
-<<<<<<< Updated upstream
-  foodType: 0
-  foodQuality: 0
-=======
   size: 1
   name: Kalf Doner
   foodType: 0
@@ -132,4 +111,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
->>>>>>> Stashed changes

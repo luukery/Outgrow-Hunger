@@ -10,10 +10,10 @@ public class FoodType : MonoBehaviour
     public enum Type
     {
         Meat,
-        Vegetable,
-        Fruit,
         Fish,
         Canned,
+        Fruit,
+        Vegetable,
         Bread,
         Water
     }

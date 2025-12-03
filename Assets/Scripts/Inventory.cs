@@ -5,29 +5,20 @@ using System.Data.SqlTypes;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
-<<<<<<< Updated upstream
-=======
 using UnityEngine.UIElements;
 using UnityEngine.UI;
->>>>>>> Stashed changes
 
 public class Inventory : MonoBehaviour
 {
     public List<Food> foods = new List<Food>();
 
-<<<<<<< Updated upstream
-=======
     public InventoryVisualiser vis;
 
->>>>>>> Stashed changes
     //Inventory handeling
     public int maxCapacity;
     public int currentCapacity;
 
 
-<<<<<<< Updated upstream
-
-=======
     
 
     public void Update()
@@ -36,7 +27,7 @@ public class Inventory : MonoBehaviour
         {
             if (TryAddFoodToInventory(new Food(FoodType.Type.Meat, Food.Quality.Medium, 1, "Porkchops")))
             {
-                Debug.Log("Added food to inventory.");
+                Debug.Log("Added Meat to inventory.");
             }
             else
             {
@@ -47,7 +38,7 @@ public class Inventory : MonoBehaviour
         {
             if (TryAddFoodToInventory(new Food(FoodType.Type.Fish, Food.Quality.Medium, 1, "Tuna")))
             {
-                Debug.Log("Added food to inventory.");
+                Debug.Log("Added fish to inventory.");
             }
             else
             {
@@ -58,7 +49,7 @@ public class Inventory : MonoBehaviour
         {
             if (TryAddFoodToInventory(new Food(FoodType.Type.Canned, Food.Quality.Medium, 1, "Beans")))
             {
-                Debug.Log("Added food to inventory.");
+                Debug.Log("Added Canned to inventory.");
             }
             else
             {
@@ -69,7 +60,7 @@ public class Inventory : MonoBehaviour
         {
             if (TryAddFoodToInventory(new Food(FoodType.Type.Fruit, Food.Quality.Medium, 1, "Grape")))
             {
-                Debug.Log("Added food to inventory.");
+                Debug.Log("Added Fruit to inventory.");
             }
             else
             {
@@ -80,7 +71,7 @@ public class Inventory : MonoBehaviour
         {
             if (TryAddFoodToInventory(new Food(FoodType.Type.Vegetable, Food.Quality.Medium, 1, "Pumpkin")))
             {
-                Debug.Log("Added food to inventory.");
+                Debug.Log("Added Veggie to inventory.");
             }
             else
             {
@@ -91,7 +82,7 @@ public class Inventory : MonoBehaviour
         {
             if (TryAddFoodToInventory(new Food(FoodType.Type.Bread, Food.Quality.Medium, 1, "Baguette")))
             {
-                Debug.Log("Added food to inventory.");
+                Debug.Log("Added Bread to inventory.");
             }
             else
             {
@@ -102,7 +93,7 @@ public class Inventory : MonoBehaviour
         {
             if (TryAddFoodToInventory(new Food(FoodType.Type.Water, Food.Quality.Medium, 1, "Bottle")))
             {
-                Debug.Log("Added food to inventory.");
+                Debug.Log("Added Water to inventory.");
             }
             else
             {
@@ -118,10 +109,19 @@ public class Inventory : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log(this.foods.Count + " items in inventory.");
+
+            if (this.GetFoodsByType(FoodType.Type.Fish) != null)
+            {
+                Debug.Log("It is nit null");
+            }
+            else
+            {
+                Debug.Log("Failed to visualise inventory.");
+            }
             vis.SetProgressBar(this);
         }
     }
->>>>>>> Stashed changes
 
     //Boolean logic || een aantal methods die ook in de normale locig staan, maar dan als een true/false voor het wel en niet lukken. 
     public bool TryAddFoodToInventory(Food food)
@@ -172,51 +172,4 @@ public class Inventory : MonoBehaviour
     }
 }
 
-<<<<<<< Updated upstream
-public class InventoryVisualiser
-{
-    private List<Food> ActiveInventory;
 
-    private List<List<Food>> TempList;
-    //Filled per category of food.
-
-    public void SortFoodByTypeWithSize(Inventory inventory)
-    {
-        int[] TypeSizeByType = new int[Enum.GetValues(typeof(FoodType.Type)).Length];
-
-
-        foreach (FoodType.Type foodType in Enum.GetValues(typeof(FoodType.Type)))
-        {
-            //do once per type
-            List<Food> AllFoodByType = new List<Food>();
-            var foodInThatType = inventory.GetFoodsByType(foodType);
-
-            foreach (Food food in foodInThatType)
-            {
-                AllFoodByType.Add(food);
-            }
-            TempList.Add(AllFoodByType);
-        }
-
-        int i = 0;
-        foreach (List<Food> typeCollection in TempList)
-        {
-
-            int typeCount = 0;
-            foreach (Food food in typeCollection)
-            {
-                typeCount += food.size;
-            }
-            TypeSizeByType[i] = typeCount;
-            i++;
-        }
-
-
-
-
-
-    }
-}
-=======
-
->>>>>>> Stashed changes

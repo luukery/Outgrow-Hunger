@@ -1,17 +1,34 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class InventoryVisualiser : MonoBehaviour
 {
-	public Inventory SelectedInventory;
-	private List<Food> ActiveInventory;
+	[Header("General settings")]
+    public float GeneralScale = 0.3f;//Steps for the progressbar
+	public GameObject Parent;
+
+    [Header("General Bar settings")]
+	public Transform barLocation;
+    public List<GameObject> PlaceHolderObjects;
+	public float IndividualScale = 0.3f;
+
+    [Header("Individual Bar settings")]
+	public List<GameObject> IndivisualBarPositions;
+
+    [Header("Legacy settings")]
     public UnityEngine.UI.Slider CapacityBar;
 
-    public List<GameObject> PlaceHolderObjects;
 
-    private List<List<Food>> TempList;
+    [Header("Hidden settings")]
+    public Inventory SelectedInventory;
+	private List<Food> ActiveInventory;
+
+
+
+    private List<List<Food>> TempList = new List<List<Food>>();
     //Filled per category of food.
 
     private void Update()
@@ -19,21 +36,27 @@ public class InventoryVisualiser : MonoBehaviour
 
     }
 
-    public int[] SortFoodByTypeWithSize(Inventory inventory)
+    public Tuple<int[], Inventory> SortFoodByTypeWithSize(Inventory inventory)
 	{
-		int[] TypeSizeByType = new int[Enum.GetValues(typeof(FoodType.Type)).Length];
+		TempList.Clear();
+        int[] TypeSizeByType = new int[Enum.GetValues(typeof(FoodType.Type)).Length];
+		Inventory ReturnInventory = new Inventory();
+		ReturnInventory.maxCapacity = inventory.maxCapacity;
+		ReturnInventory.currentCapacity = inventory.currentCapacity;
 
+		List<Food> newFoods = new List<Food>();
 
-		foreach (FoodType.Type foodType in Enum.GetValues(typeof(FoodType.Type)))
+        foreach (FoodType.Type foodType in Enum.GetValues(typeof(FoodType.Type)))
 		{
 			//do once per type
 			List<Food> AllFoodByType = new List<Food>();
-			var foodInThatType = inventory.GetFoodsByType(foodType);
+			var foodInThatType = inventory.GetFoodsByType(foodType) ?? new List<Food>();
 
 			foreach (Food food in foodInThatType)
 			{
 				AllFoodByType.Add(food);
-			}
+				newFoods.Add(food);
+            }
 			TempList.Add(AllFoodByType);
 		}
 
@@ -49,35 +72,84 @@ public class InventoryVisualiser : MonoBehaviour
 			TypeSizeByType[i] = typeCount;
 			i++;
 		}
-
-		return TypeSizeByType;
+		ReturnInventory.foods = newFoods;
+		Tuple<int[], Inventory> result;
+		result = Tuple.Create(TypeSizeByType, ReturnInventory);
+        return result;
 
 
 	}
 
 	public void SetProgressBar(Inventory inv)
 	{
-		ActiveInventory = inv.foods;
+		float Gpos = barLocation.position.x;
+		//remove all child objects from Parent object
+		foreach (Transform child in Parent.transform)
+		{
+			Destroy(child.gameObject);
+        }
+
+        if (inv == null)
+        {
+            Debug.LogError("Inventory is NULL!");
+            return;
+        }
+
+        if (inv.foods == null)
+        {
+            Debug.LogError("Inventory.foods is NULL!");
+            return;
+        }
+
+
+        ActiveInventory = inv.foods;
 		SelectedInventory = inv;
 
-
-        int pos = 0;
-
-		int[] iets = SortFoodByTypeWithSize(SelectedInventory);
+		Tuple<int[], Inventory> iets = SortFoodByTypeWithSize(SelectedInventory);
 
 		for (int i = 0; i < Enum.GetValues(typeof(FoodType.Type)).Length; i++)//do seven times as we have 7 food types
 		{
-			//happens once every type
-			for (int j = 0; j < i; j++)
+            //happens once every type
+			float Ipos = IndivisualBarPositions[i].transform.position.y;
+            for (int j = 0; j < iets.Item1[i]; j++)
 			{
-                //duplicate the place holder object in the array at position i
+			//General Bar in the bottom
+				Gpos += GeneralScale;
+				//duplicate the place holder object in the array at position i
+				GameObject GeneralObject = Instantiate(PlaceHolderObjects[i], Parent.transform);
+				//set it to the right position
 				
-				GameObject d = Instantiate(PlaceHolderObjects[i]);
-				d.transform.position = new Vector3(pos, 0, 0);
-				pos++;
-				//happens as much as the amount of food in the category with index i as type index. 
-			}
+				GeneralObject.transform.localScale = new Vector3(GeneralScale, GeneralScale, GeneralScale);
+				GeneralObject.transform.position = barLocation.position;
+
+				
+
+                //update the next position
+                barLocation.position = new Vector3(Gpos, barLocation.position.y, barLocation.position.z);
+
+
+
+			//Individual Bars
+                Ipos += IndividualScale;
+				//create an object
+				GameObject IndividualObject = Instantiate(PlaceHolderObjects[i], Parent.transform);
+				
+				
+				//setscale
+				IndividualObject.transform.localScale = new Vector3(IndividualScale, IndividualScale, IndividualScale);
+				
+				//setlocation
+				IndividualObject.transform.position = IndivisualBarPositions[i].transform.position;
+                Debug.Log("ik heb je "+j+"ste blokje van type "+ (FoodType.Type)i+" geplaatst op positie "+ IndividualObject.transform.position);
+
+                //updatePosition
+                IndivisualBarPositions[i].transform.position = new Vector3(IndivisualBarPositions[i].transform.position.x, Ipos, IndivisualBarPositions[i].transform.position.z);
+				Debug.Log("en toen de volgende positie verdanderd met "+IndividualScale+" naar "+ IndivisualBarPositions[i].transform.position);
+
+
+            }
 		}
+		Debug.Log("I have done the visualisation. And i have ...");
 
 	}
 

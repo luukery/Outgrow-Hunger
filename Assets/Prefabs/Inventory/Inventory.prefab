@@ -9,11 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4206520128736404148}
-<<<<<<< Updated upstream
-  - component: {fileID: 1103796175984481175}
-=======
   - component: {fileID: 9037721519639256978}
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Inventory
   m_TagString: Untagged
@@ -36,11 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
---- !u!114 &1103796175984481175
-=======
 --- !u!114 &9037721519639256978
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,12 +41,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2821143491342494767}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< Updated upstream
-  m_Script: {fileID: 11500000, guid: 8f85db2d6bb046a4e8a4c9b681917e34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  foods: []
-=======
   m_Script: {fileID: 11500000, guid: 8614ae0ff1a06de448588ad4df424eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Food
@@ -62,4 +48,3 @@ MonoBehaviour:
   name: 
   foodType: 0
   foodQuality: 0
->>>>>>> Stashed changes
