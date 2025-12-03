@@ -9,6 +9,7 @@ public class NPC : MonoBehaviour
     [SerializeField]
     public Dictionary<FoodTypes, int> Needs = new Dictionary<FoodTypes, int>();
 
+    public List<Request> Order = new List<Request>();
     public int money;
 
     [Range(0f, 1f)]
@@ -18,6 +19,12 @@ public class NPC : MonoBehaviour
     {
         GenerateProfile();
         DebugPrint();
+        PopulateOrder();
+    }
+
+    public void PopulateOrder()
+    {
+        Order.Add(new Request(4, FoodType.Type.Meat, Food.Quality.Good))
     }
 
     void GenerateProfile()
