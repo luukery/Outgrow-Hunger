@@ -98,6 +98,7 @@ public class RouteHandler : MonoBehaviour
         routeSetUp();
     }
 
+
     void Update()
     {
         if (Keyboard.current.rKey.wasPressedThisFrame)
@@ -108,13 +109,14 @@ public class RouteHandler : MonoBehaviour
     }
 
     
-    void routeSetUp()
+    void RouteSetUp()
     {
         routes = GenerateRoutes();
         setUpButtons(routes);
     }
 
-    void setUpButtons(List<Route> routes)
+
+    void SetUpButtons(List<Route> routes)
     {
         // Clear listeners
         shortRouteButton.onClick.RemoveAllListeners();
