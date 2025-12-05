@@ -95,7 +95,7 @@ public class RouteHandler : MonoBehaviour
     
     void Start()
     {
-        routeSetUp();
+        RouteSetUp();
     }
 
 
@@ -104,7 +104,7 @@ public class RouteHandler : MonoBehaviour
         if (Keyboard.current.rKey.wasPressedThisFrame)
         {
             routes = GenerateRoutes();
-            setUpButtons(routes);
+            SetUpButtons(routes);
         }
     }
 
@@ -112,7 +112,7 @@ public class RouteHandler : MonoBehaviour
     void RouteSetUp()
     {
         routes = GenerateRoutes();
-        setUpButtons(routes);
+        SetUpButtons(routes);
     }
 
 
@@ -166,7 +166,7 @@ public class RouteHandler : MonoBehaviour
 
         timePassedText.text = $"Time Passed: {timePassed}h";
 
-        routeSetUp();
+        RouteSetUp();
     }
 
 
