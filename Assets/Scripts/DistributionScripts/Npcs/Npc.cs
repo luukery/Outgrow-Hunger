@@ -20,11 +20,14 @@ public class NPC : MonoBehaviour
         GenerateProfile();
         DebugPrint();
         PopulateOrder();
+        Inventory inv = new Inventory();
+        Order = inv.CanSatisfyOrder(Order);
+
     }
 
     public void PopulateOrder()
     {
-        Order.Add(new Request(4, FoodType.Type.Meat, Food.Quality.Good))
+        Order.Add(new Request(4, FoodType.Type.Meat, Food.Quality.Good));
     }
 
     void GenerateProfile()

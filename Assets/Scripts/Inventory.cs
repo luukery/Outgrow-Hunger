@@ -19,7 +19,8 @@ public class Inventory : MonoBehaviour
     public int currentCapacity;
 
 
-    
+
+
 
     public void Update()
     {
@@ -171,20 +172,20 @@ public class Inventory : MonoBehaviour
         return foods.FindAll(f => f.foodQuality == quality);
     }
     
-    public bool CanSatisfyRequest(int amountRequested, FoodType.Type type)
+
+    //Orders from NPC and all the logic regarding those is down here. 
+    
+
+    public List<Request> CanSatisfyOrder(List<Request> orderByNPC)
     {
-        int totalAvailable = 0;
-        foreach (Food food in GetFoodsByType(type))
+        bool[] satisfaction = new bool[orderByNPC.Count];
+        foreach (Request RequestAtPosition in orderByNPC)
         {
-            totalAvailable += food.size;
-            if (totalAvailable >= amountRequested)
-            {
-                return true;
-            }
+            RequestAtPosition.Possible = CanSatisfyRequest(RequestAtPosition.Amount, RequestAtPosition.FoodType, RequestAtPosition.Quality);
         }
-        return false;
+        return orderByNPC;
     }
-    public bool CanSatisfyRequest(int amountRequested, FoodType.Type type, Food.Quality quality)
+    private bool CanSatisfyRequest(int amountRequested, FoodType.Type type, Food.Quality quality)
     {
         int totalAvailable = 0;
         foreach (Food food in GetFoodsByType(type))
@@ -200,6 +201,9 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
+
+    
+
 
 
 }
