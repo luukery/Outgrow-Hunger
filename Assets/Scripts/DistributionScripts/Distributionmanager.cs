@@ -46,8 +46,6 @@ public class Distributionmanager : MonoBehaviour
             yield return new WaitForSeconds(4);
         }
         // Temp text
-        dialogue.text = "Give food?";
-
         currentNPC = spawner.SpawnNPC();
         Debug.Log("Spawned NPC");
     }
