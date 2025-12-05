@@ -554,7 +554,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 17.5, y: -50}
-  m_SizeDelta: {x: 100, y: 40}
+  m_SizeDelta: {x: 200, y: 40}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &151469116
 MonoBehaviour:
@@ -711,7 +711,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 58.365005, y: -38}
-  m_SizeDelta: {x: 96.73001, y: 64}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &184123767
 MonoBehaviour:
@@ -1313,12 +1313,14 @@ MonoBehaviour:
     priceText: {fileID: 1927478767}
     buyButton: {fileID: 1672023}
   - root: {fileID: 13978660}
-    icon: {fileID: 0}
+    icon: {fileID: 184123768}
     nameText: {fileID: 1012489882}
     priceText: {fileID: 326939576}
     buyButton: {fileID: 828078838}
   playerCoins: 100
   coinsText: {fileID: 302958870}
+  headerText: {fileID: 151469116}
+  descText: {fileID: 0}
 --- !u!114 &731126626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1720,7 +1722,7 @@ GameObject:
   - component: {fileID: 917451148}
   - component: {fileID: 917451147}
   - component: {fileID: 917451146}
-  - component: {fileID: 917451145}
+  - component: {fileID: 917451149}
   m_Layer: 0
   m_Name: Meat stall (1)
   m_TagString: Untagged
@@ -1743,33 +1745,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1620749935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &917451145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917451143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6dc27a9870e4a40bcc61160bd41975, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MarketStallSimple
-  foodPool:
-  - name: Rundergehakt
-    icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-    minPrice: 3
-    maxPrice: 8
-  - name: Steak
-    icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-    minPrice: 10
-    maxPrice: 20
-  minItems: 1
-  maxItems: 2
-  currentStock: []
-  onStockChanged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &917451146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1782,7 +1757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a22ed18556f5b24e9ff807992f117c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
-  stall: {fileID: 917451145}
+  stall: {fileID: 917451149}
   stallUIPanel: {fileID: 731126623}
 --- !u!61 &917451147
 BoxCollider2D:
@@ -1888,6 +1863,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &917451149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917451143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ef3774611cf444fbf4823368a447d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MarketStallFromCatalog
+  catalog: {fileID: 11400000, guid: e8fbb4ffb65298f429f1f03eaa7f22b2, type: 2}
+  stallType: 7
+  minItems: 1
+  maxItems: 2
+  useWeightedRandom: 0
+  stallId: 89422aec-26d5-4e04-9e0b-8bc30d0247f0
+  currentStock: []
+  onStockChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &997891068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,7 +2075,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 58.365005, y: -38}
-  m_SizeDelta: {x: 96.73001, y: 64}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1000960157
 MonoBehaviour:
@@ -2613,24 +2610,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1417182937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6dc27a9870e4a40bcc61160bd41975, type: 3}
+  m_Script: {fileID: 11500000, guid: b5ef3774611cf444fbf4823368a447d1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MarketStallSimple
-  foodPool:
-  - name: Appel
-    icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    minPrice: 2
-    maxPrice: 6
-  - name: Banaan
-    icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    minPrice: 2
-    maxPrice: 6
-  - name: kiwi
-    icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    minPrice: 2
-    maxPrice: 6
+  m_EditorClassIdentifier: Assembly-CSharp::MarketStallFromCatalog
+  catalog: {fileID: 11400000, guid: e8fbb4ffb65298f429f1f03eaa7f22b2, type: 2}
+  stallType: 3
   minItems: 1
   maxItems: 2
+  useWeightedRandom: 0
+  stallId: bb358356-6c29-41f1-a7de-6f2f26955eb4
   currentStock: []
   onStockChanged:
     m_PersistentCalls:
@@ -2960,8 +2948,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1417182938}
   - {fileID: 2137307802}
+  - {fileID: 1417182938}
   - {fileID: 1629766990}
   - {fileID: 917451144}
   m_Father: {fileID: 2052760018}
@@ -3128,20 +3116,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1629766989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6dc27a9870e4a40bcc61160bd41975, type: 3}
+  m_Script: {fileID: 11500000, guid: b5ef3774611cf444fbf4823368a447d1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MarketStallSimple
-  foodPool:
-  - name: Rundergehakt
-    icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-    minPrice: 3
-    maxPrice: 8
-  - name: Steak
-    icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-    minPrice: 10
-    maxPrice: 20
+  m_EditorClassIdentifier: Assembly-CSharp::MarketStallFromCatalog
+  catalog: {fileID: 11400000, guid: e8fbb4ffb65298f429f1f03eaa7f22b2, type: 2}
+  stallType: 7
   minItems: 1
   maxItems: 2
+  useWeightedRandom: 0
+  stallId: ccc9252f-9c1d-43b4-97a3-b7951d3d63d3
   currentStock: []
   onStockChanged:
     m_PersistentCalls:
@@ -3930,7 +3913,7 @@ GameObject:
   - component: {fileID: 2137307806}
   - component: {fileID: 2137307805}
   - component: {fileID: 2137307804}
-  - component: {fileID: 2137307803}
+  - component: {fileID: 2137307807}
   m_Layer: 0
   m_Name: fruit stall (1)
   m_TagString: Untagged
@@ -3953,37 +3936,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1620749935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2137307803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137307801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc6dc27a9870e4a40bcc61160bd41975, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MarketStallSimple
-  foodPool:
-  - name: Appel
-    icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    minPrice: 2
-    maxPrice: 6
-  - name: Banaan
-    icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    minPrice: 2
-    maxPrice: 6
-  - name: kiwi
-    icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-    minPrice: 2
-    maxPrice: 6
-  minItems: 1
-  maxItems: 2
-  currentStock: []
-  onStockChanged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2137307804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3996,7 +3948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a22ed18556f5b24e9ff807992f117c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
-  stall: {fileID: 2137307803}
+  stall: {fileID: 2137307807}
   stallUIPanel: {fileID: 731126623}
 --- !u!61 &2137307805
 BoxCollider2D:
@@ -4102,6 +4054,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2137307807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137307801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ef3774611cf444fbf4823368a447d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MarketStallFromCatalog
+  catalog: {fileID: 11400000, guid: e8fbb4ffb65298f429f1f03eaa7f22b2, type: 2}
+  stallType: 3
+  minItems: 1
+  maxItems: 2
+  useWeightedRandom: 0
+  stallId: 96bb62a1-318e-422b-a45e-8fd1f67d7275
+  currentStock: []
+  onStockChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
