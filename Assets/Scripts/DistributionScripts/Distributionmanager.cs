@@ -12,12 +12,12 @@ public class Distributionmanager : MonoBehaviour
     private Button feedButton, denyButton;
     private TextMeshProUGUI dialogue;
 
-    private GameObject currentNPC;
+    private NPC currentNPC;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SpawnNPC();
-        
+        StartCoroutine(SpawnNPC());
+
         feedButton = canvas.transform.Find("FeedButton").GetComponent<Button>();
         denyButton = canvas.transform.Find("DenyButton").GetComponent<Button>();
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
@@ -35,14 +35,18 @@ public class Distributionmanager : MonoBehaviour
         }
     }
     
-    private void SpawnNPC()
+    private IEnumerator SpawnNPC()
     {
+        // despawns NPC and waits 5 seconds before spawning a new one if an NPC is already spawned
         if (currentNPC != null) 
         {
-            Destroy(currentNPC);
+            Destroy(currentNPC.gameObject);
+            currentNPC = null;
             Debug.Log("Despawned NPC");
+            yield return new WaitForSeconds(4);
         }
-
+        // Temp text
+        dialogue.text = "Give food?";
 
         currentNPC = spawner.SpawnNPC();
         Debug.Log("Spawned NPC");
@@ -50,15 +54,15 @@ public class Distributionmanager : MonoBehaviour
 
     private void HandleAccept()
     {
-        // code om eten te geven
-        dialogue.text = "accepted food";
-        SpawnNPC();
+        // still needs code to handle the accepting of the food
+        dialogue.text = "Accepted food";
+        StartCoroutine(SpawnNPC());
     }
 
     public void Deny()
     {
         // temp text
         dialogue.text = "Denied NPC Food";
-        SpawnNPC();
+        StartCoroutine(SpawnNPC());
     }
 }

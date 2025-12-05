@@ -4,11 +4,11 @@ public class SpawnerScript : MonoBehaviour
 {
     public GameObject NPCList;
     // deze is temp, het moet eventueel gewoon een random npc pakken van het npc lijst
-    public GameObject NPC;
+    public NPC spawnedNPC;
 
-    public GameObject SpawnNPC()
+    public NPC SpawnNPC()
     {
-        GameObject npc = Instantiate(NPC, new Vector3(0, 1), Quaternion.identity);
+        NPC npc = Instantiate(spawnedNPC, new Vector3(0, 1), Quaternion.identity);
         return npc;
     }
 
