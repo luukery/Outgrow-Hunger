@@ -17,6 +17,9 @@ public class RouteHandler : MonoBehaviour
 
     float timePassed = 0f;
 
+    // IMPORTANT: you removed this earlier — routes MUST persist!
+    private List<Route> routes;
+
     void Awake()
     {
         if (Instance == null)
@@ -43,6 +46,7 @@ public class RouteHandler : MonoBehaviour
         }
     }
 
+    // ------------------ EVENT LISTS BY RARITY ------------------
     List<RouteEvent> commonEvents = new List<RouteEvent>
     {
         new("Fallen tree blocking passage", 0.5f),
@@ -55,12 +59,10 @@ public class RouteHandler : MonoBehaviour
         new("Grazing deer or elk", 0.75f),
         new("Swarm of insects spooking horses", 0.25f),
         new("Winds buffeting the carriage", 0f, 10),
-
     };
 
     List<RouteEvent> uncommonEvents = new List<RouteEvent>
     {
-
         new("Sudden forest fire (smoke visible)", 1f),
         new("Snowfall", 0.5f, 10),
         new("Thunderstorm", 0.5f),
@@ -70,7 +72,6 @@ public class RouteHandler : MonoBehaviour
         new("Desperate refugees begging for supplies", 0f, 5),
         new("Predators tracking the carriage", 0f, 10),
         new("Steep incline straining the horses", 0.5f),
-
     };
 
     List<RouteEvent> rareEvents = new List<RouteEvent>
@@ -81,7 +82,6 @@ public class RouteHandler : MonoBehaviour
         new("Bandits attempting robbery", 0f, 15),
         new("Rockslide", 0.5f),
         new("Stream deeper than expected", 0f, 5),
-
     };
 
     // ------------------ ROUTE CLASS ------------------
@@ -101,7 +101,7 @@ public class RouteHandler : MonoBehaviour
         }
     }
 
-    
+    // ------------------ UNITY LIFECYCLE ------------------
     void Start()
     {
         RouteSetUp();
@@ -118,7 +118,7 @@ public class RouteHandler : MonoBehaviour
     // ------------------ MAIN SETUP ------------------
     void RouteSetUp()
     {
-        List<Route> routes = GenerateRoutes();
+        routes = GenerateRoutes();  // store routes!
         SetUpButtons(routes);
     }
 
@@ -130,10 +130,10 @@ public class RouteHandler : MonoBehaviour
             mediumRouteButton != null ||
             longRouteButton != null;
 
+        // If using roads, skip button setup
         if (!usingButtons)
-            return; // you are using roads, not buttons — skip everything
+            return;
 
-        // SHORT BUTTON
         if (shortRouteButton != null)
         {
             shortRouteButton.onClick.RemoveAllListeners();
@@ -141,7 +141,6 @@ public class RouteHandler : MonoBehaviour
             UpdateButtonText(shortRouteButton, routes[0]);
         }
 
-        // MEDIUM BUTTON
         if (mediumRouteButton != null)
         {
             mediumRouteButton.onClick.RemoveAllListeners();
@@ -149,7 +148,6 @@ public class RouteHandler : MonoBehaviour
             UpdateButtonText(mediumRouteButton, routes[1]);
         }
 
-        // LONG BUTTON
         if (longRouteButton != null)
         {
             longRouteButton.onClick.RemoveAllListeners();
@@ -168,9 +166,9 @@ public class RouteHandler : MonoBehaviour
         TMP_Text tmp = btn.GetComponentInChildren<TMP_Text>();
         if (tmp == null) return;
 
-        string eventText = route.EventData == null ?
-            "Event: None" :
-            $"Event: {route.EventData.Name} (+{route.EventData.ExtraTime}h)";
+        string eventText = route.EventData == null
+            ? "Event: None"
+            : $"Event: {route.EventData.Name} (+{route.EventData.ExtraTime}h)";
 
         tmp.text =
             $"{route.RouteName}\n" +
@@ -200,7 +198,6 @@ public class RouteHandler : MonoBehaviour
 
         timePassed += totalTime;
 
-        // Update UI only if it exists
         if (resultText != null)
         {
             if (route.EventData == null)
@@ -219,16 +216,17 @@ public class RouteHandler : MonoBehaviour
     RouteEvent GetRandomEvent(int eventChance)
     {
         int roll = Random.Range(1, 101);
-        if (roll > eventChance) return null;
+        if (roll > eventChance)
+            return null;
 
-        List<RouteEvent> eventList;
         int rarityRoll = Random.Range(1, 101);
 
-        eventList = rarityRoll <= 55 ? commonEvents :
-                    rarityRoll <= 85 ? uncommonEvents :
-                    rareEvents;
+        List<RouteEvent> list =
+            rarityRoll <= 55 ? commonEvents :
+            rarityRoll <= 85 ? uncommonEvents :
+            rareEvents;
 
-        return eventList[Random.Range(0, eventList.Count)];
+        return list[Random.Range(0, list.Count)];
     }
 
     List<Route> GenerateRoutes()
@@ -237,10 +235,11 @@ public class RouteHandler : MonoBehaviour
         float mediumRouteTime = Mathf.Round(Random.Range(4f, 6f) * 4f) / 4f;
         float longRouteTime = Mathf.Round(Random.Range(6f, 8f) * 4f) / 4f;
 
-        Route shortRoute = new("Short Route", shortRouteTime, 75, GetRandomEvent(75));
-        Route mediumRoute = new("Medium Route", mediumRouteTime, 55, GetRandomEvent(55));
-        Route longRoute = new("Long Route", longRouteTime, 35, GetRandomEvent(35));
-
-        return new List<Route> { shortRoute, mediumRoute, longRoute };
+        return new List<Route>
+        {
+            new("Short Route",  shortRouteTime, 75, GetRandomEvent(75)),
+            new("Medium Route", mediumRouteTime, 55, GetRandomEvent(55)),
+            new("Long Route",   longRouteTime, 35, GetRandomEvent(35))
+        };
     }
 }
