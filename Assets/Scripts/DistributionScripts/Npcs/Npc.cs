@@ -4,113 +4,95 @@ using System.Collections.Generic;
 
 public class NPC : MonoBehaviour
 {
-    public List<Request> Needs = new List<Request>();
+    [SerializeField]
+    public Dictionary<FoodTypes, int> Request = new Dictionary<FoodTypes, int>();
+    [SerializeField]
+    public Dictionary<FoodTypes, int> Needs = new Dictionary<FoodTypes, int>();
+
     public List<Request> Order = new List<Request>();
-    public int Money;
+    public int money;
+
+    [Range(0f, 1f)]
+    public float OverRequestChance = 0.125f;
 
     void Start()
     {
         GenerateProfile();
         DebugPrint();
+        PopulateOrder();
+        Inventory inv = new Inventory();
+        Order = inv.CanSatisfyOrder(Order);
+
+    }
+
+    public void PopulateOrder()
+    {
+        Order.Add(new Request(4, FoodType.Type.Meat, Food.Quality.Good));
     }
 
     void GenerateProfile()
     {
-        Needs.Clear();
-        Order.Clear();
-
+        Array types = Enum.GetValues(typeof(FoodTypes));
         System.Random rng = new System.Random();
+        int extramoney = 0;
 
-        Array foodTypes = Enum.GetValues(typeof(FoodType.Type));
-        Array qualities = Enum.GetValues(typeof(Food.Quality));
-
-        foreach (FoodType.Type type in foodTypes)
+        foreach (FoodTypes type in types)
         {
-            Food.Quality quality = (Food.Quality)qualities.GetValue(rng.Next(qualities.Length));
-            int needAmount = rng.Next(0, 4);
+            int need = rng.Next(0, 4);
+            Needs[type] = need;
 
-            Request need = new Request(needAmount, type, quality);
-            Request order = new Request(needAmount, type, quality);
+            int request = need;
 
-            Needs.Add(need);
-            Order.Add(order);
+            if (rng.NextDouble() < 0.125f)
+            {
+                request += rng.Next(1, 3);
+                extramoney = 10;
+            }
+
+            Request[type] = request;
         }
 
-        Money = rng.Next(0, 21);
+
+        money =  extramoney + rng.Next(0, 21);
     }
 
-    public NpcInfoDTO GetInfoDTO()
-    {
-        NpcInfoDTO dto = new NpcInfoDTO();
-
-        List<Request> needsCopy = new List<Request>();
-        for (int i = 0; i < Needs.Count; i++)
-        {
-            Request n = Needs[i];
-            needsCopy.Add(new Request(n.Amount, n.FoodType, n.Quality));
-        }
-
-        List<Request> orderCopy = new List<Request>();
-        for (int i = 0; i < Order.Count; i++)
-        {
-            Request o = Order[i];
-            orderCopy.Add(new Request(o.Amount, o.FoodType, o.Quality));
-        }
-
-        dto.Needs = needsCopy;
-        dto.Order = orderCopy;
-        dto.Money = Money;
-
-        return dto;
-    }
-
-
-    public DeliveryResult ReceiveDelivery(List<Request> given)
+    public DeliveryResult HandleDelivery(Dictionary<FoodTypes, int> given)
     {
         DeliveryResult result = new DeliveryResult();
-        result.MoneyBefore = Money;
+        int cost = 0;
 
-        for (int i = 0; i < Needs.Count; i++)
+        foreach (KeyValuePair<FoodTypes, int> entry in Needs)
         {
-            Request need = Needs[i];
-            Request delivered = given.Find(r => r.FoodType == need.FoodType);
+            FoodTypes type = entry.Key;
+            int need = entry.Value;
 
-            int amount = delivered != null ? delivered.Amount : 0;
+            int amountGiven = given.ContainsKey(type) ? given[type] : 0;
+            int requested = Request[type];
 
-            if (amount < need.Amount)
-                result.Shortage += need.Amount - amount;
+            if (amountGiven < need)
+                result.Shortage += need - amountGiven;
 
-            if (amount > need.Amount)
-                result.Over += amount - need.Amount;
+            if (amountGiven > need)
+                result.Over += amountGiven - need;
 
-            result.TotalCost += amount;
+            cost += amountGiven;
         }
 
-        if (Money >= result.TotalCost)
-        {
-            Money -= result.TotalCost;
-            result.Paid = result.TotalCost;
-        }
-        else
-        {
-            result.Paid = Money;
-            Money = 0;
-        }
-
-        result.MoneyAfter = Money;
-
+        result.CanPay = money > cost;
         return result;
     }
 
-
     public void DebugPrint()
     {
-        for (int i = 0; i < Needs.Count; i++)
+        foreach (KeyValuePair<FoodTypes, int> entry in Needs)
         {
-            Request need = Needs[i];
-            Request order = Order[i];
+            FoodTypes type = entry.Key;
+            int need = entry.Value;
+            int request = Request[type];
 
-            Debug.Log(need.FoodType + " | Need: " + need.Amount + " | Order: " + order.Amount + " | Quality: " + need.Quality);
+            Debug.Log(type + " | Need: " + need + " | Request: " + request);
         }
+
     }
+
 }

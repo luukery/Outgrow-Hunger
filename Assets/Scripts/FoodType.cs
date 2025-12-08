@@ -15,6 +15,7 @@ public class FoodType : MonoBehaviour
         Fruit,
         Vegetable,
         Bread,
+        Dairy,
         Water
     }
 

@@ -3,10 +3,14 @@ using UnityEngine;
 public class Food : MonoBehaviour
 {
     //Public Variables
+    public int ID; //Unique identifier for each food item.
     public int size;//The amount of space it takes up in the inventory. 
     public string name; //Porkchops, broccoli, tuna etc. Not the food type but the name of the actual food. 
     public FoodType.Type foodType;
     public Quality foodQuality;
+    public Sprite icon;
+    int minPrice;
+    int maxPrice;
 
     public Food (FoodType.Type type, Quality quality, int size, string name)
     {
@@ -14,6 +18,12 @@ public class Food : MonoBehaviour
         this.foodQuality = quality;
         this.size = size;
         this.name = name;
+    }
+
+    public Food GetFoodByID(int ID)
+    {
+        //get food by ID logic
+        return this;
     }
     public enum Quality
     {
