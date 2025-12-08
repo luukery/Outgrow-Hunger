@@ -21,9 +21,9 @@ public class NPC : MonoBehaviour
       //  DebugPrint(result);
     }
 
-    public DeliveryResult Transaction(List<Request> needs, int money, List<Request> playerInput )
+    public DeliveryResult Transaction(List<Request> playerInput )
     {
-        DeliveryResult result = deliveryService.Transaction(needs, money, playerInput);
+        DeliveryResult result = deliveryService.Transaction(Order, Money, playerInput);
         return result;
 
     }
