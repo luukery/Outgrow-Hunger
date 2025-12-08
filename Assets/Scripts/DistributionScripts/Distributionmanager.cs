@@ -18,7 +18,7 @@ public class Distributionmanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(SpawnNPC());
+        SpawnNPC();
 
         feedButton = canvas.transform.Find("FeedButton").GetComponent<Button>();
         denyButton = canvas.transform.Find("DenyButton").GetComponent<Button>();
@@ -103,6 +103,6 @@ public class Distributionmanager : MonoBehaviour
     {
         // temp text
         dialogue.text = "Denied NPC Food";
-        StartCoroutine(SpawnNPC());
+        SpawnNPC();
     }
 }
