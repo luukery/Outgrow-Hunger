@@ -5,7 +5,6 @@ public class Request
     public int Amount;
     public FoodType.Type FoodType;
     public Food.Quality Quality;
-    public bool Possible = false;
 
     public Request(int amount, FoodType.Type foodType, Food.Quality quality)
     {
