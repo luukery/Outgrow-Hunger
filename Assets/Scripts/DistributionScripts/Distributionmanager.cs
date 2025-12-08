@@ -33,6 +33,8 @@ public class Distributionmanager : MonoBehaviour
             dropdowns.Add(dropdown);
         }
 
+        foodselect.SetActive(false);
+
         ChangeButtonFunction(false);
     }
 
@@ -77,7 +79,7 @@ public class Distributionmanager : MonoBehaviour
             feedbuttonText.text = "Give food";
             denybuttonText.text = "Cancel selection";
 
-            feedButton.onClick.AddListener(() => SendDelivery(orderinfo));
+            // feedButton.onClick.AddListener(() => SendDelivery(orderinfo));
             // denybutton function needs to be added later
             denyButton.onClick.AddListener(Deny);
         }
@@ -109,9 +111,9 @@ public class Distributionmanager : MonoBehaviour
         // dialogue needs to be reenabled eventually
         dialogue.gameObject.SetActive(false);
 
-        NpcInfoDTO orderinfo = currentNPC.GetInfoDTO();
+        NpcInfoDTO npcDTO = currentNPC.GetInfoDTO();
         // cant do a foreach loop bc there's multiple lists in dto 
-        for (int index = 0; index < orderinfo.Needs.Count; index++)
+        for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
             // temp break bc there's only 4 dropdowns
             if (index >= 5)
@@ -119,8 +121,8 @@ public class Distributionmanager : MonoBehaviour
             TMP_Dropdown dropdown = dropdowns[index];
             // fix later
             TextMeshProUGUI ordertext = dropdown.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
-            Request need = orderinfo.Needs[index];
-            Request order = orderinfo.Order[index];
+            Request need = npcDTO.Needs[index];
+            Request order = npcDTO.Order[index];
             ordertext.text = "Need: " + need.Amount + "\nOrder: " + order.Amount;
             dropdown.ClearOptions();
             List<string> options = new();
@@ -129,29 +131,33 @@ public class Distributionmanager : MonoBehaviour
                 options.Add(a.ToString());
             }
             dropdown.AddOptions(options);
-        }    
+        }
+
+        feedButton.onClick.RemoveAllListeners();
+        feedButton.onClick.AddListener(() => SendDelivery(npcDTO));
     }
 
 
-    private void SendDelivery(NpcInfoDTO orderinfo)
+    private void SendDelivery(NpcInfoDTO npcDTO)
     {
         List<Request> requests = new();
 
-        for (int index = 0; index < orderinfo.Needs.Count; index++)
+        for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
             // temp break bc there's only 4 dropdowns
             if (index >= 5)
                 break;
             TMP_Dropdown dropdown = dropdowns[index];
 
-            Request need = orderinfo.Needs[index];
+            Request need = npcDTO.Needs[index];
 
             // geen idee hoe we quality gaan handelen, voor nu is het temp
             Request sendrequest = new(dropdown.value, need.FoodType, need.Quality);
             requests.Add(sendrequest);
         }
+
         Debug.Log("NPC recieved delivery");
-        currentNPC.ReceiveDelivery(requests);
+        currentNPC.Transaction(requests);
     }
 
 
