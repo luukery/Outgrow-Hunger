@@ -27,7 +27,9 @@ public class DeliveryResult
     public int AmountPaid;
     public int PaymentShortfall;
 
+    public int NpcMoneyBefore;
     public int NpcMoneyAfter;
 }
+
 
 

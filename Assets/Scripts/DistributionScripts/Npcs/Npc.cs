@@ -6,15 +6,21 @@ public class NPC : MonoBehaviour
 {
     public List<Request> Needs = new List<Request>();
     public List<Request> Order = new List<Request>();
-
     public List<Request> testRequest = new List<Request>();
+
     public int Money;
+
+    ReceiveDelivery deliveryService = new ReceiveDelivery();
 
     void Start()
     {
         GenerateProfile();
         GenerateTestRequest();
-        DeliveryResult result = ReceiveDelivery(testRequest);
+
+        DeliveryResult result = deliveryService.Transaction(Order, Money, testRequest);
+
+        Money = result.NpcMoneyAfter;
+
         DebugPrint(result);
     }
 
@@ -24,20 +30,16 @@ public class NPC : MonoBehaviour
         Order.Clear();
 
         System.Random rng = new System.Random();
-
         Array foodTypes = Enum.GetValues(typeof(FoodType.Type));
         Array qualities = Enum.GetValues(typeof(Food.Quality));
 
         foreach (FoodType.Type type in foodTypes)
         {
             Food.Quality quality = (Food.Quality)qualities.GetValue(rng.Next(qualities.Length));
-            int needAmount = rng.Next(0, 4);
+            int amount = rng.Next(0, 4);
 
-            Request need = new Request(needAmount, type, quality);
-            Request order = new Request(needAmount, type, quality);
-
-            Needs.Add(need);
-            Order.Add(order);
+            Needs.Add(new Request(amount, type, quality));
+            Order.Add(new Request(amount, type, quality));
         }
 
         Money = rng.Next(0, 21);
@@ -47,121 +49,52 @@ public class NPC : MonoBehaviour
     {
         testRequest.Clear();
 
-        for (int i = 0; i < Needs.Count; i++)
-        {
-            Request n = Needs[i];
-            int deliveredAmount = n.Amount == 0 ? 1 : n.Amount + 1;
-            testRequest.Add(new Request(deliveredAmount, n.FoodType, n.Quality));
-        }
-    }
-
-    public NpcInfoDTO GetInfoDTO()
-    {
-        NpcInfoDTO dto = new NpcInfoDTO();
-
-        List<Request> needsCopy = new List<Request>();
-        for (int i = 0; i < Needs.Count; i++)
-        {
-            Request n = Needs[i];
-            needsCopy.Add(new Request(n.Amount, n.FoodType, n.Quality));
-        }
-
-        List<Request> orderCopy = new List<Request>();
         for (int i = 0; i < Order.Count; i++)
         {
             Request o = Order[i];
-            orderCopy.Add(new Request(o.Amount, o.FoodType, o.Quality));
+            testRequest.Add(new Request(o.Amount, o.FoodType, o.Quality));
         }
-
-        dto.Needs = needsCopy;
-        dto.Order = orderCopy;
-        dto.Money = Money;
-
-        return dto;
     }
-
-    public DeliveryResult ReceiveDelivery(List<Request> given)
-    {
-        DeliveryResult result = new DeliveryResult();
-
-        for (int i = 0; i < Needs.Count; i++)
-        {
-            Request need = Needs[i];
-            Request delivered = given.Find(r => r.FoodType == need.FoodType);
-            int amount = delivered != null ? delivered.Amount : 0;
-
-            if (amount < need.Amount)
-            {
-                int diff = need.Amount - amount;
-                result.TotalFoodShortage += diff;
-                result.Shortages.Add(new Request(diff, need.FoodType, need.Quality));
-            }
-
-            if (amount > need.Amount)
-            {
-                int diff = amount - need.Amount;
-                result.TotalFoodExcess += diff;
-                result.Excesses.Add(new Request(diff, need.FoodType, need.Quality));
-            }
-
-            result.TotalPrice += amount;
-        }
-
-        if (Money >= result.TotalPrice)
-        {
-            Money -= result.TotalPrice;
-            result.AmountPaid = result.TotalPrice;
-        }
-        else
-        {
-            result.AmountPaid = Money;
-            Money = 0;
-        }
-
-        result.PaymentShortfall = result.TotalPrice - result.AmountPaid;
-        result.NpcMoneyAfter = Money;
-
-        return result;
-    }
-
 
     public void DebugPrint(DeliveryResult result)
     {
         Debug.Log("========== NPC PROFILE ==========");
+
+        Debug.Log($"Money Before: {result.NpcMoneyBefore}");
+        Debug.Log($"Money After: {result.NpcMoneyAfter}");
+
         for (int i = 0; i < Needs.Count; i++)
         {
             Request need = Needs[i];
             Request order = Order[i];
-
-            Debug.Log(
-                $"{need.FoodType}  |  Need: {need.Amount}  |  Order: {order.Amount}  |  Quality: {need.Quality}"
-            );
+            Debug.Log($"{need.FoodType} | Need: {need.Amount} | Order: {order.Amount} | Quality: {need.Quality}");
         }
 
         Debug.Log("========== DELIVERY RESULT ==========");
-
         Debug.Log(
             $"Total Price: {result.TotalPrice}\n" +
             $"Paid: {result.AmountPaid}\n" +
-            $"Shortfall: {result.PaymentShortfall}\n" +
-            $"NPC Money After: {result.NpcMoneyAfter}"
+            $"Unpaid: {result.PaymentShortfall}"
         );
 
         Debug.Log("----- Shortages -----");
-        if (result.Shortages.Count == 0)
-            Debug.Log("None");
+        if (result.Shortages.Count == 0) Debug.Log("None");
+        else
+            for (int i = 0; i < result.Shortages.Count; i++)
+            {
+                Request s = result.Shortages[i];
+                Debug.Log($"{s.FoodType} | Missing: {s.Amount} | Quality: {s.Quality}");
+            }
 
-        foreach (var s in result.Shortages)
-            Debug.Log($"• {s.FoodType}  |  Amount Missing: {s.Amount}  |  Quality: {s.Quality}");
-
-        Debug.Log("----- Excesses -----");
-        if (result.Excesses.Count == 0)
-            Debug.Log("None");
-
-        foreach (var e in result.Excesses)
-            Debug.Log($"• {e.FoodType}  |  Extra Given: {e.Amount}  |  Quality: {e.Quality}");
+        Debug.Log("----- Excess (Overdelivery + Unpaid) -----");
+        if (result.Excesses.Count == 0) Debug.Log("None");
+        else
+            for (int i = 0; i < result.Excesses.Count; i++)
+            {
+                Request e = result.Excesses[i];
+                Debug.Log($"{e.FoodType} | Excess: {e.Amount} | Quality: {e.Quality}");
+            }
 
         Debug.Log("====================================");
     }
-
 }
