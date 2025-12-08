@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: b529fc1ccbac1634097d9ac44eca1d38
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2798276826873804487
+    second: Flower 03 (Purple) No Shadows_0
+  - first:
+      213: -6875974436016200780
+    second: Flower 03 (Purple) No Shadows_1
+  - first:
+      213: 4290851750814315903
+    second: Flower 03 (Purple) No Shadows_2
+  - first:
+      213: -8240432833322327369
+    second: Flower 03 (Purple) No Shadows_3
+  - first:
+      213: -4684125602430240309
+    second: Flower 03 (Purple) No Shadows_4
+  - first:
+      213: 2957757494206810513
+    second: Flower 03 (Purple) No Shadows_5
+  - first:
+      213: 6174734612175523134
+    second: Flower 03 (Purple) No Shadows_6
+  - first:
+      213: 2604318701757260713
+    second: Flower 03 (Purple) No Shadows_7
+  - first:
+      213: -913871134150744755
+    second: Flower 03 (Purple) No Shadows_8
+  - first:
+      213: 5968785174069005571
+    second: Flower 03 (Purple) No Shadows_9
+  - first:
+      213: -8629992539926327374
+    second: Flower 03 (Purple) No Shadows_10
+  - first:
+      213: -6691484965566249083
+    second: Flower 03 (Purple) No Shadows_11
+  - first:
+      213: 5441990704122429543
+    second: Flower 03 (Purple) No Shadows_12
+  - first:
+      213: 3128958002533101648
+    second: Flower 03 (Purple) No Shadows_13
+  - first:
+      213: -2007214661365038776
+    second: Flower 03 (Purple) No Shadows_14
+  - first:
+      213: -5150735543029370194
+    second: Flower 03 (Purple) No Shadows_15
+  - first:
+      213: 6100627773329963022
+    second: Flower 03 (Purple) No Shadows_16
+  - first:
+      213: -9073843554980490787
+    second: Flower 03 (Purple) No Shadows_17
+  - first:
+      213: -8839943163847140663
+    second: Flower 03 (Purple) No Shadows_18
+  - first:
+      213: 204678217410661594
+    second: Flower 03 (Purple) No Shadows_19
+  - first:
+      213: -825400673567112831
+    second: Flower 03 (Purple) No Shadows_20
+  - first:
+      213: 1307935079178742699
+    second: Flower 03 (Purple) No Shadows_21
+  - first:
+      213: -716540397916996196
+    second: Flower 03 (Purple) No Shadows_22
+  - first:
+      213: -6107601547341349387
+    second: Flower 03 (Purple) No Shadows_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 939caf64d068a29d0800000000000000
+      internalID: -2798276826873804487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 36
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b366905ea1a390a0800000000000000
+      internalID: -6875974436016200780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 36
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f757627feea2c8b30800000000000000
+      internalID: 4290851750814315903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 36
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b26b5e6ff914ad80800000000000000
+      internalID: -8240432833322327369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc935d70594aefeb0800000000000000
+      internalID: -4684125602430240309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19942f525c01c0920800000000000000
+      internalID: 2957757494206810513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3d08052a6011b550800000000000000
+      internalID: 6174734612175523134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3e52c9f06642420800000000000000
+      internalID: 2604318701757260713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_8
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45267e9b074153f0800000000000000
+      internalID: -913871134150744755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d4009ed7265d250800000000000000
+      internalID: 5968785174069005571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_10
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf8b63328b1c3880800000000000000
+      internalID: -8629992539926327374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_11
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5878e8770e11323a0800000000000000
+      internalID: -6691484965566249083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760023666b5d58b40800000000000000
+      internalID: 5441990704122429543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 050f912b9ba4c6b20800000000000000
+      internalID: 3128958002533101648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 5
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841816176e0f424e0800000000000000
+      internalID: -2007214661365038776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_15
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea271c93059e488b0800000000000000
+      internalID: -5150735543029370194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e08f63823a8c9a450800000000000000
+      internalID: 6100627773329963022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_17
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 5
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd19bedac5b331280800000000000000
+      internalID: -9073843554980490787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_18
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca9f3c4786325580800000000000000
+      internalID: -8839943163847140663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_19
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adcc50a11c927d200800000000000000
+      internalID: 204678217410661594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_20
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 5
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1810aa6e5769b84f0800000000000000
+      internalID: -825400673567112831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_21
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baba8b75608b62210800000000000000
+      internalID: 1307935079178742699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_22
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9db0f2fd465e06f0800000000000000
+      internalID: -716540397916996196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Purple) No Shadows_23
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 5
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fdb71d80c07d3ba0800000000000000
+      internalID: -6107601547341349387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Flower 03 (Purple) No Shadows_0: -2798276826873804487
+      Flower 03 (Purple) No Shadows_1: -6875974436016200780
+      Flower 03 (Purple) No Shadows_10: -8629992539926327374
+      Flower 03 (Purple) No Shadows_11: -6691484965566249083
+      Flower 03 (Purple) No Shadows_12: 5441990704122429543
+      Flower 03 (Purple) No Shadows_13: 3128958002533101648
+      Flower 03 (Purple) No Shadows_14: -2007214661365038776
+      Flower 03 (Purple) No Shadows_15: -5150735543029370194
+      Flower 03 (Purple) No Shadows_16: 6100627773329963022
+      Flower 03 (Purple) No Shadows_17: -9073843554980490787
+      Flower 03 (Purple) No Shadows_18: -8839943163847140663
+      Flower 03 (Purple) No Shadows_19: 204678217410661594
+      Flower 03 (Purple) No Shadows_2: 4290851750814315903
+      Flower 03 (Purple) No Shadows_20: -825400673567112831
+      Flower 03 (Purple) No Shadows_21: 1307935079178742699
+      Flower 03 (Purple) No Shadows_22: -716540397916996196
+      Flower 03 (Purple) No Shadows_23: -6107601547341349387
+      Flower 03 (Purple) No Shadows_3: -8240432833322327369
+      Flower 03 (Purple) No Shadows_4: -4684125602430240309
+      Flower 03 (Purple) No Shadows_5: 2957757494206810513
+      Flower 03 (Purple) No Shadows_6: 6174734612175523134
+      Flower 03 (Purple) No Shadows_7: 2604318701757260713
+      Flower 03 (Purple) No Shadows_8: -913871134150744755
+      Flower 03 (Purple) No Shadows_9: 5968785174069005571
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

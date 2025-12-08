@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: 4ddd87f51f3ddb843851b91727fc7b9a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6154532248205339420
+    second: RVDecoration_0
+  - first:
+      213: 6740154757645223469
+    second: RVDecoration_1
+  - first:
+      213: 8703454479586499542
+    second: RVDecoration_2
+  - first:
+      213: 1308584316939762134
+    second: RVDecoration_3
+  - first:
+      213: -1701183670602594637
+    second: RVDecoration_4
+  - first:
+      213: -9134698135677921801
+    second: RVDecoration_5
+  - first:
+      213: -1163812880632605938
+    second: RVDecoration_6
+  - first:
+      213: 5416765120293661219
+    second: RVDecoration_7
+  - first:
+      213: 1780569769064631558
+    second: RVDecoration_8
+  - first:
+      213: 2710137837565124350
+    second: RVDecoration_9
+  - first:
+      213: -1289729979999627987
+    second: RVDecoration_10
+  - first:
+      213: -7486005550956839859
+    second: RVDecoration_11
+  - first:
+      213: 8431812643142808544
+    second: RVDecoration_12
+  - first:
+      213: -3495941080830337855
+    second: RVDecoration_13
+  - first:
+      213: -3428010417305934077
+    second: RVDecoration_14
+  - first:
+      213: 5059297228620631532
+    second: RVDecoration_15
+  - first:
+      213: 5322811435759554631
+    second: RVDecoration_16
+  - first:
+      213: 7111653017911991950
+    second: RVDecoration_17
+  - first:
+      213: 999422091877701052
+    second: RVDecoration_18
+  - first:
+      213: -1474236473173203732
+    second: RVDecoration_19
+  - first:
+      213: -5278211943292983416
+    second: RVDecoration_20
+  - first:
+      213: 8230707005994786579
+    second: RVDecoration_21
+  - first:
+      213: 392057376128375726
+    second: RVDecoration_22
+  - first:
+      213: -4303327040511032357
+    second: RVDecoration_23
+  - first:
+      213: -3912185461879115141
+    second: RVDecoration_24
+  - first:
+      213: 802760253958430333
+    second: RVDecoration_25
+  - first:
+      213: -3052349366279047195
+    second: RVDecoration_26
+  - first:
+      213: 1335872528396605230
+    second: RVDecoration_27
+  - first:
+      213: 8641730109060742349
+    second: RVDecoration_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RVDecoration_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 383
+        width: 145
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e4d8034785b69aa0800000000000000
+      internalID: -6154532248205339420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 351
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d264a9c8a07d98d50800000000000000
+      internalID: 6740154757645223469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 367
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db198e7cb1e8c870800000000000000
+      internalID: 8703454479586499542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_3
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 223
+        width: 66
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d977d9c086092210800000000000000
+      internalID: 1308584316939762134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 369
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b68900077e2468e0800000000000000
+      internalID: -1701183670602594637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f59e7c71780b3180800000000000000
+      internalID: -9134698135677921801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_6
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 351
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e039ed8e95e49dfe0800000000000000
+      internalID: -1163812880632605938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_7
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 351
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a64da7d273c2b40800000000000000
+      internalID: 5416765120293661219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_8
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 272
+        width: 17
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d85e665cad5b810800000000000000
+      internalID: 1780569769064631558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 335
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe1a6c11085c9520800000000000000
+      internalID: 2710137837565124350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_10
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 353
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2553fd9a65f91ee0800000000000000
+      internalID: -1289729979999627987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_11
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 335
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c7d9c2d9d5c1890800000000000000
+      internalID: -7486005550956839859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 336
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e3bc2fdce0d30570800000000000000
+      internalID: 8431812643142808544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_13
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 321
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc9969fb1ceb7fc0800000000000000
+      internalID: -3495941080830337855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 324
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307242610b24d60d0800000000000000
+      internalID: -3428010417305934077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 322
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced0d0d260c363640800000000000000
+      internalID: 5059297228620631532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 322
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 740d5d2accc6ed940800000000000000
+      internalID: 5322811435759554631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_17
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 321
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e9a7a9dbaa1b260800000000000000
+      internalID: 7111653017911991950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 111
+        width: 208
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb55c0fe819aedd00800000000000000
+      internalID: 999422091877701052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4269d0db57a8be0800000000000000
+      internalID: -1474236473173203732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 98
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8872cc6e33600c6b0800000000000000
+      internalID: -5278211943292983416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_21
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 97
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f53aee968593270800000000000000
+      internalID: 8230707005994786579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 97
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab14bb3b1ed07500800000000000000
+      internalID: 392057376128375726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_23
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 63
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3c10e4bd28744c0800000000000000
+      internalID: -4303327040511032357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_24
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 63
+        width: 17
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b727f31dc0025b9c0800000000000000
+      internalID: -3912185461879115141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_25
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 15
+        width: 66
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e9ef0a23af32b00800000000000000
+      internalID: 802760253958430333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 65
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e77c846c60e3a5d0800000000000000
+      internalID: -3052349366279047195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 81
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e275840acf8f98210800000000000000
+      internalID: 1335872528396605230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVDecoration_28
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 0
+        width: 66
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dccfc539fb79de770800000000000000
+      internalID: 8641730109060742349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RVDecoration_0: -6154532248205339420
+      RVDecoration_1: 6740154757645223469
+      RVDecoration_10: -1289729979999627987
+      RVDecoration_11: -7486005550956839859
+      RVDecoration_12: 8431812643142808544
+      RVDecoration_13: -3495941080830337855
+      RVDecoration_14: -3428010417305934077
+      RVDecoration_15: 5059297228620631532
+      RVDecoration_16: 5322811435759554631
+      RVDecoration_17: 7111653017911991950
+      RVDecoration_18: 999422091877701052
+      RVDecoration_19: -1474236473173203732
+      RVDecoration_2: 8703454479586499542
+      RVDecoration_20: -5278211943292983416
+      RVDecoration_21: 8230707005994786579
+      RVDecoration_22: 392057376128375726
+      RVDecoration_23: -4303327040511032357
+      RVDecoration_24: -3912185461879115141
+      RVDecoration_25: 802760253958430333
+      RVDecoration_26: -3052349366279047195
+      RVDecoration_27: 1335872528396605230
+      RVDecoration_28: 8641730109060742349
+      RVDecoration_3: 1308584316939762134
+      RVDecoration_4: -1701183670602594637
+      RVDecoration_5: -9134698135677921801
+      RVDecoration_6: -1163812880632605938
+      RVDecoration_7: 5416765120293661219
+      RVDecoration_8: 1780569769064631558
+      RVDecoration_9: 2710137837565124350
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
