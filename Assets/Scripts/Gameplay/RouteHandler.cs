@@ -6,23 +6,33 @@ using TMPro;
 
 public class RouteHandler : MonoBehaviour
 {
-    [Header("UI References")]
+    [Header("UI References (Optional — leave empty if using roads instead of buttons)")]
     public Button shortRouteButton;
     public Button mediumRouteButton;
     public Button longRouteButton;
     public TMP_Text resultText;
     public TMP_Text timePassedText;
 
-    float timePassed = 0;
+    public static RouteHandler Instance { get; private set; }
 
-    
+    float timePassed = 0f;
+
+    void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+    // ------------------ ROUTE EVENT CLASS ------------------
     [System.Serializable]
     public class RouteEvent
     {
         public string Name;
         public float ExtraTime;
-        public int FoodLoss;    // unused for now
-        public int GoldLoss;    // unused for now
+        public int FoodLoss;
+        public int GoldLoss;
 
         public RouteEvent(string name, float extraTime, int foodLoss = 0, int goldLoss = 0)
         {
@@ -33,14 +43,13 @@ public class RouteHandler : MonoBehaviour
         }
     }
 
+    // ------------------ EVENT LIST ------------------
     List<RouteEvent> eventList = new List<RouteEvent>
     {
-        // Forest / Nature 
         new("Fallen tree blocking passage", 0.5f),
         new("Tree roots shaking the carriage", 0.25f, 15),
         new("Sudden forest fire (smoke visible)", 1f),
 
-        // Weather 
         new("Heavy rain", 0.5f),
         new("Snowfall", 0.5f, 10),
         new("Hail", 1f),
@@ -49,37 +58,33 @@ public class RouteHandler : MonoBehaviour
         new("Thunderstorm", 0.5f),
         new("Temperature drop causing icy patches", 0.5f),
 
-        // Road & Terrain 
         new("Cows blocking the road", 1f),
         new("Caravan jam or abandoned cart", 0.75f),
         new("Sinkhole opening near the road", 0f, 15),
         new("Poor road maintenance", 0.5f),
         new("River crossing too deep", 0.75f),
 
-        // Human Activity 
         new("Bandits attempting robbery", 0f, 15),
         new("Toll collectors demanding unfair toll", 0f, 0, 10),
         new("Desperate refugees begging for supplies", 0f, 5),
 
-        // Wildlife 
         new("Grazing deer or elk", 0.75f),
         new("Swarm of insects spooking horses", 0.25f),
         new("Predators tracking the carriage", 0f, 10),
 
-        // Geological / Landmark 
         new("Rockslide", 0.5f),
         new("Steep incline straining the horses", 0.5f),
         new("Stream deeper than expected", 0f, 5),
         new("Winds buffeting the carriage", 0f, 10),
     };
 
-    
+    // ------------------ ROUTE CLASS ------------------
     public class Route
     {
-        public string RouteName { get; set; }
-        public float TravelTime { get; set; }
-        public int EventChance { get; set; }
-        public RouteEvent EventData { get; set; }
+        public string RouteName;
+        public float TravelTime;
+        public int EventChance;
+        public RouteEvent EventData;
 
         public Route(string routeName, float travelTime, int eventChance, RouteEvent evt)
         {
@@ -92,62 +97,95 @@ public class RouteHandler : MonoBehaviour
 
     List<Route> routes;
 
-    
+    // ------------------ UNITY LIFECYCLE ------------------
     void Start()
     {
         RouteSetUp();
     }
 
-
     void Update()
     {
-        if (Keyboard.current.rKey.wasPressedThisFrame)
+        if (Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame)
         {
-            routes = GenerateRoutes();
-            SetUpButtons(routes);
+            RouteSetUp();
         }
     }
 
-    
+    // ------------------ MAIN SETUP ------------------
     void RouteSetUp()
     {
         routes = GenerateRoutes();
-        SetUpButtons(routes);
+        SetUpButtons(routes);  // safe — does nothing if buttons are not assigned
     }
 
-
+    // ------------------ BUTTON SETUP ------------------
     void SetUpButtons(List<Route> routes)
     {
-        // Clear listeners
-        shortRouteButton.onClick.RemoveAllListeners();
-        mediumRouteButton.onClick.RemoveAllListeners();
-        longRouteButton.onClick.RemoveAllListeners();
+        bool usingButtons =
+            shortRouteButton != null ||
+            mediumRouteButton != null ||
+            longRouteButton != null;
 
-        // Assign listeners
-        shortRouteButton.onClick.AddListener(() => HandleRouteSelection(routes[0]));
-        mediumRouteButton.onClick.AddListener(() => HandleRouteSelection(routes[1]));
-        longRouteButton.onClick.AddListener(() => HandleRouteSelection(routes[2]));
+        if (!usingButtons)
+            return; // you are using roads, not buttons — skip everything
 
-        UpdateButtonText(shortRouteButton, routes[0]);
-        UpdateButtonText(mediumRouteButton, routes[1]);
-        UpdateButtonText(longRouteButton, routes[2]);
+        // SHORT BUTTON
+        if (shortRouteButton != null)
+        {
+            shortRouteButton.onClick.RemoveAllListeners();
+            shortRouteButton.onClick.AddListener(() => HandleRouteSelection(routes[0]));
+            UpdateButtonText(shortRouteButton, routes[0]);
+        }
 
-        resultText.text = "Choose a route!";
+        // MEDIUM BUTTON
+        if (mediumRouteButton != null)
+        {
+            mediumRouteButton.onClick.RemoveAllListeners();
+            mediumRouteButton.onClick.AddListener(() => HandleRouteSelection(routes[1]));
+            UpdateButtonText(mediumRouteButton, routes[1]);
+        }
+
+        // LONG BUTTON
+        if (longRouteButton != null)
+        {
+            longRouteButton.onClick.RemoveAllListeners();
+            longRouteButton.onClick.AddListener(() => HandleRouteSelection(routes[2]));
+            UpdateButtonText(longRouteButton, routes[2]);
+        }
+
+        if (resultText != null)
+            resultText.text = "Choose a route!";
     }
 
     void UpdateButtonText(Button btn, Route route)
     {
+        if (btn == null) return;
+
+        TMP_Text tmp = btn.GetComponentInChildren<TMP_Text>();
+        if (tmp == null) return;
+
         string eventText = route.EventData == null ?
             "Event: None" :
             $"Event: {route.EventData.Name} (+{route.EventData.ExtraTime}h)";
 
-        btn.GetComponentInChildren<TMP_Text>().text =
+        tmp.text =
             $"{route.RouteName}\n" +
             $"Time: {route.TravelTime}h\n" +
             $"Chance: {route.EventChance}%\n" +
             $"{eventText}";
     }
 
+    // ------------------ ROUTE SELECTION ------------------
+    public void SelectRouteByIndex(int index)
+    {
+        if (routes == null || routes.Count <= index)
+        {
+            Debug.LogWarning("Route index out of range.");
+            return;
+        }
+
+        HandleRouteSelection(routes[index]);
+    }
 
     void HandleRouteSelection(Route route)
     {
@@ -158,18 +196,22 @@ public class RouteHandler : MonoBehaviour
 
         timePassed += totalTime;
 
-        // Event result text
-        if (route.EventData == null)
-            resultText.text = "No event happened.";
-        else
-            resultText.text = $"{route.EventData.Name}\n(+{route.EventData.ExtraTime}h)";
+        // Update UI only if it exists
+        if (resultText != null)
+        {
+            if (route.EventData == null)
+                resultText.text = "No event happened.";
+            else
+                resultText.text = $"{route.EventData.Name}\n(+{route.EventData.ExtraTime}h)";
+        }
 
-        timePassedText.text = $"Time Passed: {timePassed}h";
+        if (timePassedText != null)
+            timePassedText.text = $"Time Passed: {timePassed}h";
 
         RouteSetUp();
     }
 
-
+    // ------------------ RANDOM EVENT GENERATION ------------------
     RouteEvent GetRandomEvent(int eventChance)
     {
         int roll = Random.Range(1, 101);
@@ -179,20 +221,15 @@ public class RouteHandler : MonoBehaviour
         return eventList[Random.Range(0, eventList.Count)];
     }
 
-
     List<Route> GenerateRoutes()
     {
         float shortRouteTime = Mathf.Round(Random.Range(2f, 4f) * 4f) / 4f;
         float mediumRouteTime = Mathf.Round(Random.Range(4f, 6f) * 4f) / 4f;
         float longRouteTime = Mathf.Round(Random.Range(6f, 8f) * 4f) / 4f;
 
-        int shortChance = 75;
-        int mediumChance = 55;
-        int longChance = 35;
-
-        Route shortRoute = new("Short Route", shortRouteTime, shortChance, GetRandomEvent(shortChance));
-        Route mediumRoute = new("Medium Route", mediumRouteTime, mediumChance, GetRandomEvent(mediumChance));
-        Route longRoute = new("Long Route", longRouteTime, longChance, GetRandomEvent(longChance));
+        Route shortRoute = new("Short Route", shortRouteTime, 75, GetRandomEvent(75));
+        Route mediumRoute = new("Medium Route", mediumRouteTime, 55, GetRandomEvent(55));
+        Route longRoute = new("Long Route", longRouteTime, 35, GetRandomEvent(35));
 
         return new List<Route> { shortRoute, mediumRoute, longRoute };
     }
