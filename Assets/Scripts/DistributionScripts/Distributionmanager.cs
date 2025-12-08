@@ -110,6 +110,7 @@ public class Distributionmanager : MonoBehaviour
         npcDTO = currentNPC.GetInfoDTO();
 
         // cant do a foreach loop bc there's multiple lists in dto 
+        // skip if need = 0
         for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
             TMP_Dropdown dropdown = dropdowns[index];
