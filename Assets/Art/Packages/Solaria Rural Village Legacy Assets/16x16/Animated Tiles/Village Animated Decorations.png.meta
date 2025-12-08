@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: a246e79881decfc4f82441061a7ffd5a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6023622626928822723
+    second: Village Animated Decorations_0
+  - first:
+      213: -4888784762079091094
+    second: Village Animated Decorations_1
+  - first:
+      213: 4276291557148270947
+    second: Village Animated Decorations_2
+  - first:
+      213: -3602921992505670515
+    second: Village Animated Decorations_3
+  - first:
+      213: 3956993566072686600
+    second: Village Animated Decorations_4
+  - first:
+      213: -1116523916987989254
+    second: Village Animated Decorations_5
+  - first:
+      213: 562084667466049279
+    second: Village Animated Decorations_6
+  - first:
+      213: 3099581894058386710
+    second: Village Animated Decorations_7
+  - first:
+      213: 5145857360241732517
+    second: Village Animated Decorations_8
+  - first:
+      213: 7839970434239838667
+    second: Village Animated Decorations_9
+  - first:
+      213: -6091691118905014193
+    second: Village Animated Decorations_10
+  - first:
+      213: 3363678552793133348
+    second: Village Animated Decorations_11
+  - first:
+      213: -5684937336500811195
+    second: Village Animated Decorations_12
+  - first:
+      213: -5111132631488541923
+    second: Village Animated Decorations_13
+  - first:
+      213: 25585919129899372
+    second: Village Animated Decorations_14
+  - first:
+      213: 7848068474560980540
+    second: Village Animated Decorations_15
+  - first:
+      213: -7921048149014490200
+    second: Village Animated Decorations_16
+  - first:
+      213: 9040397768499457224
+    second: Village Animated Decorations_17
+  - first:
+      213: -6237850096124399876
+    second: Village Animated Decorations_18
+  - first:
+      213: 4463969705369292210
+    second: Village Animated Decorations_19
+  - first:
+      213: -3631073894275252065
+    second: Village Animated Decorations_20
+  - first:
+      213: 3050595677281139926
+    second: Village Animated Decorations_21
+  - first:
+      213: -7974333479692421007
+    second: Village Animated Decorations_22
+  - first:
+      213: -5529110063703993656
+    second: Village Animated Decorations_23
+  - first:
+      213: -7369757732796902166
+    second: Village Animated Decorations_24
+  - first:
+      213: 6151771615038541013
+    second: Village Animated Decorations_25
+  - first:
+      213: 2502376166534286703
+    second: Village Animated Decorations_26
+  - first:
+      213: 7240457154584078985
+    second: Village Animated Decorations_27
+  - first:
+      213: 8551310126959606374
+    second: Village Animated Decorations_28
+  - first:
+      213: 7838739868402322759
+    second: Village Animated Decorations_29
+  - first:
+      213: -2156550725098856991
+    second: Village Animated Decorations_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Village Animated Decorations_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 129
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9091b5dd4389350800000000000000
+      internalID: 6023622626928822723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 129
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a66eee8292c872cb0800000000000000
+      internalID: -4888784762079091094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 129
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36123d3b380785b30800000000000000
+      internalID: 4276291557148270947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 129
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d84c1437989dffdc0800000000000000
+      internalID: -3602921992505670515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808c44ceea01ae630800000000000000
+      internalID: 3956993566072686600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 55
+        width: 95
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af204b0c96f4180f0800000000000000
+      internalID: -1116523916987989254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6e10ae60decc700800000000000000
+      internalID: 562084667466049279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61525937f4de30b20800000000000000
+      internalID: 3099581894058386710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aba9065102c96740800000000000000
+      internalID: 5145857360241732517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_9
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 56
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc93e6e629b2dcc60800000000000000
+      internalID: 7839970434239838667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_10
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 56
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48c348d337f57ba0800000000000000
+      internalID: -6091691118905014193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_11
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 55
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421b5dd72df2eae20800000000000000
+      internalID: 3363678552793133348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_12
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 56
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a838fcc9b0b11b0800000000000000
+      internalID: -5684937336500811195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 39
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1bc73c93fb9119b0800000000000000
+      internalID: -5111132631488541923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_14
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 40
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c615df40246ea5000800000000000000
+      internalID: 25585919129899372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 39
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36262f52b0f9ec60800000000000000
+      internalID: 7848068474560980540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_16
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 39
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3d93d0da8c21290800000000000000
+      internalID: -7921048149014490200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_17
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 40
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cce4a35fd1f57d70800000000000000
+      internalID: 9040397768499457224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_18
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 39
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe6e5a1364be69a0800000000000000
+      internalID: -6237850096124399876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 24
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd44a0cbc433fd30800000000000000
+      internalID: 4463969705369292210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 23
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f90878a0885db9dc0800000000000000
+      internalID: -3631073894275252065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_21
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 24
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc3fa11b94e55a20800000000000000
+      internalID: 3050595677281139926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_22
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 24
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178bd6633f9755190800000000000000
+      internalID: -7974333479692421007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_23
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 23
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c2d2e801b7a443b0800000000000000
+      internalID: -5529110063703993656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_24
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 24
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae4d3ff736c59b990800000000000000
+      internalID: -7369757732796902166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_25
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 7
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc04bdb0bb7f5550800000000000000
+      internalID: 6151771615038541013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_26
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 8
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d0ea48dd93ab220800000000000000
+      internalID: 2502376166534286703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_27
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 7
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a6b66ab654b7460800000000000000
+      internalID: 7240457154584078985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_28
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 7
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ab0a1f04b5ca670800000000000000
+      internalID: 8551310126959606374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_29
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 8
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d00def06cc8cc60800000000000000
+      internalID: 7838739868402322759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village Animated Decorations_30
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 7
+        width: 46
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed1f5a9a846212e0800000000000000
+      internalID: -2156550725098856991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Village Animated Decorations_0: 6023622626928822723
+      Village Animated Decorations_1: -4888784762079091094
+      Village Animated Decorations_10: -6091691118905014193
+      Village Animated Decorations_11: 3363678552793133348
+      Village Animated Decorations_12: -5684937336500811195
+      Village Animated Decorations_13: -5111132631488541923
+      Village Animated Decorations_14: 25585919129899372
+      Village Animated Decorations_15: 7848068474560980540
+      Village Animated Decorations_16: -7921048149014490200
+      Village Animated Decorations_17: 9040397768499457224
+      Village Animated Decorations_18: -6237850096124399876
+      Village Animated Decorations_19: 4463969705369292210
+      Village Animated Decorations_2: 4276291557148270947
+      Village Animated Decorations_20: -3631073894275252065
+      Village Animated Decorations_21: 3050595677281139926
+      Village Animated Decorations_22: -7974333479692421007
+      Village Animated Decorations_23: -5529110063703993656
+      Village Animated Decorations_24: -7369757732796902166
+      Village Animated Decorations_25: 6151771615038541013
+      Village Animated Decorations_26: 2502376166534286703
+      Village Animated Decorations_27: 7240457154584078985
+      Village Animated Decorations_28: 8551310126959606374
+      Village Animated Decorations_29: 7838739868402322759
+      Village Animated Decorations_3: -3602921992505670515
+      Village Animated Decorations_30: -2156550725098856991
+      Village Animated Decorations_4: 3956993566072686600
+      Village Animated Decorations_5: -1116523916987989254
+      Village Animated Decorations_6: 562084667466049279
+      Village Animated Decorations_7: 3099581894058386710
+      Village Animated Decorations_8: 5145857360241732517
+      Village Animated Decorations_9: 7839970434239838667
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

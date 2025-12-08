@@ -1,0 +1,2769 @@
+fileFormatVersion: 2
+guid: f1b844ace2ec8aa4c945ddeea3af225b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4502313748573500705
+    second: Rural Village Terrain No Shadows_0
+  - first:
+      213: -7656217194986694925
+    second: Rural Village Terrain No Shadows_1
+  - first:
+      213: -8952978262018997890
+    second: Rural Village Terrain No Shadows_2
+  - first:
+      213: 7572542538029676292
+    second: Rural Village Terrain No Shadows_3
+  - first:
+      213: 1268463179154592529
+    second: Rural Village Terrain No Shadows_4
+  - first:
+      213: 2539912589813363323
+    second: Rural Village Terrain No Shadows_5
+  - first:
+      213: -4904723651660135825
+    second: Rural Village Terrain No Shadows_6
+  - first:
+      213: 8772919780469019806
+    second: Rural Village Terrain No Shadows_7
+  - first:
+      213: 9012786052071578641
+    second: Rural Village Terrain No Shadows_8
+  - first:
+      213: -4691873099330262752
+    second: Rural Village Terrain No Shadows_9
+  - first:
+      213: 2609871976901635728
+    second: Rural Village Terrain No Shadows_10
+  - first:
+      213: 4404469597752531481
+    second: Rural Village Terrain No Shadows_11
+  - first:
+      213: 5972040912670793432
+    second: Rural Village Terrain No Shadows_12
+  - first:
+      213: -3093846058554097939
+    second: Rural Village Terrain No Shadows_13
+  - first:
+      213: 1038119891028342903
+    second: Rural Village Terrain No Shadows_14
+  - first:
+      213: -1484509925741938036
+    second: Rural Village Terrain No Shadows_15
+  - first:
+      213: 3887087502088635451
+    second: Rural Village Terrain No Shadows_16
+  - first:
+      213: 8633742830712213436
+    second: Rural Village Terrain No Shadows_17
+  - first:
+      213: -3247416602635076981
+    second: Rural Village Terrain No Shadows_18
+  - first:
+      213: -9109218772442547812
+    second: Rural Village Terrain No Shadows_19
+  - first:
+      213: 4895881297999497849
+    second: Rural Village Terrain No Shadows_20
+  - first:
+      213: -8884158468003951959
+    second: Rural Village Terrain No Shadows_21
+  - first:
+      213: 7306264289163021144
+    second: Rural Village Terrain No Shadows_22
+  - first:
+      213: 942222036265239207
+    second: Rural Village Terrain No Shadows_23
+  - first:
+      213: 3330662310332804980
+    second: Rural Village Terrain No Shadows_24
+  - first:
+      213: -3851159819330724398
+    second: Rural Village Terrain No Shadows_25
+  - first:
+      213: 5537213441535484355
+    second: Rural Village Terrain No Shadows_26
+  - first:
+      213: -3361241715512990311
+    second: Rural Village Terrain No Shadows_27
+  - first:
+      213: -4881879046572729827
+    second: Rural Village Terrain No Shadows_28
+  - first:
+      213: -8199181387311982577
+    second: Rural Village Terrain No Shadows_29
+  - first:
+      213: -568678865613840680
+    second: Rural Village Terrain No Shadows_30
+  - first:
+      213: 7611706356698893328
+    second: Rural Village Terrain No Shadows_31
+  - first:
+      213: 8607912825969444113
+    second: Rural Village Terrain No Shadows_32
+  - first:
+      213: -1693577169360181027
+    second: Rural Village Terrain No Shadows_33
+  - first:
+      213: 6597777058163957270
+    second: Rural Village Terrain No Shadows_34
+  - first:
+      213: -4519422791279604241
+    second: Rural Village Terrain No Shadows_35
+  - first:
+      213: 1591687435592092634
+    second: Rural Village Terrain No Shadows_36
+  - first:
+      213: 4767069580569039950
+    second: Rural Village Terrain No Shadows_37
+  - first:
+      213: -1407407193964229152
+    second: Rural Village Terrain No Shadows_38
+  - first:
+      213: 6234487985479843598
+    second: Rural Village Terrain No Shadows_39
+  - first:
+      213: -5541551654918795960
+    second: Rural Village Terrain No Shadows_40
+  - first:
+      213: 3508607971957687828
+    second: Rural Village Terrain No Shadows_41
+  - first:
+      213: -5729281318675722362
+    second: Rural Village Terrain No Shadows_42
+  - first:
+      213: 815370921857398037
+    second: Rural Village Terrain No Shadows_43
+  - first:
+      213: 8841103653261908634
+    second: Rural Village Terrain No Shadows_44
+  - first:
+      213: 3962056610874925650
+    second: Rural Village Terrain No Shadows_45
+  - first:
+      213: -6641959653378212724
+    second: Rural Village Terrain No Shadows_46
+  - first:
+      213: -3628966664755149577
+    second: Rural Village Terrain No Shadows_47
+  - first:
+      213: 7902382865438975005
+    second: Rural Village Terrain No Shadows_48
+  - first:
+      213: -4654966949255453491
+    second: Rural Village Terrain No Shadows_49
+  - first:
+      213: -1184913723029793538
+    second: Rural Village Terrain No Shadows_50
+  - first:
+      213: 7945627614084303055
+    second: Rural Village Terrain No Shadows_51
+  - first:
+      213: -1853750747779967465
+    second: Rural Village Terrain No Shadows_52
+  - first:
+      213: -6431420618075287533
+    second: Rural Village Terrain No Shadows_53
+  - first:
+      213: 2241888827036411985
+    second: Rural Village Terrain No Shadows_54
+  - first:
+      213: -4138218339084276081
+    second: Rural Village Terrain No Shadows_55
+  - first:
+      213: 7247721131980013007
+    second: Rural Village Terrain No Shadows_56
+  - first:
+      213: -7532214470542976044
+    second: Rural Village Terrain No Shadows_57
+  - first:
+      213: 7818416773615320043
+    second: Rural Village Terrain No Shadows_58
+  - first:
+      213: 1373735066324685805
+    second: Rural Village Terrain No Shadows_59
+  - first:
+      213: -6828436408382077367
+    second: Rural Village Terrain No Shadows_60
+  - first:
+      213: 866165335695970939
+    second: Rural Village Terrain No Shadows_61
+  - first:
+      213: -7389851069782924150
+    second: Rural Village Terrain No Shadows_62
+  - first:
+      213: 3731311428600710396
+    second: Rural Village Terrain No Shadows_63
+  - first:
+      213: 3934928322827358993
+    second: Rural Village Terrain No Shadows_64
+  - first:
+      213: 4629240210142676957
+    second: Rural Village Terrain No Shadows_65
+  - first:
+      213: -5813458018940360652
+    second: Rural Village Terrain No Shadows_66
+  - first:
+      213: 6718039592795545231
+    second: Rural Village Terrain No Shadows_67
+  - first:
+      213: -7945100334839757956
+    second: Rural Village Terrain No Shadows_68
+  - first:
+      213: 2107329784080119935
+    second: Rural Village Terrain No Shadows_69
+  - first:
+      213: 7451377326910623162
+    second: Rural Village Terrain No Shadows_70
+  - first:
+      213: -8923122296388948921
+    second: Rural Village Terrain No Shadows_71
+  - first:
+      213: 9004100990642145465
+    second: Rural Village Terrain No Shadows_72
+  - first:
+      213: -2011388818183711917
+    second: Rural Village Terrain No Shadows_73
+  - first:
+      213: -297800938513738047
+    second: Rural Village Terrain No Shadows_74
+  - first:
+      213: -3893187444911516355
+    second: Rural Village Terrain No Shadows_75
+  - first:
+      213: -3746889791529874791
+    second: Rural Village Terrain No Shadows_76
+  - first:
+      213: -2927157594445465395
+    second: Rural Village Terrain No Shadows_77
+  - first:
+      213: -2460176085968167122
+    second: Rural Village Terrain No Shadows_78
+  - first:
+      213: -7984676006121950150
+    second: Rural Village Terrain No Shadows_79
+  - first:
+      213: -917805506712739881
+    second: Rural Village Terrain No Shadows_80
+  - first:
+      213: 1892402236596160230
+    second: Rural Village Terrain No Shadows_81
+  - first:
+      213: 4091117979989943819
+    second: Rural Village Terrain No Shadows_82
+  - first:
+      213: -2560318215927058038
+    second: Rural Village Terrain No Shadows_83
+  - first:
+      213: 4555959912869841607
+    second: Rural Village Terrain No Shadows_84
+  - first:
+      213: 120912846600684242
+    second: Rural Village Terrain No Shadows_85
+  - first:
+      213: -586038686565132708
+    second: Rural Village Terrain No Shadows_86
+  - first:
+      213: 3008058464141858147
+    second: Rural Village Terrain No Shadows_87
+  - first:
+      213: -6550325726102986996
+    second: Rural Village Terrain No Shadows_88
+  - first:
+      213: -3482017618703377271
+    second: Rural Village Terrain No Shadows_89
+  - first:
+      213: 9015994139998504872
+    second: Rural Village Terrain No Shadows_90
+  - first:
+      213: 8819739125299519280
+    second: Rural Village Terrain No Shadows_91
+  - first:
+      213: 1721996432268211918
+    second: Rural Village Terrain No Shadows_92
+  - first:
+      213: 5543440382394535637
+    second: Rural Village Terrain No Shadows_93
+  - first:
+      213: -3199658680215936297
+    second: Rural Village Terrain No Shadows_94
+  - first:
+      213: 3374023466880483938
+    second: Rural Village Terrain No Shadows_95
+  - first:
+      213: -6173367952201341509
+    second: Rural Village Terrain No Shadows_96
+  - first:
+      213: 8296204488895557284
+    second: Rural Village Terrain No Shadows_97
+  - first:
+      213: -7324453940970630911
+    second: Rural Village Terrain No Shadows_98
+  - first:
+      213: -1156194839784289376
+    second: Rural Village Terrain No Shadows_99
+  - first:
+      213: -4003992453547455760
+    second: Rural Village Terrain No Shadows_100
+  - first:
+      213: 612774143236539030
+    second: Rural Village Terrain No Shadows_101
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 416
+        height: 705
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fda4becff719481c0800000000000000
+      internalID: -4502313748573500705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_1
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 818
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f694998607afb590800000000000000
+      internalID: -7656217194986694925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_2
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 816
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e714092a4b1a0c380800000000000000
+      internalID: -8952978262018997890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_3
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 607
+        width: 66
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4073bc93153171960800000000000000
+      internalID: 7572542538029676292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_4
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 607
+        width: 66
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1131c247a8c7a9110800000000000000
+      internalID: 1268463179154592529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_5
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 852
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b723e5c1b059f3320800000000000000
+      internalID: 2539912589813363323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_6
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 852
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62475d33dbeeebb0800000000000000
+      internalID: -4904723651660135825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_7
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 852
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e949ad53f0cafb970800000000000000
+      internalID: 8772919780469019806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_8
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 854
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c525e9929d31d70800000000000000
+      internalID: 9012786052071578641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_9
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 851
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0296537564e13eeb0800000000000000
+      internalID: -4691873099330262752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_10
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 815
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ee77c3cb0283420800000000000000
+      internalID: 2609871976901635728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_11
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 703
+        width: 219
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a1c0663c1df1d30800000000000000
+      internalID: 4404469597752531481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_12
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 835
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de97df9193f0e250800000000000000
+      internalID: 5972040912670793432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_13
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 834
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deef322d6637015d0800000000000000
+      internalID: -3093846058554097939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_14
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 836
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778f20b6a84286e00800000000000000
+      internalID: 1038119891028342903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_15
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 839
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a3c9a7616f56be0800000000000000
+      internalID: -1484509925741938036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_16
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 833
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b348adc0d75b1f530800000000000000
+      internalID: 3887087502088635451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_17
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 839
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf4daa6c5731d770800000000000000
+      internalID: 8633742830712213436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_18
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 833
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8afa323ecbdee2d0800000000000000
+      internalID: -3247416602635076981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_19
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 840
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99fd370acd859180800000000000000
+      internalID: -9109218772442547812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_20
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 818
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a0dbdd91aa1f340800000000000000
+      internalID: 4895881297999497849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_21
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 818
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa885291f025b480800000000000000
+      internalID: -8884158468003951959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_22
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 821
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b0fa629a0156560800000000000000
+      internalID: 7306264289163021144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_23
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 819
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2822b23f1731d00800000000000000
+      internalID: 942222036265239207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_24
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 823
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f2b2289b3e83e20800000000000000
+      internalID: 3330662310332804980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_25
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 802
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ddd8837c8eed8ac0800000000000000
+      internalID: -3851159819330724398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_26
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 800
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1ad34a94228dc40800000000000000
+      internalID: 5537213441535484355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_27
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 792
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995af96e7787a51d0800000000000000
+      internalID: -3361241715512990311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_28
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 754
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1a1c985fd4104cb0800000000000000
+      internalID: -4881879046572729827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_29
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 752
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f08564828f7a63e80800000000000000
+      internalID: -8199181387311982577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_30
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 788
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de90dfa595ab18f0800000000000000
+      internalID: -568678865613840680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_31
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 788
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01cce955a9632a960800000000000000
+      internalID: 7611706356698893328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_32
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 788
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1150079cb13757770800000000000000
+      internalID: 8607912825969444113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_33
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 790
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8239499843f78e0800000000000000
+      internalID: -1693577169360181027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_34
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 787
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e95132743009b50800000000000000
+      internalID: 6597777058163957270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_35
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 777
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed89ff8ae8c741c0800000000000000
+      internalID: -4519422791279604241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_36
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 771
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb4bef1a4fc61610800000000000000
+      internalID: 1591687435592092634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_37
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 770
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e445369c688082240800000000000000
+      internalID: 4767069580569039950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_38
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 772
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0edce652d92e77ce0800000000000000
+      internalID: -1407407193964229152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_39
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 775
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f77f28ac9558650800000000000000
+      internalID: 6234487985479843598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_40
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 775
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d461851247813b0800000000000000
+      internalID: -5541551654918795960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_41
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 776
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41644a07c5411b030800000000000000
+      internalID: 3508607971957687828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_42
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 769
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f4d06eef08d70b0800000000000000
+      internalID: -5729281318675722362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_43
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 769
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5153e7d8887c05b00800000000000000
+      internalID: 815370921857398037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_44
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 735
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a95133ee8e1ba70800000000000000
+      internalID: 8841103653261908634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_45
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 754
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2522037ee7d0cf630800000000000000
+      internalID: 3962056610874925650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_46
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 754
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8c3ae7c2e403d3a0800000000000000
+      internalID: -6641959653378212724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_47
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 757
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f40985ab0253adc0800000000000000
+      internalID: -3628966664755149577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_48
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 755
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d14af95f857eaad60800000000000000
+      internalID: 7902382865438975005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_49
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 759
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4e174093c366fb0800000000000000
+      internalID: -4654966949255453491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_50
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 738
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4d2513f375e8fe0800000000000000
+      internalID: -1184913723029793538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_51
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 736
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8870f973a844e60800000000000000
+      internalID: 7945627614084303055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_52
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716d57834872646e0800000000000000
+      internalID: -1853750747779967465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_53
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 690
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310df72e5010fb6a0800000000000000
+      internalID: -6431420618075287533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_54
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 688
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1582c69920acc1f10800000000000000
+      internalID: 2241888827036411985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_55
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 724
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8eefd788581296c0800000000000000
+      internalID: -4138218339084276081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_56
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 724
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcdb2ce28f3159460800000000000000
+      internalID: 7247721131980013007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_57
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 724
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db9a3fa8d2387790800000000000000
+      internalID: -7532214470542976044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_58
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 726
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bebfb41c1a8908c60800000000000000
+      internalID: 7818416773615320043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_59
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 723
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de3d7c3b3cc701310800000000000000
+      internalID: 1373735066324685805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_60
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 713
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 946ca03e3458c31a0800000000000000
+      internalID: -6828436408382077367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_61
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 707
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b725aee98cc350c00800000000000000
+      internalID: 866165335695970939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_62
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 706
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a846c8aea99f17990800000000000000
+      internalID: -7389851069782924150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_63
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 708
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf4c91899f748c330800000000000000
+      internalID: 3731311428600710396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_64
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 711
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1139fb2267cab9630800000000000000
+      internalID: 3934928322827358993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_65
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 711
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd74281c17d5e3040800000000000000
+      internalID: 4629240210142676957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_66
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 712
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 438e9689bb2725fa0800000000000000
+      internalID: -5813458018940360652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_67
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 705
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e969b7a654b3d50800000000000000
+      internalID: 6718039592795545231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_68
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 705
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c730a0527555db190800000000000000
+      internalID: -7945100334839757956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_69
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 690
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7832b4064dbe3d10800000000000000
+      internalID: 2107329784080119935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_70
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 690
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd48e1233c986760800000000000000
+      internalID: 7451377326910623162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_71
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 660
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c6e545c83ba2480800000000000000
+      internalID: -8923122296388948921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_72
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 636
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b8c7fc252ef4fc70800000000000000
+      internalID: 9004100990642145465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_73
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 674
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35397f2d68c1614e0800000000000000
+      internalID: -2011388818183711917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_74
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 672
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c65c1ecf9ffddbf0800000000000000
+      internalID: -297800938513738047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_75
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 664
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d35d90655ae98f9c0800000000000000
+      internalID: -3893187444911516355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_76
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 626
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a0353269f500cc0800000000000000
+      internalID: -3746889791529874791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_77
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 624
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8bd753da5a067d0800000000000000
+      internalID: -2927157594445465395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_78
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 660
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fd4f662e2bbddd0800000000000000
+      internalID: -2460176085968167122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_79
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 660
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3434802a7bb03190800000000000000
+      internalID: -7984676006121950150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_80
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 660
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df5d7f11cc4343f0800000000000000
+      internalID: -917805506712739881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_81
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 662
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6087ccec9234a10800000000000000
+      internalID: 1892402236596160230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_82
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 659
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06a38b802296c830800000000000000
+      internalID: 4091117979989943819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_83
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 649
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81b4b3d52ce77cd0800000000000000
+      internalID: -2560318215927058038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_84
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 643
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cac689f6650a3f30800000000000000
+      internalID: 4555959912869841607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_85
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 642
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d24a66e7919da100800000000000000
+      internalID: 120912846600684242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_86
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 644
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5616a66be8fdd7f0800000000000000
+      internalID: -586038686565132708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_87
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 647
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36558ca5c35ceb920800000000000000
+      internalID: 3008058464141858147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_88
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 647
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f578c05719815a0800000000000000
+      internalID: -6550325726102986996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_89
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 648
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c988f9c636dafc0800000000000000
+      internalID: -3482017618703377271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_90
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 641
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a74d9bc6ee3f1d70800000000000000
+      internalID: 9015994139998504872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_91
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 641
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03f97176102066a70800000000000000
+      internalID: 8819739125299519280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_92
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 614
+        width: 130
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec636d1b1a2c5e710800000000000000
+      internalID: 1721996432268211918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_93
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 626
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5de8e2a48a14eec40800000000000000
+      internalID: 5543440382394535637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_94
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 626
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2eb3302678893d0800000000000000
+      internalID: -3199658680215936297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_95
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 610
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2624e3f7770f2de20800000000000000
+      internalID: 3374023466880483938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_96
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 608
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5224d2e8ac35aa0800000000000000
+      internalID: -6173367952201341509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_97
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 564
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aeee98070a022370800000000000000
+      internalID: 8296204488895557284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_98
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 540
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1015cb282ff4a5a90800000000000000
+      internalID: -7324453940970630911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_99
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 518
+        width: 50
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab84834bee54ffe0800000000000000
+      internalID: -1156194839784289376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_100
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 518
+        width: 75
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa85fad316fe68c0800000000000000
+      internalID: -4003992453547455760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain No Shadows_101
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 145
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 692882f26d2018800800000000000000
+      internalID: 612774143236539030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rural Village Terrain No Shadows_0: -4502313748573500705
+      Rural Village Terrain No Shadows_1: -7656217194986694925
+      Rural Village Terrain No Shadows_10: 2609871976901635728
+      Rural Village Terrain No Shadows_100: -4003992453547455760
+      Rural Village Terrain No Shadows_101: 612774143236539030
+      Rural Village Terrain No Shadows_11: 4404469597752531481
+      Rural Village Terrain No Shadows_12: 5972040912670793432
+      Rural Village Terrain No Shadows_13: -3093846058554097939
+      Rural Village Terrain No Shadows_14: 1038119891028342903
+      Rural Village Terrain No Shadows_15: -1484509925741938036
+      Rural Village Terrain No Shadows_16: 3887087502088635451
+      Rural Village Terrain No Shadows_17: 8633742830712213436
+      Rural Village Terrain No Shadows_18: -3247416602635076981
+      Rural Village Terrain No Shadows_19: -9109218772442547812
+      Rural Village Terrain No Shadows_2: -8952978262018997890
+      Rural Village Terrain No Shadows_20: 4895881297999497849
+      Rural Village Terrain No Shadows_21: -8884158468003951959
+      Rural Village Terrain No Shadows_22: 7306264289163021144
+      Rural Village Terrain No Shadows_23: 942222036265239207
+      Rural Village Terrain No Shadows_24: 3330662310332804980
+      Rural Village Terrain No Shadows_25: -3851159819330724398
+      Rural Village Terrain No Shadows_26: 5537213441535484355
+      Rural Village Terrain No Shadows_27: -3361241715512990311
+      Rural Village Terrain No Shadows_28: -4881879046572729827
+      Rural Village Terrain No Shadows_29: -8199181387311982577
+      Rural Village Terrain No Shadows_3: 7572542538029676292
+      Rural Village Terrain No Shadows_30: -568678865613840680
+      Rural Village Terrain No Shadows_31: 7611706356698893328
+      Rural Village Terrain No Shadows_32: 8607912825969444113
+      Rural Village Terrain No Shadows_33: -1693577169360181027
+      Rural Village Terrain No Shadows_34: 6597777058163957270
+      Rural Village Terrain No Shadows_35: -4519422791279604241
+      Rural Village Terrain No Shadows_36: 1591687435592092634
+      Rural Village Terrain No Shadows_37: 4767069580569039950
+      Rural Village Terrain No Shadows_38: -1407407193964229152
+      Rural Village Terrain No Shadows_39: 6234487985479843598
+      Rural Village Terrain No Shadows_4: 1268463179154592529
+      Rural Village Terrain No Shadows_40: -5541551654918795960
+      Rural Village Terrain No Shadows_41: 3508607971957687828
+      Rural Village Terrain No Shadows_42: -5729281318675722362
+      Rural Village Terrain No Shadows_43: 815370921857398037
+      Rural Village Terrain No Shadows_44: 8841103653261908634
+      Rural Village Terrain No Shadows_45: 3962056610874925650
+      Rural Village Terrain No Shadows_46: -6641959653378212724
+      Rural Village Terrain No Shadows_47: -3628966664755149577
+      Rural Village Terrain No Shadows_48: 7902382865438975005
+      Rural Village Terrain No Shadows_49: -4654966949255453491
+      Rural Village Terrain No Shadows_5: 2539912589813363323
+      Rural Village Terrain No Shadows_50: -1184913723029793538
+      Rural Village Terrain No Shadows_51: 7945627614084303055
+      Rural Village Terrain No Shadows_52: -1853750747779967465
+      Rural Village Terrain No Shadows_53: -6431420618075287533
+      Rural Village Terrain No Shadows_54: 2241888827036411985
+      Rural Village Terrain No Shadows_55: -4138218339084276081
+      Rural Village Terrain No Shadows_56: 7247721131980013007
+      Rural Village Terrain No Shadows_57: -7532214470542976044
+      Rural Village Terrain No Shadows_58: 7818416773615320043
+      Rural Village Terrain No Shadows_59: 1373735066324685805
+      Rural Village Terrain No Shadows_6: -4904723651660135825
+      Rural Village Terrain No Shadows_60: -6828436408382077367
+      Rural Village Terrain No Shadows_61: 866165335695970939
+      Rural Village Terrain No Shadows_62: -7389851069782924150
+      Rural Village Terrain No Shadows_63: 3731311428600710396
+      Rural Village Terrain No Shadows_64: 3934928322827358993
+      Rural Village Terrain No Shadows_65: 4629240210142676957
+      Rural Village Terrain No Shadows_66: -5813458018940360652
+      Rural Village Terrain No Shadows_67: 6718039592795545231
+      Rural Village Terrain No Shadows_68: -7945100334839757956
+      Rural Village Terrain No Shadows_69: 2107329784080119935
+      Rural Village Terrain No Shadows_7: 8772919780469019806
+      Rural Village Terrain No Shadows_70: 7451377326910623162
+      Rural Village Terrain No Shadows_71: -8923122296388948921
+      Rural Village Terrain No Shadows_72: 9004100990642145465
+      Rural Village Terrain No Shadows_73: -2011388818183711917
+      Rural Village Terrain No Shadows_74: -297800938513738047
+      Rural Village Terrain No Shadows_75: -3893187444911516355
+      Rural Village Terrain No Shadows_76: -3746889791529874791
+      Rural Village Terrain No Shadows_77: -2927157594445465395
+      Rural Village Terrain No Shadows_78: -2460176085968167122
+      Rural Village Terrain No Shadows_79: -7984676006121950150
+      Rural Village Terrain No Shadows_8: 9012786052071578641
+      Rural Village Terrain No Shadows_80: -917805506712739881
+      Rural Village Terrain No Shadows_81: 1892402236596160230
+      Rural Village Terrain No Shadows_82: 4091117979989943819
+      Rural Village Terrain No Shadows_83: -2560318215927058038
+      Rural Village Terrain No Shadows_84: 4555959912869841607
+      Rural Village Terrain No Shadows_85: 120912846600684242
+      Rural Village Terrain No Shadows_86: -586038686565132708
+      Rural Village Terrain No Shadows_87: 3008058464141858147
+      Rural Village Terrain No Shadows_88: -6550325726102986996
+      Rural Village Terrain No Shadows_89: -3482017618703377271
+      Rural Village Terrain No Shadows_9: -4691873099330262752
+      Rural Village Terrain No Shadows_90: 9015994139998504872
+      Rural Village Terrain No Shadows_91: 8819739125299519280
+      Rural Village Terrain No Shadows_92: 1721996432268211918
+      Rural Village Terrain No Shadows_93: 5543440382394535637
+      Rural Village Terrain No Shadows_94: -3199658680215936297
+      Rural Village Terrain No Shadows_95: 3374023466880483938
+      Rural Village Terrain No Shadows_96: -6173367952201341509
+      Rural Village Terrain No Shadows_97: 8296204488895557284
+      Rural Village Terrain No Shadows_98: -7324453940970630911
+      Rural Village Terrain No Shadows_99: -1156194839784289376
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
