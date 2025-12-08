@@ -12,7 +12,7 @@ public class Distributionmanager : MonoBehaviour
     private Button feedButton, denyButton;
     private TextMeshProUGUI dialogue;
     private GameObject foodselect;
-    private List<Dropdown> dropdowns = new();
+    private List<TMP_Dropdown> dropdowns = new();
 
     private NPC currentNPC;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,12 +25,12 @@ public class Distributionmanager : MonoBehaviour
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
         foodselect = canvas.transform.Find("FoodSelect").gameObject;
 
+
         for (int i = 0; i <= 4 ; i++)
         {
             string dropdownname = "Dropdown" + i;
-            Dropdown dropdown = foodselect.transform.Find(dropdownname).GetComponent<Dropdown>();
+            TMP_Dropdown dropdown = foodselect.transform.Find(dropdownname).GetComponent<TMP_Dropdown>();
             dropdowns.Add(dropdown);
-            Debug.Log(dropdown);
         }
 
         feedButton.onClick.AddListener(HandleAccept);
@@ -49,14 +49,12 @@ public class Distributionmanager : MonoBehaviour
 
     private void SpawnNPC()
     {
-        // despawns NPC and waits 5 seconds before spawning a new one if an NPC is already spawned
         if (currentNPC != null)
         {
             Destroy(currentNPC.gameObject);
             currentNPC = null;
             Debug.Log("Despawned NPC");
         }
-        // Temp text
         currentNPC = spawner.SpawnNPC();
         Debug.Log("Spawned NPC");
     }
@@ -89,13 +87,45 @@ public class Distributionmanager : MonoBehaviour
             // temp break bc there's only 4 dropdowns
             if (index >= 5)
                 break;
-            Dropdown dropdown = dropdowns[index];
-            Debug.Log("Searching on: " + dropdown.name);
+            TMP_Dropdown dropdown = dropdowns[index];
+            // fix later
             TextMeshProUGUI ordertext = dropdown.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
             Request need = orderinfo.Needs[index];
             Request order = orderinfo.Order[index];
             ordertext.text = "Need: " + need.Amount + "\nOrder: " + order.Amount;
+            dropdown.ClearOptions();
+            List<string> options = new();
+            for (int a = 0; a <= need.Amount; a++)
+            {
+                options.Add(a.ToString());
+            }
+            dropdown.AddOptions(options);
         }
+        // listener needs to be readded
+        feedButton.onClick.RemoveListener(HandleAccept);
+        feedButton.onClick.AddListener(() => SendDelivery(orderinfo));
+    }
+
+
+    private void SendDelivery(NpcInfoDTO orderinfo)
+    {
+        List<Request> requests = new();
+
+        for (int index = 0; index < orderinfo.Needs.Count; index++)
+        {
+            // temp break bc there's only 4 dropdowns
+            if (index >= 5)
+                break;
+            TMP_Dropdown dropdown = dropdowns[index];
+
+            Request need = orderinfo.Needs[index];
+
+            // geen idee hoe we quality gaan handelen, voor nu is het temp
+            Request sendrequest = new(dropdown.value, need.FoodType, need.Quality);
+            requests.Add(sendrequest);
+        }
+        Debug.Log("NPC recieved delivery");
+        currentNPC.ReceiveDelivery(requests);
     }
 
 
