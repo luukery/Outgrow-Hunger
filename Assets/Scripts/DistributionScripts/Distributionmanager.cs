@@ -34,11 +34,11 @@ public class Distributionmanager : MonoBehaviour
 
         }
     }
-    
+
     private IEnumerator SpawnNPC()
     {
         // despawns NPC and waits 5 seconds before spawning a new one if an NPC is already spawned
-        if (currentNPC != null) 
+        if (currentNPC != null)
         {
             Destroy(currentNPC.gameObject);
             currentNPC = null;
@@ -47,14 +47,16 @@ public class Distributionmanager : MonoBehaviour
         }
         // Temp text
         currentNPC = spawner.SpawnNPC();
+        HandleDialgoue();
         Debug.Log("Spawned NPC");
     }
 
     private void HandleAccept()
     {
-        // still needs code to handle the accepting of the food
         dialogue.text = "Accepted food";
         StartCoroutine(SpawnNPC());
+
+        // Check if food can be delivered
     }
 
     public void Deny()
@@ -62,5 +64,16 @@ public class Distributionmanager : MonoBehaviour
         // temp text
         dialogue.text = "Denied NPC Food";
         StartCoroutine(SpawnNPC());
+    }
+
+    private void HandleDialogue()
+    {
+        // get dto npc request and order
+        currentNPC.getInfoDTO();
+
+        // dialogue displays request and order
+
+
+        // Check if order can be completed, if not disable button/change button text
     }
 }
