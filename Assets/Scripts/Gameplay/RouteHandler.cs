@@ -91,8 +91,6 @@ public class RouteHandler : MonoBehaviour
         }
     }
 
-    List<Route> routes;
-
     
     void Start()
     {
@@ -104,15 +102,14 @@ public class RouteHandler : MonoBehaviour
     {
         if (Keyboard.current.rKey.wasPressedThisFrame)
         {
-            routes = GenerateRoutes();
-            SetUpButtons(routes);
+            RouteSetUp();
         }
     }
 
     
     void RouteSetUp()
     {
-        routes = GenerateRoutes();
+        List<Route> routes = GenerateRoutes();
         SetUpButtons(routes);
     }
 
