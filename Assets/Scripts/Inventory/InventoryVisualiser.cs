@@ -82,7 +82,23 @@ public class InventoryVisualiser : MonoBehaviour
 
 	public void SetProgressBar(Inventory inv)
 	{
-		float Gpos = barLocation.position.x;
+        //DOES NOW
+        //some random fucking bulshit
+
+
+        //Should do
+        //set thee location for where to place objects in a variable. 
+        //change those values, not the root value
+        //clear the visualiser when starting. 
+        //Maybe even better to clear when active is fasle and fill when active is true.
+
+        //Split the general bar and the individual bars into 2 different functions.
+        //Add better logs
+        //update the bars when adding and removing food. With some sort of update function not called "private void Update" because unity. 
+		//Make it so the prefabs that make the bar now are not in the editor but in a map in the assets. 
+
+
+        float Gpos = barLocation.position.x;
 		//remove all child objects from Parent object
 		foreach (Transform child in Parent.transform)
 		{

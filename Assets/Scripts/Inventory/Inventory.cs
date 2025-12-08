@@ -178,7 +178,6 @@ public class Inventory : MonoBehaviour
 
     public List<Request> CanSatisfyOrder(List<Request> orderByNPC)
     {
-        bool[] satisfaction = new bool[orderByNPC.Count];
         foreach (Request RequestAtPosition in orderByNPC)
         {
             RequestAtPosition.Possible = CanSatisfyRequest(RequestAtPosition.Amount, RequestAtPosition.FoodType, RequestAtPosition.Quality);
