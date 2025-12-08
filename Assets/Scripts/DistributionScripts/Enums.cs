@@ -17,10 +17,17 @@ public class NpcInfoDTO
 
 public class DeliveryResult
 {
-    public int Shortage;
-    public int Over;
-    public int TotalCost;
-    public int Paid;
-    public int MoneyBefore;
-    public int MoneyAfter;
+    public List<Request> Shortages = new List<Request>();
+    public List<Request> Excesses = new List<Request>();
+
+    public int TotalFoodShortage;
+    public int TotalFoodExcess;
+
+    public int TotalPrice;
+    public int AmountPaid;
+    public int PaymentShortfall;
+
+    public int NpcMoneyAfter;
 }
+
+

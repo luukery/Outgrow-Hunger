@@ -6,12 +6,16 @@ public class NPC : MonoBehaviour
 {
     public List<Request> Needs = new List<Request>();
     public List<Request> Order = new List<Request>();
+
+    public List<Request> testRequest = new List<Request>();
     public int Money;
 
     void Start()
     {
         GenerateProfile();
-        DebugPrint();
+        GenerateTestRequest();
+        DeliveryResult result = ReceiveDelivery(testRequest);
+        DebugPrint(result);
     }
 
     void GenerateProfile()
@@ -39,6 +43,18 @@ public class NPC : MonoBehaviour
         Money = rng.Next(0, 21);
     }
 
+    void GenerateTestRequest()
+    {
+        testRequest.Clear();
+
+        for (int i = 0; i < Needs.Count; i++)
+        {
+            Request n = Needs[i];
+            int deliveredAmount = n.Amount == 0 ? 1 : n.Amount + 1;
+            testRequest.Add(new Request(deliveredAmount, n.FoodType, n.Quality));
+        }
+    }
+
     public NpcInfoDTO GetInfoDTO()
     {
         NpcInfoDTO dto = new NpcInfoDTO();
@@ -64,53 +80,88 @@ public class NPC : MonoBehaviour
         return dto;
     }
 
-
     public DeliveryResult ReceiveDelivery(List<Request> given)
     {
         DeliveryResult result = new DeliveryResult();
-        result.MoneyBefore = Money;
 
         for (int i = 0; i < Needs.Count; i++)
         {
             Request need = Needs[i];
             Request delivered = given.Find(r => r.FoodType == need.FoodType);
-
             int amount = delivered != null ? delivered.Amount : 0;
 
             if (amount < need.Amount)
-                result.Shortage += need.Amount - amount;
+            {
+                int diff = need.Amount - amount;
+                result.TotalFoodShortage += diff;
+                result.Shortages.Add(new Request(diff, need.FoodType, need.Quality));
+            }
 
             if (amount > need.Amount)
-                result.Over += amount - need.Amount;
+            {
+                int diff = amount - need.Amount;
+                result.TotalFoodExcess += diff;
+                result.Excesses.Add(new Request(diff, need.FoodType, need.Quality));
+            }
 
-            result.TotalCost += amount;
+            result.TotalPrice += amount;
         }
 
-        if (Money >= result.TotalCost)
+        if (Money >= result.TotalPrice)
         {
-            Money -= result.TotalCost;
-            result.Paid = result.TotalCost;
+            Money -= result.TotalPrice;
+            result.AmountPaid = result.TotalPrice;
         }
         else
         {
-            result.Paid = Money;
+            result.AmountPaid = Money;
             Money = 0;
         }
 
-        result.MoneyAfter = Money;
+        result.PaymentShortfall = result.TotalPrice - result.AmountPaid;
+        result.NpcMoneyAfter = Money;
 
         return result;
     }
 
 
-    public void DebugPrint()
+    public void DebugPrint(DeliveryResult result)
     {
+        Debug.Log("========== NPC PROFILE ==========");
         for (int i = 0; i < Needs.Count; i++)
         {
             Request need = Needs[i];
             Request order = Order[i];
 
-            Debug.Log(need.FoodType + " | Need: " + need.Amount + " | Order: " + order.Amount + " | Quality: " + need.Quality);
+            Debug.Log(
+                $"{need.FoodType}  |  Need: {need.Amount}  |  Order: {order.Amount}  |  Quality: {need.Quality}"
+            );
         }
+
+        Debug.Log("========== DELIVERY RESULT ==========");
+
+        Debug.Log(
+            $"Total Price: {result.TotalPrice}\n" +
+            $"Paid: {result.AmountPaid}\n" +
+            $"Shortfall: {result.PaymentShortfall}\n" +
+            $"NPC Money After: {result.NpcMoneyAfter}"
+        );
+
+        Debug.Log("----- Shortages -----");
+        if (result.Shortages.Count == 0)
+            Debug.Log("None");
+
+        foreach (var s in result.Shortages)
+            Debug.Log($"• {s.FoodType}  |  Amount Missing: {s.Amount}  |  Quality: {s.Quality}");
+
+        Debug.Log("----- Excesses -----");
+        if (result.Excesses.Count == 0)
+            Debug.Log("None");
+
+        foreach (var e in result.Excesses)
+            Debug.Log($"• {e.FoodType}  |  Extra Given: {e.Amount}  |  Quality: {e.Quality}");
+
+        Debug.Log("====================================");
     }
+
 }
