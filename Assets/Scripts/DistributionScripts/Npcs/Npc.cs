@@ -49,11 +49,52 @@ public class NPC : MonoBehaviour
     {
         testRequest.Clear();
 
+        System.Random rng = new System.Random();
+        Array qualities = Enum.GetValues(typeof(Food.Quality));
+
         for (int i = 0; i < Order.Count; i++)
         {
             Request o = Order[i];
-            testRequest.Add(new Request(o.Amount, o.FoodType, o.Quality));
+
+            int roll = rng.Next(3);
+
+            int deliveredAmount =
+                roll == 0 ? Math.Max(0, o.Amount - rng.Next(1, 3)) :       
+                roll == 1 ? o.Amount :                                     
+                            o.Amount + rng.Next(1, 3);                    
+
+            Food.Quality deliveredQuality =
+                (Food.Quality)qualities.GetValue(rng.Next(qualities.Length));
+
+            testRequest.Add(new Request(deliveredAmount, o.FoodType, deliveredQuality));
         }
+    }
+
+
+
+    public NpcInfoDTO GetInfoDTO()
+    {
+        NpcInfoDTO dto = new NpcInfoDTO
+        {
+            Needs = CopyRequests(Needs),
+            Order = CopyRequests(Order),
+            Money = Money
+        };
+
+        return dto;
+    }
+
+    List<Request> CopyRequests(List<Request> source)
+    {
+        List<Request> result = new List<Request>();
+
+        for (int i = 0; i < source.Count; i++)
+        {
+            Request r = source[i];
+            result.Add(new Request(r.Amount, r.FoodType, r.Quality));
+        }
+
+        return result;
     }
 
     public void DebugPrint(DeliveryResult result)
