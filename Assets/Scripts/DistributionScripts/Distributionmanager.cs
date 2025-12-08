@@ -27,11 +27,12 @@ public class Distributionmanager : MonoBehaviour
         foodselect = canvas.transform.Find("FoodSelect").gameObject;
 
 
-        for (int i = 0; i <= 4 ; i++)
+        for (int i = 0; i < 7 ; i++)
         {
             string dropdownname = "Dropdown" + i;
             TMP_Dropdown dropdown = foodselect.transform.Find(dropdownname).GetComponent<TMP_Dropdown>();
             dropdowns.Add(dropdown);
+            dropdown.gameObject.SetActive(false);
         }
 
         foodselect.SetActive(false);
@@ -97,12 +98,8 @@ public class Distributionmanager : MonoBehaviour
     private void FoodSelector()
     {
         // steps
-        // take food from npc
-        // change toggle text into food needed
         // gray out food that dont have enough of 
-        // button change text
-        // button remove listeners
-        // button add new listeners
+        // button deny function
         // need 7 dropdowns to make this work without needing the break 
 
         // buttons needs to be changed back later
@@ -115,11 +112,9 @@ public class Distributionmanager : MonoBehaviour
         // cant do a foreach loop bc there's multiple lists in dto 
         for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
-            // temp break bc there's only 4 dropdowns
-            if (index >= 5)
-                break;
             TMP_Dropdown dropdown = dropdowns[index];
-            // fix later
+            dropdown.gameObject.SetActive(true);
+
             TextMeshProUGUI ordertext = dropdown.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
             Request need = npcDTO.Needs[index];
             Request order = npcDTO.Order[index];
@@ -143,9 +138,6 @@ public class Distributionmanager : MonoBehaviour
 
         for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
-            // temp break bc there's only 4 dropdowns
-            if (index >= 5)
-                break;
             TMP_Dropdown dropdown = dropdowns[index];
 
             Request need = npcDTO.Needs[index];
