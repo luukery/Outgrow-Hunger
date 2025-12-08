@@ -15,6 +15,7 @@ public class Distributionmanager : MonoBehaviour
     private List<TMP_Dropdown> dropdowns = new();
 
     private NPC currentNPC;
+    private NpcInfoDTO npcDTO;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -79,7 +80,7 @@ public class Distributionmanager : MonoBehaviour
             feedbuttonText.text = "Give food";
             denybuttonText.text = "Cancel selection";
 
-            // feedButton.onClick.AddListener(() => SendDelivery(orderinfo));
+            feedButton.onClick.AddListener(() => SendDelivery(npcDTO));
             // denybutton function needs to be added later
             denyButton.onClick.AddListener(Deny);
         }
@@ -105,13 +106,12 @@ public class Distributionmanager : MonoBehaviour
         // need 7 dropdowns to make this work without needing the break 
 
         // buttons needs to be changed back later
-        ChangeButtonFunction(true);
-
         foodselect.SetActive(true);
         // dialogue needs to be reenabled eventually
         dialogue.gameObject.SetActive(false);
 
-        NpcInfoDTO npcDTO = currentNPC.GetInfoDTO();
+        npcDTO = currentNPC.GetInfoDTO();
+
         // cant do a foreach loop bc there's multiple lists in dto 
         for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
@@ -133,8 +133,7 @@ public class Distributionmanager : MonoBehaviour
             dropdown.AddOptions(options);
         }
 
-        feedButton.onClick.RemoveAllListeners();
-        feedButton.onClick.AddListener(() => SendDelivery(npcDTO));
+        ChangeButtonFunction(true);
     }
 
 
