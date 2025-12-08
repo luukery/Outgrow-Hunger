@@ -33,9 +33,7 @@ public class Distributionmanager : MonoBehaviour
             dropdowns.Add(dropdown);
         }
 
-        feedButton.onClick.AddListener(HandleAccept);
-        denyButton.onClick.AddListener(Deny);
-        foodselect.SetActive(false);
+        ChangeButtonFunction(false);
     }
 
     // Update is called once per frame
@@ -66,6 +64,33 @@ public class Distributionmanager : MonoBehaviour
         // Check if food can be delivered
     }
 
+    private void ChangeButtonFunction(bool select)
+    {
+        feedButton.onClick.RemoveAllListeners();
+        denyButton.onClick.RemoveAllListeners();
+
+        TextMeshProUGUI feedbuttonText = feedButton.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI denybuttonText = denyButton.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
+
+        if (select)
+        {
+            feedbuttonText.text = "Give food";
+            denybuttonText.text = "Cancel selection";
+
+            feedButton.onClick.AddListener(() => SendDelivery(orderinfo));
+            // denybutton function needs to be added later
+            denyButton.onClick.AddListener(Deny);
+        }
+        else
+        {
+            feedbuttonText.text = "Select food";
+            denybuttonText.text = "Deny food";
+
+            feedButton.onClick.AddListener(HandleAccept);
+            denyButton.onClick.AddListener(Deny);
+        }
+    }
+
     private void FoodSelector()
     {
         // steps
@@ -75,6 +100,10 @@ public class Distributionmanager : MonoBehaviour
         // button change text
         // button remove listeners
         // button add new listeners
+        // need 7 dropdowns to make this work without needing the break 
+
+        // buttons needs to be changed back later
+        ChangeButtonFunction(true);
 
         foodselect.SetActive(true);
         // dialogue needs to be reenabled eventually
@@ -100,10 +129,7 @@ public class Distributionmanager : MonoBehaviour
                 options.Add(a.ToString());
             }
             dropdown.AddOptions(options);
-        }
-        // listener needs to be readded
-        feedButton.onClick.RemoveListener(HandleAccept);
-        feedButton.onClick.AddListener(() => SendDelivery(orderinfo));
+        }    
     }
 
 
