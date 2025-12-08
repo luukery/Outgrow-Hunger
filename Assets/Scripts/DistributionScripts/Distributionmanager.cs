@@ -25,11 +25,6 @@ public class Distributionmanager : MonoBehaviour
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
         foodselect = canvas.transform.Find("FoodSelect").gameObject;
 
-        foreach (Transform child in foodselect.transform)
-        {
-            Debug.Log("Child: " + child.name);
-        }
-
 
         for (int i = 0; i <= 4 ; i++)
         {
@@ -99,26 +94,37 @@ public class Distributionmanager : MonoBehaviour
             Request order = orderinfo.Order[index];
             ordertext.text = "Need: " + need.Amount + "\nOrder: " + order.Amount;
             dropdown.ClearOptions();
-            for (int a = 0; a < need.Amount; a++)
+            List<string> options = new();
+            for (int a = 0; a <= need.Amount; a++)
             {
-                dropdown.AddOptions(a);
+                options.Add(a.ToString());
             }
+            dropdown.AddOptions(options);
         }
         // listener needs to be readded
         feedButton.onClick.RemoveListener(HandleAccept);
-        feedButton.onClick.AddListener(SendDelivery);
+        feedButton.onClick.AddListener(() => SendDelivery(orderinfo));
     }
 
 
-    private void SendDelivery()
+    private void SendDelivery(NpcInfoDTO orderinfo)
     {
         List<Request> requests = new();
 
-        foreach (TMP_Dropdown dropdown in dropdowns)
+        for (int index = 0; index < orderinfo.Needs.Count; index++)
         {
-            // Request request = new(dropdown.value);
-        }
+            // temp break bc there's only 4 dropdowns
+            if (index >= 5)
+                break;
+            TMP_Dropdown dropdown = dropdowns[index];
 
+            Request need = orderinfo.Needs[index];
+
+            // geen idee hoe we quality gaan handelen, voor nu is het temp
+            Request sendrequest = new(dropdown.value, need.FoodType, need.Quality);
+            requests.Add(sendrequest);
+        }
+        Debug.Log("NPC recieved delivery");
         currentNPC.ReceiveDelivery(requests);
     }
 
