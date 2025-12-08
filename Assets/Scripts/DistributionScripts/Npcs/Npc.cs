@@ -15,13 +15,17 @@ public class NPC : MonoBehaviour
     void Start()
     {
         GenerateProfile();
-        GenerateTestRequest();
 
-        DeliveryResult result = deliveryService.Transaction(Order, Money, testRequest);
+        //GenerateTestRequest();
+       // DeliveryResult result = Transaction(Order, Money, testRequest);       //for testing
+      //  DebugPrint(result);
+    }
 
-        Money = result.NpcMoneyAfter;
+    public DeliveryResult Transaction(List<Request> needs, int money, List<Request> playerInput )
+    {
+        DeliveryResult result = deliveryService.Transaction(needs, money, playerInput);
+        return result;
 
-        DebugPrint(result);
     }
 
     void GenerateProfile()
@@ -38,8 +42,8 @@ public class NPC : MonoBehaviour
             Food.Quality quality = (Food.Quality)qualities.GetValue(rng.Next(qualities.Length));
             int amount = rng.Next(0, 4);
 
-            Needs.Add(new Request(amount, type, quality));
-            Order.Add(new Request(amount, type, quality));
+            Needs.Add(new Request(amount, type, quality));      //for now the same, can add iterantions later
+            Order.Add(new Request(amount, type, quality));      
         }
 
         Money = rng.Next(0, 21);
