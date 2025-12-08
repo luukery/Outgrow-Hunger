@@ -43,39 +43,45 @@ public class RouteHandler : MonoBehaviour
         }
     }
 
-    // ------------------ EVENT LIST ------------------
-    List<RouteEvent> eventList = new List<RouteEvent>
+    List<RouteEvent> commonEvents = new List<RouteEvent>
     {
         new("Fallen tree blocking passage", 0.5f),
-        new("Tree roots shaking the carriage", 0.25f, 15),
-        new("Sudden forest fire (smoke visible)", 1f),
-
+        new("Tree roots shaking the carriage", 0.25f, 15), 
         new("Heavy rain", 0.5f),
-        new("Snowfall", 0.5f, 10),
-        new("Hail", 1f),
         new("Drizzle turning road to mud", 1.25f),
         new("Thick fog", 1f),
-        new("Thunderstorm", 0.5f),
-        new("Temperature drop causing icy patches", 0.5f),
-
         new("Cows blocking the road", 1f),
-        new("Caravan jam or abandoned cart", 0.75f),
-        new("Sinkhole opening near the road", 0f, 15),
         new("Poor road maintenance", 0.5f),
-        new("River crossing too deep", 0.75f),
-
-        new("Bandits attempting robbery", 0f, 15),
-        new("Toll collectors demanding unfair toll", 0f, 0, 10),
-        new("Desperate refugees begging for supplies", 0f, 5),
-
         new("Grazing deer or elk", 0.75f),
         new("Swarm of insects spooking horses", 0.25f),
-        new("Predators tracking the carriage", 0f, 10),
-
-        new("Rockslide", 0.5f),
-        new("Steep incline straining the horses", 0.5f),
-        new("Stream deeper than expected", 0f, 5),
         new("Winds buffeting the carriage", 0f, 10),
+
+    };
+
+    List<RouteEvent> uncommonEvents = new List<RouteEvent>
+    {
+
+        new("Sudden forest fire (smoke visible)", 1f),
+        new("Snowfall", 0.5f, 10),
+        new("Thunderstorm", 0.5f),
+        new("Caravan jam or abandoned cart", 0.75f),
+        new("River crossing too deep", 0.75f),
+        new("Toll collectors demanding unfair toll", 0f, 0, 10),
+        new("Desperate refugees begging for supplies", 0f, 5),
+        new("Predators tracking the carriage", 0f, 10),
+        new("Steep incline straining the horses", 0.5f),
+
+    };
+
+    List<RouteEvent> rareEvents = new List<RouteEvent>
+    {
+        new("Hail", 1f),
+        new("Temperature drop causing icy patches", 0.5f),
+        new("Sinkhole opening near the road", 0f, 15),
+        new("Bandits attempting robbery", 0f, 15),
+        new("Rockslide", 0.5f),
+        new("Stream deeper than expected", 0f, 5),
+
     };
 
     // ------------------ ROUTE CLASS ------------------
@@ -95,9 +101,7 @@ public class RouteHandler : MonoBehaviour
         }
     }
 
-    List<Route> routes;
-
-    // ------------------ UNITY LIFECYCLE ------------------
+    
     void Start()
     {
         RouteSetUp();
@@ -114,8 +118,8 @@ public class RouteHandler : MonoBehaviour
     // ------------------ MAIN SETUP ------------------
     void RouteSetUp()
     {
-        routes = GenerateRoutes();
-        SetUpButtons(routes);  // safe — does nothing if buttons are not assigned
+        List<Route> routes = GenerateRoutes();
+        SetUpButtons(routes);
     }
 
     // ------------------ BUTTON SETUP ------------------
@@ -215,8 +219,14 @@ public class RouteHandler : MonoBehaviour
     RouteEvent GetRandomEvent(int eventChance)
     {
         int roll = Random.Range(1, 101);
-        if (roll > eventChance)
-            return null;
+        if (roll > eventChance) return null;
+
+        List<RouteEvent> eventList;
+        int rarityRoll = Random.Range(1, 101);
+
+        eventList = rarityRoll <= 55 ? commonEvents :
+                    rarityRoll <= 85 ? uncommonEvents :
+                    rareEvents;
 
         return eventList[Random.Range(0, eventList.Count)];
     }
