@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 2498041d6fc36a54e9ea36013c9dcec3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4570435646975042456
+    second: Flower 01 (Yellow) No Shadows_0
+  - first:
+      213: 6272949061848819064
+    second: Flower 01 (Yellow) No Shadows_1
+  - first:
+      213: -6974406179488718099
+    second: Flower 01 (Yellow) No Shadows_2
+  - first:
+      213: 4755946292472011461
+    second: Flower 01 (Yellow) No Shadows_3
+  - first:
+      213: 2084061754345735069
+    second: Flower 01 (Yellow) No Shadows_4
+  - first:
+      213: 5881382850057203366
+    second: Flower 01 (Yellow) No Shadows_5
+  - first:
+      213: 5670988876339911418
+    second: Flower 01 (Yellow) No Shadows_6
+  - first:
+      213: 1943881790759364516
+    second: Flower 01 (Yellow) No Shadows_7
+  - first:
+      213: 3280599760300196437
+    second: Flower 01 (Yellow) No Shadows_8
+  - first:
+      213: 2987833437906255968
+    second: Flower 01 (Yellow) No Shadows_9
+  - first:
+      213: -7334767785618815089
+    second: Flower 01 (Yellow) No Shadows_10
+  - first:
+      213: -9038919379138919679
+    second: Flower 01 (Yellow) No Shadows_11
+  - first:
+      213: -5910013165913318826
+    second: Flower 01 (Yellow) No Shadows_12
+  - first:
+      213: 7825289234029041945
+    second: Flower 01 (Yellow) No Shadows_13
+  - first:
+      213: -5011094886907215531
+    second: Flower 01 (Yellow) No Shadows_14
+  - first:
+      213: -6533857056359540453
+    second: Flower 01 (Yellow) No Shadows_15
+  - first:
+      213: 5267928759260220212
+    second: Flower 01 (Yellow) No Shadows_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 35
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893eab671037d6f30800000000000000
+      internalID: 4570435646975042456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 35
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8756e9dafedfd0750800000000000000
+      internalID: 6272949061848819064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 36
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de22940288ee53f90800000000000000
+      internalID: -6974406179488718099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 35
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca51a574f3800240800000000000000
+      internalID: 4755946292472011461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9341cdaf131cec10800000000000000
+      internalID: 2084061754345735069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 18
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aeebbd8a8ede9150800000000000000
+      internalID: 5881382850057203366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 22
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa9e6b365663be40800000000000000
+      internalID: 5670988876339911418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 17
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7ef87803e0afa10800000000000000
+      internalID: 1943881790759364516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 23
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 552cce2c918078d20800000000000000
+      internalID: 3280599760300196437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 17
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060cf6a7eaae67920800000000000000
+      internalID: 2987833437906255968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 22
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87463c6f8ba53a90800000000000000
+      internalID: -7334767785618815089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_11
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 17
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103c70507be4f8280800000000000000
+      internalID: -9038919379138919679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65adad3965a6bfda0800000000000000
+      internalID: -5910013165913318826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9195df22913099c60800000000000000
+      internalID: 7825289234029041945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_14
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5518e1210c3057ab0800000000000000
+      internalID: -5011094886907215531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_15
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 2
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19928600a31355a0800000000000000
+      internalID: -6533857056359540453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 01 (Yellow) No Shadows_16
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b05cdbb417b1940800000000000000
+      internalID: 5267928759260220212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Flower 01 (Yellow) No Shadows_0: 4570435646975042456
+      Flower 01 (Yellow) No Shadows_1: 6272949061848819064
+      Flower 01 (Yellow) No Shadows_10: -7334767785618815089
+      Flower 01 (Yellow) No Shadows_11: -9038919379138919679
+      Flower 01 (Yellow) No Shadows_12: -5910013165913318826
+      Flower 01 (Yellow) No Shadows_13: 7825289234029041945
+      Flower 01 (Yellow) No Shadows_14: -5011094886907215531
+      Flower 01 (Yellow) No Shadows_15: -6533857056359540453
+      Flower 01 (Yellow) No Shadows_16: 5267928759260220212
+      Flower 01 (Yellow) No Shadows_2: -6974406179488718099
+      Flower 01 (Yellow) No Shadows_3: 4755946292472011461
+      Flower 01 (Yellow) No Shadows_4: 2084061754345735069
+      Flower 01 (Yellow) No Shadows_5: 5881382850057203366
+      Flower 01 (Yellow) No Shadows_6: 5670988876339911418
+      Flower 01 (Yellow) No Shadows_7: 1943881790759364516
+      Flower 01 (Yellow) No Shadows_8: 3280599760300196437
+      Flower 01 (Yellow) No Shadows_9: 2987833437906255968
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

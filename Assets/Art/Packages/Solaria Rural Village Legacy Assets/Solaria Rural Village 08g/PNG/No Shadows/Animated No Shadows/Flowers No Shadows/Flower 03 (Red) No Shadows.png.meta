@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 36b483734691d8b47a48f273ea393d4d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5509467558873562326
+    second: Flower 03 (Red) No Shadows_0
+  - first:
+      213: -6254874604453603418
+    second: Flower 03 (Red) No Shadows_1
+  - first:
+      213: 633135287483707709
+    second: Flower 03 (Red) No Shadows_2
+  - first:
+      213: 2859722321021798077
+    second: Flower 03 (Red) No Shadows_3
+  - first:
+      213: 7633770820010774684
+    second: Flower 03 (Red) No Shadows_4
+  - first:
+      213: -4849830275895660467
+    second: Flower 03 (Red) No Shadows_5
+  - first:
+      213: 6427034216380843331
+    second: Flower 03 (Red) No Shadows_6
+  - first:
+      213: 3228537746204169272
+    second: Flower 03 (Red) No Shadows_7
+  - first:
+      213: 7053383137303322504
+    second: Flower 03 (Red) No Shadows_8
+  - first:
+      213: -7061784642588432394
+    second: Flower 03 (Red) No Shadows_9
+  - first:
+      213: 4141245536928649450
+    second: Flower 03 (Red) No Shadows_10
+  - first:
+      213: -4374440121572715317
+    second: Flower 03 (Red) No Shadows_11
+  - first:
+      213: 7748640809240530968
+    second: Flower 03 (Red) No Shadows_12
+  - first:
+      213: -7899096309314985245
+    second: Flower 03 (Red) No Shadows_13
+  - first:
+      213: 7728247325097301489
+    second: Flower 03 (Red) No Shadows_14
+  - first:
+      213: 6516659124388261768
+    second: Flower 03 (Red) No Shadows_15
+  - first:
+      213: -6046826306735195883
+    second: Flower 03 (Red) No Shadows_16
+  - first:
+      213: -2359057631357482835
+    second: Flower 03 (Red) No Shadows_17
+  - first:
+      213: 4914777557887155363
+    second: Flower 03 (Red) No Shadows_18
+  - first:
+      213: 6216649889618743007
+    second: Flower 03 (Red) No Shadows_19
+  - first:
+      213: 8828573463721732230
+    second: Flower 03 (Red) No Shadows_20
+  - first:
+      213: 1361625174251984109
+    second: Flower 03 (Red) No Shadows_21
+  - first:
+      213: 4746734530754768833
+    second: Flower 03 (Red) No Shadows_22
+  - first:
+      213: 2392687384828043597
+    second: Flower 03 (Red) No Shadows_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a238dc312707a83b0800000000000000
+      internalID: -5509467558873562326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 36
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a75eeedfa83239a0800000000000000
+      internalID: -6254874604453603418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 36
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d313b31803959c800800000000000000
+      internalID: 633135287483707709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 36
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db682ccac46cfa720800000000000000
+      internalID: 2859722321021798077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c901c778d1a90f960800000000000000
+      internalID: 7633770820010774684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d40fd404f01f1bcb0800000000000000
+      internalID: -4849830275895660467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34549a26199613950800000000000000
+      internalID: 6427034216380843331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 834907289f11ecc20800000000000000
+      internalID: 3228537746204169272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_8
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fd1bbc796a2e160800000000000000
+      internalID: 7053383137303322504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7253258408ffd90800000000000000
+      internalID: -7061784642588432394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_10
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0dd44efd8a87930800000000000000
+      internalID: 4141245536928649450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_11
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4117ed2edda43c0800000000000000
+      internalID: -4374440121572715317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81090ee03c3b88b60800000000000000
+      internalID: 7748640809240530968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e26ea402c5c06290800000000000000
+      internalID: -7899096309314985245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 5
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f599c40fff304b60800000000000000
+      internalID: 7728247325097301489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_15
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f687762f2df6a50800000000000000
+      internalID: 6516659124388261768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519bf80f28b551ca0800000000000000
+      internalID: -6046826306735195883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_17
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 5
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da843464591f24fd0800000000000000
+      internalID: -2359057631357482835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_18
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3acfce7362cc43440800000000000000
+      internalID: 4914777557887155363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_19
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde42bb232af54650800000000000000
+      internalID: 6216649889618743007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_20
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 5
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688e29a1ac4658a70800000000000000
+      internalID: 8828573463721732230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_21
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 8
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4d48cb1e675e210800000000000000
+      internalID: 1361625174251984109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_22
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cfe7bc08e9cfd140800000000000000
+      internalID: 4746734530754768833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower 03 (Red) No Shadows_23
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 5
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d41eb3fdf78843120800000000000000
+      internalID: 2392687384828043597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Flower 03 (Red) No Shadows_0: -5509467558873562326
+      Flower 03 (Red) No Shadows_1: -6254874604453603418
+      Flower 03 (Red) No Shadows_10: 4141245536928649450
+      Flower 03 (Red) No Shadows_11: -4374440121572715317
+      Flower 03 (Red) No Shadows_12: 7748640809240530968
+      Flower 03 (Red) No Shadows_13: -7899096309314985245
+      Flower 03 (Red) No Shadows_14: 7728247325097301489
+      Flower 03 (Red) No Shadows_15: 6516659124388261768
+      Flower 03 (Red) No Shadows_16: -6046826306735195883
+      Flower 03 (Red) No Shadows_17: -2359057631357482835
+      Flower 03 (Red) No Shadows_18: 4914777557887155363
+      Flower 03 (Red) No Shadows_19: 6216649889618743007
+      Flower 03 (Red) No Shadows_2: 633135287483707709
+      Flower 03 (Red) No Shadows_20: 8828573463721732230
+      Flower 03 (Red) No Shadows_21: 1361625174251984109
+      Flower 03 (Red) No Shadows_22: 4746734530754768833
+      Flower 03 (Red) No Shadows_23: 2392687384828043597
+      Flower 03 (Red) No Shadows_3: 2859722321021798077
+      Flower 03 (Red) No Shadows_4: 7633770820010774684
+      Flower 03 (Red) No Shadows_5: -4849830275895660467
+      Flower 03 (Red) No Shadows_6: 6427034216380843331
+      Flower 03 (Red) No Shadows_7: 3228537746204169272
+      Flower 03 (Red) No Shadows_8: 7053383137303322504
+      Flower 03 (Red) No Shadows_9: -7061784642588432394
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

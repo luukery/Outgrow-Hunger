@@ -1,0 +1,2691 @@
+fileFormatVersion: 2
+guid: e153d7ff7cc9e294d975e198cb94b391
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6400707984294277197
+    second: Rural Village Buildings_0
+  - first:
+      213: -1146271642472432140
+    second: Rural Village Buildings_1
+  - first:
+      213: 1869109732166268622
+    second: Rural Village Buildings_2
+  - first:
+      213: -9066356007878288899
+    second: Rural Village Buildings_3
+  - first:
+      213: -3816831990953965325
+    second: Rural Village Buildings_4
+  - first:
+      213: 8823407548838323602
+    second: Rural Village Buildings_5
+  - first:
+      213: -5329325087438420729
+    second: Rural Village Buildings_6
+  - first:
+      213: -4940693068506416143
+    second: Rural Village Buildings_7
+  - first:
+      213: 524808614323900559
+    second: Rural Village Buildings_8
+  - first:
+      213: -5094805722940314705
+    second: Rural Village Buildings_9
+  - first:
+      213: 456324946177319033
+    second: Rural Village Buildings_10
+  - first:
+      213: 4104025234823575631
+    second: Rural Village Buildings_11
+  - first:
+      213: -5376672693221240231
+    second: Rural Village Buildings_12
+  - first:
+      213: -5538538435210589021
+    second: Rural Village Buildings_13
+  - first:
+      213: -8823676939251996328
+    second: Rural Village Buildings_14
+  - first:
+      213: -6221517277811922967
+    second: Rural Village Buildings_15
+  - first:
+      213: 1971812724548865328
+    second: Rural Village Buildings_16
+  - first:
+      213: 8146105492173456788
+    second: Rural Village Buildings_17
+  - first:
+      213: -872997827944874590
+    second: Rural Village Buildings_18
+  - first:
+      213: 4659996776836543046
+    second: Rural Village Buildings_19
+  - first:
+      213: -8339234810975418853
+    second: Rural Village Buildings_20
+  - first:
+      213: 1472515985696258277
+    second: Rural Village Buildings_21
+  - first:
+      213: -2913700230731866993
+    second: Rural Village Buildings_22
+  - first:
+      213: -5473438125752101786
+    second: Rural Village Buildings_23
+  - first:
+      213: 2268816265402178074
+    second: Rural Village Buildings_24
+  - first:
+      213: -299776690753285596
+    second: Rural Village Buildings_25
+  - first:
+      213: 8439495933143387800
+    second: Rural Village Buildings_26
+  - first:
+      213: -3264448097647039934
+    second: Rural Village Buildings_27
+  - first:
+      213: 1777278245237982117
+    second: Rural Village Buildings_28
+  - first:
+      213: 4841276173336040310
+    second: Rural Village Buildings_29
+  - first:
+      213: 7671997315334594150
+    second: Rural Village Buildings_30
+  - first:
+      213: 7067897483990495811
+    second: Rural Village Buildings_31
+  - first:
+      213: 4178329123441422558
+    second: Rural Village Buildings_32
+  - first:
+      213: -674187734732504547
+    second: Rural Village Buildings_33
+  - first:
+      213: -7579915779412803490
+    second: Rural Village Buildings_34
+  - first:
+      213: -8676588689362039845
+    second: Rural Village Buildings_35
+  - first:
+      213: 8502568391227259133
+    second: Rural Village Buildings_36
+  - first:
+      213: -2309995382586855137
+    second: Rural Village Buildings_37
+  - first:
+      213: -8099399031482371657
+    second: Rural Village Buildings_38
+  - first:
+      213: 1881567935876615427
+    second: Rural Village Buildings_39
+  - first:
+      213: -7566006312005826210
+    second: Rural Village Buildings_40
+  - first:
+      213: 2122513060423137769
+    second: Rural Village Buildings_41
+  - first:
+      213: 2442589422283534853
+    second: Rural Village Buildings_42
+  - first:
+      213: -7853016172231366911
+    second: Rural Village Buildings_43
+  - first:
+      213: 2645483205046529699
+    second: Rural Village Buildings_44
+  - first:
+      213: -5385164305525686758
+    second: Rural Village Buildings_45
+  - first:
+      213: 1078334099095631365
+    second: Rural Village Buildings_46
+  - first:
+      213: 2676870931258694552
+    second: Rural Village Buildings_47
+  - first:
+      213: -4184444892408751179
+    second: Rural Village Buildings_48
+  - first:
+      213: 6042800400914098302
+    second: Rural Village Buildings_49
+  - first:
+      213: 9191358640498312942
+    second: Rural Village Buildings_50
+  - first:
+      213: 4982210206964326755
+    second: Rural Village Buildings_51
+  - first:
+      213: -2546865339955497182
+    second: Rural Village Buildings_52
+  - first:
+      213: 6430851616124669048
+    second: Rural Village Buildings_53
+  - first:
+      213: -4615538473827272623
+    second: Rural Village Buildings_54
+  - first:
+      213: -7204398884853140976
+    second: Rural Village Buildings_55
+  - first:
+      213: -7403256991035233649
+    second: Rural Village Buildings_56
+  - first:
+      213: 4801632593191835930
+    second: Rural Village Buildings_57
+  - first:
+      213: 3301985246952835902
+    second: Rural Village Buildings_58
+  - first:
+      213: -5617554614853098182
+    second: Rural Village Buildings_59
+  - first:
+      213: 3077594263665494114
+    second: Rural Village Buildings_60
+  - first:
+      213: -2654784038417669105
+    second: Rural Village Buildings_61
+  - first:
+      213: 8979601497947570996
+    second: Rural Village Buildings_62
+  - first:
+      213: 5735876883123331623
+    second: Rural Village Buildings_63
+  - first:
+      213: 5627369779119173256
+    second: Rural Village Buildings_64
+  - first:
+      213: -6695388532162165625
+    second: Rural Village Buildings_65
+  - first:
+      213: -4028371878449683519
+    second: Rural Village Buildings_66
+  - first:
+      213: 8935047702727996507
+    second: Rural Village Buildings_67
+  - first:
+      213: 7066388000518046649
+    second: Rural Village Buildings_68
+  - first:
+      213: -5160774390757224876
+    second: Rural Village Buildings_69
+  - first:
+      213: 2174370782931650370
+    second: Rural Village Buildings_70
+  - first:
+      213: -1206266738073156922
+    second: Rural Village Buildings_71
+  - first:
+      213: 9187469281001771123
+    second: Rural Village Buildings_72
+  - first:
+      213: -4002164501290867362
+    second: Rural Village Buildings_73
+  - first:
+      213: 2602891497780922189
+    second: Rural Village Buildings_74
+  - first:
+      213: -8700652190272767020
+    second: Rural Village Buildings_75
+  - first:
+      213: 5013244811423478061
+    second: Rural Village Buildings_76
+  - first:
+      213: 5219978173524911237
+    second: Rural Village Buildings_77
+  - first:
+      213: 4882085904711746807
+    second: Rural Village Buildings_78
+  - first:
+      213: -510056499309238632
+    second: Rural Village Buildings_79
+  - first:
+      213: 2957140686729812060
+    second: Rural Village Buildings_80
+  - first:
+      213: 5004319557077001567
+    second: Rural Village Buildings_81
+  - first:
+      213: -5233593646309116746
+    second: Rural Village Buildings_82
+  - first:
+      213: -4162467424877166911
+    second: Rural Village Buildings_83
+  - first:
+      213: 7784808208147730410
+    second: Rural Village Buildings_84
+  - first:
+      213: -8040456227315775465
+    second: Rural Village Buildings_85
+  - first:
+      213: 3505023600004274371
+    second: Rural Village Buildings_86
+  - first:
+      213: 4520261481357676187
+    second: Rural Village Buildings_87
+  - first:
+      213: -7140439010845067107
+    second: Rural Village Buildings_88
+  - first:
+      213: 947889718894898546
+    second: Rural Village Buildings_89
+  - first:
+      213: -6625670725742536011
+    second: Rural Village Buildings_90
+  - first:
+      213: -2396941992379908499
+    second: Rural Village Buildings_91
+  - first:
+      213: 8815748122711056228
+    second: Rural Village Buildings_92
+  - first:
+      213: -3403407421320904193
+    second: Rural Village Buildings_93
+  - first:
+      213: 2820292002597981780
+    second: Rural Village Buildings_94
+  - first:
+      213: 5570838075808226898
+    second: Rural Village Buildings_95
+  - first:
+      213: 3584390294172211526
+    second: Rural Village Buildings_96
+  - first:
+      213: -1434500939862223490
+    second: Rural Village Buildings_97
+  - first:
+      213: 5931155102168884761
+    second: Rural Village Buildings_98
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rural Village Buildings_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 495
+        width: 273
+        height: 513
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf022d200e1c27a0800000000000000
+      internalID: -6400707984294277197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_1
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 915
+        width: 90
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fdb35ea300a710f0800000000000000
+      internalID: -1146271642472432140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_2
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 915
+        width: 90
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6fefff56960f910800000000000000
+      internalID: 1869109732166268622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_3
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 915
+        width: 90
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df99f271f35dd2280800000000000000
+      internalID: -9066356007878288899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_4
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 940
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f887d3d683e70bc0800000000000000
+      internalID: -3816831990953965325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_5
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 939
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2952201da6a037a70800000000000000
+      internalID: 8823407548838323602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_6
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 938
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705c7a6a11f6a06b0800000000000000
+      internalID: -5329325087438420729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_7
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 981
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbb073c4d12f6bb0800000000000000
+      internalID: -4940693068506416143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_8
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 984
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8057d777ae784700800000000000000
+      internalID: 524808614323900559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_9
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 937
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fabe38c303d9b49b0800000000000000
+      internalID: -5094805722940314705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_10
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 938
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9706c0fee11355600800000000000000
+      internalID: 456324946177319033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_11
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 937
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48f5eef43d64f830800000000000000
+      internalID: 4104025234823575631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_12
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 819
+        width: 92
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952510f1ca83265b0800000000000000
+      internalID: -5376672693221240231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_13
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 819
+        width: 92
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3accc6a33a82323b0800000000000000
+      internalID: -5538538435210589021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_14
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 819
+        width: 92
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8592417d2900c8580800000000000000
+      internalID: -8823676939251996328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_15
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 895
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7a014bffab8a9a0800000000000000
+      internalID: -6221517277811922967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_16
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 895
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d8452d9394d5b10800000000000000
+      internalID: 1971812724548865328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_17
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 895
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4958bd309c7cc0170800000000000000
+      internalID: 8146105492173456788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_18
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 828
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad78afc91d72e3f0800000000000000
+      internalID: -872997827944874590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_19
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 827
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 642bec9f062aba040800000000000000
+      internalID: 4659996776836543046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_20
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 826
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b160d316f16154c80800000000000000
+      internalID: -8339234810975418853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_21
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 740
+        width: 18
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8728dbc7d6f6410800000000000000
+      internalID: 1472515985696258277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_22
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 740
+        width: 18
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cd04dd3157097d0800000000000000
+      internalID: -2913700230731866993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_23
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 740
+        width: 18
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664577e26017a04b0800000000000000
+      internalID: -5473438125752101786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_24
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 740
+        width: 18
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1adce76f547c7f10800000000000000
+      internalID: 2268816265402178074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_25
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 740
+        width: 18
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42255b320baf6dbf0800000000000000
+      internalID: -299776690753285596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_26
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 739
+        width: 18
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e8d5a36dc1f1570800000000000000
+      internalID: 8439495933143387800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_27
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 783
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a6c0040c952b2d0800000000000000
+      internalID: -3264448097647039934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_28
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 783
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3807ac5292aa810800000000000000
+      internalID: 1777278245237982117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_29
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 783
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 673d14b870baf2340800000000000000
+      internalID: 4841276173336040310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_30
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 640
+        width: 102
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ed44a09e8687a60800000000000000
+      internalID: 7671997315334594150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_31
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 640
+        width: 102
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 342712a7057361260800000000000000
+      internalID: 7067897483990495811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_32
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 716
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0356533386cf930800000000000000
+      internalID: 4178329123441422558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_33
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 715
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d120857c3ddc4a6f0800000000000000
+      internalID: -674187734732504547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_34
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 714
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50c8bc32cabec690800000000000000
+      internalID: -7579915779412803490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_35
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 662
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb476cbe80969780800000000000000
+      internalID: -8676588689362039845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_36
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 688
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df8b09d37e03ff570800000000000000
+      internalID: 8502568391227259133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_37
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 671
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f113e1c307f31ffd0800000000000000
+      internalID: -2309995382586855137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_38
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 671
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b1b95a4e77299f80800000000000000
+      internalID: -8099399031482371657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_39
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 671
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30dc0b6911cac1a10800000000000000
+      internalID: 1881567935876615427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_40
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 645
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59878c7855200790800000000000000
+      internalID: -7566006312005826210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_41
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 645
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9f5a5026ea47d10800000000000000
+      internalID: 2122513060423137769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_42
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 603
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502365f5322d5e120800000000000000
+      internalID: 2442589422283534853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_43
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 602
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10760cef56b740390800000000000000
+      internalID: -7853016172231366911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_44
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 603
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae6f0865f4a6b420800000000000000
+      internalID: 2645483205046529699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_45
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 602
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e3700989d0445b0800000000000000
+      internalID: -5385164305525686758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_46
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 544
+        width: 102
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50639cd562307fe00800000000000000
+      internalID: 1078334099095631365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_47
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 544
+        width: 102
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b5e37ede7262520800000000000000
+      internalID: 2676870931258694552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_48
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 559
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb57cd5a8ddde5c0800000000000000
+      internalID: -4184444892408751179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_49
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 559
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78a211d2f65cd350800000000000000
+      internalID: 6042800400914098302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_50
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 559
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee68e125cf34e8f70800000000000000
+      internalID: 9191358640498312942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_51
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 559
+        width: 64
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3612f6e49cd542540800000000000000
+      internalID: 4982210206964326755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_52
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 468
+        width: 18
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227b2399777b7acd0800000000000000
+      internalID: -2546865339955497182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_53
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 468
+        width: 18
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c8b560979fe3950800000000000000
+      internalID: 6430851616124669048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_54
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 468
+        width: 18
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1587064563052ffb0800000000000000
+      internalID: -4615538473827272623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_55
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 468
+        width: 18
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012bb108265d40c90800000000000000
+      internalID: -7204398884853140976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_56
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 491
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8aea64adf8524990800000000000000
+      internalID: -7403256991035233649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_57
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 491
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1913234763d2a240800000000000000
+      internalID: 4801632593191835930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_58
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 481
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b4432661203dd20800000000000000
+      internalID: 3301985246952835902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_59
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 476
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a35235347df6a02b0800000000000000
+      internalID: -5617554614853098182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_60
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 479
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268cf805dafc5ba20800000000000000
+      internalID: 3077594263665494114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 463
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04ecb29bff482bd0800000000000000
+      internalID: -2654784038417669105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_62
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 464
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4330bb58cf3fd9c70800000000000000
+      internalID: 8979601497947570996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_63
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 463
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722e0fd92ade99f40800000000000000
+      internalID: 5735876883123331623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_64
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 464
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88eaa20cffe681e40800000000000000
+      internalID: 5627369779119173256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_65
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 411
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784004b8a933513a0800000000000000
+      internalID: -6695388532162165625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_66
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 431
+        width: 60
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c365d9ae195818c0800000000000000
+      internalID: -4028371878449683519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_67
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 374
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b54b544bb8aaffb70800000000000000
+      internalID: 8935047702727996507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_68
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 374
+        width: 94
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b306f7727ad01260800000000000000
+      internalID: 7066388000518046649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_69
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 332
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e8bf8d80f3168b0800000000000000
+      internalID: -5160774390757224876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_70
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 332
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24701aee4baec2e10800000000000000
+      internalID: 2174370782931650370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_71
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 347
+        width: 64
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c2c7c4faca724fe0800000000000000
+      internalID: -1206266738073156922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_72
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 294
+        width: 18
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3709cee32a2708f70800000000000000
+      internalID: 9187469281001771123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_73
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 294
+        width: 18
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5521e727947578c0800000000000000
+      internalID: -4002164501290867362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_74
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 250
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d47cd1ac6045f1420800000000000000
+      internalID: 2602891497780922189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_75
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 271
+        width: 62
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db31945ee2114780800000000000000
+      internalID: -8700652190272767020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_76
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 195
+        width: 94
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2177fc389f929540800000000000000
+      internalID: 5013244811423478061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_77
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 195
+        width: 94
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 584ae300e76117840800000000000000
+      internalID: 5219978173524911237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_78
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 212
+        width: 30
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f409419347a0c340800000000000000
+      internalID: 4882085904711746807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_79
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 111
+        width: 97
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8962b47f05aebe8f0800000000000000
+      internalID: -510056499309238632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_80
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 145
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c58926779cfd90920800000000000000
+      internalID: 2957140686729812060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_81
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 145
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f556d168f1ae27540800000000000000
+      internalID: 5004319557077001567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_82
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 144
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b4f005be4a8e57b0800000000000000
+      internalID: -5233593646309116746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_83
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 145
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cebf074ee1fb36c0800000000000000
+      internalID: -4162467424877166911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_84
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 160
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aefc033d1d1390c60800000000000000
+      internalID: 7784808208147730410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_85
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 161
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71804c259af8a6090800000000000000
+      internalID: -8040456227315775465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_86
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 119
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c89d9fc46854a030800000000000000
+      internalID: 3505023600004274371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_87
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 70
+        width: 94
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e84303ed13bbe30800000000000000
+      internalID: 4520261481357676187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_88
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 70
+        width: 94
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98fc322d8018ec90800000000000000
+      internalID: -7140439010845067107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_89
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 86
+        width: 18
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27da9fc5da4972d00800000000000000
+      internalID: 947889718894898546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 33
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba59694493ec04a0800000000000000
+      internalID: -6625670725742536011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_91
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 31
+        width: 34
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e7afc15f95cbed0800000000000000
+      internalID: -2396941992379908499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_92
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 81
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f5283b534d75a70800000000000000
+      internalID: 8815748122711056228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_93
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 81
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff14d3a7bfaa4c0d0800000000000000
+      internalID: -3403407421320904193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_94
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 81
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e4ab142a0b32720800000000000000
+      internalID: 2820292002597981780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_95
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 56
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e15c1e6b79f4d40800000000000000
+      internalID: 5570838075808226898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_96
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 35
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6491e7c4bff4eb130800000000000000
+      internalID: 3584390294172211526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_97
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 36
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e755c89def0a71ce0800000000000000
+      internalID: -1434500939862223490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Buildings_98
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 31
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916a58c0422bf4250800000000000000
+      internalID: 5931155102168884761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rural Village Buildings_0: -6400707984294277197
+      Rural Village Buildings_1: -1146271642472432140
+      Rural Village Buildings_10: 456324946177319033
+      Rural Village Buildings_11: 4104025234823575631
+      Rural Village Buildings_12: -5376672693221240231
+      Rural Village Buildings_13: -5538538435210589021
+      Rural Village Buildings_14: -8823676939251996328
+      Rural Village Buildings_15: -6221517277811922967
+      Rural Village Buildings_16: 1971812724548865328
+      Rural Village Buildings_17: 8146105492173456788
+      Rural Village Buildings_18: -872997827944874590
+      Rural Village Buildings_19: 4659996776836543046
+      Rural Village Buildings_2: 1869109732166268622
+      Rural Village Buildings_20: -8339234810975418853
+      Rural Village Buildings_21: 1472515985696258277
+      Rural Village Buildings_22: -2913700230731866993
+      Rural Village Buildings_23: -5473438125752101786
+      Rural Village Buildings_24: 2268816265402178074
+      Rural Village Buildings_25: -299776690753285596
+      Rural Village Buildings_26: 8439495933143387800
+      Rural Village Buildings_27: -3264448097647039934
+      Rural Village Buildings_28: 1777278245237982117
+      Rural Village Buildings_29: 4841276173336040310
+      Rural Village Buildings_3: -9066356007878288899
+      Rural Village Buildings_30: 7671997315334594150
+      Rural Village Buildings_31: 7067897483990495811
+      Rural Village Buildings_32: 4178329123441422558
+      Rural Village Buildings_33: -674187734732504547
+      Rural Village Buildings_34: -7579915779412803490
+      Rural Village Buildings_35: -8676588689362039845
+      Rural Village Buildings_36: 8502568391227259133
+      Rural Village Buildings_37: -2309995382586855137
+      Rural Village Buildings_38: -8099399031482371657
+      Rural Village Buildings_39: 1881567935876615427
+      Rural Village Buildings_4: -3816831990953965325
+      Rural Village Buildings_40: -7566006312005826210
+      Rural Village Buildings_41: 2122513060423137769
+      Rural Village Buildings_42: 2442589422283534853
+      Rural Village Buildings_43: -7853016172231366911
+      Rural Village Buildings_44: 2645483205046529699
+      Rural Village Buildings_45: -5385164305525686758
+      Rural Village Buildings_46: 1078334099095631365
+      Rural Village Buildings_47: 2676870931258694552
+      Rural Village Buildings_48: -4184444892408751179
+      Rural Village Buildings_49: 6042800400914098302
+      Rural Village Buildings_5: 8823407548838323602
+      Rural Village Buildings_50: 9191358640498312942
+      Rural Village Buildings_51: 4982210206964326755
+      Rural Village Buildings_52: -2546865339955497182
+      Rural Village Buildings_53: 6430851616124669048
+      Rural Village Buildings_54: -4615538473827272623
+      Rural Village Buildings_55: -7204398884853140976
+      Rural Village Buildings_56: -7403256991035233649
+      Rural Village Buildings_57: 4801632593191835930
+      Rural Village Buildings_58: 3301985246952835902
+      Rural Village Buildings_59: -5617554614853098182
+      Rural Village Buildings_6: -5329325087438420729
+      Rural Village Buildings_60: 3077594263665494114
+      Rural Village Buildings_61: -2654784038417669105
+      Rural Village Buildings_62: 8979601497947570996
+      Rural Village Buildings_63: 5735876883123331623
+      Rural Village Buildings_64: 5627369779119173256
+      Rural Village Buildings_65: -6695388532162165625
+      Rural Village Buildings_66: -4028371878449683519
+      Rural Village Buildings_67: 8935047702727996507
+      Rural Village Buildings_68: 7066388000518046649
+      Rural Village Buildings_69: -5160774390757224876
+      Rural Village Buildings_7: -4940693068506416143
+      Rural Village Buildings_70: 2174370782931650370
+      Rural Village Buildings_71: -1206266738073156922
+      Rural Village Buildings_72: 9187469281001771123
+      Rural Village Buildings_73: -4002164501290867362
+      Rural Village Buildings_74: 2602891497780922189
+      Rural Village Buildings_75: -8700652190272767020
+      Rural Village Buildings_76: 5013244811423478061
+      Rural Village Buildings_77: 5219978173524911237
+      Rural Village Buildings_78: 4882085904711746807
+      Rural Village Buildings_79: -510056499309238632
+      Rural Village Buildings_8: 524808614323900559
+      Rural Village Buildings_80: 2957140686729812060
+      Rural Village Buildings_81: 5004319557077001567
+      Rural Village Buildings_82: -5233593646309116746
+      Rural Village Buildings_83: -4162467424877166911
+      Rural Village Buildings_84: 7784808208147730410
+      Rural Village Buildings_85: -8040456227315775465
+      Rural Village Buildings_86: 3505023600004274371
+      Rural Village Buildings_87: 4520261481357676187
+      Rural Village Buildings_88: -7140439010845067107
+      Rural Village Buildings_89: 947889718894898546
+      Rural Village Buildings_9: -5094805722940314705
+      Rural Village Buildings_90: -6625670725742536011
+      Rural Village Buildings_91: -2396941992379908499
+      Rural Village Buildings_92: 8815748122711056228
+      Rural Village Buildings_93: -3403407421320904193
+      Rural Village Buildings_94: 2820292002597981780
+      Rural Village Buildings_95: 5570838075808226898
+      Rural Village Buildings_96: 3584390294172211526
+      Rural Village Buildings_97: -1434500939862223490
+      Rural Village Buildings_98: 5931155102168884761
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

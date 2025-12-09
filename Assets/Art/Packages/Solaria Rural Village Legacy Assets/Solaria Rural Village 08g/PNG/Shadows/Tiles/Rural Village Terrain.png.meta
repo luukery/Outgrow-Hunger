@@ -1,0 +1,2769 @@
+fileFormatVersion: 2
+guid: 6f8da566ee512f746a4156b90b0469d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5920345716247595348
+    second: Rural Village Terrain_0
+  - first:
+      213: -5713407193965942283
+    second: Rural Village Terrain_1
+  - first:
+      213: 7228885106924326888
+    second: Rural Village Terrain_2
+  - first:
+      213: -7057492445045690027
+    second: Rural Village Terrain_3
+  - first:
+      213: 1841932480963874331
+    second: Rural Village Terrain_4
+  - first:
+      213: -990309000813030293
+    second: Rural Village Terrain_5
+  - first:
+      213: -6844601401690674630
+    second: Rural Village Terrain_6
+  - first:
+      213: 6113869032876629679
+    second: Rural Village Terrain_7
+  - first:
+      213: -7707332026820706877
+    second: Rural Village Terrain_8
+  - first:
+      213: 3339816614485442149
+    second: Rural Village Terrain_9
+  - first:
+      213: -6873981239988635526
+    second: Rural Village Terrain_10
+  - first:
+      213: 8709931385054115530
+    second: Rural Village Terrain_11
+  - first:
+      213: 8417594217184940411
+    second: Rural Village Terrain_12
+  - first:
+      213: -1178083394324862115
+    second: Rural Village Terrain_13
+  - first:
+      213: -4721647215962160343
+    second: Rural Village Terrain_14
+  - first:
+      213: -311628434765354228
+    second: Rural Village Terrain_15
+  - first:
+      213: -4124327639777579327
+    second: Rural Village Terrain_16
+  - first:
+      213: 8328229113194082002
+    second: Rural Village Terrain_17
+  - first:
+      213: -8516810999107658635
+    second: Rural Village Terrain_18
+  - first:
+      213: -2577109743739006561
+    second: Rural Village Terrain_19
+  - first:
+      213: 6441424264872576319
+    second: Rural Village Terrain_20
+  - first:
+      213: -6267447647447302594
+    second: Rural Village Terrain_21
+  - first:
+      213: -1314069881021584859
+    second: Rural Village Terrain_22
+  - first:
+      213: 7394182004568283928
+    second: Rural Village Terrain_23
+  - first:
+      213: 4902848120931150993
+    second: Rural Village Terrain_24
+  - first:
+      213: -7653847866021783483
+    second: Rural Village Terrain_25
+  - first:
+      213: -5092777535029964133
+    second: Rural Village Terrain_26
+  - first:
+      213: 7488581421947740528
+    second: Rural Village Terrain_27
+  - first:
+      213: -4181121538483265862
+    second: Rural Village Terrain_28
+  - first:
+      213: 6427349090761850105
+    second: Rural Village Terrain_29
+  - first:
+      213: -3638489549957194794
+    second: Rural Village Terrain_30
+  - first:
+      213: -6214710421922353604
+    second: Rural Village Terrain_31
+  - first:
+      213: 6395042671629598600
+    second: Rural Village Terrain_32
+  - first:
+      213: -7206311883515069587
+    second: Rural Village Terrain_33
+  - first:
+      213: -249096618985145799
+    second: Rural Village Terrain_34
+  - first:
+      213: 2819700062026986386
+    second: Rural Village Terrain_35
+  - first:
+      213: -3747396900718025807
+    second: Rural Village Terrain_36
+  - first:
+      213: 926929224497934670
+    second: Rural Village Terrain_37
+  - first:
+      213: 6644403549026223678
+    second: Rural Village Terrain_38
+  - first:
+      213: -2577620792595952419
+    second: Rural Village Terrain_39
+  - first:
+      213: -3812893657034041740
+    second: Rural Village Terrain_40
+  - first:
+      213: -6743017210408963364
+    second: Rural Village Terrain_41
+  - first:
+      213: -2257630674096196507
+    second: Rural Village Terrain_42
+  - first:
+      213: 8741609318362186474
+    second: Rural Village Terrain_43
+  - first:
+      213: 6821567237018965256
+    second: Rural Village Terrain_44
+  - first:
+      213: -829006291675744049
+    second: Rural Village Terrain_45
+  - first:
+      213: -5588697555764831073
+    second: Rural Village Terrain_46
+  - first:
+      213: 3643317433608878126
+    second: Rural Village Terrain_47
+  - first:
+      213: -3247619145140043791
+    second: Rural Village Terrain_48
+  - first:
+      213: -3913420759122092678
+    second: Rural Village Terrain_49
+  - first:
+      213: -4198094671650834555
+    second: Rural Village Terrain_50
+  - first:
+      213: 7035185999262384168
+    second: Rural Village Terrain_51
+  - first:
+      213: -7743029286713858917
+    second: Rural Village Terrain_52
+  - first:
+      213: 3580138510322007491
+    second: Rural Village Terrain_53
+  - first:
+      213: 2682543480662749750
+    second: Rural Village Terrain_54
+  - first:
+      213: -2931780836765455864
+    second: Rural Village Terrain_55
+  - first:
+      213: 4271354066491224777
+    second: Rural Village Terrain_56
+  - first:
+      213: -691832313960056165
+    second: Rural Village Terrain_57
+  - first:
+      213: -8251726201439386
+    second: Rural Village Terrain_58
+  - first:
+      213: 4732272201386725704
+    second: Rural Village Terrain_59
+  - first:
+      213: -8984186956578030106
+    second: Rural Village Terrain_60
+  - first:
+      213: 5919391465153018116
+    second: Rural Village Terrain_61
+  - first:
+      213: -7835329501198532750
+    second: Rural Village Terrain_62
+  - first:
+      213: 7869815873548945699
+    second: Rural Village Terrain_63
+  - first:
+      213: 6737226629006325854
+    second: Rural Village Terrain_64
+  - first:
+      213: 6332100029947446547
+    second: Rural Village Terrain_65
+  - first:
+      213: 1208504433369463687
+    second: Rural Village Terrain_66
+  - first:
+      213: 3097420644778492611
+    second: Rural Village Terrain_67
+  - first:
+      213: -7638285319565802977
+    second: Rural Village Terrain_68
+  - first:
+      213: -434905899972387741
+    second: Rural Village Terrain_69
+  - first:
+      213: -7788004572370572144
+    second: Rural Village Terrain_70
+  - first:
+      213: -5974405239339529288
+    second: Rural Village Terrain_71
+  - first:
+      213: -7757853306094948856
+    second: Rural Village Terrain_72
+  - first:
+      213: 6753625650279146143
+    second: Rural Village Terrain_73
+  - first:
+      213: 4669581595063397651
+    second: Rural Village Terrain_74
+  - first:
+      213: 9117866347095551192
+    second: Rural Village Terrain_75
+  - first:
+      213: -7294861832205218680
+    second: Rural Village Terrain_76
+  - first:
+      213: 3836715547576230338
+    second: Rural Village Terrain_77
+  - first:
+      213: -4010306108053562218
+    second: Rural Village Terrain_78
+  - first:
+      213: 984324949311702711
+    second: Rural Village Terrain_79
+  - first:
+      213: -1235244772301486518
+    second: Rural Village Terrain_80
+  - first:
+      213: -2850239952867838530
+    second: Rural Village Terrain_81
+  - first:
+      213: 3666831454104942780
+    second: Rural Village Terrain_82
+  - first:
+      213: 5402747640145682050
+    second: Rural Village Terrain_83
+  - first:
+      213: 7139895364808839816
+    second: Rural Village Terrain_84
+  - first:
+      213: 748823178733484409
+    second: Rural Village Terrain_85
+  - first:
+      213: -4302059400266501477
+    second: Rural Village Terrain_86
+  - first:
+      213: -4527140040662536345
+    second: Rural Village Terrain_87
+  - first:
+      213: 2466692091696637845
+    second: Rural Village Terrain_88
+  - first:
+      213: -1819080563879686794
+    second: Rural Village Terrain_89
+  - first:
+      213: 5961392655182882940
+    second: Rural Village Terrain_90
+  - first:
+      213: 4651532958819062256
+    second: Rural Village Terrain_91
+  - first:
+      213: 7145433784664072242
+    second: Rural Village Terrain_92
+  - first:
+      213: 461180015627057599
+    second: Rural Village Terrain_93
+  - first:
+      213: -7287192526664980145
+    second: Rural Village Terrain_94
+  - first:
+      213: -2590277654332572401
+    second: Rural Village Terrain_95
+  - first:
+      213: -3412062076516825436
+    second: Rural Village Terrain_96
+  - first:
+      213: -2362900208499626225
+    second: Rural Village Terrain_97
+  - first:
+      213: 7684170259543388301
+    second: Rural Village Terrain_98
+  - first:
+      213: -4371679528784967688
+    second: Rural Village Terrain_99
+  - first:
+      213: 5052872119069835959
+    second: Rural Village Terrain_100
+  - first:
+      213: 8274096040655616314
+    second: Rural Village Terrain_101
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rural Village Terrain_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 416
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca67e8b30f4b6dda0800000000000000
+      internalID: -5920345716247595348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_1
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 818
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f9af729d66e5b0b0800000000000000
+      internalID: -5713407193965942283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_2
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 816
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef065854b8225460800000000000000
+      internalID: 7228885106924326888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_3
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 607
+        width: 66
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5517c007300ce0e90800000000000000
+      internalID: -7057492445045690027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_4
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 607
+        width: 66
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e0b1c15dbdf8910800000000000000
+      internalID: 1841932480963874331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_5
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 852
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64daace537b142f0800000000000000
+      internalID: -990309000813030293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_6
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 852
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a26171a471301a0800000000000000
+      internalID: -6844601401690674630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_7
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 852
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae5fd32e73d8d450800000000000000
+      internalID: 6113869032876629679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_8
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 854
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd3c575b5e0a0590800000000000000
+      internalID: -7707332026820706877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_9
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 851
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e3a590489695e20800000000000000
+      internalID: 3339816614485442149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_10
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 815
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7837cd6b76ba90a0800000000000000
+      internalID: -6873981239988635526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_11
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 703
+        width: 210
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac63d209274efd870800000000000000
+      internalID: 8709931385054115530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_12
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 835
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71d0ba975d41d470800000000000000
+      internalID: 8417594217184940411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_13
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 834
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5bea75056b96afe0800000000000000
+      internalID: -1178083394324862115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_14
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 836
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9230dd99fd6597eb0800000000000000
+      internalID: -4721647215962160343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_15
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 839
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b66e3f69fdcabf0800000000000000
+      internalID: -311628434765354228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_16
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 833
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce6bbdfcd173c6c0800000000000000
+      internalID: -4124327639777579327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_17
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 839
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2deeffbe040d39370800000000000000
+      internalID: 8328229113194082002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_18
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 833
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c5c0335853ec980800000000000000
+      internalID: -8516810999107658635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_19
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 840
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f911d3997544c3cd0800000000000000
+      internalID: -2577109743739006561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_20
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 818
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35cf43ad39846950800000000000000
+      internalID: 6441424264872576319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_21
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 818
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ebb8d229d8509a0800000000000000
+      internalID: -6267447647447302594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_22
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 821
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a2babc76c73cde0800000000000000
+      internalID: -1314069881021584859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_23
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 819
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81bd0ea6b596d9660800000000000000
+      internalID: 7394182004568283928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_24
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 823
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ceacbb36a6a0440800000000000000
+      internalID: 4902848120931150993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_25
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 802
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 548d3eceae118c590800000000000000
+      internalID: -7653847866021783483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_26
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 800
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92137880d1d259b0800000000000000
+      internalID: -5092777535029964133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_27
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 792
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 071e8c68029cce760800000000000000
+      internalID: 7488581421947740528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_28
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 754
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe58fffc1ca9f5c0800000000000000
+      internalID: -4181121538483265862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_29
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 752
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc3a4ac1f7823950800000000000000
+      internalID: 6427349090761850105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_30
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 788
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db94d7280d718dc0800000000000000
+      internalID: -3638489549957194794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_31
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 788
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3e66675cc9e0c9a0800000000000000
+      internalID: -6214710421922353604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_32
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 788
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f72fd6d61cfb850800000000000000
+      internalID: 6395042671629598600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_33
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 790
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b786ac5890efb90800000000000000
+      internalID: -7206311883515069587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_34
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 787
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ab3aed1f70b8cf0800000000000000
+      internalID: -249096618985145799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_35
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 777
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293f34a5446912720800000000000000
+      internalID: 2819700062026986386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_36
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 771
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b36d449f529efbc0800000000000000
+      internalID: -3747396900718025807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_37
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 770
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e41b026f73d1ddc00800000000000000
+      internalID: 926929224497934670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_38
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 772
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e368d0403d9a53c50800000000000000
+      internalID: 6644403549026223678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_39
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 775
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc48a3cb837a3cd0800000000000000
+      internalID: -2577620792595952419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_40
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 775
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4765526ab61e51bc0800000000000000
+      internalID: -3812893657034041740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_41
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 776
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd27a3bb29dfb62a0800000000000000
+      internalID: -6743017210408963364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_42
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 769
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56478740dd84ba0e0800000000000000
+      internalID: -2257630674096196507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_43
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 769
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2093a2c5f605970800000000000000
+      internalID: 8741609318362186474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_44
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 735
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80555f582431bae50800000000000000
+      internalID: 6821567237018965256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_45
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 754
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc87a148b27ce74f0800000000000000
+      internalID: -829006291675744049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_46
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 754
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c1b87ee25f072b0800000000000000
+      internalID: -5588697555764831073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_47
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 757
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e28be3a17e9af8230800000000000000
+      internalID: 3643317433608878126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_48
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 755
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff7b2818932ee2d0800000000000000
+      internalID: -3247619145140043791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_49
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 759
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d53e3cd8cb0b9c0800000000000000
+      internalID: -3913420759122092678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_50
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 738
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587baca732f5db5c0800000000000000
+      internalID: -4198094671650834555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_51
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 736
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82006de646002a160800000000000000
+      internalID: 7035185999262384168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_52
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9469f753eb3b8490800000000000000
+      internalID: -7743029286713858917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_53
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 690
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd707ab1053fa130800000000000000
+      internalID: 3580138510322007491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_54
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 688
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 632717b351f4a3520800000000000000
+      internalID: 2682543480662749750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_55
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 724
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a2c49bcd83057d0800000000000000
+      internalID: -2931780836765455864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_56
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 724
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c2312394e5e64b30800000000000000
+      internalID: 4271354066491224777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_57
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 724
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a364a0d2e1666f0800000000000000
+      internalID: -691832313960056165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_58
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 726
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bbaf6491fa2eff0800000000000000
+      internalID: -8251726201439386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_59
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 723
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8419c189e786ca140800000000000000
+      internalID: 4732272201386725704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_60
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 713
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6edf7713091c15380800000000000000
+      internalID: -8984186956578030106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_61
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 707
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409bceedc27e52250800000000000000
+      internalID: 5919391465153018116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_62
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 706
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27f3ceef451534390800000000000000
+      internalID: -7835329501198532750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_63
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 708
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3298d9647d3373d60800000000000000
+      internalID: 7869815873548945699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_64
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 711
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5879397cef6f7d50800000000000000
+      internalID: 6737226629006325854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_65
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 711
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3150247ad6320e750800000000000000
+      internalID: 6332100029947446547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_66
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 712
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78bb874116875c010800000000000000
+      internalID: 1208504433369463687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_67
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 709
+        width: 81
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c2cbf36aaf3cfa20800000000000000
+      internalID: 3097420644778492611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_68
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 705
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f120332a8fb5ff590800000000000000
+      internalID: -7638285319565802977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_69
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 705
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36c9c616367e6f9f0800000000000000
+      internalID: -434905899972387741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_70
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 690
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09cebb2aa137be390800000000000000
+      internalID: -7788004572370572144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_71
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 690
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb4feca616a61da0800000000000000
+      internalID: -5974405239339529288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_72
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 660
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80eee9e5581965490800000000000000
+      internalID: -7757853306094948856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_73
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 636
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f92ead62fb2b9bd50800000000000000
+      internalID: 6753625650279146143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_74
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 674
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31da47f58bfadc040800000000000000
+      internalID: 4669581595063397651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_75
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 672
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc6e18522b298e70800000000000000
+      internalID: 9117866347095551192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_76
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 664
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c4add30d173ca90800000000000000
+      internalID: -7294861832205218680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_77
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 626
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1ef757670ce3530800000000000000
+      internalID: 3836715547576230338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_78
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 624
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c53ec97d78858c0800000000000000
+      internalID: -4010306108053562218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_79
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 660
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b64743835609ad00800000000000000
+      internalID: 984324949311702711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_80
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 660
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46cf489c678bdee0800000000000000
+      internalID: -1235244772301486518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_81
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 660
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb5bfa43dd9e178d0800000000000000
+      internalID: -2850239952867838530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_82
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 662
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb87721a7c333e230800000000000000
+      internalID: 3666831454104942780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_83
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 659
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e96fd8a5a6afa40800000000000000
+      internalID: 5402747640145682050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_84
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 649
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88293e86101061360800000000000000
+      internalID: 7139895364808839816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_85
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 643
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979fcffa6ba546a00800000000000000
+      internalID: 748823178733484409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_86
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 642
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b923c7cc4c30c44c0800000000000000
+      internalID: -4302059400266501477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_87
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 644
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76facdb6e1e5c21c0800000000000000
+      internalID: -4527140040662536345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_88
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 647
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597e7d763637b3220800000000000000
+      internalID: 2466692091696637845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_89
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 647
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d42247dd351c6e0800000000000000
+      internalID: -1819080563879686794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_90
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 648
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c786ccaf80f1bb250800000000000000
+      internalID: 5961392655182882940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_91
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 641
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f19e67c4909d8040800000000000000
+      internalID: 4651532958819062256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_92
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 641
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2302af44b2ea92360800000000000000
+      internalID: 7145433784664072242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_93
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 613
+        width: 130
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9b5f0e7c0766600800000000000000
+      internalID: 461180015627057599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_94
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 626
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49a0469101beda90800000000000000
+      internalID: -7287192526664980145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_95
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 626
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0dffdf723c7d0cd0800000000000000
+      internalID: -2590277654332572401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_96
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 610
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a602a98e9be5a0d0800000000000000
+      internalID: -3412062076516825436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_97
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 608
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0feea097ca453fd0800000000000000
+      internalID: -2362900208499626225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_98
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 564
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8074b97328a3aa60800000000000000
+      internalID: 7684170259543388301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_99
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 540
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7cce671aca453c0800000000000000
+      internalID: -4371679528784967688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_100
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 517
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b202a8cb686f1640800000000000000
+      internalID: 5052872119069835959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Terrain_101
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 517
+        width: 81
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a397ebcc28e73d270800000000000000
+      internalID: 8274096040655616314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rural Village Terrain_0: -5920345716247595348
+      Rural Village Terrain_1: -5713407193965942283
+      Rural Village Terrain_10: -6873981239988635526
+      Rural Village Terrain_100: 5052872119069835959
+      Rural Village Terrain_101: 8274096040655616314
+      Rural Village Terrain_11: 8709931385054115530
+      Rural Village Terrain_12: 8417594217184940411
+      Rural Village Terrain_13: -1178083394324862115
+      Rural Village Terrain_14: -4721647215962160343
+      Rural Village Terrain_15: -311628434765354228
+      Rural Village Terrain_16: -4124327639777579327
+      Rural Village Terrain_17: 8328229113194082002
+      Rural Village Terrain_18: -8516810999107658635
+      Rural Village Terrain_19: -2577109743739006561
+      Rural Village Terrain_2: 7228885106924326888
+      Rural Village Terrain_20: 6441424264872576319
+      Rural Village Terrain_21: -6267447647447302594
+      Rural Village Terrain_22: -1314069881021584859
+      Rural Village Terrain_23: 7394182004568283928
+      Rural Village Terrain_24: 4902848120931150993
+      Rural Village Terrain_25: -7653847866021783483
+      Rural Village Terrain_26: -5092777535029964133
+      Rural Village Terrain_27: 7488581421947740528
+      Rural Village Terrain_28: -4181121538483265862
+      Rural Village Terrain_29: 6427349090761850105
+      Rural Village Terrain_3: -7057492445045690027
+      Rural Village Terrain_30: -3638489549957194794
+      Rural Village Terrain_31: -6214710421922353604
+      Rural Village Terrain_32: 6395042671629598600
+      Rural Village Terrain_33: -7206311883515069587
+      Rural Village Terrain_34: -249096618985145799
+      Rural Village Terrain_35: 2819700062026986386
+      Rural Village Terrain_36: -3747396900718025807
+      Rural Village Terrain_37: 926929224497934670
+      Rural Village Terrain_38: 6644403549026223678
+      Rural Village Terrain_39: -2577620792595952419
+      Rural Village Terrain_4: 1841932480963874331
+      Rural Village Terrain_40: -3812893657034041740
+      Rural Village Terrain_41: -6743017210408963364
+      Rural Village Terrain_42: -2257630674096196507
+      Rural Village Terrain_43: 8741609318362186474
+      Rural Village Terrain_44: 6821567237018965256
+      Rural Village Terrain_45: -829006291675744049
+      Rural Village Terrain_46: -5588697555764831073
+      Rural Village Terrain_47: 3643317433608878126
+      Rural Village Terrain_48: -3247619145140043791
+      Rural Village Terrain_49: -3913420759122092678
+      Rural Village Terrain_5: -990309000813030293
+      Rural Village Terrain_50: -4198094671650834555
+      Rural Village Terrain_51: 7035185999262384168
+      Rural Village Terrain_52: -7743029286713858917
+      Rural Village Terrain_53: 3580138510322007491
+      Rural Village Terrain_54: 2682543480662749750
+      Rural Village Terrain_55: -2931780836765455864
+      Rural Village Terrain_56: 4271354066491224777
+      Rural Village Terrain_57: -691832313960056165
+      Rural Village Terrain_58: -8251726201439386
+      Rural Village Terrain_59: 4732272201386725704
+      Rural Village Terrain_6: -6844601401690674630
+      Rural Village Terrain_60: -8984186956578030106
+      Rural Village Terrain_61: 5919391465153018116
+      Rural Village Terrain_62: -7835329501198532750
+      Rural Village Terrain_63: 7869815873548945699
+      Rural Village Terrain_64: 6737226629006325854
+      Rural Village Terrain_65: 6332100029947446547
+      Rural Village Terrain_66: 1208504433369463687
+      Rural Village Terrain_67: 3097420644778492611
+      Rural Village Terrain_68: -7638285319565802977
+      Rural Village Terrain_69: -434905899972387741
+      Rural Village Terrain_7: 6113869032876629679
+      Rural Village Terrain_70: -7788004572370572144
+      Rural Village Terrain_71: -5974405239339529288
+      Rural Village Terrain_72: -7757853306094948856
+      Rural Village Terrain_73: 6753625650279146143
+      Rural Village Terrain_74: 4669581595063397651
+      Rural Village Terrain_75: 9117866347095551192
+      Rural Village Terrain_76: -7294861832205218680
+      Rural Village Terrain_77: 3836715547576230338
+      Rural Village Terrain_78: -4010306108053562218
+      Rural Village Terrain_79: 984324949311702711
+      Rural Village Terrain_8: -7707332026820706877
+      Rural Village Terrain_80: -1235244772301486518
+      Rural Village Terrain_81: -2850239952867838530
+      Rural Village Terrain_82: 3666831454104942780
+      Rural Village Terrain_83: 5402747640145682050
+      Rural Village Terrain_84: 7139895364808839816
+      Rural Village Terrain_85: 748823178733484409
+      Rural Village Terrain_86: -4302059400266501477
+      Rural Village Terrain_87: -4527140040662536345
+      Rural Village Terrain_88: 2466692091696637845
+      Rural Village Terrain_89: -1819080563879686794
+      Rural Village Terrain_9: 3339816614485442149
+      Rural Village Terrain_90: 5961392655182882940
+      Rural Village Terrain_91: 4651532958819062256
+      Rural Village Terrain_92: 7145433784664072242
+      Rural Village Terrain_93: 461180015627057599
+      Rural Village Terrain_94: -7287192526664980145
+      Rural Village Terrain_95: -2590277654332572401
+      Rural Village Terrain_96: -3412062076516825436
+      Rural Village Terrain_97: -2362900208499626225
+      Rural Village Terrain_98: 7684170259543388301
+      Rural Village Terrain_99: -4371679528784967688
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
