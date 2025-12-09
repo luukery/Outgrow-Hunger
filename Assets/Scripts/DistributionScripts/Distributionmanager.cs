@@ -138,12 +138,14 @@ public class Distributionmanager : MonoBehaviour
             dropdown.gameObject.SetActive(true);
 
             TextMeshProUGUI ordertext = dropdown.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
-            // change icon to order food type
-
+            Image icon = dropdown.transform.Find("Icon").GetComponent<Image>();
 
             Request need = npcneeds[index];
             Request order = npcorders[index];
+
             ordertext.text = "Need: " + need.Amount + "\nOrder: " + order.Amount;
+            icon.sprite = order.FoodType;
+
             dropdown.ClearOptions();
             List<string> options = new();
             for (int a = 0; a <= need.Amount; a++)
