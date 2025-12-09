@@ -115,25 +115,34 @@ public class Distributionmanager : MonoBehaviour
         // dialogue needs to be reenabled eventually
         dialogue.gameObject.SetActive(false);
 
-        npcDTO = currentNPC.GetInfoDTO();
+        List<Request> npcneeds = new();
+        List<Request> npcorders = new();
 
+        npcDTO = currentNPC.GetInfoDTO();
         // cant do a foreach loop bc there's multiple lists in dto 
         // skip if need = 0
-         
-        /* List<Request> needs = new()
-        foreach (Request order in npcDTO.Orders)
-        {
-            if ()
-        } */
-
         for (int index = 0; index < npcDTO.Needs.Count; index++)
+        {
+            Request dtoneed = npcDTO.Needs[index];
+            if (dtoneed.Amount != 0)
+            {
+                npcneeds.Add(dtoneed);
+                npcorders.Add(npcDTO.Order[index]);
+            }
+        }
+
+
+        for (int index = 0; index < npcneeds.Count; index++)
         {
             TMP_Dropdown dropdown = dropdowns[index];
             dropdown.gameObject.SetActive(true);
 
             TextMeshProUGUI ordertext = dropdown.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
-            Request need = npcDTO.Needs[index];
-            Request order = npcDTO.Order[index];
+            // change icon to order food type
+
+
+            Request need = npcneeds[index];
+            Request order = npcorders[index];
             ordertext.text = "Need: " + need.Amount + "\nOrder: " + order.Amount;
             dropdown.ClearOptions();
             List<string> options = new();
@@ -165,9 +174,6 @@ public class Distributionmanager : MonoBehaviour
 
         Debug.Log("NPC recieved delivery");
         currentNPC.Transaction(requests);
-
-
-
 
         foodselect.SetActive(false);
         dialogue.gameObject.SetActive(true);
