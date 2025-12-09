@@ -82,8 +82,7 @@ public class Distributionmanager : MonoBehaviour
             denybuttonText.text = "Cancel selection";
 
             feedButton.onClick.AddListener(() => SendDelivery(npcDTO));
-            // denybutton function needs to be added later
-            denyButton.onClick.AddListener(Deny);
+            denyButton.onClick.AddListener(CancelSelection);
         }
         else
         {
@@ -93,6 +92,15 @@ public class Distributionmanager : MonoBehaviour
             feedButton.onClick.AddListener(HandleAccept);
             denyButton.onClick.AddListener(Deny);
         }
+    }
+
+    private void CancelSelection()
+    {
+        Debug.Log("Selection cancelled");
+        foodselect.SetActive(false);
+        dialogue.gameObject.SetActive(true);
+        dialogue.text = "cancelled selection";
+        ChangeButtonFunction(false);
     }
 
     private void FoodSelector()
@@ -111,6 +119,13 @@ public class Distributionmanager : MonoBehaviour
 
         // cant do a foreach loop bc there's multiple lists in dto 
         // skip if need = 0
+         
+        /* List<Request> needs = new()
+        foreach (Request order in npcDTO.Orders)
+        {
+            if ()
+        } */
+
         for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
             TMP_Dropdown dropdown = dropdowns[index];
@@ -150,6 +165,14 @@ public class Distributionmanager : MonoBehaviour
 
         Debug.Log("NPC recieved delivery");
         currentNPC.Transaction(requests);
+
+
+
+
+        foodselect.SetActive(false);
+        dialogue.gameObject.SetActive(true);
+        SpawnNPC();
+        ChangeButtonFunction(false);
     }
 
 
