@@ -66,10 +66,15 @@ public class RoadClickable : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             foreach (var mat in rend.materials)
             {
                 if (mat.HasProperty(colorPropertyName))
-                {
                     mat.SetColor(colorPropertyName, color);
-                }
             }
         }
+    }
+
+    // Called by RouteHandler to clear highlight between legs / when scene resets
+    public void ResetHighlight()
+    {
+        isSelected = false;
+        SetColor(baseColor);
     }
 }
