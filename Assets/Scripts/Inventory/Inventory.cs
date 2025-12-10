@@ -8,12 +8,13 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Wallet))]
 public class Inventory : MonoBehaviour
 {
     public List<Food> foods = new List<Food>();
 
     public InventoryVisualiser vis;
-
+    public Wallet wallet;
     //Inventory handeling
     public int maxCapacity;
     public int currentCapacity;
@@ -125,6 +126,18 @@ public class Inventory : MonoBehaviour
     }
 
     //Boolean logic || A few methods that try and do something. They return true when possibla and complete the action. They return false and dont do anything (yet) when impossible. 
+    public bool CanThisTransactionHappen(Food food)
+    {
+        if ((currentCapacity + food.size) > maxCapacity)
+        {
+            return false;
+        }
+        if (food.price > wallet.Money)
+        {
+            return false;
+        }
+        return true;
+    }
     public bool TryAddFoodToInventory(Food food)
     {
         if ((currentCapacity + food.size) > maxCapacity)
@@ -153,6 +166,11 @@ public class Inventory : MonoBehaviour
     {
         foods.Add(food);
         currentCapacity += food.size;
+    }
+
+    private void RemoveCoinsFromWallet(int amount)
+    {
+        //Placeholder for wallet logic. 
     }
 
     private void RemoveFoodFromInventory(Food food)
