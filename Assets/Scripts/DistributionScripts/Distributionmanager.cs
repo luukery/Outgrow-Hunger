@@ -9,7 +9,7 @@ public class Distributionmanager : MonoBehaviour
     public SpawnerScript spawner;
     public Canvas canvas;
 
-    private Button feedButton, denyButton;
+    private Button feedButton, denyButton, continueButton;
     private TextMeshProUGUI dialogue;
     private GameObject foodselect;
     private List<TMP_Dropdown> dropdowns = new();
@@ -23,9 +23,11 @@ public class Distributionmanager : MonoBehaviour
 
         feedButton = canvas.transform.Find("FeedButton").GetComponent<Button>();
         denyButton = canvas.transform.Find("DenyButton").GetComponent<Button>();
+        continueButton = canvas.transform.Find("ContinueButton").GetComponent<Button>();
+        continueButton.enabled = false;
+
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
         foodselect = canvas.transform.Find("FoodSelect").gameObject;
-
 
         for (int i = 0; i < 7 ; i++)
         {
@@ -94,6 +96,23 @@ public class Distributionmanager : MonoBehaviour
         }
     }
 
+    private void EnableDisableConfirmButton(bool enable)
+    {
+        if (enable)
+        {
+            continueButton.enabled = true;
+            feedButton.enabled = false;
+            denyButton.enabled = false;
+
+        }
+        else
+        {
+            continueButton.enabled = false;
+            feedButton.enabled = true;
+            denyButton.enabled = true;
+        }
+    }
+
     private void CancelSelection()
     {
         Debug.Log("Selection cancelled");
@@ -144,10 +163,12 @@ public class Distributionmanager : MonoBehaviour
             Request order = npcorders[index];
 
             ordertext.text = "Need: " + need.Amount + "\nOrder: " + order.Amount;
-            icon.sprite = order.FoodType;
+            // icon.sprite = order.FoodType;
 
             dropdown.ClearOptions();
             List<string> options = new();
+
+                
             for (int a = 0; a <= need.Amount; a++)
             {
                 options.Add(a.ToString());
@@ -174,13 +195,34 @@ public class Distributionmanager : MonoBehaviour
             requests.Add(sendrequest);
         }
 
-        Debug.Log("NPC recieved delivery");
-        currentNPC.Transaction(requests);
-
+        ShowResults(currentNPC.Transaction(requests));
         foodselect.SetActive(false);
         dialogue.gameObject.SetActive(true);
-        SpawnNPC();
         ChangeButtonFunction(false);
+
+        continueButton.onClick.AddListener(ContinueAfterDelivery);
+    }
+
+    private void ContinueAfterDelivery()
+    {
+        SpawnNPC();
+    }
+
+    private void ShowResults(DeliveryResult result)
+    {
+        string resulttext = string.Empty;
+        
+        if (result.TotalFoodShortage != 0)
+        {
+            resulttext += "Amount of food you didn't give: " + result.TotalFoodShortage + "\n";
+        }
+        if (result.TotalFoodExcess != 0)
+        {
+            resulttext += "Amount of extra food you gave: " + result.TotalFoodExcess + "\n";
+        }
+        resulttext += "Money earned: $" + result.AmountPaid;
+
+        dialogue.text = resulttext;
     }
 
 
