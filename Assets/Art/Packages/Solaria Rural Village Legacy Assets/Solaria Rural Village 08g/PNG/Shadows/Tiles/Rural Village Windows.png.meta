@@ -1,0 +1,2613 @@
+fileFormatVersion: 2
+guid: 3194280c5029b25469736bdb7899c056
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2026550499187757598
+    second: Rural Village Windows_0
+  - first:
+      213: -8709561521969226345
+    second: Rural Village Windows_1
+  - first:
+      213: -5514018585166630957
+    second: Rural Village Windows_2
+  - first:
+      213: 7093286770562087629
+    second: Rural Village Windows_3
+  - first:
+      213: -5337907240616891820
+    second: Rural Village Windows_4
+  - first:
+      213: 4375545029021420827
+    second: Rural Village Windows_5
+  - first:
+      213: 2109027224755665698
+    second: Rural Village Windows_6
+  - first:
+      213: -7997647054063811910
+    second: Rural Village Windows_7
+  - first:
+      213: -71142622597047988
+    second: Rural Village Windows_8
+  - first:
+      213: -4053945325169164804
+    second: Rural Village Windows_9
+  - first:
+      213: -4809887361267128270
+    second: Rural Village Windows_10
+  - first:
+      213: 1685853800635914761
+    second: Rural Village Windows_11
+  - first:
+      213: -8408207916203152757
+    second: Rural Village Windows_12
+  - first:
+      213: -5666728626319458366
+    second: Rural Village Windows_13
+  - first:
+      213: 5696893164736697090
+    second: Rural Village Windows_14
+  - first:
+      213: -4626456534452494402
+    second: Rural Village Windows_15
+  - first:
+      213: 1402570547079786193
+    second: Rural Village Windows_16
+  - first:
+      213: 873658496563597249
+    second: Rural Village Windows_17
+  - first:
+      213: -3456891058782997891
+    second: Rural Village Windows_18
+  - first:
+      213: -2346036911553443097
+    second: Rural Village Windows_19
+  - first:
+      213: -3138031806476314508
+    second: Rural Village Windows_20
+  - first:
+      213: -5002791899586308050
+    second: Rural Village Windows_21
+  - first:
+      213: 5644339144905256055
+    second: Rural Village Windows_22
+  - first:
+      213: 2605197619939175596
+    second: Rural Village Windows_23
+  - first:
+      213: -6737997235705946121
+    second: Rural Village Windows_24
+  - first:
+      213: 3867244873638857056
+    second: Rural Village Windows_25
+  - first:
+      213: -3054907324731467265
+    second: Rural Village Windows_26
+  - first:
+      213: 807425735403009749
+    second: Rural Village Windows_27
+  - first:
+      213: -4413717940725378248
+    second: Rural Village Windows_28
+  - first:
+      213: -3627529439888710871
+    second: Rural Village Windows_29
+  - first:
+      213: 3628939838863202930
+    second: Rural Village Windows_30
+  - first:
+      213: 6075332101785956386
+    second: Rural Village Windows_31
+  - first:
+      213: 8684406374698876912
+    second: Rural Village Windows_32
+  - first:
+      213: -7530402057441081361
+    second: Rural Village Windows_33
+  - first:
+      213: -7080225390065732052
+    second: Rural Village Windows_34
+  - first:
+      213: -1688958101053941581
+    second: Rural Village Windows_35
+  - first:
+      213: 5975437564586241172
+    second: Rural Village Windows_36
+  - first:
+      213: 5381246565926441613
+    second: Rural Village Windows_37
+  - first:
+      213: 3296651983824906399
+    second: Rural Village Windows_38
+  - first:
+      213: -9202594793668358706
+    second: Rural Village Windows_39
+  - first:
+      213: -118176999156792747
+    second: Rural Village Windows_40
+  - first:
+      213: 2344749113057147471
+    second: Rural Village Windows_41
+  - first:
+      213: -7271220186564681884
+    second: Rural Village Windows_42
+  - first:
+      213: -4700303620023130170
+    second: Rural Village Windows_43
+  - first:
+      213: 1799754039111618648
+    second: Rural Village Windows_44
+  - first:
+      213: 5771480635201678363
+    second: Rural Village Windows_45
+  - first:
+      213: -6215009826416821921
+    second: Rural Village Windows_46
+  - first:
+      213: -5185377785998702124
+    second: Rural Village Windows_47
+  - first:
+      213: 1397111334359258173
+    second: Rural Village Windows_48
+  - first:
+      213: 3859553734170387122
+    second: Rural Village Windows_49
+  - first:
+      213: 4267935658297496595
+    second: Rural Village Windows_50
+  - first:
+      213: 138140470952297584
+    second: Rural Village Windows_51
+  - first:
+      213: -5100076025796532353
+    second: Rural Village Windows_52
+  - first:
+      213: 1463237437726488311
+    second: Rural Village Windows_53
+  - first:
+      213: 8246129033453740710
+    second: Rural Village Windows_54
+  - first:
+      213: 2960546148998757539
+    second: Rural Village Windows_55
+  - first:
+      213: -7578993282961538382
+    second: Rural Village Windows_56
+  - first:
+      213: -7568064029513571872
+    second: Rural Village Windows_57
+  - first:
+      213: -1215857318409511570
+    second: Rural Village Windows_58
+  - first:
+      213: 2898325951969940230
+    second: Rural Village Windows_59
+  - first:
+      213: 8479752852503053114
+    second: Rural Village Windows_60
+  - first:
+      213: 6498595871108599335
+    second: Rural Village Windows_61
+  - first:
+      213: 8097119718195430389
+    second: Rural Village Windows_62
+  - first:
+      213: 1839730322807602325
+    second: Rural Village Windows_63
+  - first:
+      213: -6243276948324940647
+    second: Rural Village Windows_64
+  - first:
+      213: 4552927784625078917
+    second: Rural Village Windows_65
+  - first:
+      213: -3466935483239216035
+    second: Rural Village Windows_66
+  - first:
+      213: -3417212532424524916
+    second: Rural Village Windows_67
+  - first:
+      213: 4154215277461150019
+    second: Rural Village Windows_68
+  - first:
+      213: 7692587458534806733
+    second: Rural Village Windows_69
+  - first:
+      213: -6396755060416332201
+    second: Rural Village Windows_70
+  - first:
+      213: -2511523685325806519
+    second: Rural Village Windows_71
+  - first:
+      213: -8202878163063634823
+    second: Rural Village Windows_72
+  - first:
+      213: -460617612631905512
+    second: Rural Village Windows_73
+  - first:
+      213: 4245158779830528721
+    second: Rural Village Windows_74
+  - first:
+      213: 6932637833351956580
+    second: Rural Village Windows_75
+  - first:
+      213: -5921723250165328624
+    second: Rural Village Windows_76
+  - first:
+      213: -3846249552854936127
+    second: Rural Village Windows_77
+  - first:
+      213: -2421916944913861133
+    second: Rural Village Windows_78
+  - first:
+      213: -7473421780334962265
+    second: Rural Village Windows_79
+  - first:
+      213: 379442607901260640
+    second: Rural Village Windows_80
+  - first:
+      213: 6803804202561426258
+    second: Rural Village Windows_81
+  - first:
+      213: -2472201762600802588
+    second: Rural Village Windows_82
+  - first:
+      213: 8188494612626111893
+    second: Rural Village Windows_83
+  - first:
+      213: -6716512051284156356
+    second: Rural Village Windows_84
+  - first:
+      213: 3079650062957700744
+    second: Rural Village Windows_85
+  - first:
+      213: 1782410833102942573
+    second: Rural Village Windows_86
+  - first:
+      213: -1255601676902222589
+    second: Rural Village Windows_87
+  - first:
+      213: -2500447945547520543
+    second: Rural Village Windows_88
+  - first:
+      213: 3409629782421435291
+    second: Rural Village Windows_89
+  - first:
+      213: -4846905184024549523
+    second: Rural Village Windows_90
+  - first:
+      213: 7289939698687864615
+    second: Rural Village Windows_91
+  - first:
+      213: -2075954338117237418
+    second: Rural Village Windows_92
+  - first:
+      213: -8017172909379842102
+    second: Rural Village Windows_93
+  - first:
+      213: 8600000115576775747
+    second: Rural Village Windows_94
+  - first:
+      213: 5382665769278606596
+    second: Rural Village Windows_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rural Village Windows_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 303
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e121a7f11f0cf1c10800000000000000
+      internalID: 2026550499187757598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 293
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d1d95e0fb612780800000000000000
+      internalID: -8709561521969226345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 303
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dfad32bf454a73b0800000000000000
+      internalID: -5514018585166630957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_3
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 293
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcab4596cba607260800000000000000
+      internalID: 7093286770562087629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_4
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 303
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45a6b0765a1fbe5b0800000000000000
+      internalID: -5337907240616891820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 293
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d4c81750f09bc30800000000000000
+      internalID: 4375545029021420827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_6
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 303
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b70393615c44d10800000000000000
+      internalID: 2109027224755665698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_7
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 293
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2c39fa066a20190800000000000000
+      internalID: -7997647054063811910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_8
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 303
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4996b36920430ff0800000000000000
+      internalID: -71142622597047988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_9
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 293
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdbf6a943e7db7c0800000000000000
+      internalID: -4053945325169164804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_10
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 303
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2382806cde8df3db0800000000000000
+      internalID: -4809887361267128270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_11
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 293
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a5522891b556710800000000000000
+      internalID: 1685853800635914761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_12
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 288
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a6515e27b005b80800000000000000
+      internalID: -8408207916203152757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_13
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 288
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cff0b5865cbb51b0800000000000000
+      internalID: -5666728626319458366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_14
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 288
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2035b7f562e6f0f40800000000000000
+      internalID: 5696893164736697090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_15
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 288
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf9c2f3b468bcfb0800000000000000
+      internalID: -4626456534452494402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_16
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 288
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dead1f3b7ee67310800000000000000
+      internalID: 1402570547079786193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_17
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 288
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cfcca616cbdf1c00800000000000000
+      internalID: 873658496563597249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_18
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 271
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72f30eb5e7a600d0800000000000000
+      internalID: -3456891058782997891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_19
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 271
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea07e8dbd3317fd0800000000000000
+      internalID: -2346036911553443097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_20
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 271
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4781a11b2b87374d0800000000000000
+      internalID: -3138031806476314508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_21
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 271
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e28d4f3f543829ab0800000000000000
+      internalID: -5002791899586308050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_22
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 271
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ce8eb1c88b45e40800000000000000
+      internalID: 5644339144905256055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_23
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 271
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cacea22be65872420800000000000000
+      internalID: 2605197619939175596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_24
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 278
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ffde2ca633dd72a0800000000000000
+      internalID: -6737997235705946121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_25
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 278
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069c1b819b63ba530800000000000000
+      internalID: 3867244873638857056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_26
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 278
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff954a749f9ca95d0800000000000000
+      internalID: -3054907324731467265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_27
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 278
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6743dad6d843b00800000000000000
+      internalID: 807425735403009749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_28
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 278
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8339b44fae25fb2c0800000000000000
+      internalID: -4413717940725378248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_29
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 278
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9236923a13d68adc0800000000000000
+      internalID: -3627529439888710871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_30
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 245
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a54b67e859c5230800000000000000
+      internalID: 3628939838863202930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_31
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 245
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220ba7bab5aef4450800000000000000
+      internalID: 6075332101785956386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_32
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 245
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff7019f595358870800000000000000
+      internalID: 8684406374698876912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_33
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 245
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe78a5ef933ae7790800000000000000
+      internalID: -7530402057441081361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_34
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 245
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c263e67358cfdbd90800000000000000
+      internalID: -7080225390065732052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_35
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 245
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b8592a3e8d9f88e0800000000000000
+      internalID: -1688958101053941581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_36
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 240
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49c20b64ec40de250800000000000000
+      internalID: 5975437564586241172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_37
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 239
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8216da9d370eaa40800000000000000
+      internalID: 5381246565926441613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_38
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 240
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9868fb438f00cd20800000000000000
+      internalID: 3296651983824906399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_39
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 239
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecdc987eac0d94080800000000000000
+      internalID: -9202594793668358706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_40
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 240
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55243a835a62c5ef0800000000000000
+      internalID: -118176999156792747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_41
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 239
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4afe2335e83a8020800000000000000
+      internalID: 2344749113057147471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f9920d3cf671b90800000000000000
+      internalID: -7271220186564681884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_43
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 213
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7e908c2ca25ceb0800000000000000
+      internalID: -4700303620023130170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_44
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 223
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 850925853c20af810800000000000000
+      internalID: 1799754039111618648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_45
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 213
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ced312f0b681050800000000000000
+      internalID: 5771480635201678363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_46
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 223
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59fcdccd79dfb9a0800000000000000
+      internalID: -6215009826416821921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_47
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 213
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9885f7066d908b0800000000000000
+      internalID: -5185377785998702124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_48
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 223
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d34d72c3b59836310800000000000000
+      internalID: 1397111334359258173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_49
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 213
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b222c42ca3ef8530800000000000000
+      internalID: 3859553734170387122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_50
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 223
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3149b056ed0ca3b30800000000000000
+      internalID: 4267935658297496595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_51
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 213
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0748734c606cae100800000000000000
+      internalID: 138140470952297584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_52
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 223
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7769ea30e3e839b0800000000000000
+      internalID: -5100076025796532353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_53
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 213
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f67db172b67e4410800000000000000
+      internalID: 1463237437726488311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_54
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 214
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2ab038aa2207270800000000000000
+      internalID: 8246129033453740710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_55
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 214
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3acb8307909f51920800000000000000
+      internalID: 2960546148998757539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_56
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 214
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b2810ea3c102d690800000000000000
+      internalID: -7578993282961538382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_57
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 214
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1ae6bccd5d8f690800000000000000
+      internalID: -7568064029513571872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_58
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 214
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d54a6f538602fe0800000000000000
+      internalID: -1215857318409511570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_59
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 214
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603d67ae81ce83820800000000000000
+      internalID: 2898325951969940230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_60
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 191
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33cc8caa422ea570800000000000000
+      internalID: 8479752852503053114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_61
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 191
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e8f348386af2a50800000000000000
+      internalID: 6498595871108599335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_62
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 191
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f389dabb7fbe5070800000000000000
+      internalID: 8097119718195430389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_63
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 191
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c36753bf8088910800000000000000
+      internalID: 1839730322807602325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_64
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 191
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99405bc91bc6b59a0800000000000000
+      internalID: -6243276948324940647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_65
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 191
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582859a92bf3f2f30800000000000000
+      internalID: 4552927784625078917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_66
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 176
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c445eeb88f2efc0800000000000000
+      internalID: -3466935483239216035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_67
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 176
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8bb2d29e4f9390d0800000000000000
+      internalID: -3417212532424524916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_68
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 176
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349929de8ccb6a930800000000000000
+      internalID: 4154215277461150019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_69
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 176
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc49795598f81ca60800000000000000
+      internalID: 7692587458534806733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_70
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 176
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75eb3bcf9292a37a0800000000000000
+      internalID: -6396755060416332201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_71
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 176
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 944ec2bc386452dd0800000000000000
+      internalID: -2511523685325806519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_72
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 165
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97488ca75c5892e80800000000000000
+      internalID: -8202878163063634823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_73
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 165
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b69c5c8be8b99f0800000000000000
+      internalID: -460617612631905512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_74
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 165
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1daedee1b65d9ea30800000000000000
+      internalID: 4245158779830528721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_75
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 165
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4688065f06da53060800000000000000
+      internalID: 6932637833351956580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_76
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 165
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01559bf1410d1dda0800000000000000
+      internalID: -5921723250165328624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_77
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 165
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c59394f8606f9ac0800000000000000
+      internalID: -3846249552854936127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_78
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 166
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5f8e6de5f936ed0800000000000000
+      internalID: -2421916944913861133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_79
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 166
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a997769c72194890800000000000000
+      internalID: -7473421780334962265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_80
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 166
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b3a90aa0d044500800000000000000
+      internalID: 379442607901260640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_81
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 166
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253dbf6cfd7fb6e50800000000000000
+      internalID: 6803804202561426258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_82
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 166
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6a51f5899f0bdd0800000000000000
+      internalID: -2472201762600802588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_83
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 166
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d77c6377063a170800000000000000
+      internalID: 8188494612626111893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_84
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 128
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c30e39dffd72ac2a0800000000000000
+      internalID: -6716512051284156356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_85
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 128
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8866a136a6d1dba20800000000000000
+      internalID: 3079650062957700744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_86
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 128
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61b8e685356cb810800000000000000
+      internalID: 1782410833102942573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_87
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 128
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305bbd46de4339ee0800000000000000
+      internalID: -1255601676902222589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_88
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 128
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5e84a67df9c4dd0800000000000000
+      internalID: -2500447945547520543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_89
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 128
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9372dcd830715f20800000000000000
+      internalID: 3409629782421435291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_90
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 102
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67a7364a655cbcb0800000000000000
+      internalID: -4846905184024549523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_91
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 102
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72fee4e38811b2560800000000000000
+      internalID: 7289939698687864615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_92
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 102
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6554792478ab033e0800000000000000
+      internalID: -2075954338117237418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_93
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 102
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf878937b74db090800000000000000
+      internalID: -8017172909379842102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_94
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 102
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 344a5455a86595770800000000000000
+      internalID: 8600000115576775747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rural Village Windows_95
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 102
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d8182aff113ba40800000000000000
+      internalID: 5382665769278606596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rural Village Windows_0: 2026550499187757598
+      Rural Village Windows_1: -8709561521969226345
+      Rural Village Windows_10: -4809887361267128270
+      Rural Village Windows_11: 1685853800635914761
+      Rural Village Windows_12: -8408207916203152757
+      Rural Village Windows_13: -5666728626319458366
+      Rural Village Windows_14: 5696893164736697090
+      Rural Village Windows_15: -4626456534452494402
+      Rural Village Windows_16: 1402570547079786193
+      Rural Village Windows_17: 873658496563597249
+      Rural Village Windows_18: -3456891058782997891
+      Rural Village Windows_19: -2346036911553443097
+      Rural Village Windows_2: -5514018585166630957
+      Rural Village Windows_20: -3138031806476314508
+      Rural Village Windows_21: -5002791899586308050
+      Rural Village Windows_22: 5644339144905256055
+      Rural Village Windows_23: 2605197619939175596
+      Rural Village Windows_24: -6737997235705946121
+      Rural Village Windows_25: 3867244873638857056
+      Rural Village Windows_26: -3054907324731467265
+      Rural Village Windows_27: 807425735403009749
+      Rural Village Windows_28: -4413717940725378248
+      Rural Village Windows_29: -3627529439888710871
+      Rural Village Windows_3: 7093286770562087629
+      Rural Village Windows_30: 3628939838863202930
+      Rural Village Windows_31: 6075332101785956386
+      Rural Village Windows_32: 8684406374698876912
+      Rural Village Windows_33: -7530402057441081361
+      Rural Village Windows_34: -7080225390065732052
+      Rural Village Windows_35: -1688958101053941581
+      Rural Village Windows_36: 5975437564586241172
+      Rural Village Windows_37: 5381246565926441613
+      Rural Village Windows_38: 3296651983824906399
+      Rural Village Windows_39: -9202594793668358706
+      Rural Village Windows_4: -5337907240616891820
+      Rural Village Windows_40: -118176999156792747
+      Rural Village Windows_41: 2344749113057147471
+      Rural Village Windows_42: -7271220186564681884
+      Rural Village Windows_43: -4700303620023130170
+      Rural Village Windows_44: 1799754039111618648
+      Rural Village Windows_45: 5771480635201678363
+      Rural Village Windows_46: -6215009826416821921
+      Rural Village Windows_47: -5185377785998702124
+      Rural Village Windows_48: 1397111334359258173
+      Rural Village Windows_49: 3859553734170387122
+      Rural Village Windows_5: 4375545029021420827
+      Rural Village Windows_50: 4267935658297496595
+      Rural Village Windows_51: 138140470952297584
+      Rural Village Windows_52: -5100076025796532353
+      Rural Village Windows_53: 1463237437726488311
+      Rural Village Windows_54: 8246129033453740710
+      Rural Village Windows_55: 2960546148998757539
+      Rural Village Windows_56: -7578993282961538382
+      Rural Village Windows_57: -7568064029513571872
+      Rural Village Windows_58: -1215857318409511570
+      Rural Village Windows_59: 2898325951969940230
+      Rural Village Windows_6: 2109027224755665698
+      Rural Village Windows_60: 8479752852503053114
+      Rural Village Windows_61: 6498595871108599335
+      Rural Village Windows_62: 8097119718195430389
+      Rural Village Windows_63: 1839730322807602325
+      Rural Village Windows_64: -6243276948324940647
+      Rural Village Windows_65: 4552927784625078917
+      Rural Village Windows_66: -3466935483239216035
+      Rural Village Windows_67: -3417212532424524916
+      Rural Village Windows_68: 4154215277461150019
+      Rural Village Windows_69: 7692587458534806733
+      Rural Village Windows_7: -7997647054063811910
+      Rural Village Windows_70: -6396755060416332201
+      Rural Village Windows_71: -2511523685325806519
+      Rural Village Windows_72: -8202878163063634823
+      Rural Village Windows_73: -460617612631905512
+      Rural Village Windows_74: 4245158779830528721
+      Rural Village Windows_75: 6932637833351956580
+      Rural Village Windows_76: -5921723250165328624
+      Rural Village Windows_77: -3846249552854936127
+      Rural Village Windows_78: -2421916944913861133
+      Rural Village Windows_79: -7473421780334962265
+      Rural Village Windows_8: -71142622597047988
+      Rural Village Windows_80: 379442607901260640
+      Rural Village Windows_81: 6803804202561426258
+      Rural Village Windows_82: -2472201762600802588
+      Rural Village Windows_83: 8188494612626111893
+      Rural Village Windows_84: -6716512051284156356
+      Rural Village Windows_85: 3079650062957700744
+      Rural Village Windows_86: 1782410833102942573
+      Rural Village Windows_87: -1255601676902222589
+      Rural Village Windows_88: -2500447945547520543
+      Rural Village Windows_89: 3409629782421435291
+      Rural Village Windows_9: -4053945325169164804
+      Rural Village Windows_90: -4846905184024549523
+      Rural Village Windows_91: 7289939698687864615
+      Rural Village Windows_92: -2075954338117237418
+      Rural Village Windows_93: -8017172909379842102
+      Rural Village Windows_94: 8600000115576775747
+      Rural Village Windows_95: 5382665769278606596
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
