@@ -10,7 +10,7 @@ public class NPC : MonoBehaviour
 
     public int Money;
 
-    ReceiveDelivery deliveryService = new ReceiveDelivery();
+    DeliveryResultService deliveryService = new DeliveryResultService();
 
     void Start()
     {

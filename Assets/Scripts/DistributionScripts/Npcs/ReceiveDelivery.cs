@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public class ReceiveDelivery
+public class DeliveryResultService
 {
     public DeliveryResult Transaction(List<Request> order, int npcMoney, List<Request> given)
     {
