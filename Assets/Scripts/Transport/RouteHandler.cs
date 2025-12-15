@@ -6,13 +6,6 @@ using TMPro;
 
 public class RouteHandler : MonoBehaviour
 {
-    [Header("UI References (Optional — leave empty if using roads instead of buttons)")]
-    public Button shortRouteButton;
-    public Button mediumRouteButton;
-    public Button longRouteButton;
-    public TMP_Text resultText;
-    public TMP_Text timePassedText;
-
     [Header("Popup UI (Info Box)")]
     public GameObject infoPopupPanel;
     public GameObject popupBackground;
@@ -61,51 +54,52 @@ public class RouteHandler : MonoBehaviour
         public float ExtraTime;
         public int FoodLoss;
         public int GoldLoss;
-
-        public RouteEvent(string name, float extraTime, int foodLoss = 0, int goldLoss = 0)
+        public int FoodGain;
+        public RouteEvent(string name, float extraTime, int foodLoss = 0, int goldLoss = 0, int foodGain = 0)
         {
             Name = name;
             ExtraTime = extraTime;
             FoodLoss = foodLoss;
             GoldLoss = goldLoss;
+            FoodGain = foodGain;
         }
     }
 
     // ------------------ EVENT LISTS BY RARITY ------------------
     List<RouteEvent> commonEvents = new()
     {
-        new("Fallen tree", 0.5f),
-        new("Tree roots", 0.25f, 15),
-        new("Heavy rain", 0.5f),
-        new("Muddy Roads", 1.25f),
-        new("Thick fog", 1f),
+        new("Fallen tree", 2.5f),
+        new("Tree roots", 1f, 5),
+        new("Heavy rain", 2f),
+        new("Muddy Roads", 2f),
+        new("Thick fog", 3f),
         new("Livestock", 1f),
-        new("Poor Road", 0.5f),
-        new("Deer", 0.75f),
-        new("Insect Swarm", 0.25f),
+        new("Poor Road", 2f),
+        new("Deer", 1f),
+        new("Insect Swarm", 2f),
         new("Winds", 0f, 10),
     };
 
     List<RouteEvent> uncommonEvents = new()
     {
-        new("Forest Fire", 1f),
-        new("Snowfall", 0.5f, 10),
-        new("Thunderstorm", 0.5f),
-        new("Cart", 0.75f),
-        new("River Crossing", 0.75f),   // only allowed on Short Road (routeIndex 0)
-        new("Tolls", 0f, 0, 10),
+        new("Forest Fire", 4f),
+        new("Snowfall", 5f),
+        new("Thunderstorm", 5f),
+        new("River Crossing", 3f, 5),   // only allowed on Short Road (routeIndex 0)
+        new("Tolls", 0f, 0, 15),
         new("Refugees", 0f, 5),
-        new("Predators", 0f, 10),
-        new("Tired Horses", 0.5f),
+        new("Predators", 0f, 15),
+        new("Tired Horses", 5f),
     };
 
     List<RouteEvent> rareEvents =new()
     {
-        new("Hail", 1f),
-        new("Icy Roads", 0.5f),
-        new("Sinkhole", 0f, 15),
-        new("Bandits", 0f, 15),
-        new("Rockslide", 0.5f),
+        new("Hail", 4f, 15),
+        new("Icy Roads", 5f),
+        new("Sinkhole", 0f, 20),
+        new("Bandits", 0f, 15, 15),
+        new("Rockslide", 7f),
+        new("Cart", 0f, 0, 0, 20),
     };
 
     // ------------------ ROUTE CLASS ------------------
