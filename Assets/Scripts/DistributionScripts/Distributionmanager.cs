@@ -115,7 +115,7 @@ public class Distributionmanager : MonoBehaviour
     private void CancelSelection()
     {
         Debug.Log("Selection cancelled");
-        foodselect.SetActive(false);
+        foodselectors.HideSelectors();
         dialogue.gameObject.SetActive(true);
         dialogue.text = "cancelled selection";
         ChangeButtonFunction(false);
