@@ -113,14 +113,14 @@ public class RouteHandler : MonoBehaviour
     {
         public string RouteName;
         public float TravelTime;
-        public int EventChance;
+        public int EventTakePlaceChance;
         public RouteEvent EventData;
 
         public Route(string routeName, float travelTime, int eventChance, RouteEvent evt)
         {
             RouteName = routeName;
             TravelTime = travelTime;
-            EventChance = eventChance;
+            EventTakePlaceChance = eventChance;
             EventData = evt;
         }
     }
@@ -224,7 +224,7 @@ public class RouteHandler : MonoBehaviour
         tmp.text =
             $"{route.RouteName}\n" +
             $"Time: {route.TravelTime}h\n" +
-            $"Chance: {route.EventChance}%\n" +
+            $"Chance: {route.EventTakePlaceChance}%\n" +
             $"{eventText}";
     }
 
@@ -250,6 +250,11 @@ public class RouteHandler : MonoBehaviour
 
         float legTime = route.TravelTime;
 
+        int roll = Random.Range(1, 101);
+        if (roll > route.EventTakePlaceChance)
+        {
+            route.EventData = null;
+        }
         string eventDescription;
         if (route.EventData != null)
         {
@@ -452,12 +457,9 @@ public class RouteHandler : MonoBehaviour
     }
 
     // ------------------ RANDOM EVENT GENERATION ------------------
-    RouteEvent GetRandomEvent(int eventChance, int routeIndex)
+    RouteEvent GetRandomEvent(int routeIndex)
     {
         int roll = Random.Range(1, 101);
-        if (roll > eventChance)
-            return null;
-
         int rarityRoll = Random.Range(1, 101);
 
         List<RouteEvent> list =
@@ -494,9 +496,14 @@ public class RouteHandler : MonoBehaviour
 
         return new List<Route>
         {
-            new("Short Route",  shortRouteTime, 95, GetRandomEvent(95, 0)),
-            new("Medium Route", mediumRouteTime, 80, GetRandomEvent(80, 1)),
-            new("Long Route",   longRouteTime, 70, GetRandomEvent(70, 2))
+            new("Short Route",  shortRouteTime, 100, GetRandomEvent(0)),
+            new("Medium Route", mediumRouteTime, 85, GetRandomEvent(1)),
+            new("Long Route",   longRouteTime, 70, GetRandomEvent(2))
         };
+    }
+
+    void WillEventHappen()
+    {
+        // Placeholder for future event logic
     }
 }
