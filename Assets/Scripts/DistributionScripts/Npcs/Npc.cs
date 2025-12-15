@@ -4,9 +4,11 @@ using System.Collections.Generic;
 
 public class NPC : MonoBehaviour
 {
+    [SerializeField]
     public List<Request> Needs = new List<Request>();
+    [SerializeField]
     public List<Request> Order = new List<Request>();
-    public List<Request> testRequest = new List<Request>();
+  //  public List<Request> testRequest = new List<Request>();
 
     public int Money;
 
@@ -51,7 +53,7 @@ public class NPC : MonoBehaviour
 
     void GenerateTestRequest()
     {
-        testRequest.Clear();
+       // testRequest.Clear();
 
         System.Random rng = new System.Random();
         Array qualities = Enum.GetValues(typeof(Food.Quality));
@@ -70,7 +72,7 @@ public class NPC : MonoBehaviour
             Food.Quality deliveredQuality =
                 (Food.Quality)qualities.GetValue(rng.Next(qualities.Length));
 
-            testRequest.Add(new Request(deliveredAmount, o.FoodType, deliveredQuality));
+          //  testRequest.Add(new Request(deliveredAmount, o.FoodType, deliveredQuality));
         }
     }
 
