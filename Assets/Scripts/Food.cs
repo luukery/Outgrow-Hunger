@@ -69,10 +69,8 @@ public class Food : MonoBehaviour
         iconName = s ? s.name : null;
     }
 
-
     //Private Variables
     private float SpoilChance;
-
     private void Spoil(Food food)
     {
         //Spoil logic here

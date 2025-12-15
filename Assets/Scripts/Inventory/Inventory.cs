@@ -12,17 +12,11 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public List<Food> foods = new List<Food>();
-
     public InventoryVisualiser vis;
     public Wallet wallet;
     //Inventory handeling
     public int maxCapacity;
     public int currentCapacity;
-
-
-
-
-
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
@@ -126,18 +120,6 @@ public class Inventory : MonoBehaviour
     }
 
     //Boolean logic || A few methods that try and do something. They return true when possibla and complete the action. They return false and dont do anything (yet) when impossible. 
-    public bool CanThisTransactionHappen(Food food)
-    {
-        if ((currentCapacity + food.size) > maxCapacity)
-        {
-            return false;
-        }
-        if (food.price > wallet.Money)
-        {
-            return false;
-        }
-        return true;
-    }
     public bool TryAddFoodToInventory(Food food)
     {
         if ((currentCapacity + food.size) > maxCapacity)
@@ -150,7 +132,6 @@ public class Inventory : MonoBehaviour
             return true;
         }
     }
-
     public bool TryRemoveFoodFromInventory(Food food)
     {
         //when the food miraculously would make the capacity go negative, it wont. 
@@ -160,6 +141,15 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
+    public List<Food> GetFoodsByType(FoodType.Type type)
+    {
+        //return foods by type of food in inv 
+        return foods.FindAll(f => f.foodType == type);
+    }
+    public List<Food> GetFoodsByQuality(Food.Quality quality)
+    {
+        return foods.FindAll(f => f.foodQuality == quality);
+    }
 
     //LOGIC || The PRIVATE methods that actually do the adding and removing from inventory.
     private void AddFoodToInventory(Food food)
@@ -167,33 +157,32 @@ public class Inventory : MonoBehaviour
         foods.Add(food);
         currentCapacity += food.size;
     }
-
     private void RemoveCoinsFromWallet(int amount)
     {
         //Placeholder for wallet logic. 
     }
-
     private void RemoveFoodFromInventory(Food food)
     {
         foods.Remove(food);
         currentCapacity -= food.size;
     }
 
-    public List<Food> GetFoodsByType(FoodType.Type type)
+    
+    //All logic needed for the market trasnactions
+    public bool CanThisTransactionHappen(Food food)
     {
-        //return foods by type of food in inv 
-        return foods.FindAll(f => f.foodType == type);
-    }
-
-    public List<Food> GetFoodsByQuality(Food.Quality quality)
-    {
-        return foods.FindAll(f => f.foodQuality == quality);
+        if ((currentCapacity + food.size) > maxCapacity)
+        {
+            return false;
+        }
+        if (food.price > wallet.Money)
+        {
+            return false;
+        }
+        return true;
     }
     
-
     //Orders from NPC and all the logic regarding those is down here. 
-    
-
     public List<Request> CanSatisfyOrder(List<Request> orderByNPC)
     {
         foreach (Request RequestAtPosition in orderByNPC)
@@ -219,8 +208,7 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    
-
+    ;
 
 
 }
