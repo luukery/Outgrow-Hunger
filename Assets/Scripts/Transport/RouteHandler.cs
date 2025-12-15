@@ -92,14 +92,14 @@ public class RouteHandler : MonoBehaviour
         new("Tired Horses", 5f),
     };
 
-    List<RouteEvent> rareEvents =new()
+    List<RouteEvent> rareEvents = new()
     {
         new("Hail", 4f, 15),
         new("Icy Roads", 5f),
         new("Sinkhole", 0f, 20),
         new("Bandits", 0f, 15, 15),
         new("Rockslide", 7f),
-        new("Cart", 0f, 0, 0, 20),
+        new("Cart", 0.5f, 0, 0, 20),
     };
 
     // ------------------ ROUTE CLASS ------------------
