@@ -5312,6 +5312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda36711891c768478d5e16f49aa0020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCScript
+  Needs: []
+  Order: []
   Money: 0
 --- !u!1 &985358973
 GameObject:
@@ -8284,6 +8286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Distributionmanager
   spawner: {fileID: 296994701}
   canvas: {fileID: 726788835}
+  maxNPCs: 2
 --- !u!1 &1415866964
 GameObject:
   m_ObjectHideFlags: 0
@@ -11508,7 +11511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1830520482
 RectTransform:
   m_ObjectHideFlags: 0

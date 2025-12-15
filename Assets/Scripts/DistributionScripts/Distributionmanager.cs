@@ -17,14 +17,14 @@ public class Distributionmanager : MonoBehaviour
     private NPC currentNPC;
     private NpcInfoDTO npcDTO;
     private int npcSpawnCount = 0;
+    public int maxNPCs = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        TrySpawnNPC();
-
         feedButton = canvas.transform.Find("FeedButton").GetComponent<Button>();
         denyButton = canvas.transform.Find("DenyButton").GetComponent<Button>();
         continueButton = canvas.transform.Find("ContinueButton").GetComponent<Button>();
+        continueButton.onClick.AddListener(ContinueAfterInteraction);
         continueButton.gameObject.SetActive(false);
 
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
@@ -39,8 +39,9 @@ public class Distributionmanager : MonoBehaviour
         }
 
         foodselect.SetActive(false);
-
         ChangeButtonFunction(false);
+
+        TrySpawnNPC();
     }
 
     // Update is called once per frame
@@ -52,25 +53,27 @@ public class Distributionmanager : MonoBehaviour
         }
     }
 
-    public void TrySpawnNPC()
+    public bool TrySpawnNPC()
     {
-        /* temp number for npc spawn count
-        if (npcSpawnCount >= 6 || inventory = empty) */
-        SpawnNPC();
-
-        /* if spawn fails
-        else 
+        Debug.Log(npcSpawnCount);
+        // needs to also stop if there's not any food in inventory eventually
+        if (npcSpawnCount < maxNPCs /* || inventory = empty*/)
         {
-            
+            SpawnNPC();
+            return true;
         }
-        */
+        else
+        {
+            dialogue.text = "No more NPCs being spawned";
+            return false;
+        }
     }
 
     private void SpawnNPC()
     {
         currentNPC = spawner.SpawnNPC();
         Debug.Log("Spawned NPC");
-        npcSpawnCount++
+        npcSpawnCount++;
     }
 
     private void DespawnNPC()
@@ -220,14 +223,17 @@ public class Distributionmanager : MonoBehaviour
         foodselect.SetActive(false);
 
         EnableDisableConfirmButton(true);
-        continueButton.onClick.AddListener(ContinueAfterInteraction);
         DespawnNPC();
     }
 
     private void ContinueAfterInteraction()
     {
-        TrySpawnNPC();
-        EnableDisableConfirmButton(false);
+        bool success = TrySpawnNPC();
+        if (success)
+            EnableDisableConfirmButton(false);
+        else
+            continueButton.onClick.RemoveAllListeners();
+
     }
 
     private void ShowResults(DeliveryResult result)
@@ -254,6 +260,6 @@ public class Distributionmanager : MonoBehaviour
         dialogue.text = "Denied NPC Food";
         DespawnNPC();
         EnableDisableConfirmButton(true);
-        continueButton.onClick.AddListener(ContinueAfterInteraction);
+
     }
 }
