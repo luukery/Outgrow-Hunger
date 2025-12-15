@@ -16,10 +16,11 @@ public class Distributionmanager : MonoBehaviour
 
     private NPC currentNPC;
     private NpcInfoDTO npcDTO;
+    private int npcSpawnCount = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SpawnNPC();
+        TrySpawnNPC();
 
         feedButton = canvas.transform.Find("FeedButton").GetComponent<Button>();
         denyButton = canvas.transform.Find("DenyButton").GetComponent<Button>();
@@ -51,10 +52,25 @@ public class Distributionmanager : MonoBehaviour
         }
     }
 
+    public void TrySpawnNPC()
+    {
+        /* temp number for npc spawn count
+        if (npcSpawnCount >= 6 || inventory = empty) */
+        SpawnNPC();
+
+        /* if spawn fails
+        else 
+        {
+            
+        }
+        */
+    }
+
     private void SpawnNPC()
     {
         currentNPC = spawner.SpawnNPC();
         Debug.Log("Spawned NPC");
+        npcSpawnCount++
     }
 
     private void DespawnNPC()
@@ -171,6 +187,7 @@ public class Distributionmanager : MonoBehaviour
     private void SendDelivery(NpcInfoDTO npcDTO)
     {
         List<Request> requests = new();
+        bool emptydelivery = true;
 
         for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
@@ -181,12 +198,26 @@ public class Distributionmanager : MonoBehaviour
             // geen idee hoe we quality gaan handelen, voor nu is het temp
             Request sendrequest = new(dropdown.value, need.FoodType, need.Quality);
             requests.Add(sendrequest);
+
+            if (dropdown.value != 0)
+            {
+                emptydelivery = false;
+            }
+        }
+
+        ChangeButtonFunction(false);
+        dialogue.gameObject.SetActive(true);
+
+        // if players give nothing, it'll go through the denial process instead
+        if (emptydelivery)
+        {
+            Deny();
+            foodselect.SetActive(false);
+            return;
         }
 
         ShowResults(currentNPC.Transaction(requests));
         foodselect.SetActive(false);
-        dialogue.gameObject.SetActive(true);
-        ChangeButtonFunction(false);
 
         EnableDisableConfirmButton(true);
         continueButton.onClick.AddListener(ContinueAfterInteraction);
@@ -195,7 +226,7 @@ public class Distributionmanager : MonoBehaviour
 
     private void ContinueAfterInteraction()
     {
-        SpawnNPC();
+        TrySpawnNPC();
         EnableDisableConfirmButton(false);
     }
 
