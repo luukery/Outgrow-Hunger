@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: fa87d5cc7a3b2944da127a779ec51460
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8932920827877884918
+    second: RVTerrain_0
+  - first:
+      213: -6668596757591490379
+    second: RVTerrain_1
+  - first:
+      213: 4943447915018178143
+    second: RVTerrain_2
+  - first:
+      213: 4357286022946360884
+    second: RVTerrain_3
+  - first:
+      213: -6348689094051101890
+    second: RVTerrain_4
+  - first:
+      213: 9044021407964991807
+    second: RVTerrain_5
+  - first:
+      213: -9105325153850344533
+    second: RVTerrain_6
+  - first:
+      213: 8128073180979577124
+    second: RVTerrain_7
+  - first:
+      213: 7005602986042971117
+    second: RVTerrain_8
+  - first:
+      213: 7415123532733063973
+    second: RVTerrain_9
+  - first:
+      213: -843482299216146045
+    second: RVTerrain_10
+  - first:
+      213: 4770641995875898013
+    second: RVTerrain_11
+  - first:
+      213: 1580052054300477062
+    second: RVTerrain_12
+  - first:
+      213: 5630463251111891710
+    second: RVTerrain_13
+  - first:
+      213: -6167579275558361598
+    second: RVTerrain_14
+  - first:
+      213: -4927550906109459890
+    second: RVTerrain_15
+  - first:
+      213: -670414286830039495
+    second: RVTerrain_16
+  - first:
+      213: -9207805104179905046
+    second: RVTerrain_17
+  - first:
+      213: 2778894063610107034
+    second: RVTerrain_18
+  - first:
+      213: -5647666115973033815
+    second: RVTerrain_19
+  - first:
+      213: -588057081404851800
+    second: RVTerrain_20
+  - first:
+      213: -7677040732487122554
+    second: RVTerrain_21
+  - first:
+      213: 8797940221116413023
+    second: RVTerrain_22
+  - first:
+      213: -3171503536644149371
+    second: RVTerrain_23
+  - first:
+      213: 862531862648838739
+    second: RVTerrain_24
+  - first:
+      213: -5184225641519149885
+    second: RVTerrain_25
+  - first:
+      213: 1725834474058299295
+    second: RVTerrain_26
+  - first:
+      213: 3184848860084153640
+    second: RVTerrain_27
+  - first:
+      213: 7388557805524835113
+    second: RVTerrain_28
+  - first:
+      213: 1867686502098541986
+    second: RVTerrain_29
+  - first:
+      213: 8773048880610450874
+    second: RVTerrain_30
+  - first:
+      213: -3741716779494549942
+    second: RVTerrain_31
+  - first:
+      213: -8078254161890777582
+    second: RVTerrain_32
+  - first:
+      213: -3982045574518190885
+    second: RVTerrain_33
+  - first:
+      213: -6272619525680898988
+    second: RVTerrain_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RVTerrain_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 74
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c76afe5d3e70480800000000000000
+      internalID: -8932920827877884918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 40
+        width: 130
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b00079a4926473a0800000000000000
+      internalID: -6668596757591490379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_2
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 360
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ecd4cefa7aa9440800000000000000
+      internalID: 4943447915018178143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 143
+        width: 168
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e0e7e4d80387c30800000000000000
+      internalID: 4357286022946360884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_4
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 335
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3300bfd7ece4e7a0800000000000000
+      internalID: -6348689094051101890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 311
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3118c2ad81d28d70800000000000000
+      internalID: 9044021407964991807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 295
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab3250c30363a180800000000000000
+      internalID: -9105325153850344533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_7
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 264
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421caa46e77bcc070800000000000000
+      internalID: 8128073180979577124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_8
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 239
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de3d18c6cc6e83160800000000000000
+      internalID: 7005602986042971117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_9
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 215
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 523a136e09fc7e660800000000000000
+      internalID: 7415123532733063973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_10
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 199
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38154ec51595b44f0800000000000000
+      internalID: -843482299216146045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_11
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 168
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d925eba8e99b43240800000000000000
+      internalID: 4770641995875898013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_12
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 143
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 686c43fc8f87de510800000000000000
+      internalID: 1580052054300477062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_13
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 119
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef25a63de7c632e40800000000000000
+      internalID: 5630463251111891710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_14
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 102
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 206684c735b586aa0800000000000000
+      internalID: -6167579275558361598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_15
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 102
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4201b4ee82dd9bb0800000000000000
+      internalID: -4927550906109459890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_16
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 127
+        width: 36
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e062512c532b6f0800000000000000
+      internalID: -670414286830039495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 103
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedf354fa0e473080800000000000000
+      internalID: -9207805104179905046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_18
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 111
+        width: 36
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a941ce97d6d909620800000000000000
+      internalID: 2778894063610107034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_19
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 95
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a0da6317957f91b0800000000000000
+      internalID: -5647666115973033815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_20
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 42
+        width: 24
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a9f53b333dc6d7f0800000000000000
+      internalID: -588057081404851800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_21
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 42
+        width: 24
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68186e5e02ca57590800000000000000
+      internalID: -7677040732487122554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_22
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 82
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f54f3c28400981a70800000000000000
+      internalID: 8797940221116413023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_23
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 95
+        width: 36
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f2e66365e8cf3d0800000000000000
+      internalID: -3171503536644149371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_24
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 79
+        width: 36
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ad3a0c82458fb00800000000000000
+      internalID: 862531862648838739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_25
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 57
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc87c90f3eed08b0800000000000000
+      internalID: -5184225641519149885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_26
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 63
+        width: 36
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f973e5f6f4563f710800000000000000
+      internalID: 1725834474058299295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_27
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 34
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82daf980a2bd23c20800000000000000
+      internalID: 3184848860084153640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_28
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 47
+        width: 36
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b5fb88d2e698660800000000000000
+      internalID: 7388557805524835113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_29
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 24
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad106d6afa5be910800000000000000
+      internalID: 1867686502098541986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_30
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 23
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd9ceda97120c970800000000000000
+      internalID: 8773048880610450874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_31
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 23
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46db1cd960c21cc0800000000000000
+      internalID: -3741716779494549942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_32
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 9
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216ed23e3a644ef80800000000000000
+      internalID: -8078254161890777582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_33
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 15
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc4d63d5aeecb8c0800000000000000
+      internalID: -3982045574518190885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RVTerrain_34
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c5c9076cd23f8a0800000000000000
+      internalID: -6272619525680898988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RVTerrain_0: -8932920827877884918
+      RVTerrain_1: -6668596757591490379
+      RVTerrain_10: -843482299216146045
+      RVTerrain_11: 4770641995875898013
+      RVTerrain_12: 1580052054300477062
+      RVTerrain_13: 5630463251111891710
+      RVTerrain_14: -6167579275558361598
+      RVTerrain_15: -4927550906109459890
+      RVTerrain_16: -670414286830039495
+      RVTerrain_17: -9207805104179905046
+      RVTerrain_18: 2778894063610107034
+      RVTerrain_19: -5647666115973033815
+      RVTerrain_2: 4943447915018178143
+      RVTerrain_20: -588057081404851800
+      RVTerrain_21: -7677040732487122554
+      RVTerrain_22: 8797940221116413023
+      RVTerrain_23: -3171503536644149371
+      RVTerrain_24: 862531862648838739
+      RVTerrain_25: -5184225641519149885
+      RVTerrain_26: 1725834474058299295
+      RVTerrain_27: 3184848860084153640
+      RVTerrain_28: 7388557805524835113
+      RVTerrain_29: 1867686502098541986
+      RVTerrain_3: 4357286022946360884
+      RVTerrain_30: 8773048880610450874
+      RVTerrain_31: -3741716779494549942
+      RVTerrain_32: -8078254161890777582
+      RVTerrain_33: -3982045574518190885
+      RVTerrain_34: -6272619525680898988
+      RVTerrain_4: -6348689094051101890
+      RVTerrain_5: 9044021407964991807
+      RVTerrain_6: -9105325153850344533
+      RVTerrain_7: 8128073180979577124
+      RVTerrain_8: 7005602986042971117
+      RVTerrain_9: 7415123532733063973
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
