@@ -40,6 +40,7 @@ public class Distributionmanager : MonoBehaviour
         foodselect.SetActive(false);
 
         ChangeButtonFunction(false);
+        // EnableDisableConfirmButton(false);
     }
 
     // Update is called once per frame
@@ -126,10 +127,7 @@ public class Distributionmanager : MonoBehaviour
     {
         // steps
         // gray out food that dont have enough of 
-        // button deny function
-        // need 7 dropdowns to make this work without needing the break 
 
-        // buttons needs to be changed back later
         foodselect.SetActive(true);
         // dialogue needs to be reenabled eventually
         dialogue.gameObject.SetActive(false);
@@ -139,7 +137,7 @@ public class Distributionmanager : MonoBehaviour
 
         npcDTO = currentNPC.GetInfoDTO();
         // cant do a foreach loop bc there's multiple lists in dto 
-        // skip if need = 0
+        // skip if need = 0 so it only shows food the npc needs
         for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
             Request dtoneed = npcDTO.Needs[index];
