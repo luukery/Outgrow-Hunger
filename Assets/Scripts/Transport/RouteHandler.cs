@@ -214,7 +214,7 @@ public class RouteHandler : MonoBehaviour
         }
         else
         {
-            eventDescription = $"{route.EventData.Name} didn't happen.";
+            eventDescription = $"You were not affected by {route.EventData.Name}.";
         }
 
         timePassed += legTime;
