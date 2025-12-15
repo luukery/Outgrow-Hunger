@@ -12,12 +12,12 @@ public class Distributionmanager : MonoBehaviour
     private Button feedButton, denyButton, continueButton;
     private TextMeshProUGUI dialogue;
     private GameObject foodselect;
-    private List<TMP_Dropdown> dropdowns = new();
-
     private NPC currentNPC;
     private NpcInfoDTO npcDTO;
     private int npcSpawnCount = 0;
     public int maxNPCs = 2;
+
+    public FoodSelectors foodselectors;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,17 +28,6 @@ public class Distributionmanager : MonoBehaviour
         continueButton.gameObject.SetActive(false);
 
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
-        foodselect = canvas.transform.Find("FoodSelect").gameObject;
-
-        for (int i = 0; i < 7 ; i++)
-        {
-            string dropdownname = "Dropdown" + i;
-            TMP_Dropdown dropdown = foodselect.transform.Find(dropdownname).GetComponent<TMP_Dropdown>();
-            dropdowns.Add(dropdown);
-            dropdown.gameObject.SetActive(false);
-        }
-
-        foodselect.SetActive(false);
         ChangeButtonFunction(false);
 
         TrySpawnNPC();
@@ -136,8 +125,6 @@ public class Distributionmanager : MonoBehaviour
     {
         // steps
         // gray out food that dont have enough of 
-
-        foodselect.SetActive(true);
         // dialogue needs to be reenabled eventually
         dialogue.gameObject.SetActive(false);
 
@@ -160,27 +147,17 @@ public class Distributionmanager : MonoBehaviour
 
         for (int index = 0; index < npcneeds.Count; index++)
         {
-            TMP_Dropdown dropdown = dropdowns[index];
-            dropdown.gameObject.SetActive(true);
+            GameObject selector = foodselectors.GetSelector(index);
+            selector.SetActive(true);
 
-            TextMeshProUGUI ordertext = dropdown.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
-            Image icon = dropdown.transform.Find("Icon").GetComponent<Image>();
+            TextMeshProUGUI ordertext = selector.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
+            Image icon = selector.transform.Find("Icon").GetComponent<Image>();
 
             Request need = npcneeds[index];
             Request order = npcorders[index];
 
             ordertext.text = "Need: " + need.Amount + "\nOrder: " + order.Amount;
             // icon.sprite = order.FoodType;
-
-            dropdown.ClearOptions();
-            List<string> options = new();
-
-                
-            for (int a = 0; a <= need.Amount; a++)
-            {
-                options.Add(a.ToString());
-            }
-            dropdown.AddOptions(options);
         }
 
         ChangeButtonFunction(true);
@@ -194,15 +171,15 @@ public class Distributionmanager : MonoBehaviour
 
         for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
-            TMP_Dropdown dropdown = dropdowns[index];
+            int value = foodselectors.GetValue(index);
 
             Request need = npcDTO.Needs[index];
 
             // geen idee hoe we quality gaan handelen, voor nu is het temp
-            Request sendrequest = new(dropdown.value, need.FoodType, need.Quality);
+            Request sendrequest = new(value, need.FoodType, need.Quality);
             requests.Add(sendrequest);
 
-            if (dropdown.value != 0)
+            if (value != 0)
             {
                 emptydelivery = false;
             }
@@ -220,7 +197,7 @@ public class Distributionmanager : MonoBehaviour
         }
 
         ShowResults(currentNPC.Transaction(requests));
-        foodselect.SetActive(false);
+        foodselectors.HideSelectors();
 
         EnableDisableConfirmButton(true);
         DespawnNPC();
