@@ -24,7 +24,7 @@ public class Distributionmanager : MonoBehaviour
         feedButton = canvas.transform.Find("FeedButton").GetComponent<Button>();
         denyButton = canvas.transform.Find("DenyButton").GetComponent<Button>();
         continueButton = canvas.transform.Find("ContinueButton").GetComponent<Button>();
-        continueButton.enabled = false;
+        continueButton.gameObject.SetActive(false);
 
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
         foodselect = canvas.transform.Find("FoodSelect").gameObject;
@@ -40,7 +40,6 @@ public class Distributionmanager : MonoBehaviour
         foodselect.SetActive(false);
 
         ChangeButtonFunction(false);
-        // EnableDisableConfirmButton(false);
     }
 
     // Update is called once per frame
@@ -54,14 +53,15 @@ public class Distributionmanager : MonoBehaviour
 
     private void SpawnNPC()
     {
-        if (currentNPC != null)
-        {
-            Destroy(currentNPC.gameObject);
-            currentNPC = null;
-            Debug.Log("Despawned NPC");
-        }
         currentNPC = spawner.SpawnNPC();
         Debug.Log("Spawned NPC");
+    }
+
+    private void DespawnNPC()
+    {
+        Destroy(currentNPC.gameObject);
+        currentNPC = null;
+        Debug.Log("Despawned NPC");
     }
 
     private void HandleAccept()
@@ -99,19 +99,9 @@ public class Distributionmanager : MonoBehaviour
 
     private void EnableDisableConfirmButton(bool enable)
     {
-        if (enable)
-        {
-            continueButton.enabled = true;
-            feedButton.enabled = false;
-            denyButton.enabled = false;
-
-        }
-        else
-        {
-            continueButton.enabled = false;
-            feedButton.enabled = true;
-            denyButton.enabled = true;
-        }
+        continueButton.gameObject.SetActive(enable);
+        feedButton.gameObject.SetActive(!enable);
+        denyButton.gameObject.SetActive(!enable);   
     }
 
     private void CancelSelection()
@@ -198,12 +188,15 @@ public class Distributionmanager : MonoBehaviour
         dialogue.gameObject.SetActive(true);
         ChangeButtonFunction(false);
 
-        continueButton.onClick.AddListener(ContinueAfterDelivery);
+        EnableDisableConfirmButton(true);
+        continueButton.onClick.AddListener(ContinueAfterInteraction);
+        DespawnNPC();
     }
 
-    private void ContinueAfterDelivery()
+    private void ContinueAfterInteraction()
     {
         SpawnNPC();
+        EnableDisableConfirmButton(false);
     }
 
     private void ShowResults(DeliveryResult result)
@@ -228,6 +221,8 @@ public class Distributionmanager : MonoBehaviour
     {
         // temp text
         dialogue.text = "Denied NPC Food";
-        SpawnNPC();
+        DespawnNPC();
+        EnableDisableConfirmButton(true);
+        continueButton.onClick.AddListener(ContinueAfterInteraction);
     }
 }
