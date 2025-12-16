@@ -69,4 +69,13 @@ public class FoodSelectors : MonoBehaviour
             selector.gameObject.SetActive(false);   
         }
     }
+
+    public void ResetValues()
+    {
+        foreach (GameObject selector in Selectors)
+        {
+            TextMeshProUGUI number = selector.transform.Find("Number").GetComponent<TextMeshProUGUI>();
+            number.text = "0";
+        }
+    }
 }
