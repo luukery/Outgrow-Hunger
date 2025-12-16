@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b6137204524ef314080a96f531f0829e
+guid: 383f1a7444a97de4da5a1ab0bd8da0c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7319553915754133480
-    second: plusbutton_0
+      213: 4431449416557614730
+    second: Gemini_Generated_Image_g16on9g16on9g16o-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plusbutton_0
+      name: Gemini_Generated_Image_g16on9g16on9g16o-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 80
+        x: 94
+        y: 37
+        width: 312
+        height: 425
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 818c7298e78bb6a90800000000000000
-      internalID: -7319553915754133480
+      spriteID: a86570af3cbaf7d30800000000000000
+      internalID: 4431449416557614730
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      plusbutton_0: -7319553915754133480
+      Gemini_Generated_Image_g16on9g16on9g16o-removebg-preview_0: 4431449416557614730
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
