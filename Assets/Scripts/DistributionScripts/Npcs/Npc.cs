@@ -4,30 +4,25 @@ using System.Collections.Generic;
 
 public class NPC : MonoBehaviour
 {
-    [SerializeField]
-    public List<Request> Needs = new List<Request>();
-    [SerializeField]
-    public List<Request> Order = new List<Request>();
-  //  public List<Request> testRequest = new List<Request>();
+    [SerializeField] private NpcCategory category;
+
+    [SerializeField] public List<Request> Needs = new();
+    [SerializeField] public List<Request> Order = new();
 
     public int Money;
 
-    DeliveryResultService deliveryService = new DeliveryResultService();
+    private readonly DeliveryResultService deliveryService = new();
+    private System.Random rng;
 
     void Start()
     {
+        rng = new System.Random(Guid.NewGuid().GetHashCode());
         GenerateProfile();
-
-        //GenerateTestRequest();
-       // DeliveryResult result = Transaction(Order, Money, testRequest);       //for testing
-      //  DebugPrint(result);
     }
 
-    public DeliveryResult Transaction(List<Request> playerInput )
+    public DeliveryResult Transaction(List<Request> playerInput)
     {
-        DeliveryResult result = deliveryService.Transaction(Order, Money, playerInput);
-        return result;
-
+        return deliveryService.Transaction(Order, Money, playerInput);
     }
 
     void GenerateProfile()
@@ -35,113 +30,180 @@ public class NPC : MonoBehaviour
         Needs.Clear();
         Order.Clear();
 
-        System.Random rng = new System.Random();
-        Array foodTypes = Enum.GetValues(typeof(FoodType.Type));
-        Array qualities = Enum.GetValues(typeof(Food.Quality));
+        CategoryConfig config = GetCategoryConfig(category);
 
-        foreach (FoodType.Type type in foodTypes)
-        {
-            Food.Quality quality = (Food.Quality)qualities.GetValue(rng.Next(qualities.Length));
-            int amount = rng.Next(0, 4);
-
-            Needs.Add(new Request(amount, type, quality));      //for now the same, can add iterantions later
-            Order.Add(new Request(amount, type, quality));      
-        }
-
-        Money = rng.Next(0, 21);
+        GenerateNeeds(config);
+        GenerateOrder(config);
+        Money = RollMoney(config);
     }
 
-    void GenerateTestRequest()
+    void GenerateNeeds(CategoryConfig config)
     {
-       // testRequest.Clear();
+        FoodType.Type[] foodTypes = (FoodType.Type[])Enum.GetValues(typeof(FoodType.Type));
+        Food.Quality[] qualities = (Food.Quality[])Enum.GetValues(typeof(Food.Quality));
 
-        System.Random rng = new System.Random();
-        Array qualities = Enum.GetValues(typeof(Food.Quality));
-
-        for (int i = 0; i < Order.Count; i++)
+        for (int i = 0; i < foodTypes.Length; i++)
         {
-            Request o = Order[i];
+            int amount = rng.Next(config.MinNeedAmount, config.MaxNeedAmount + 1);
+            Food.Quality quality = qualities[rng.Next(qualities.Length)];
 
-            int roll = rng.Next(3);
-
-            int deliveredAmount =
-                roll == 0 ? Math.Max(0, o.Amount - rng.Next(1, 3)) :       
-                roll == 1 ? o.Amount :                                     
-                            o.Amount + rng.Next(1, 3);                    
-
-            Food.Quality deliveredQuality =
-                (Food.Quality)qualities.GetValue(rng.Next(qualities.Length));
-
-          //  testRequest.Add(new Request(deliveredAmount, o.FoodType, deliveredQuality));
+            Needs.Add(new Request(amount, foodTypes[i], quality));
         }
     }
 
-
-
-    public NpcInfoDTO GetInfoDTO()
+    void GenerateOrder(CategoryConfig config)
     {
-        NpcInfoDTO dto = new NpcInfoDTO
-        {
-            Needs = CopyRequests(Needs),
-            Order = CopyRequests(Order),
-            Money = Money
-        };
+        List<Request> shuffledNeeds = ShuffleNeeds(Needs);
 
-        return dto;
+        int totalItems = rng.Next(config.MinTotalItems, config.MaxTotalItems + 1);
+        int distinctTypes = rng.Next(config.MinDistinctItems, config.MaxDistinctItems + 1);
+
+        distinctTypes = Math.Min(distinctTypes, shuffledNeeds.Count);
+
+        List<Request> selectedTypes = shuffledNeeds.GetRange(0, distinctTypes);
+
+        for (int i = 0; i < totalItems; i++)
+        {
+            Request baseNeed = selectedTypes[rng.Next(selectedTypes.Count)];
+
+            int buffer = config.ExactMatch
+                ? 0
+                : rng.Next(config.MinOrderBuffer, config.MaxOrderBuffer + 1);
+
+            int amount = 1 + buffer;
+
+            Request existing = Order.Find(o => o.FoodType == baseNeed.FoodType);
+
+            if (existing != null)
+            {
+                existing.Amount += amount;
+            }
+            else
+            {
+                Food.Quality quality = config.QualityStrict
+                    ? baseNeed.Quality
+                    : baseNeed.Quality;
+
+                Order.Add(new Request(amount, baseNeed.FoodType, quality));
+            }
+        }
     }
 
-    List<Request> CopyRequests(List<Request> source)
+    int RollMoney(CategoryConfig config)
     {
-        List<Request> result = new List<Request>();
+        return rng.Next(config.MinMoney, config.MaxMoney + 1);
+    }
 
-        for (int i = 0; i < source.Count; i++)
+    List<Request> ShuffleNeeds(List<Request> source)
+    {
+        List<Request> result = new(source);
+
+        for (int i = 0; i < result.Count; i++)
         {
-            Request r = source[i];
-            result.Add(new Request(r.Amount, r.FoodType, r.Quality));
+            int swapIndex = rng.Next(i, result.Count);
+            Request temp = result[i];
+            result[i] = result[swapIndex];
+            result[swapIndex] = temp;
         }
 
         return result;
     }
 
-    public void DebugPrint(DeliveryResult result)
+    CategoryConfig GetCategoryConfig(NpcCategory category)
     {
-        Debug.Log("========== NPC PROFILE ==========");
+        switch (category)
+        {
+            case NpcCategory.Survival:
+                return new CategoryConfig(
+                    minNeedAmount: 1,
+                    maxNeedAmount: 3,
+                    minMoney: 0,
+                    maxMoney: 5,
+                    exactMatch: false,
+                    qualityStrict: false,
+                    minOrderBuffer: 0,
+                    maxOrderBuffer: 1,
+                    minTotalItems: 1,
+                    maxTotalItems: 2,
+                    minDistinctItems: 1,
+                    maxDistinctItems: 2
+                );
 
-        Debug.Log($"Money Before: {result.NpcMoneyBefore}");
-        Debug.Log($"Money After: {result.NpcMoneyAfter}");
+            case NpcCategory.Precautious:
+                return new CategoryConfig(
+                    minNeedAmount: 4,
+                    maxNeedAmount: 6,
+                    minMoney: 5,
+                    maxMoney: 10,
+                    exactMatch: false,
+                    qualityStrict: false,
+                    minOrderBuffer: 1,
+                    maxOrderBuffer: 2,
+                    minTotalItems: 3,
+                    maxTotalItems: 4,
+                    minDistinctItems: 2,
+                    maxDistinctItems: 3
+                );
+
+            case NpcCategory.ExactNeed:
+                return new CategoryConfig(
+                    minNeedAmount: 6,
+                    maxNeedAmount: 8,
+                    minMoney: 8,
+                    maxMoney: 12,
+                    exactMatch: true,
+                    qualityStrict: true,
+                    minOrderBuffer: 0,
+                    maxOrderBuffer: 0,
+                    minTotalItems: 5,
+                    maxTotalItems: 6,
+                    minDistinctItems: 3,
+                    maxDistinctItems: 4
+                );
+
+            case NpcCategory.PreferenceDriven:
+                return new CategoryConfig(
+                    minNeedAmount: 11,
+                    maxNeedAmount: 15,
+                    minMoney: 15,
+                    maxMoney: 25,
+                    exactMatch: false,
+                    qualityStrict: true,
+                    minOrderBuffer: 0,
+                    maxOrderBuffer: 1,
+                    minTotalItems: 6,
+                    maxTotalItems: 8,
+                    minDistinctItems: 4,
+                    maxDistinctItems: 6
+                );
+
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    public NpcInfoDTO GetInfoDTO()
+    {
+        List<Request> needsCopy = new(Needs.Count);
+        List<Request> orderCopy = new(Order.Count);
 
         for (int i = 0; i < Needs.Count; i++)
         {
-            Request need = Needs[i];
-            Request order = Order[i];
-            Debug.Log($"{need.FoodType} | Need: {need.Amount} | Order: {order.Amount} | Quality: {need.Quality}");
+            Request r = Needs[i];
+            needsCopy.Add(new Request(r.Amount, r.FoodType, r.Quality));
         }
 
-        Debug.Log("========== DELIVERY RESULT ==========");
-        Debug.Log(
-            $"Total Price: {result.TotalPrice}\n" +
-            $"Paid: {result.AmountPaid}\n" +
-            $"Unpaid: {result.PaymentShortfall}"
-        );
+        for (int i = 0; i < Order.Count; i++)
+        {
+            Request r = Order[i];
+            orderCopy.Add(new Request(r.Amount, r.FoodType, r.Quality));
+        }
 
-        Debug.Log("----- Shortages -----");
-        if (result.Shortages.Count == 0) Debug.Log("None");
-        else
-            for (int i = 0; i < result.Shortages.Count; i++)
-            {
-                Request s = result.Shortages[i];
-                Debug.Log($"{s.FoodType} | Missing: {s.Amount} | Quality: {s.Quality}");
-            }
-
-        Debug.Log("----- Excess (Overdelivery + Unpaid) -----");
-        if (result.Excesses.Count == 0) Debug.Log("None");
-        else
-            for (int i = 0; i < result.Excesses.Count; i++)
-            {
-                Request e = result.Excesses[i];
-                Debug.Log($"{e.FoodType} | Excess: {e.Amount} | Quality: {e.Quality}");
-            }
-
-        Debug.Log("====================================");
+        return new NpcInfoDTO
+        {
+            Needs = needsCopy,
+            Order = orderCopy,
+            Money = Money
+        };
     }
 }

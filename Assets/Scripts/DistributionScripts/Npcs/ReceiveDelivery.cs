@@ -8,41 +8,43 @@ public class DeliveryResultService
         DeliveryResult result = new DeliveryResult();
         result.NpcMoneyBefore = npcMoney;
 
-        CalculateShortageAndOverDelivery(order, given, result);
-        npcMoney = ProcessPayment(order, given, npcMoney, result);
+        CalculateOrderResult(order, given, result);
+        npcMoney = ProcessPayment(result, npcMoney);
 
-        result.PaymentShortfall = result.TotalPrice - result.AmountPaid;
         result.NpcMoneyAfter = npcMoney;
+        result.PaymentShortfall = result.TotalPrice - result.AmountPaid;
 
         return result;
     }
 
-    void CalculateShortageAndOverDelivery(List<Request> order, List<Request> given, DeliveryResult result)
+    void CalculateOrderResult(List<Request> order, List<Request> given, DeliveryResult result)
     {
         for (int i = 0; i < order.Count; i++)
         {
             Request wanted = order[i];
             Request delivered = given.Find(r => r.FoodType == wanted.FoodType);
-            int amount = delivered != null ? delivered.Amount : 0;
 
-            if (amount < wanted.Amount)
-            {
-                int diff = wanted.Amount - amount;
-                result.TotalFoodShortage += diff;
-                result.Shortages.Add(new Request(diff, wanted.FoodType, wanted.Quality));
-            }
-            else if (amount > wanted.Amount)
-            {
-                int diff = amount - wanted.Amount;
-                result.Excesses.Add(new Request(diff, wanted.FoodType, wanted.Quality));
-                result.TotalFoodExcess += diff;
-            }
+            int deliveredAmount = delivered != null ? delivered.Amount : 0;
+            int paidAmount = Math.Min(deliveredAmount, wanted.Amount);
 
-            result.TotalPrice += amount;
+            result.TotalPrice += wanted.Amount;
+
+            if (deliveredAmount < wanted.Amount)
+            {
+                int shortage = wanted.Amount - deliveredAmount;
+                result.TotalFoodShortage += shortage;
+                result.Shortages.Add(new Request(shortage, wanted.FoodType, wanted.Quality));
+            }
+            else if (deliveredAmount > wanted.Amount)
+            {
+                int excess = deliveredAmount - wanted.Amount;
+                result.TotalFoodExcess += excess;
+                result.Excesses.Add(new Request(excess, wanted.FoodType, wanted.Quality));
+            }
         }
     }
 
-    int ProcessPayment(List<Request> order, List<Request> given, int npcMoney, DeliveryResult result)
+    int ProcessPayment(DeliveryResult result, int npcMoney)
     {
         if (npcMoney >= result.TotalPrice)
         {
@@ -51,29 +53,6 @@ public class DeliveryResultService
         }
 
         result.AmountPaid = npcMoney;
-        int unpaid = result.TotalPrice - npcMoney;
-
-        for (int i = 0; i < order.Count; i++)
-        {
-            Request wanted = order[i];
-            Request delivered = given.Find(r => r.FoodType == wanted.FoodType);
-
-            if (delivered == null || delivered.Amount == 0)
-                continue;
-
-            int unpaidPart = Math.Min(unpaid, delivered.Amount);
-
-            if (unpaidPart > 0)
-            {
-                result.Excesses.Add(new Request(unpaidPart, wanted.FoodType, wanted.Quality));
-                result.TotalFoodExcess += unpaidPart;
-                unpaid -= unpaidPart;
-            }
-
-            if (unpaid <= 0)
-                break;
-        }
-
         return 0;
     }
 }
