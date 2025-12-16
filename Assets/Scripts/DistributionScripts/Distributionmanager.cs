@@ -118,7 +118,7 @@ public class Distributionmanager : MonoBehaviour
     private void CancelSelection()
     {
         Debug.Log("Selection cancelled");
-        foodselect.SetActive(false);
+        foodselectors.HideSelectors();
         dialogue.gameObject.SetActive(true);
         dialogue.text = "cancelled selection";
         ChangeButtonFunction(1);
@@ -129,34 +129,23 @@ public class Distributionmanager : MonoBehaviour
         dialogue.gameObject.SetActive(false);
         foodselectors.ResetValues();
 
-        List<Request> npcneeds = new();
-        List<Request> npcorders = new();
-
         npcDTO = currentNPC.GetInfoDTO();
-        for (int index = 0; index < npcDTO.Needs.Count; index++)
-        {
-            Request dtoneed = npcDTO.Needs[index];
-            if (dtoneed.Amount != 0)
-            {
-                npcneeds.Add(dtoneed);
-                npcorders.Add(npcDTO.Order[index]);
-            }
-        }
 
-
-        for (int index = 0; index < npcneeds.Count; index++)
+        for (int index = 0; index < npcDTO.Order.Count; index++)
         {
             GameObject selector = foodselectors.GetSelector(index);
             selector.SetActive(true);
 
-            TextMeshProUGUI ordertext = selector.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
-            Image icon = selector.transform.Find("Icon").GetComponent<Image>();
+            TextMeshProUGUI ordertext =
+                selector.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
 
-            Request need = npcneeds[index];
-            Request order = npcorders[index];
+            Request order = npcDTO.Order[index];
+            Request need = npcDTO.Needs.Find(n => n.FoodType == order.FoodType);
 
-            ordertext.text = "Need: " + need.Amount + "\nOrder: " + order.Amount;
-            // icon.sprite = order.FoodType;
+            int needAmount = need != null ? need.Amount : 0;
+
+            ordertext.text = "Need: " + needAmount + "\nOrder: " + order.Amount;
+
         }
 
         ChangeButtonFunction(2);
