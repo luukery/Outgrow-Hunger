@@ -28,18 +28,9 @@ public class Distributionmanager : MonoBehaviour
         continueButton.gameObject.SetActive(false);
 
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
-        ChangeButtonFunction(false);
+        ChangeButtonFunction(1);
 
         TrySpawnNPC();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (currentNPC != null)
-        {
-
-        }
     }
 
     public bool TrySpawnNPC()
@@ -79,37 +70,69 @@ public class Distributionmanager : MonoBehaviour
         // Check if food can be delivered
     }
 
-    private void ChangeButtonFunction(bool select)
+    private void ChangeButtonFunction(int select)
     {
+        // Select 1 = default
+        // Select 2 = selecting food
+        // Select 3 = confirm deny
+        
         feedButton.onClick.RemoveAllListeners();
         denyButton.onClick.RemoveAllListeners();
 
         TextMeshProUGUI feedbuttonText = feedButton.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI denybuttonText = denyButton.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
 
-        if (select)
+        switch (select)
         {
-            feedbuttonText.text = "Give food";
-            denybuttonText.text = "Cancel selection";
+            case 1:
+                feedbuttonText.text = "Select food";
+                denybuttonText.text = "Deny food";
 
-            feedButton.onClick.AddListener(() => SendDelivery(npcDTO));
-            denyButton.onClick.AddListener(CancelSelection);
-        }
-        else
+                feedButton.onClick.AddListener(HandleAccept);
+                denyButton.onClick.AddListener(Deny);
+                break;
+            case 2:
+                feedbuttonText.text = "Give food";
+                denybuttonText.text = "Cancel selection";
+
+                feedButton.onClick.AddListener(ConfirmBeforeDelivery);
+                denyButton.onClick.AddListener(CancelSelection);
+                break;
+            case 3:
+                feedbuttonText.text = "Confirm";
+                denybuttonText.text = "Return";
+
+                feedButton.onClick.AddListener(SendDelivery);
+                denyButton.onClick.AddListener(HandleAccept);
+                break;
+                
+        }       
+    }
+
+    private void ConfirmBeforeDelivery()
+    {
+        dialogue.gameObject.SetActive(true);
+        foodselectors.HideSelectors();
+
+        dialogue.text = "Are you sure you want to give the following?\n";
+        for (int index = 0; index < npcDTO.Needs.Count; index++)
         {
-            feedbuttonText.text = "Select food";
-            denybuttonText.text = "Deny food";
-
-            feedButton.onClick.AddListener(HandleAccept);
-            denyButton.onClick.AddListener(Deny);
+            int amount = foodselectors.GetValue(index);
+            if (amount != 0)
+            {
+                Request need = npcDTO.Needs[index];
+                dialogue.text += amount + " " + need.FoodType + "\n";
+            }
         }
+
+        ChangeButtonFunction(3);
     }
 
     private void EnableDisableConfirmButton(bool enable)
     {
         continueButton.gameObject.SetActive(enable);
         feedButton.gameObject.SetActive(!enable);
-        denyButton.gameObject.SetActive(!enable);   
+        denyButton.gameObject.SetActive(!enable);
     }
 
     private void CancelSelection()
@@ -118,7 +141,7 @@ public class Distributionmanager : MonoBehaviour
         foodselectors.HideSelectors();
         dialogue.gameObject.SetActive(true);
         dialogue.text = "cancelled selection";
-        ChangeButtonFunction(false);
+        ChangeButtonFunction(1);
     }
 
     private void FoodSelector()
@@ -127,6 +150,7 @@ public class Distributionmanager : MonoBehaviour
         // gray out food that dont have enough of 
         // dialogue needs to be reenabled eventually
         dialogue.gameObject.SetActive(false);
+        foodselectors.ResetValues();
 
         List<Request> npcneeds = new();
         List<Request> npcorders = new();
@@ -160,11 +184,11 @@ public class Distributionmanager : MonoBehaviour
             // icon.sprite = order.FoodType;
         }
 
-        ChangeButtonFunction(true);
+        ChangeButtonFunction(2);
     }
 
 
-    private void SendDelivery(NpcInfoDTO npcDTO)
+    private void SendDelivery()
     {
         List<Request> requests = new();
         bool emptydelivery = true;
@@ -185,8 +209,7 @@ public class Distributionmanager : MonoBehaviour
             }
         }
 
-        ChangeButtonFunction(false);
-        dialogue.gameObject.SetActive(true);
+        ChangeButtonFunction(1);
 
         // if players give nothing, it'll go through the denial process instead
         if (emptydelivery)
@@ -237,6 +260,5 @@ public class Distributionmanager : MonoBehaviour
         dialogue.text = "Denied NPC Food";
         DespawnNPC();
         EnableDisableConfirmButton(true);
-
     }
 }
