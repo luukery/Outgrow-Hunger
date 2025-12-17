@@ -149,13 +149,17 @@ public class Distributionmanager : MonoBehaviour
             TextMeshProUGUI ordertext =
                 selector.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
 
+            TextMeshProUGUI foodtype =
+                selector.transform.Find("TempFoodType").GetComponent<TextMeshProUGUI>();
+
             Request order = npcDTO.Order[index];
             Request need = npcDTO.Needs.Find(n => n.FoodType == order.FoodType);
+
 
             int needAmount = need != null ? need.Amount : 0;
 
             ordertext.text = "Need: " + needAmount + "\nOrder: " + order.Amount;
-
+            foodtype.text = order.FoodType.ToString();
         }
 
         ChangeButtonFunction(2);
