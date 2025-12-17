@@ -17,8 +17,20 @@ public class Inventory : MonoBehaviour
     //Inventory handeling
     public int maxCapacity;
     public int currentCapacity;
+    public SceneScroller sceneScroller;
     public void Update()
     {
+        //if arrow right: next scene
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            sceneScroller.NextScene();
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            sceneScroller.PreviousScene();
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Z))
         {
             if (TryAddFoodToInventory(new Food(FoodType.Type.Meat, Food.Quality.Medium, 1, "Porkchops")))
@@ -76,7 +88,7 @@ public class Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
-            if (TryAddFoodToInventory(new Food(FoodType.Type.Bread, Food.Quality.Medium, 1, "Baguette")))
+            if (TryAddFoodToInventory(new Food(FoodType.Type.Dairy, Food.Quality.Medium, 1, "Karnemelk")))
             {
                 Debug.Log("Added Bread to inventory.");
             }
@@ -86,6 +98,17 @@ public class Inventory : MonoBehaviour
             }
         }
         if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (TryAddFoodToInventory(new Food(FoodType.Type.Bread, Food.Quality.Medium, 1, "Baguette")))
+            {
+                Debug.Log("Added Bread to inventory.");
+            }
+            else
+            {
+                Debug.Log("Not enough capacity to add food.");
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.L))
         {
             if (TryAddFoodToInventory(new Food(FoodType.Type.Water, Food.Quality.Medium, 1, "Bottle")))
             {
@@ -117,6 +140,11 @@ public class Inventory : MonoBehaviour
             }
             vis.SetProgressBar(this);
         }
+    }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
     }
 
     //Boolean logic || A few methods that try and do something. They return true when possibla and complete the action. They return false and dont do anything (yet) when impossible. 
@@ -207,10 +235,6 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
-
-    ;
-
-
 }
 
 

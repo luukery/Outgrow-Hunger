@@ -11,12 +11,13 @@ public class InventoryVisualiser : MonoBehaviour
 	public GameObject Parent;
 
     [Header("General Bar settings")]
-	public Transform barLocation;
+	public Transform GeneralBarLocation;
     public List<GameObject> PlaceHolderObjects;
 	public float IndividualScale = 0.3f;
 
     [Header("Individual Bar settings")]
 	public List<GameObject> IndivisualBarPositions;
+	private List<GameObject> IndividualBarObjects;
 
     [Header("Legacy settings")]
     public UnityEngine.UI.Slider CapacityBar;
@@ -30,6 +31,11 @@ public class InventoryVisualiser : MonoBehaviour
 
     private List<List<Food>> TempList = new List<List<Food>>();
     //Filled per category of food.
+
+    private void Awake()
+    {
+		IndividualBarObjects = IndivisualBarPositions;
+    }
 
     private void Update()
     {
@@ -82,6 +88,7 @@ public class InventoryVisualiser : MonoBehaviour
 
 	public void SetProgressBar(Inventory inv)
 	{
+		IndivisualBarPositions = IndividualBarObjects;
         //DOES NOW
         //some random fucking bulshit
 
@@ -95,15 +102,17 @@ public class InventoryVisualiser : MonoBehaviour
         //Split the general bar and the individual bars into 2 different functions.
         //Add better logs
         //update the bars when adding and removing food. With some sort of update function not called "private void Update" because unity. 
-		//Make it so the prefabs that make the bar now are not in the editor but in a map in the assets. 
+        //Make it so the prefabs that make the bar now are not in the editor but in a map in the assets. 
 
+        var globalBarPosition = GeneralBarLocation.position;
 
-        float Gpos = barLocation.position.x;
 		//remove all child objects from Parent object
 		foreach (Transform child in Parent.transform)
 		{
 			Destroy(child.gameObject);
         }
+
+
 
         if (inv == null)
         {
@@ -116,39 +125,38 @@ public class InventoryVisualiser : MonoBehaviour
             Debug.LogError("Inventory.foods is NULL!");
             return;
         }
-
-
-        ActiveInventory = inv.foods;
+		ActiveInventory = inv.foods;
 		SelectedInventory = inv;
 
-		Tuple<int[], Inventory> iets = SortFoodByTypeWithSize(SelectedInventory);
+		Tuple<int[], Inventory> CountOfFoodByType = SortFoodByTypeWithSize(SelectedInventory);
 
 
 
 		for (int i = 0; i < Enum.GetValues(typeof(FoodType.Type)).Length; i++)//do seven times as we have 7 food types
 		{
             //happens once every type
-			float Ipos = IndivisualBarPositions[i].transform.position.y;
-            for (int j = 0; j < iets.Item1[i]; j++)
+            for (int j = 0; j < CountOfFoodByType.Item1[i]; j++)
 			{
 			//General Bar in the bottom
-				Gpos += GeneralScale;
+				globalBarPosition.x += GeneralScale;
 				//duplicate the place holder object in the array at position i
 				GameObject GeneralObject = Instantiate(PlaceHolderObjects[i], Parent.transform);
 				//set it to the right position
 				
 				GeneralObject.transform.localScale = new Vector3(GeneralScale, GeneralScale, GeneralScale);
-				GeneralObject.transform.position = barLocation.position;
+				GeneralObject.transform.position = GeneralBarLocation.position;
 
 				
 
                 //update the next position
-                barLocation.position = new Vector3(Gpos, barLocation.position.y, barLocation.position.z);
+                globalBarPosition = new Vector3(globalBarPosition.x, GeneralBarLocation.position.y, GeneralBarLocation.position.z);
 
 
 
 			//Individual Bars
-                Ipos += IndividualScale;
+				Transform Ipos = IndivisualBarPositions[i].transform;
+				Vector3 pos = new Vector3 (Ipos.position.x, Ipos.position.y, Ipos.position.z);
+                Ipos.position = pos;
 				//create an object
 				GameObject IndividualObject = Instantiate(PlaceHolderObjects[i], Parent.transform);
 				
@@ -161,7 +169,7 @@ public class InventoryVisualiser : MonoBehaviour
                 Debug.Log("ik heb je "+j+"ste blokje van type "+ (FoodType.Type)i+" geplaatst op positie "+ IndividualObject.transform.position);
 
                 //updatePosition
-                IndivisualBarPositions[i].transform.position = new Vector3(IndivisualBarPositions[i].transform.position.x, Ipos, IndivisualBarPositions[i].transform.position.z);
+                Ipos.position = new Vector3(IndivisualBarPositions[i].transform.position.x, Ipos.position.x, IndivisualBarPositions[i].transform.position.z);
 				Debug.Log("en toen de volgende positie verdanderd met "+IndividualScale+" naar "+ IndivisualBarPositions[i].transform.position);
 
 
