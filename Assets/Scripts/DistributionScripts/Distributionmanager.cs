@@ -176,8 +176,8 @@ public class Distributionmanager : MonoBehaviour
             int amount = foodselectors.GetValue(index);
             if (amount != 0)
             {
-                Request need = npcDTO.Needs[index];
-                dialogue.text += amount + " " + need.FoodType + "\n";
+                Request order = npcDTO.Order[index];
+                dialogue.text += amount + " " + order.FoodType + "\n";
             }
         }
 
