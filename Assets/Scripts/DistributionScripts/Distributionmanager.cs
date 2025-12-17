@@ -45,7 +45,7 @@ public class Distributionmanager : MonoBehaviour
         }
         else
         {
-            dialogue.text = "No more NPCs being spawned";
+            dialogue.text = "No more people to feed";
             return false;
         }
     }
@@ -53,6 +53,8 @@ public class Distributionmanager : MonoBehaviour
     private void SpawnNPC()
     {
         currentNPC = spawner.SpawnNPC();
+        npcDTO = currentNPC.GetInfoDTO();
+        DisplayOrder();
         Debug.Log("Spawned NPC");
         npcSpawnCount++;
     }
@@ -68,6 +70,16 @@ public class Distributionmanager : MonoBehaviour
     {
         dialogue.text = "Accepted food";
         FoodSelector();
+    }
+
+    private void DisplayOrder()
+    {
+        dialogue.text = "I want the following:\n";
+        foreach (Request order in npcDTO.Order)
+        {
+            dialogue.text += order.Amount + " " + order.FoodType + "\n";
+        }
+        dialogue.text += "\nI can pay $" + npcDTO.Money;
     }
 
     private void ChangeButtonFunction(int select)
@@ -120,7 +132,7 @@ public class Distributionmanager : MonoBehaviour
         Debug.Log("Selection cancelled");
         foodselectors.HideSelectors();
         dialogue.gameObject.SetActive(true);
-        dialogue.text = "cancelled selection";
+        DisplayOrder();
         ChangeButtonFunction(1);
     }
 
@@ -128,8 +140,6 @@ public class Distributionmanager : MonoBehaviour
     {
         dialogue.gameObject.SetActive(false);
         foodselectors.ResetValues();
-
-        npcDTO = currentNPC.GetInfoDTO();
 
         for (int index = 0; index < npcDTO.Order.Count; index++)
         {
@@ -157,7 +167,7 @@ public class Distributionmanager : MonoBehaviour
         foodselectors.HideSelectors();
 
         dialogue.text = "Are you sure you want to give the following?\n";
-        for (int index = 0; index < npcDTO.Needs.Count; index++)
+        for (int index = 0; index < npcDTO.Order.Count; index++)
         {
             int amount = foodselectors.GetValue(index);
             if (amount != 0)
