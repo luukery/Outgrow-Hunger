@@ -11,7 +11,7 @@ public class Distributionmanager : MonoBehaviour
 
     private Button feedButton, denyButton, continueButton;
     private TextMeshProUGUI dialogue;
-    private GameObject foodselect;
+    private GameObject moneyselect;
     private NPC currentNPC;
     private NpcInfoDTO npcDTO;
     private int npcSpawnCount = 0;
@@ -27,10 +27,6 @@ public class Distributionmanager : MonoBehaviour
         continueButton.onClick.AddListener(ContinueAfterInteraction);
         continueButton.gameObject.SetActive(false);
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
-
-        // 🔧 FIX: foodselect initialiseren
-        //foodselect = canvas.transform.Find("FoodSelect").gameObject;
-
         ChangeButtonFunction(1);
         TrySpawnNPC();
     }
@@ -56,6 +52,7 @@ public class Distributionmanager : MonoBehaviour
         npcDTO = currentNPC.GetInfoDTO();
         DisplayOrder();
         Debug.Log("Spawned NPC");
+        foodselectors.ResetMoney();
         npcSpawnCount++;
     }
 
@@ -86,7 +83,8 @@ public class Distributionmanager : MonoBehaviour
     {
         // Select 1 = default
         // Select 2 = selecting food
-        // Select 3 = confirm deny
+        // select 3 = amount money
+        // Select 4 = final confirm before delivery
 
         feedButton.onClick.RemoveAllListeners();
         denyButton.onClick.RemoveAllListeners();
@@ -104,16 +102,20 @@ public class Distributionmanager : MonoBehaviour
                 denyButton.onClick.AddListener(Deny);
                 break;
             case 2:
-                feedbuttonText.text = "Give food";
+                feedbuttonText.text = "Next";
                 denybuttonText.text = "Cancel selection";
 
-                feedButton.onClick.AddListener(ConfirmBeforeDelivery);
+                feedButton.onClick.AddListener(SelectMoney);
                 denyButton.onClick.AddListener(CancelSelection);
                 break;
             case 3:
                 feedbuttonText.text = "Confirm";
                 denybuttonText.text = "Return";
 
+                feedButton.onClick.AddListener(ConfirmBeforeDelivery);
+                denyButton.onClick.AddListener(CancelSelection);
+                break;
+            case 4:
                 feedButton.onClick.AddListener(SendDelivery);
                 denyButton.onClick.AddListener(HandleAccept);
                 break;
@@ -155,7 +157,6 @@ public class Distributionmanager : MonoBehaviour
             Request order = npcDTO.Order[index];
             Request need = npcDTO.Needs.Find(n => n.FoodType == order.FoodType);
 
-
             int needAmount = need != null ? need.Amount : 0;
 
             ordertext.text = "Need: " + needAmount + "\nOrder: " + order.Amount;
@@ -165,10 +166,18 @@ public class Distributionmanager : MonoBehaviour
         ChangeButtonFunction(2);
     }
 
+    private void SelectMoney()
+    {
+        foodselectors.HideSelectors();
+        foodselectors.ShowHideMoneySelect(true);
+        foodselectors.ChangeMaxMoney(npcDTO.Money);
+        ChangeButtonFunction(4);
+    }
+
     private void ConfirmBeforeDelivery()
     {
+        foodselectors.ShowHideMoneySelect(false);
         dialogue.gameObject.SetActive(true);
-        foodselectors.HideSelectors();
 
         dialogue.text = "Are you sure you want to give the following?\n";
         for (int index = 0; index < npcDTO.Order.Count; index++)
@@ -209,7 +218,6 @@ public class Distributionmanager : MonoBehaviour
         if (emptydelivery)
         {
             Deny();
-            foodselect.SetActive(false);
             return;
         }
 
@@ -239,7 +247,7 @@ public class Distributionmanager : MonoBehaviour
         if (result.TotalFoodExcess != 0)
             resulttext += "Amount of extra food you gave: " + result.TotalFoodExcess + "\n";
 
-        resulttext += "Money earned: $" + result.AmountPaid;
+        resulttext += "Money earned: $" + foodselectors.GetMoney();
         dialogue.text = resulttext;
     }
 

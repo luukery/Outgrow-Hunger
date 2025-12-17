@@ -7,25 +7,35 @@ using TMPro;
 public class FoodSelectors : MonoBehaviour
 {
     private List<GameObject> Selectors = new();
-    
+    private GameObject moneySelect;
+    private int maxMoney = 5;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         foreach (Transform child in transform)
         {
-            Selectors.Add(child.gameObject);
-
             Button minus = child.Find("MinusButton").GetComponent<Button>();
             Button plus = child.Find("PlusButton").GetComponent<Button>();
             TextMeshProUGUI number = child.Find("Number").GetComponent<TextMeshProUGUI>();
 
             minus.onClick.AddListener(() => MinusOne(number));
-            plus.onClick.AddListener(() => PlusOne(number));
+           
+
+            if(child.gameObject.name == "MoneySelect")
+            {
+                plus.onClick.AddListener(() => MoneyPlusOne(number));
+                moneySelect = child.gameObject;
+
+            }
+            else
+            {
+                plus.onClick.AddListener(() => PlusOne(number));
+                Selectors.Add(child.gameObject);
+            }
 
             child.gameObject.SetActive(false);
         }
-
-        Debug.Log("Selector children: " + Selectors.Count);
     }
 
     public GameObject GetSelector(int index)
@@ -37,6 +47,12 @@ public class FoodSelectors : MonoBehaviour
     {
         GameObject selector = Selectors[index];
         TextMeshProUGUI number = selector.transform.Find("Number").GetComponent<TextMeshProUGUI>();
+        return int.Parse(number.text);
+    }
+
+    public int GetMoney()
+    {
+        TextMeshProUGUI number = moneySelect.transform.Find("Number").GetComponent<TextMeshProUGUI>();
         return int.Parse(number.text);
     }
 
@@ -62,6 +78,17 @@ public class FoodSelectors : MonoBehaviour
         numberText.text = number.ToString();
     }   
 
+    private void MoneyPlusOne(TextMeshProUGUI numberText)
+    {
+        int number = int.Parse(numberText.text);
+        // add logic max number
+        if (number <= maxMoney)
+        {
+            number++;
+        }
+        numberText.text = number.ToString();
+    }
+
     public void HideSelectors()
     {
         foreach (GameObject selector in Selectors)
@@ -77,5 +104,21 @@ public class FoodSelectors : MonoBehaviour
             TextMeshProUGUI number = selector.transform.Find("Number").GetComponent<TextMeshProUGUI>();
             number.text = "0";
         }
+    }
+
+    public void ResetMoney()
+    {
+        TextMeshProUGUI number = moneySelect.transform.Find("Number").GetComponent<TextMeshProUGUI>();
+        number.text = "0";
+    }
+    
+    public void ChangeMaxMoney(int max)
+    {
+        maxMoney = max;
+    }
+
+    public void ShowHideMoneySelect(bool show)
+    {
+        moneySelect.gameObject.SetActive(show);
     }
 }
