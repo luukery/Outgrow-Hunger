@@ -6,6 +6,9 @@ public class StallInteractable : MonoBehaviour, IInteractable
     public MarketStallFromCatalog stall;
     public GameObject stallUIPanel;
 
+
+    //TODO Add a cartInteracatble to switch scenes
+
     public void Interact()
     {
         if (stall == null || stallUIPanel == null) return;

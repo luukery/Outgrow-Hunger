@@ -20,6 +20,7 @@ public class Inventory : MonoBehaviour
     public SceneScroller sceneScroller;
     public void Update()
     {
+        //TODO remove this testing code later.
         //if arrow right: next scene
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
