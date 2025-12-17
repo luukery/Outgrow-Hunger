@@ -314,6 +314,8 @@ public class RouteHandler : MonoBehaviour
 
         if (popupBackground != null)
             popupBackground.SetActive(true);
+
+        //TODO if continuebutton pressed, next scene 
     }
 
     // ------------------ EVENT ICON & HIGHLIGHT HELPERS ------------------
