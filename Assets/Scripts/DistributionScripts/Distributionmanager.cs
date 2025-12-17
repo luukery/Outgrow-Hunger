@@ -133,6 +133,7 @@ public class Distributionmanager : MonoBehaviour
     {
         Debug.Log("Selection cancelled");
         foodselectors.HideSelectors();
+        foodselectors.ShowHideMoneySelect(false);
         dialogue.gameObject.SetActive(true);
         DisplayOrder();
         ChangeButtonFunction(1);
@@ -171,7 +172,7 @@ public class Distributionmanager : MonoBehaviour
         foodselectors.HideSelectors();
         foodselectors.ShowHideMoneySelect(true);
         foodselectors.ChangeMaxMoney(npcDTO.Money);
-        ChangeButtonFunction(4);
+        ChangeButtonFunction(3);
     }
 
     private void ConfirmBeforeDelivery()
@@ -190,7 +191,9 @@ public class Distributionmanager : MonoBehaviour
             }
         }
 
-        ChangeButtonFunction(3);
+        dialogue.text += "\n\n For $" + foodselectors.GetMoney() + "?";
+
+        ChangeButtonFunction(4);
     }
 
     private void SendDelivery()

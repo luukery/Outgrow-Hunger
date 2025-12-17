@@ -82,7 +82,7 @@ public class FoodSelectors : MonoBehaviour
     {
         int number = int.Parse(numberText.text);
         // add logic max number
-        if (number <= maxMoney)
+        if (number < maxMoney)
         {
             number++;
         }
