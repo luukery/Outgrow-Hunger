@@ -6,6 +6,13 @@ using TMPro;
 
 public class RouteHandler : MonoBehaviour
 {
+    [Header("UI References (Optional — leave empty if using roads instead of buttons)")]
+    public Button shortRouteButton;
+    public Button mediumRouteButton;
+    public Button longRouteButton;
+    public TMP_Text resultText;
+    public TMP_Text timePassedText;
+
     [Header("Popup UI (Info Box)")]
     public GameObject infoPopupPanel;
     public GameObject popupBackground;
@@ -54,52 +61,51 @@ public class RouteHandler : MonoBehaviour
         public float ExtraTime;
         public int FoodLoss;
         public int GoldLoss;
-        public int FoodGain;
-        public RouteEvent(string name, float extraTime, int foodLoss = 0, int goldLoss = 0, int foodGain = 0)
+
+        public RouteEvent(string name, float extraTime, int foodLoss = 0, int goldLoss = 0)
         {
             Name = name;
             ExtraTime = extraTime;
             FoodLoss = foodLoss;
             GoldLoss = goldLoss;
-            FoodGain = foodGain;
         }
     }
 
     // ------------------ EVENT LISTS BY RARITY ------------------
-    List<RouteEvent> commonEvents = new()
+    List<RouteEvent> commonEvents = new List<RouteEvent>
     {
-        new("Fallen tree", 2.5f),
-        new("Tree roots", 1f, 5),
-        new("Heavy rain", 2f),
-        new("Muddy Roads", 2f),
-        new("Thick fog", 3f),
+        new("Fallen tree", 0.5f),
+        new("Tree roots", 0.25f, 15),
+        new("Heavy rain", 0.5f),
+        new("Muddy Roads", 1.25f),
+        new("Thick fog", 1f),
         new("Livestock", 1f),
-        new("Poor Road", 2f),
-        new("Deer", 1f),
-        new("Insect Swarm", 2f),
+        new("Poor Road", 0.5f),
+        new("Deer", 0.75f),
+        new("Insect Swarm", 0.25f),
         new("Winds", 0f, 10),
     };
 
-    List<RouteEvent> uncommonEvents = new()
+    List<RouteEvent> uncommonEvents = new List<RouteEvent>
     {
-        new("Forest Fire", 4f),
-        new("Snowfall", 5f),
-        new("Thunderstorm", 5f),
-        new("River Crossing", 3f, 5),   // only allowed on Short Road (routeIndex 0)
-        new("Tolls", 0f, 0, 15),
+        new("Forest Fire", 1f),
+        new("Snowfall", 0.5f, 10),
+        new("Thunderstorm", 0.5f),
+        new("Cart", 0.75f),
+        new("River Crossing", 0.75f),   // only allowed on Short Road (routeIndex 0)
+        new("Tolls", 0f, 0, 10),
         new("Refugees", 0f, 5),
-        new("Predators", 0f, 15),
-        new("Tired Horses", 5f),
+        new("Predators", 0f, 10),
+        new("Tired Horses", 0.5f),
     };
 
-    List<RouteEvent> rareEvents = new()
+    List<RouteEvent> rareEvents = new List<RouteEvent>
     {
-        new("Hail", 4f, 15),
-        new("Icy Roads", 5f),
-        new("Sinkhole", 0f, 20),
-        new("Bandits", 0f, 15, 15),
-        new("Rockslide", 7f),
-        new("Cart", 0.5f, 0, 0, 20),
+        new("Hail", 1f),
+        new("Ice Roads", 0.5f),
+        new("Sinkhole", 0f, 15),
+        new("Bandits", 0f, 15),
+        new("Rockslide", 0.5f),
     };
 
     // ------------------ ROUTE CLASS ------------------
@@ -107,14 +113,14 @@ public class RouteHandler : MonoBehaviour
     {
         public string RouteName;
         public float TravelTime;
-        public int EventTakePlaceChance;
+        public int EventChance;
         public RouteEvent EventData;
 
         public Route(string routeName, float travelTime, int eventChance, RouteEvent evt)
         {
             RouteName = routeName;
             TravelTime = travelTime;
-            EventTakePlaceChance = eventChance;
+            EventChance = eventChance;
             EventData = evt;
         }
     }
@@ -164,7 +170,62 @@ public class RouteHandler : MonoBehaviour
         ResetRoadHighlights();
 
         routes = GenerateRoutes();
+        SetUpButtons(routes);
         ShowIconsForCurrentRoutes();
+    }
+
+    // ------------------ BUTTON SETUP ------------------
+    void SetUpButtons(List<Route> routes)
+    {
+        bool usingButtons =
+            shortRouteButton != null ||
+            mediumRouteButton != null ||
+            longRouteButton != null;
+
+        if (!usingButtons)
+            return;
+
+        if (shortRouteButton != null)
+        {
+            shortRouteButton.onClick.RemoveAllListeners();
+            shortRouteButton.onClick.AddListener(() => HandleRouteSelection(routes[0], 0));
+            UpdateButtonText(shortRouteButton, routes[0]);
+        }
+
+        if (mediumRouteButton != null)
+        {
+            mediumRouteButton.onClick.RemoveAllListeners();
+            mediumRouteButton.onClick.AddListener(() => HandleRouteSelection(routes[1], 1));
+            UpdateButtonText(mediumRouteButton, routes[1]);
+        }
+
+        if (longRouteButton != null)
+        {
+            longRouteButton.onClick.RemoveAllListeners();
+            longRouteButton.onClick.AddListener(() => HandleRouteSelection(routes[2], 2));
+            UpdateButtonText(longRouteButton, routes[2]);
+        }
+
+        if (resultText != null)
+            resultText.text = "Choose a route!";
+    }
+
+    void UpdateButtonText(Button btn, Route route)
+    {
+        if (btn == null) return;
+
+        TMP_Text tmp = btn.GetComponentInChildren<TMP_Text>();
+        if (tmp == null) return;
+
+        string eventText = route.EventData == null
+            ? "Event: None"
+            : $"Event: {route.EventData.Name} (+{route.EventData.ExtraTime}h)";
+
+        tmp.text =
+            $"{route.RouteName}\n" +
+            $"Time: {route.TravelTime}h\n" +
+            $"Chance: {route.EventChance}%\n" +
+            $"{eventText}";
     }
 
     // ------------------ ROUTE SELECTION ------------------
@@ -184,16 +245,13 @@ public class RouteHandler : MonoBehaviour
 
     void HandleRouteSelection(Route route, int routeIndex)
     {
-        if (journeyFinished) return;
+        if (journeyFinished)
+            return;
 
         float legTime = route.TravelTime;
 
-        int roll = Random.Range(1, 101);
-        bool eventHappened = roll <= route.EventTakePlaceChance;
-
         string eventDescription;
-
-        if (eventHappened)
+        if (route.EventData != null)
         {
             legTime += route.EventData.ExtraTime;
             currentFood -= route.EventData.FoodLoss;
@@ -214,7 +272,7 @@ public class RouteHandler : MonoBehaviour
         }
         else
         {
-            eventDescription = $"You were not affected by {route.EventData.Name}.";
+            eventDescription = "No event happened on this road.";
         }
 
         timePassed += legTime;
@@ -222,9 +280,13 @@ public class RouteHandler : MonoBehaviour
         currentFood = Mathf.Max(0, currentFood);
         currentGold = Mathf.Max(0, currentGold);
 
+        if (resultText != null)
+            resultText.text = eventDescription;
+        if (timePassedText != null)
+            timePassedText.text = $"Time Passed: {timePassed}h";
+
         ShowInfoPopup(route, legTime, eventDescription);
     }
-
 
     // ------------------ POPUP LOGIC ------------------
     void ShowInfoPopup(Route route, float legTime, string eventDescription)
@@ -235,7 +297,7 @@ public class RouteHandler : MonoBehaviour
             return;
         }
 
-        if (popupTitleText != null && !journeyFinished)
+        if (popupTitleText != null)
         {
             popupTitleText.text = $"Leg {legsCompleted + 1}:\n{route.RouteName}";
         }
@@ -271,9 +333,7 @@ public class RouteHandler : MonoBehaviour
 
     void ContinueAfterPopup()
     {
-        if(!journeyFinished){
-            legsCompleted++;
-        }
+        legsCompleted++;
 
         if (legsCompleted >= legsPerJourney)
         {
@@ -314,8 +374,6 @@ public class RouteHandler : MonoBehaviour
 
         if (popupBackground != null)
             popupBackground.SetActive(true);
-
-        //TODO if continuebutton pressed, next scene 
     }
 
     // ------------------ EVENT ICON & HIGHLIGHT HELPERS ------------------
@@ -388,15 +446,18 @@ public class RouteHandler : MonoBehaviour
 
     void ResetRoadHighlights()
     {
-        if(shortRoadClickable != null) shortRoadClickable.ResetHighlight();
-        if(mediumRoadClickable != null) mediumRoadClickable.ResetHighlight();
-        if(longRoadClickable != null) longRoadClickable.ResetHighlight();
+        if (shortRoadClickable != null) shortRoadClickable.ResetHighlight();
+        if (mediumRoadClickable != null) mediumRoadClickable.ResetHighlight();
+        if (longRoadClickable != null) longRoadClickable.ResetHighlight();
     }
 
     // ------------------ RANDOM EVENT GENERATION ------------------
-    RouteEvent GetRandomEvent(int routeIndex)
+    RouteEvent GetRandomEvent(int eventChance, int routeIndex)
     {
         int roll = Random.Range(1, 101);
+        if (roll > eventChance)
+            return null;
+
         int rarityRoll = Random.Range(1, 101);
 
         List<RouteEvent> list =
@@ -433,9 +494,9 @@ public class RouteHandler : MonoBehaviour
 
         return new List<Route>
         {
-            new("Short Route",  shortRouteTime, 100, GetRandomEvent(0)),
-            new("Medium Route", mediumRouteTime, 85, GetRandomEvent(1)),
-            new("Long Route",   longRouteTime, 70, GetRandomEvent(2))
+            new("Short Route",  shortRouteTime, 95, GetRandomEvent(95, 0)),
+            new("Medium Route", mediumRouteTime, 80, GetRandomEvent(80, 1)),
+            new("Long Route",   longRouteTime, 70, GetRandomEvent(70, 2))
         };
     }
 }

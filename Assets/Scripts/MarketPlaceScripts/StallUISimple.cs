@@ -6,7 +6,6 @@ using TMPro;
 
 public class StallUISimple : MonoBehaviour
 {
-    public Inventory playerInventory; // Keeps track of the items a player has purchased. 
     [System.Serializable]
     public class Slot
     {
@@ -39,7 +38,6 @@ public class StallUISimple : MonoBehaviour
 
     public void Refresh()
     {
-        Debug.Log("[StallUI] Refreshing UI...");
         // verberg alles eerst
         for (int s = 0; s < slots.Count; s++)
             if (slots[s]?.root) slots[s].root.SetActive(false);
@@ -57,7 +55,7 @@ public class StallUISimple : MonoBehaviour
             headerText.text = title;
         }
 
-        List<Food> stock = stall.currentStock;
+        List<MarketStockItem> stock = stall.currentStock;
         if (stock == null)
         {
             Debug.LogWarning("[StallUI] stall.currentStock == null");
@@ -69,9 +67,6 @@ public class StallUISimple : MonoBehaviour
         {
             var item = stock[i];
             var s = slots[i];
-            //Debug.Log(item != null ? $"I have an item {item.icon}" : "Item is null");   
-
-            //Debug.Log($"I have a sprite {(item.icon != null)}");
 
             if (s == null)
             {
@@ -80,21 +75,9 @@ public class StallUISimple : MonoBehaviour
             }
 
             // --- DEBUG: log alle relevante refs ---
-            Debug.Log(" --------------------MAIN DEBUG RN----------------------");
-            string itemIconName = (item.icon != null) ? item.icon.name : "NULL";
-            Debug.Log("Help" + (item != null) + " " + (item.icon != null));
-
-            Debug.Log("I have an item with data: " + (item != null) + "and with a name " + item.name + " and icon name " + item.icon.name);
-            //Help False True
-
-
-            string slotIconRef = item.icon.name;
-
-
+            string itemIconName = (item != null && item.icon != null) ? item.icon.name : "NULL";
+            string slotIconRef  = (s.icon != null) ? s.icon.name : "NULL";
             Debug.Log($"[StallUI] Slot {i}: item='{item?.name ?? "NULL"}', itemIcon={itemIconName}, slotIconRef={slotIconRef}");
-            Debug.Log("---------------END MAIN DEBUG RN---------------------------");
-
-
 
             if (s.root) s.root.SetActive(true);
 
@@ -113,7 +96,7 @@ public class StallUISimple : MonoBehaviour
                 // handige waarschuwing specifiek voor het 2e slot-issue
                 if (!hasIcon)
                 {
-                    Debug.LogWarning($"[StallUI] Slot {i} heeft GEEN item.icon. Check ProductCatalog entry voor '{item?.name}'. Al heet de icon wel {item.icon.name}");
+                    Debug.LogWarning($"[StallUI] Slot {i} heeft GEEN item.icon. Check ProductCatalog entry voor '{item?.name}'.");
                 }
             }
             else
@@ -128,7 +111,7 @@ public class StallUISimple : MonoBehaviour
             {
                 int idx = i; // capture
                 s.buyButton.onClick.RemoveAllListeners();
-                s.buyButton.onClick.AddListener(() => TryBuy(item, idx));
+                s.buyButton.onClick.AddListener(() => TryBuy(idx));
             }
 
             shown++;
@@ -138,48 +121,21 @@ public class StallUISimple : MonoBehaviour
             Debug.LogWarning("[StallUI] Er zijn 0 slots getoond. Heeft deze stall currentStock gevuld?");
     }
 
-    void TryBuy(Food item, int index)
+    void TryBuy(int index)
     {
         if (stall == null) return;
         if (index < 0 || index >= stall.currentStock.Count) return;
 
-        if (playerInventory == null)
+        var item = stall.currentStock[index];
+        if (playerCoins >= item.price)
         {
-            Debug.LogWarning("[StallUI] Geen playerInventory gekoppeld aan UI.");
-            return;
+            playerCoins -= item.price;
+            UpdateCoins();
+            Debug.Log($"[StallUI] Gekocht: {item.name} voor {item.price} coins");
+
+            if (index < slots.Count && slots[index].buyButton != null)
+                StartCoroutine(FlashButton(slots[index].buyButton));
         }
-        //Underneath is the logic for the adding to the inventory. A food item has a set price of at least 1 and is not negative. 
-        //We check if the player can afford the item and if there is enough space in the inventory.
-        //This code can be placed anywhere where a player buys food. 
-
-        //Inventory.CanThisTransactionHappenCheck(Food item) checks if there is enough space in the inventory and enough money in the wallet, but does not complete the task if it returns true. 
-        //In contrary, TrySpendMony and TryAddFoodToInventory do complete the task if they return true. 
-
-        if (playerInventory.CanThisTransactionHappen(item))//Check if there is enough space and enough money
-        {
-            if (!playerInventory.TryAddFoodToInventory(item))
-            {
-                throw new System.UnauthorizedAccessException("Checked if it was possible, failed anyway. Failed at Adding Food");
-                return;
-            }
-            if (!playerInventory.wallet.TrySpendMoney(item.price))
-            {
-                throw new System.UnauthorizedAccessException("Checked if it was possible, failed anyway. Failed at Spending money");
-                return;
-            }
-            Debug.Log($"[StallUI] Gekocht: {item.name} in categorie {item.foodType},Hij is {item.size} units groot en kost {item.price} coins");
-
-        }
-
-        //This ends the inventory logic code. 
-
-
-
-        if (index < slots.Count && slots[index].buyButton != null)
-            {
-
-            StartCoroutine(FlashButton(slots[index].buyButton));
-            }
         else
         {
             Debug.Log("[StallUI] Niet genoeg coins!");
