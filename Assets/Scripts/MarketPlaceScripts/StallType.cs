@@ -1,11 +1,11 @@
 public enum StallType
 {
-    Meat,           // Vleeskraam
-    Fish,          // Viskraam
-    EggsAndBeans,  // Eieren & Peulvruchtenkraam
-    Fruit,         // Fruitkraam
-    Vegetables,    // Groentekraam
     Bakery,        // Broodkraam
+    Fish,          // Viskraam
+    Vegetables,    // Groentekraam
+    Fruit,         // Fruitkraam
     Dairy,         // Zuivelkraam
     Spices,        // Zout- & Kruidkraam
+    EggsAndBeans,  // Eieren & Peulvruchtenkraam
+    Meat           // Vleeskraam
 }
