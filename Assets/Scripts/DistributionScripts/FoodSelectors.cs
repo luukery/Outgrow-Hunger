@@ -102,16 +102,15 @@ public class FoodSelectors : MonoBehaviour
         foreach (GameObject selector in Selectors)
         {
             TextMeshProUGUI number = selector.transform.Find("Number").GetComponent<TextMeshProUGUI>();
+            Image icon = selector.transform.Find("Icon").GetComponent<Image>();
+            icon.gameObject.SetActive(false);
             number.text = "0";
         }
+
+        TextMeshProUGUI money = moneySelect.transform.Find("Number").GetComponent<TextMeshProUGUI>();
+        money.text = "0";
     }
 
-    public void ResetMoney()
-    {
-        TextMeshProUGUI number = moneySelect.transform.Find("Number").GetComponent<TextMeshProUGUI>();
-        number.text = "0";
-    }
-    
     public void ChangeMaxMoney(int max)
     {
         maxMoney = max;
@@ -129,6 +128,5 @@ public class FoodSelectors : MonoBehaviour
         Image icon = selector.transform.Find("Icon").GetComponent<Image>();
         icon.gameObject.SetActive(true);
         icon.sprite = newIcon;
-
     }
 }

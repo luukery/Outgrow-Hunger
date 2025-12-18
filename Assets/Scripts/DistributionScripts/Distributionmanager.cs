@@ -52,7 +52,6 @@ public class Distributionmanager : MonoBehaviour
         npcDTO = currentNPC.GetInfoDTO();
         DisplayOrder();
         Debug.Log("Spawned NPC");
-        foodselectors.ResetMoney();
         npcSpawnCount++;
     }
 
