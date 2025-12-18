@@ -14,7 +14,7 @@ public class NPC : MonoBehaviour
     private readonly DeliveryResultService deliveryService = new();
     private System.Random rng;
 
-    void Start()
+    void Awake()
     {
         rng = new System.Random(Guid.NewGuid().GetHashCode());
         GenerateProfile();

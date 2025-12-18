@@ -208,6 +208,8 @@ public class Distributionmanager : MonoBehaviour
             Request sendrequest = new Request(value, order.FoodType, order.Quality);
             requests.Add(sendrequest);
 
+            Debug.Log("Value:" + value);
+
             if (value != 0)
             {
                 emptydelivery = false;
@@ -244,13 +246,31 @@ public class Distributionmanager : MonoBehaviour
         string resulttext = string.Empty;
 
         if (result.TotalFoodShortage != 0)
-            resulttext += "Amount of food you didn't give: " + result.TotalFoodShortage + "\n";
+        {
+            resulttext += "Amount of food you didn't give: " + result.TotalFoodShortage;
+            foreach (Request shortage in result.Shortages)
+            {
+                resulttext += "\n\t" + shortage.Amount + " " + shortage.FoodType;
+            }
+            resulttext += "\n";
+        }
+            
 
         if (result.TotalFoodExcess != 0)
-            resulttext += "Amount of extra food you gave: " + result.TotalFoodExcess + "\n";
+        {
+            resulttext += "Amount of extra food you gave: " + result.TotalFoodExcess;
+            foreach (Request excess in result.Excesses)
+            {
+                resulttext += "\n\t" + excess.Amount + " " + excess.FoodType;
+            }
+            resulttext += "\n";
+        }
 
         resulttext += "Money earned: $" + foodselectors.GetMoney();
         dialogue.text = resulttext;
+
+        Debug.Log("Total Shortage: " + result.TotalFoodShortage);
+        Debug.Log("Total Total Excess: " + result.TotalFoodExcess);
     }
 
     public void Deny()

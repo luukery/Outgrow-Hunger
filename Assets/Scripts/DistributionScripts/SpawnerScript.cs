@@ -2,14 +2,23 @@ using UnityEngine;
 
 public class SpawnerScript : MonoBehaviour
 {
-    public GameObject NPCList;
-    // deze is temp, het moet eventueel gewoon een random npc pakken van het npc lijst
-    public NPC spawnedNPC;
+    
+    /* code for a single npc
+    public GameObject NPC;
 
     public NPC SpawnNPC()
     {
-        NPC npc = Instantiate(spawnedNPC, new Vector3(0, 1), Quaternion.identity);
-        return npc;
+        GameObject npc = Instantiate(NPC);
+        return npc.GetComponent<NPC>();
+    }
+    */
+
+    public GameObject[] NPCs;
+    public NPC SpawnNPC()
+    {
+        int index = Random.Range(0, NPCs.Length);
+        GameObject npc = Instantiate(NPCs[index], new Vector3(0, 1), Quaternion.identity);
+        return npc.GetComponent<NPC>();
     }
 
 }
