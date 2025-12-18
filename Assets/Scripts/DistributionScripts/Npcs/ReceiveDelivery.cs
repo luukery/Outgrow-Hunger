@@ -1,58 +1,90 @@
-using System;
 using System.Collections.Generic;
 
 public class DeliveryResultService
 {
-    public DeliveryResult Transaction(List<Request> order, int npcMoney, List<Request> given)
+    public DeliveryResult Transaction(List<Request> order, List<Request> given)
     {
         DeliveryResult result = new DeliveryResult();
-        result.NpcMoneyBefore = npcMoney;
 
-        CalculateOrderResult(order, given, result);
-        npcMoney = ProcessPayment(result, npcMoney);
+        List<Request> orderedTotals = new List<Request>();
+        List<Request> deliveredTotals = new List<Request>();
 
-        result.NpcMoneyAfter = npcMoney;
-        result.PaymentShortfall = result.TotalPrice - result.AmountPaid;
+        for (int i = 0; i < order.Count; i++)
+        {
+            Request r = order[i];
+            Request existing = FindByType(orderedTotals, r.FoodType);
+
+            if (existing == null)
+            {
+                orderedTotals.Add(
+                    new Request(r.Amount, r.FoodType, r.Quality)
+                );
+            }
+            else
+            {
+                existing.Amount += r.Amount;
+            }
+
+            result.TotalOrderedAmount += r.Amount;
+        }
+
+        for (int i = 0; i < given.Count; i++)
+        {
+            Request r = given[i];
+            Request existing = FindByType(deliveredTotals, r.FoodType);
+
+            if (existing == null)
+            {
+                deliveredTotals.Add(
+                    new Request(r.Amount, r.FoodType, r.Quality)
+                );
+            }
+            else
+            {
+                existing.Amount += r.Amount;
+            }
+
+            result.TotalDeliveredAmount += r.Amount;
+        }
+
+        for (int i = 0; i < orderedTotals.Count; i++)
+        {
+            Request ordered = orderedTotals[i];
+            Request delivered = FindByType(deliveredTotals, ordered.FoodType);
+
+            int deliveredAmount = delivered != null ? delivered.Amount : 0;
+
+            if (deliveredAmount < ordered.Amount)
+            {
+                int shortage = ordered.Amount - deliveredAmount;
+                result.TotalFoodShortage += shortage;
+                result.Shortages.Add(
+                    new Request(shortage, ordered.FoodType, ordered.Quality)
+                );
+            }
+            else if (deliveredAmount > ordered.Amount)
+            {
+                int excess = deliveredAmount - ordered.Amount;
+                result.TotalFoodExcess += excess;
+                result.Excesses.Add(
+                    new Request(excess, ordered.FoodType, ordered.Quality)
+                );
+            }
+        }
 
         return result;
     }
 
-    void CalculateOrderResult(List<Request> order, List<Request> given, DeliveryResult result)
+    Request FindByType(List<Request> list, FoodType.Type type)
     {
-        for (int i = 0; i < order.Count; i++)
+        for (int i = 0; i < list.Count; i++)
         {
-            Request wanted = order[i];
-            Request delivered = given.Find(r => r.FoodType == wanted.FoodType);
-
-            int deliveredAmount = delivered != null ? delivered.Amount : 0;
-            int paidAmount = Math.Min(deliveredAmount, wanted.Amount);
-
-            result.TotalPrice += wanted.Amount;
-
-            if (deliveredAmount < wanted.Amount)
+            if (list[i].FoodType == type)
             {
-                int shortage = wanted.Amount - deliveredAmount;
-                result.TotalFoodShortage += shortage;
-                result.Shortages.Add(new Request(shortage, wanted.FoodType, wanted.Quality));
-            }
-            else if (deliveredAmount > wanted.Amount)
-            {
-                int excess = deliveredAmount - wanted.Amount;
-                result.TotalFoodExcess += excess;
-                result.Excesses.Add(new Request(excess, wanted.FoodType, wanted.Quality));
+                return list[i];
             }
         }
-    }
 
-    int ProcessPayment(DeliveryResult result, int npcMoney)
-    {
-        if (npcMoney >= result.TotalPrice)
-        {
-            result.AmountPaid = result.TotalPrice;
-            return npcMoney - result.TotalPrice;
-        }
-
-        result.AmountPaid = npcMoney;
-        return 0;
+        return null;
     }
 }

@@ -22,7 +22,7 @@ public class NPC : MonoBehaviour
 
     public DeliveryResult Transaction(List<Request> playerInput)
     {
-        return deliveryService.Transaction(Order, Money, playerInput);
+        return deliveryService.Transaction(Order, playerInput);
     }
 
     void GenerateProfile()
