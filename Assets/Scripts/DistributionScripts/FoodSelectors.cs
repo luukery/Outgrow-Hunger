@@ -121,4 +121,14 @@ public class FoodSelectors : MonoBehaviour
     {
         moneySelect.gameObject.SetActive(show);
     }
+
+
+    public void AddIcon(int index, Sprite newIcon)
+    {
+        GameObject selector = GetSelector(index);
+        Image icon = selector.transform.Find("Icon").GetComponent<Image>();
+        icon.gameObject.SetActive(true);
+        icon.sprite = newIcon;
+
+    }
 }
