@@ -1410,7 +1410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50fdb81cd3bc7141b68491b67d36195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  NPC: {fileID: 8714416078856817653, guid: e55b2e01208a7684db6595e27802353e, type: 3}
+  NPCs:
+  - {fileID: 8714416078856817653, guid: e55b2e01208a7684db6595e27802353e, type: 3}
 --- !u!4 &296994702
 Transform:
   m_ObjectHideFlags: 0
