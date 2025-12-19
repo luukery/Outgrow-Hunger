@@ -12,7 +12,7 @@ public class InventoryVisualiser : MonoBehaviour
 	public GameObject Parent;
 
     [Header("General Bar settings")]
-	public Transform GeneralBarLocation;
+	public Transform barLocation;
     public List<GameObject> PlaceHolderObjects;
 	public float IndividualScale = 0.3f;
 
