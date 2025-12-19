@@ -41,23 +41,5 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
-    uniqueID: 299445889
-    locked: 0
-  - name: Grass
-    uniqueID: 1119822963
-    locked: 0
-  - name: BackgroundDecoration
-    uniqueID: 1279604095
-    locked: 0
-  - name: FirstLayerHouses
-    uniqueID: 2320738145
-    locked: 0
-  - name: SecondLayerHouses
-    uniqueID: 2766085683
-    locked: 0
-  - name: Stalls
-    uniqueID: 2952272787
-    locked: 0
   m_RenderingLayers:
   - Default

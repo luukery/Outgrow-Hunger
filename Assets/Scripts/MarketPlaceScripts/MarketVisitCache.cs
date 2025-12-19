@@ -3,15 +3,15 @@ using System.Collections.Generic;
 public static class MarketVisitCache
 {
     // key: sceneName + "::" + stallId
-    static readonly Dictionary<string, List<MarketStockItem>> cache = new();
+    static readonly Dictionary<string, List<Food>> cache = new();
 
     static string Key(string sceneName, string stallId) => sceneName + "::" + stallId;
 
-    public static bool TryGet(string sceneName, string stallId, out List<MarketStockItem> stock)
+    public static bool TryGet(string sceneName, string stallId, out List<Food> stock)
         => cache.TryGetValue(Key(sceneName, stallId), out stock);
 
-    public static void Set(string sceneName, string stallId, List<MarketStockItem> stock)
-        => cache[Key(sceneName, stallId)] = new List<MarketStockItem>(stock); // kopie
+    public static void Set(string sceneName, string stallId, List<Food> stock)
+        => cache[Key(sceneName, stallId)] = new List<Food>(stock); // kopie
 
     public static void ClearForScene(string sceneName)
     {

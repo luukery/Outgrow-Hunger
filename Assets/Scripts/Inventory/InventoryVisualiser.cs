@@ -12,12 +12,13 @@ public class InventoryVisualiser : MonoBehaviour
 	public GameObject Parent;
 
     [Header("General Bar settings")]
-	public Transform barLocation;
+	public Transform GeneralBarLocation;
     public List<GameObject> PlaceHolderObjects;
 	public float IndividualScale = 0.3f;
 
     [Header("Individual Bar settings")]
 	public List<GameObject> IndivisualBarPositions;
+	private List<GameObject> IndividualBarObjects;
 
     [Header("Legacy settings")]
     public UnityEngine.UI.Slider CapacityBar;
@@ -31,6 +32,11 @@ public class InventoryVisualiser : MonoBehaviour
 
     private List<List<Food>> TempList = new List<List<Food>>();
     //Filled per category of food.
+
+    private void Awake()
+    {
+		IndividualBarObjects = IndivisualBarPositions;
+    }
 
     private void Update()
     {

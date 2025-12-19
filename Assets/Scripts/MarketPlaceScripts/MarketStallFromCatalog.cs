@@ -19,7 +19,7 @@ public class MarketStallFromCatalog : MonoBehaviour
     public string stallId;
 
     [Header("Current stock (read-only)")]
-    public List<MarketStockItem> currentStock = new();
+    public List<Food> currentStock = new();
 
     [Header("Events")]
     public UnityEvent onStockChanged;
@@ -45,7 +45,7 @@ public class MarketStallFromCatalog : MonoBehaviour
     {
         if (MarketVisitCache.TryGet(scene, stallId, out var cached))
         {
-            currentStock = new List<MarketStockItem>(cached);
+            currentStock = new List<Food>(cached);
             return true;
         }
         return false;
@@ -73,8 +73,13 @@ public class MarketStallFromCatalog : MonoBehaviour
 
         foreach (var p in picks)
         {
+            Debug.Log("My icon here has a name " + p.icon.name);
+
             int price = Random.Range(p.minPrice, p.maxPrice + 1);
-            currentStock.Add(new MarketStockItem { name = p.name, icon = p.icon, price = price });
+            int typeNumber = (int) p.type;
+            Food addingFood = new Food((FoodType.Type)typeNumber, 1, p.name, price, p.icon);
+            Debug.Log($"[MarketStall] Toegevoegd aan voorraad: {addingFood.name} voor {addingFood.price} munten. Ook heb ik denk ik een icon want {(p.icon.name)} bestaat");
+            currentStock.Add(addingFood);
         }
     }
 }
