@@ -11,13 +11,12 @@ public class InventoryVisualiser : MonoBehaviour
 	public GameObject Parent;
 
     [Header("General Bar settings")]
-	public Transform GeneralBarLocation;
+	public Transform barLocation;
     public List<GameObject> PlaceHolderObjects;
 	public float IndividualScale = 0.3f;
 
     [Header("Individual Bar settings")]
 	public List<GameObject> IndivisualBarPositions;
-	private List<GameObject> IndividualBarObjects;
 
     [Header("Legacy settings")]
     public UnityEngine.UI.Slider CapacityBar;
@@ -31,11 +30,6 @@ public class InventoryVisualiser : MonoBehaviour
 
     private List<List<Food>> TempList = new List<List<Food>>();
     //Filled per category of food.
-
-    private void Awake()
-    {
-		IndividualBarObjects = IndivisualBarPositions;
-    }
 
     private void Update()
     {
@@ -88,7 +82,6 @@ public class InventoryVisualiser : MonoBehaviour
 
 	public void SetProgressBar(Inventory inv)
 	{
-		IndivisualBarPositions = IndividualBarObjects;
         //DOES NOW
         //some random fucking bulshit
 
@@ -104,13 +97,13 @@ public class InventoryVisualiser : MonoBehaviour
         //update the bars when adding and removing food. With some sort of update function not called "private void Update" because unity. 
         //Make it so the prefabs that make the bar now are not in the editor but in a map in the assets. 
 
-        var globalBarPosition = GeneralBarLocation.position;
+		var globalBarPosition = barLocation.position;
 
 		//remove all child objects from Parent object
 		foreach (Transform child in Parent.transform)
 		{
 			Destroy(child.gameObject);
-        }
+		}
 
 
 
@@ -144,12 +137,12 @@ public class InventoryVisualiser : MonoBehaviour
 				//set it to the right position
 				
 				GeneralObject.transform.localScale = new Vector3(GeneralScale, GeneralScale, GeneralScale);
-				GeneralObject.transform.position = GeneralBarLocation.position;
+				GeneralObject.transform.position = barLocation.position;
 
 				
 
-                //update the next position
-                globalBarPosition = new Vector3(globalBarPosition.x, GeneralBarLocation.position.y, GeneralBarLocation.position.z);
+				//update the next position
+				globalBarPosition = new Vector3(globalBarPosition.x, barLocation.position.y, barLocation.position.z);
 
 
 
