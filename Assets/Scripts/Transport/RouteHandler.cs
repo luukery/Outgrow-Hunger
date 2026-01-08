@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEngine.InputSystem;
 
 public class RouteHandler : MonoBehaviour
 {
@@ -15,8 +17,13 @@ public class RouteHandler : MonoBehaviour
 
     [Header("Journey Settings")]
     public int legsPerJourney = 5;
-    public int startingFood = 100;
-    public int startingGold = 100;
+
+    [Header("Fallback values (ONLY used if Inventory/Wallet missing)")]
+    public int fallbackFood = 100;
+    public int fallbackGold = 100;
+
+    [Header("Scene Flow")]
+    public string distributionSceneName = "Distribution";
 
     [Header("Event icon roots for each road")]
     public Transform shortRoadEventsRoot;
@@ -30,9 +37,11 @@ public class RouteHandler : MonoBehaviour
 
     public static RouteHandler Instance { get; private set; }
 
+    // --- click-carryover protection ---
+    private bool inputLocked = true;
+    public bool CanSelectRoutes => !journeyFinished && !inputLocked;
+
     float timePassed = 0f;
-    int currentFood;
-    int currentGold;
     int legsCompleted = 0;
     bool journeyFinished = false;
 
@@ -40,10 +49,8 @@ public class RouteHandler : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     // ------------------ ROUTE EVENT CLASS ------------------
@@ -54,14 +61,13 @@ public class RouteHandler : MonoBehaviour
         public float ExtraTime;
         public int FoodLoss;
         public int GoldLoss;
-        public int FoodGain;
-        public RouteEvent(string name, float extraTime, int foodLoss = 0, int goldLoss = 0, int foodGain = 0)
+
+        public RouteEvent(string name, float extraTime, int foodLoss = 0, int goldLoss = 0)
         {
             Name = name;
             ExtraTime = extraTime;
             FoodLoss = foodLoss;
             GoldLoss = goldLoss;
-            FoodGain = foodGain;
         }
     }
 
@@ -97,9 +103,9 @@ public class RouteHandler : MonoBehaviour
         new("Hail", 4f, 15),
         new("Icy Roads", 5f),
         new("Sinkhole", 0f, 20),
-        new("Bandits", 0f, 15, 15),
+        new("Bandits", 0f, 15), // keep simple: treat as gold loss elsewhere if needed
         new("Rockslide", 7f),
-        new("Cart", 0.5f, 0, 0, 20),
+        new("Cart", 0.5f),
     };
 
     // ------------------ ROUTE CLASS ------------------
@@ -119,14 +125,14 @@ public class RouteHandler : MonoBehaviour
         }
     }
 
-    // ------------------ UNITY LIFECYCLE ------------------
     void Start()
     {
-        currentFood = startingFood;
-        currentGold = startingGold;
         timePassed = 0f;
         legsCompleted = 0;
         journeyFinished = false;
+
+        // lock clicks from previous scene
+        StartCoroutine(UnlockAfterMouseRelease());
 
         if (popupContinueButton != null)
         {
@@ -134,10 +140,8 @@ public class RouteHandler : MonoBehaviour
             popupContinueButton.onClick.AddListener(OnPopupContinue);
         }
 
-        if (infoPopupPanel != null)
-            infoPopupPanel.SetActive(false);
-        if (popupBackground != null)
-            popupBackground.SetActive(false);
+        if (infoPopupPanel != null) infoPopupPanel.SetActive(false);
+        if (popupBackground != null) popupBackground.SetActive(false);
 
         ClearAllEventIcons();
         ResetRoadHighlights();
@@ -145,20 +149,52 @@ public class RouteHandler : MonoBehaviour
         RouteSetUp();
     }
 
-    void Update()
+    IEnumerator UnlockAfterMouseRelease()
     {
-        if (Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame)
+        inputLocked = true;
+        yield return null; // let UI settle for a frame
+
+        // wait until left mouse is not pressed (prevents carryover click selecting road 0)
+        if (Mouse.current != null)
         {
-            if (!journeyFinished)
-                RouteSetUp();
+            while (Mouse.current.leftButton.isPressed)
+                yield return null;
         }
+
+        inputLocked = false;
+    }
+
+    // ------------------ LIVE VALUES FROM PERSISTENT DATA ------------------
+    int GetFoodLive()
+    {
+        if (Inventory.Instance != null) return Inventory.Instance.GetTotalFoodUnits();
+        return fallbackFood;
+    }
+
+    int GetGoldLive()
+    {
+        if (Wallet.Instance != null) return Wallet.Instance.Money;
+        return fallbackGold;
+    }
+
+    void ApplyFoodLoss(int amount)
+    {
+        if (amount <= 0) return;
+        if (Inventory.Instance != null) Inventory.Instance.TryRemoveFoodUnits(amount);
+        else fallbackFood = Mathf.Max(0, fallbackFood - amount);
+    }
+
+    void ApplyGoldLoss(int amount)
+    {
+        if (amount <= 0) return;
+        if (Wallet.Instance != null) Wallet.Instance.RemoveMoneyClamped(amount);
+        else fallbackGold = Mathf.Max(0, fallbackGold - amount);
     }
 
     // ------------------ MAIN SETUP ------------------
     void RouteSetUp()
     {
-        if (journeyFinished)
-            return;
+        if (journeyFinished) return;
 
         ClearAllEventIcons();
         ResetRoadHighlights();
@@ -170,8 +206,7 @@ public class RouteHandler : MonoBehaviour
     // ------------------ ROUTE SELECTION ------------------
     public void SelectRouteByIndex(int index)
     {
-        if (journeyFinished)
-            return;
+        if (!CanSelectRoutes) return;
 
         if (routes == null || routes.Count <= index)
         {
@@ -184,7 +219,7 @@ public class RouteHandler : MonoBehaviour
 
     void HandleRouteSelection(Route route, int routeIndex)
     {
-        if (journeyFinished) return;
+        if (!CanSelectRoutes) return;
 
         float legTime = route.TravelTime;
 
@@ -196,8 +231,10 @@ public class RouteHandler : MonoBehaviour
         if (eventHappened)
         {
             legTime += route.EventData.ExtraTime;
-            currentFood -= route.EventData.FoodLoss;
-            currentGold -= route.EventData.GoldLoss;
+
+            // ✅ APPLY LOSSES TO PERSISTENT INVENTORY/WALLET
+            ApplyFoodLoss(route.EventData.FoodLoss);
+            ApplyGoldLoss(route.EventData.GoldLoss);
 
             eventDescription =
                 $"{route.EventData.Name}\n" +
@@ -219,12 +256,8 @@ public class RouteHandler : MonoBehaviour
 
         timePassed += legTime;
 
-        currentFood = Mathf.Max(0, currentFood);
-        currentGold = Mathf.Max(0, currentGold);
-
         ShowInfoPopup(route, legTime, eventDescription);
     }
-
 
     // ------------------ POPUP LOGIC ------------------
     void ShowInfoPopup(Route route, float legTime, string eventDescription)
@@ -236,9 +269,7 @@ public class RouteHandler : MonoBehaviour
         }
 
         if (popupTitleText != null && !journeyFinished)
-        {
             popupTitleText.text = $"Leg {legsCompleted + 1}:\n{route.RouteName}";
-        }
 
         if (popupBodyText != null)
         {
@@ -246,22 +277,18 @@ public class RouteHandler : MonoBehaviour
                 $"{eventDescription}\n\n" +
                 $"Time this leg: {legTime}h\n" +
                 $"Total time travelled: {timePassed}h\n\n" +
-                $"Current Food: {currentFood}\n" +
-                $"Current Gold: {currentGold}";
+                $"Current Food: {GetFoodLive()}\n" +
+                $"Current Gold: {GetGoldLive()}";
         }
 
         infoPopupPanel.SetActive(true);
-
-        if (popupBackground != null)
-            popupBackground.SetActive(true);
+        if (popupBackground != null) popupBackground.SetActive(true);
     }
 
     void OnPopupContinue()
     {
-        if (infoPopupPanel != null)
-            infoPopupPanel.SetActive(false);
-        if (popupBackground != null)
-            popupBackground.SetActive(false);
+        if (infoPopupPanel != null) infoPopupPanel.SetActive(false);
+        if (popupBackground != null) popupBackground.SetActive(false);
 
         ClearAllEventIcons();
         ResetRoadHighlights();
@@ -271,18 +298,13 @@ public class RouteHandler : MonoBehaviour
 
     void ContinueAfterPopup()
     {
-        if(!journeyFinished){
+        if (!journeyFinished)
             legsCompleted++;
-        }
 
         if (legsCompleted >= legsPerJourney)
-        {
             ShowFinalSummary();
-        }
         else
-        {
             RouteSetUp();
-        }
     }
 
     void ShowFinalSummary()
@@ -294,7 +316,7 @@ public class RouteHandler : MonoBehaviour
 
         if (infoPopupPanel == null)
         {
-            Debug.Log($"Journey finished!\nTotal time: {timePassed}h\nFood: {currentFood}\nGold: {currentGold}");
+            SceneManager.LoadScene(distributionSceneName);
             return;
         }
 
@@ -306,16 +328,22 @@ public class RouteHandler : MonoBehaviour
             popupBodyText.text =
                 $"Total legs travelled: {legsCompleted}\n" +
                 $"Total time spent: {timePassed}h\n\n" +
-                $"Final Food: {currentFood}\n" +
-                $"Final Gold: {currentGold}";
+                $"Final Food: {GetFoodLive()}\n" +
+                $"Final Gold: {GetGoldLive()}\n\n" +
+                $"Press Continue to deliver.";
         }
 
         infoPopupPanel.SetActive(true);
+        if (popupBackground != null) popupBackground.SetActive(true);
 
-        if (popupBackground != null)
-            popupBackground.SetActive(true);
-
-        //TODO if continuebutton pressed, next scene 
+        if (popupContinueButton != null)
+        {
+            popupContinueButton.onClick.RemoveAllListeners();
+            popupContinueButton.onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene(distributionSceneName);
+            });
+        }
     }
 
     // ------------------ EVENT ICON & HIGHLIGHT HELPERS ------------------
@@ -341,15 +369,10 @@ public class RouteHandler : MonoBehaviour
 
     void ShowEventIcon(int routeIndex, RouteEvent evt)
     {
-        if (evt == null)
-            return;
+        if (evt == null) return;
 
         Transform root = GetEventsRootForIndex(routeIndex);
-        if (root == null)
-        {
-            Debug.LogWarning("No events root assigned for route index " + routeIndex);
-            return;
-        }
+        if (root == null) return;
 
         string eventName = evt.Name.ToLowerInvariant();
 
@@ -364,8 +387,6 @@ public class RouteHandler : MonoBehaviour
                 return;
             }
         }
-
-        Debug.LogWarning($"No event icon found under {root.name} for event '{evt.Name}'.");
     }
 
     void ClearAllEventIcons()
@@ -380,23 +401,20 @@ public class RouteHandler : MonoBehaviour
         if (root == null) return;
 
         foreach (Transform child in root)
-        {
             if (child != null && child.gameObject.activeSelf)
                 child.gameObject.SetActive(false);
-        }
     }
 
     void ResetRoadHighlights()
     {
-        if(shortRoadClickable != null) shortRoadClickable.ResetHighlight();
-        if(mediumRoadClickable != null) mediumRoadClickable.ResetHighlight();
-        if(longRoadClickable != null) longRoadClickable.ResetHighlight();
+        if (shortRoadClickable != null) shortRoadClickable.ResetHighlight();
+        if (mediumRoadClickable != null) mediumRoadClickable.ResetHighlight();
+        if (longRoadClickable != null) longRoadClickable.ResetHighlight();
     }
 
     // ------------------ RANDOM EVENT GENERATION ------------------
     RouteEvent GetRandomEvent(int routeIndex)
     {
-        int roll = Random.Range(1, 101);
         int rarityRoll = Random.Range(1, 101);
 
         List<RouteEvent> list =
@@ -421,7 +439,6 @@ public class RouteHandler : MonoBehaviour
     {
         if (evt.Name == "River Crossing" && routeIndex != 0)
             return false;
-
         return true;
     }
 
@@ -434,8 +451,8 @@ public class RouteHandler : MonoBehaviour
         return new List<Route>
         {
             new("Short Route",  shortRouteTime, 100, GetRandomEvent(0)),
-            new("Medium Route", mediumRouteTime, 85, GetRandomEvent(1)),
-            new("Long Route",   longRouteTime, 70, GetRandomEvent(2))
+            new("Medium Route", mediumRouteTime, 85,  GetRandomEvent(1)),
+            new("Long Route",   longRouteTime, 70,  GetRandomEvent(2))
         };
     }
 }

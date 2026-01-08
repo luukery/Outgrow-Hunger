@@ -24214,6 +24214,7 @@ MonoBehaviour:
   legsPerJourney: 5
   startingFood: 100
   startingGold: 100
+  distributionSceneName: DistributionScene
   shortRoadEventsRoot: {fileID: 873895459}
   mediumRoadEventsRoot: {fileID: 918860970}
   longRoadEventsRoot: {fileID: 702949019}
