@@ -1,8 +1,8 @@
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class StallUISimple : MonoBehaviour
 {
@@ -22,11 +22,8 @@ public class StallUISimple : MonoBehaviour
     [Header("Slots (max 2)")]
     public List<Slot> slots = new();
 
-    [Header("Speler coins (demo)")]
-    public int playerCoins = 100;
+    [Header("UI")]
     public TMP_Text coinsText;
-
-    // (optioneel) header/desc, koppel in Inspector als je ze hebt
     public TMP_Text headerText;
     public TMP_Text descText;
 
@@ -38,7 +35,6 @@ public class StallUISimple : MonoBehaviour
 
     public void Refresh()
     {
-        // verberg alles eerst
         for (int s = 0; s < slots.Count; s++)
             if (slots[s]?.root) slots[s].root.SetActive(false);
 
@@ -48,12 +44,8 @@ public class StallUISimple : MonoBehaviour
             return;
         }
 
-        // (optioneel) dynamische header
         if (headerText)
-        {
-            string title = stall.stallType.ToString() + " Stall";
-            headerText.text = title;
-        }
+            headerText.text = stall.stallType.ToString() + " Stall";
 
         List<MarketStockItem> stock = stall.currentStock;
         if (stock == null)
@@ -67,49 +59,27 @@ public class StallUISimple : MonoBehaviour
         {
             var item = stock[i];
             var s = slots[i];
-
-            if (s == null)
-            {
-                Debug.LogWarning($"[StallUI] Slot {i} is null in slots-lijst.");
-                continue;
-            }
-
-            // --- DEBUG: log alle relevante refs ---
-            string itemIconName = (item != null && item.icon != null) ? item.icon.name : "NULL";
-            string slotIconRef  = (s.icon != null) ? s.icon.name : "NULL";
-            Debug.Log($"[StallUI] Slot {i}: item='{item?.name ?? "NULL"}', itemIcon={itemIconName}, slotIconRef={slotIconRef}");
+            if (s == null) continue;
 
             if (s.root) s.root.SetActive(true);
 
-            // Icon veilig zetten (en geen wit blok als item geen sprite heeft)
             if (s.icon)
             {
-                s.icon.sprite = (item != null) ? item.icon : null;
-                bool hasIcon = (item != null && item.icon != null);
-
-                // toggle Image enabled/alpha zodat je geen witte placeholder ziet
+                s.icon.sprite = item != null ? item.icon : null;
+                bool hasIcon = item != null && item.icon != null;
                 s.icon.enabled = hasIcon;
+
                 var col = s.icon.color;
                 col.a = hasIcon ? 1f : 0f;
                 s.icon.color = col;
-
-                // handige waarschuwing specifiek voor het 2e slot-issue
-                if (!hasIcon)
-                {
-                    Debug.LogWarning($"[StallUI] Slot {i} heeft GEEN item.icon. Check ProductCatalog entry voor '{item?.name}'.");
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"[StallUI] Slot {i} mist de Image-referentie (slots[{i}].icon is niet gevuld in de Inspector).");
             }
 
-            if (s.nameText)  s.nameText.text  = (item != null) ? item.name : "(null)";
-            if (s.priceText) s.priceText.text = (item != null) ? (item.price + " coins") : "-";
+            if (s.nameText) s.nameText.text = item != null ? item.name : "(null)";
+            if (s.priceText) s.priceText.text = item != null ? (item.price + " coins") : "-";
 
             if (s.buyButton)
             {
-                int idx = i; // capture
+                int idx = i;
                 s.buyButton.onClick.RemoveAllListeners();
                 s.buyButton.onClick.AddListener(() => TryBuy(idx));
             }
@@ -118,7 +88,7 @@ public class StallUISimple : MonoBehaviour
         }
 
         if (shown == 0)
-            Debug.LogWarning("[StallUI] Er zijn 0 slots getoond. Heeft deze stall currentStock gevuld?");
+            Debug.LogWarning("[StallUI] 0 slots getoond. Is currentStock gevuld?");
     }
 
     void TryBuy(int index)
@@ -126,32 +96,60 @@ public class StallUISimple : MonoBehaviour
         if (stall == null) return;
         if (index < 0 || index >= stall.currentStock.Count) return;
 
-        var item = stall.currentStock[index];
-        if (playerCoins >= item.price)
+        if (Wallet.Instance == null || Inventory.Instance == null)
         {
-            playerCoins -= item.price;
-            UpdateCoins();
-            Debug.Log($"[StallUI] Gekocht: {item.name} voor {item.price} coins");
-
-            if (index < slots.Count && slots[index].buyButton != null)
-                StartCoroutine(FlashButton(slots[index].buyButton));
+            Debug.LogWarning("[StallUI] Missing Wallet or Inventory (make sure they exist in the first scene).");
+            return;
         }
-        else
+
+        var item = stall.currentStock[index];
+
+        // Spend
+        if (!Wallet.Instance.CanSpendMoney(item.price))
         {
             Debug.Log("[StallUI] Niet genoeg coins!");
+            return;
         }
+
+        // Convert MarketStockItem -> Food (no lookup needed)
+        Food bought = new Food(
+            item.foodType,
+            item.foodQuality,
+            item.size,
+            item.name,
+            item.icon
+        );
+
+        // Add to inventory (refund if full)
+        if (!Inventory.Instance.TryAddFoodToInventory(bought))
+        {
+            Wallet.Instance.AddMoney(item.price);
+            Debug.Log("[StallUI] Inventory full - refunded.");
+            UpdateCoins();
+            return;
+        }
+
+        UpdateCoins();
+        Debug.Log($"[StallUI] Gekocht: {item.name} ({item.foodType}, {item.foodQuality}, size {item.size}) voor {item.price} coins");
+
+        if (index < slots.Count && slots[index].buyButton != null)
+            StartCoroutine(FlashButton(slots[index].buyButton));
     }
 
     void UpdateCoins()
     {
-        if (coinsText) coinsText.text = $"Coins: {playerCoins}";
+        int money = Wallet.Instance != null ? Wallet.Instance.Money : 0;
+        if (coinsText) coinsText.text = $"Coins: {money}";
     }
 
     IEnumerator FlashButton(Button b)
     {
-        var c = b.colors; var old = c.normalColor;
-        c.normalColor = Color.green; b.colors = c;
+        var c = b.colors;
+        var old = c.normalColor;
+        c.normalColor = Color.green;
+        b.colors = c;
         yield return new WaitForSeconds(0.15f);
-        c.normalColor = old; b.colors = c;
+        c.normalColor = old;
+        b.colors = c;
     }
 }

@@ -1,30 +1,28 @@
 using UnityEngine;
 
-public class Food : MonoBehaviour
+[System.Serializable]
+public class Food
 {
-    //Public Variables
-    public int ID; //Unique identifier for each food item.
-    public int size;//The amount of space it takes up in the inventory. 
-    public string name; //Porkchops, broccoli, tuna etc. Not the food type but the name of the actual food. 
+    public int ID;
+    public int size;
+    public string name;
     public FoodType.Type foodType;
     public Quality foodQuality;
     public Sprite icon;
-    int minPrice;
-    int maxPrice;
 
-    public Food (FoodType.Type type, Quality quality, int size, string name)
+    private float spoilChance;
+    private int price;
+
+    public Food(FoodType.Type type, Quality quality, int size, string name, Sprite icon = null, int id = 0)
     {
         this.foodType = type;
         this.foodQuality = quality;
         this.size = size;
         this.name = name;
+        this.icon = icon;
+        this.ID = id;
     }
 
-    public Food GetFoodByID(int ID)
-    {
-        //get food by ID logic
-        return this;
-    }
     public enum Quality
     {
         Good,
@@ -33,20 +31,9 @@ public class Food : MonoBehaviour
         Spoiled
     }
 
-
-
-
-    //Private Variables
-    private float SpoilChance;
-    private int price;
-
-
-
-    private void Spoil(Food food)
+    public void Spoil()
     {
-        //Spoil logic here
-        food.foodQuality = Quality.Spoiled;
-        food.price = 0;//Magic Number,  maar moet hier kunnen
+        foodQuality = Quality.Spoiled;
+        price = 0;
     }
-
 }
