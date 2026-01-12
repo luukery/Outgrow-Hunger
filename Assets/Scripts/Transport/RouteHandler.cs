@@ -8,6 +8,8 @@ using System.Collections;
 
 public class RouteHandler : MonoBehaviour
 {
+    [HideInInspector] public List<Route> routes;
+
     [Header("Popup UI (Info Box)")]
     public GameObject infoPopupPanel;
     public GameObject popupBackground;
@@ -49,8 +51,6 @@ public class RouteHandler : MonoBehaviour
     // --- NEW: prevents click carryover from Market selecting a road immediately ---
     private bool inputLocked = true;
     public bool CanSelectRoutes => !journeyFinished && !inputLocked;
-
-    private List<Route> routes;
 
     void Awake()
     {
