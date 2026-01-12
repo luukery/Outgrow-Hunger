@@ -3,15 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Road
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - stall
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -58,6 +59,9 @@ TagManager:
     locked: 0
   - name: Stalls
     uniqueID: 2952272787
+    locked: 0
+  - name: Player
+    uniqueID: 607341465
     locked: 0
   m_RenderingLayers:
   - Default
