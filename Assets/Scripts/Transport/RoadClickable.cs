@@ -41,19 +41,17 @@ public class RoadClickable : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     }
 
     public void OnPointerClick(PointerEventData eventData)
-    {
-        if (RouteHandler.Instance != null)
-        {
-            RouteHandler.Instance.SelectRouteByIndex(routeIndex);
-        }
-        else
-        {
-            Debug.LogWarning("No RouteHandler.Instance found in scene.");
-        }
+{
+    if (RouteHandler.Instance == null) return;
+    if (!RouteHandler.Instance.CanSelectRoutes) return;
 
-        isSelected = true;
-        SetColor(selectedColor);
-    }
+    RouteHandler.Instance.SelectRouteByIndex(routeIndex);
+
+    isSelected = true;
+    SetColor(selectedColor);
+}
+
+
 
     private void SetColor(Color color)
     {
