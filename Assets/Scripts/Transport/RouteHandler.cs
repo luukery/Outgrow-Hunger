@@ -60,14 +60,18 @@ public class RouteHandler : MonoBehaviour
     public class RouteEvent
     {
         public string Name;
+        public string SituationDescription;
+        public string SystematicWhy;
         public float ExtraTime;
         public int FoodLoss;
         public int GoldLoss;
         public int FoodGain;
 
-        public RouteEvent(string name, float extraTime, int foodLoss = 0, int goldLoss = 0, int foodGain = 0)
+        public RouteEvent(string name, string situationDescription, string systematicWhy, float extraTime, int foodLoss = 0, int goldLoss = 0, int foodGain = 0)
         {
             Name = name;
+            SituationDescription = situationDescription;
+            SystematicWhy = systematicWhy;
             ExtraTime = extraTime;
             FoodLoss = foodLoss;
             GoldLoss = goldLoss;
@@ -78,39 +82,194 @@ public class RouteHandler : MonoBehaviour
     // ------------------ EVENT LISTS BY RARITY ------------------
     List<RouteEvent> commonEvents = new()
     {
-        new("Fallen tree", 2.5f),
-        new("Tree roots", 1f, 5),
-        new("Heavy rain", 2f),
-        new("Muddy Roads", 2f),
-        new("Thick fog", 3f),
-        new("Livestock", 1f),
-        new("Poor Road", 2f),
-        new("Deer", 1f),
-        new("Insect Swarm", 2f),
-        new("Winds", 0f, 10),
+        new RouteEvent(
+            "Fallen Tree",
+            "A fallen tree blocks the road. With no maintenance crew nearby, you clear it yourself, losing {time} hours.",
+            "When rural roads go uncleared, food takes longer to reach people. Some of it never arriving.",
+            2.5f
+        ),
+
+        new RouteEvent(
+            "Tree Roots",
+            "Thick roots break through the road, forcing you to slow and carefully pass, losing {time} hours and {foodLoss} food.",
+            "Poor road quality damages vehicles and supplies, reducing how much food survives the journey.",
+            1f,
+            foodLoss: 5
+        ),
+
+        new RouteEvent(
+            "Heavy Rain",
+            "Rain pours down, soaking the road and slowing your progress by {time} hours.",
+            "When transport slows, food spends more time in transit and is more likely to spoil before reaching communities.",
+            2f
+        ),
+
+        new RouteEvent(
+            "Muddy Roads",
+            "The road turns to mud, bogging down the carriage and costing {time} hours.",
+            "Unpaved roads make food transport unreliable, especially during bad weather.",
+            2f
+        ),
+
+        new RouteEvent(
+            "Thick Fog",
+            "Dense fog limits visibility, forcing you to move cautiously and lose {time} hours.",
+            "When travel becomes unpredictable, food deliveries are delayed or canceled altogether.",
+            3f
+        ),
+
+        new RouteEvent(
+            "Livestock",
+            "Cattle block the road, and guiding them aside takes {time} hour.",
+            "In rural areas, shared roads slow transport and reduce how much food reaches markets on time.",
+            1f
+        ),
+
+        new RouteEvent(
+            "Poor Road",
+            "Cracked ground and missing stones force a slower pace, costing {time} hours.",
+            "Weak infrastructure turns ordinary travel into delays that affect food access.",
+            2f
+        ),
+
+        new RouteEvent(
+            "Deer",
+            "A herd crosses the road, bringing you to a halt for {time} hour.",
+            "Even small interruptions can disrupt supply routes where timing matters for food delivery.",
+            1f
+        ),
+
+        new RouteEvent(
+            "Insect Swarm",
+            "A swarm of insects spooks the horses, forcing a stop that costs {time} hours.",
+            "Delays like this add up, making long journeys riskier for food transport.",
+            2f
+        ),
+
+        new RouteEvent(
+            "Winds",
+            "Strong winds batter the carriage, rocking it back and forth. You can’t secure everything in time and lose {foodLoss} food.",
+            "Without protected transport, food is easily lost long before it reaches communities.",
+            0f,
+            foodLoss: 10
+        ),
     };
+
 
     List<RouteEvent> uncommonEvents = new()
     {
-        new("Forest Fire", 4f),
-        new("Snowfall", 5f),
-        new("Thunderstorm", 5f),
-        new("River Crossing", 3f, 5),   // only allowed on Short Road (routeIndex 0)
-        new("Tolls", 0f, 0, 15),
-        new("Refugees", 0f, 5),
-        new("Predators", 0f, 15),
-        new("Tired Horses", 5f),
+        new RouteEvent(
+            "Forest Fire",
+            "Smoke fills the air as a distant fire forces a wide detour, costing {time} hours.",
+            "Environmental disasters cut off routes, stopping food from reaching entire regions.",
+            4f
+        ),
+
+        new RouteEvent(
+            "Snowfall",
+            "Snow begins falling mid-journey, turning the road slick and slow and adding {time} hours.",
+            "When roads aren’t built for winter, food arrives late… if it arrives at all.",
+            5f
+        ),
+
+        new RouteEvent(
+            "Thunderstorm",
+            "A violent storm halts travel, grounding you for {time} hours.",
+            "Extreme weather regularly disrupts transport, breaking supply chains that people rely on for food.",
+            5f
+        ),
+
+        new RouteEvent(
+            "River Crossing",
+            "The river runs deeper than expected. Crossing carefully costs {time} hours and {foodLoss} food lost to water damage.",
+            "Unsafe crossings make food transport risky, especially where bridges are missing or broken.",
+            3f,
+            foodLoss: 5
+        ),
+
+        new RouteEvent(
+            "Tolls",
+            "Armed collectors demand payment to pass. You lose {goldLoss} gold to continue.",
+            "Extra costs along trade routes raise food prices and limit who can afford to move supplies.",
+            0f,
+            goldLoss: 15
+        ),
+
+        new RouteEvent(
+            "Refugees",
+            "Desperate travelers beg for help. Sharing supplies costs {foodLoss} food.",
+            "When people are displaced, already scarce food must stretch even further.",
+            0f,
+            foodLoss: 5
+        ),
+
+        new RouteEvent(
+            "Predators",
+            "Predators stalk the caravan, forcing you to rush and abandon {foodLoss} food to escape.",
+            "In unsafe regions, food is often lost just to keep moving.",
+            0f,
+            foodLoss: 15
+        ),
+
+        new RouteEvent(
+            "Tired Horses",
+            "The horses slow to a crawl from exhaustion, costing {time} hours.",
+            "Limited resources and overuse make long food journeys harder to sustain.",
+            5f
+        ),
     };
+
 
     List<RouteEvent> rareEvents = new()
     {
-        new("Hail", 4f, 15),
-        new("Icy Roads", 5f),
-        new("Sinkhole", 0f, 15),
-        new("Bandits", 0f, 10, 10),
-        new("Rockslide", 7f),
-        new("Cart", 0.5f, 0, 0, 20),
+        new RouteEvent(
+            "Hail",
+            "Hail pounds the road, damaging supplies and delaying you {time} hours while {foodLoss} food is severely damaged and lost.",
+            "Severe weather can destroy food outright before it ever reaches people.",
+            4f,
+            foodLoss: 15
+        ),
+
+        new RouteEvent(
+            "Icy Roads",
+            "Ice coats the road, forcing extreme caution and adding {time} hours.",
+            "Without proper road treatment, winter conditions make food transport dangerous and slow.",
+            5f
+        ),
+
+        new RouteEvent(
+            "Sinkhole",
+            "The ground collapses nearby, causing your carriage to slip and crash. You are able to recover most supplies barring {foodLoss} food.",
+            "Infrastructure failure can instantly cut off food routes with no warning.",
+            0f,
+            foodLoss: 15
+        ),
+
+        new RouteEvent(
+            "Bandits",
+            "Bandits ambush the caravan demanding supplies. You escape, but lose {foodLoss} food and {goldLoss} gold.",
+            "Conflict and crime along supply routes directly reduce how much food reaches communities.",
+            0f,
+            foodLoss: 10,
+            goldLoss: 10
+        ),
+
+        new RouteEvent(
+            "Rockslide",
+            "Falling rocks block the path, forcing a long detour that costs {time} hours.",
+            "In unstable terrain, food transport depends on a few fragile routes.",
+            7f
+        ),
+
+        new RouteEvent(
+            "Cart",
+            "An abandoned cart blocks the road. Clearing it takes {time} hours, but you recover {foodGain} food from what was left behind.",
+            "When transport fails, food is often wasted long before it can be used.",
+            0.5f,
+            foodGain: 20
+        ),
     };
+
 
     // ------------------ ROUTE CLASS ------------------
     public class Route
@@ -261,6 +420,34 @@ public class RouteHandler : MonoBehaviour
         HandleRouteSelection(routes[index], index);
     }
 
+    string FormatSituation(RouteEvent e)
+    {
+        string text = e.SituationDescription;
+
+        if (e.ExtraTime > 0)
+        {
+            text = text.Replace("{time}", $"<color=#ff4d4d>{e.ExtraTime}</color>");
+        }
+
+        if (e.FoodLoss > 0)
+        {
+            text = text.Replace("{foodLoss}", $"<color=#ff4d4d>{e.FoodLoss}</color>");
+        }
+
+        if (e.GoldLoss > 0)
+        {
+            text = text.Replace("{goldLoss}", $"<color=#ff4d4d>{e.GoldLoss}</color>");
+        }
+
+        if (e.FoodGain > 0)
+        {
+            text = text.Replace("{foodGain}", $"<color=#4dff4d>{e.FoodGain}</color>");
+        }
+
+        return text;
+    }
+
+
     void HandleRouteSelection(Route route, int routeIndex)
     {
         if (!CanSelectRoutes) return;
@@ -274,34 +461,30 @@ public class RouteHandler : MonoBehaviour
 
         if (eventHappened)
         {
-            legTime += route.EventData.ExtraTime;
+            var e = route.EventData;
 
-            // ✅ Apply to persistent systems (instead of currentFood/currentGold)
-            ApplyFoodLoss(route.EventData.FoodLoss);
-            ApplyGoldLoss(route.EventData.GoldLoss);
-            ApplyFoodGain(route.EventData.FoodGain);
+            legTime += e.ExtraTime;
+
+            ApplyFoodLoss(e.FoodLoss);
+            ApplyGoldLoss(e.GoldLoss);
+            ApplyFoodGain(e.FoodGain);
 
             eventDescription =
-                $"{route.EventData.Name}\n" +
-                $"Extra time: +{route.EventData.ExtraTime}h";
-
-            if (route.EventData.FoodLoss != 0 || route.EventData.GoldLoss != 0 || route.EventData.FoodGain != 0)
-            {
-                eventDescription += "\nEffect: ";
-                if (route.EventData.FoodLoss != 0) eventDescription += $"-{route.EventData.FoodLoss} food ";
-                if (route.EventData.GoldLoss != 0) eventDescription += $"-{route.EventData.GoldLoss} gold ";
-                if (route.EventData.FoodGain != 0) eventDescription += $"+{route.EventData.FoodGain} food";
-            }
+                $"<b>{e.Name}</b>\n\n" +
+                $"{FormatSituation(e)}\n" +
+                $"<i>{e.SystematicWhy}</i>";
         }
         else
         {
-            eventDescription = $"You were not affected by {route.EventData.Name}.";
+            eventDescription =
+                $"<b>{route.EventData.Name}</b>\n\n" +
+                "You were not affected by this event.";
         }
 
         timePassed += legTime;
-
         ShowInfoPopup(route, legTime, eventDescription);
     }
+
 
     // ------------------ POPUP LOGIC ------------------
     void ShowInfoPopup(Route route, float legTime, string eventDescription)
