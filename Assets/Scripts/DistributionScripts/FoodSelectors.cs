@@ -1,132 +1,203 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 
 public class FoodSelectors : MonoBehaviour
 {
-    private List<GameObject> Selectors = new();
+    private readonly List<GameObject> Selectors = new();
+    private readonly List<int> maxPerSelector = new();
+    private readonly List<Button> plusButtons = new();
+    private readonly List<Button> minusButtons = new();
+
     private GameObject moneySelect;
     private int maxMoney = 5;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Selectors.Clear();
+        maxPerSelector.Clear();
+        plusButtons.Clear();
+        minusButtons.Clear();
+        moneySelect = null;
+
         foreach (Transform child in transform)
         {
             Button minus = child.Find("MinusButton").GetComponent<Button>();
             Button plus = child.Find("PlusButton").GetComponent<Button>();
             TextMeshProUGUI number = child.Find("Number").GetComponent<TextMeshProUGUI>();
 
-            minus.onClick.AddListener(() => MinusOne(number));
-           
-
-            if(child.gameObject.name == "MoneySelect")
+            if (child.gameObject.name == "MoneySelect")
             {
-                plus.onClick.AddListener(() => MoneyPlusOne(number));
                 moneySelect = child.gameObject;
 
+                minus.onClick.RemoveAllListeners();
+                plus.onClick.RemoveAllListeners();
+
+                minus.onClick.AddListener(() => MinusOne(number));
+                plus.onClick.AddListener(() => MoneyPlusOne(number));
             }
             else
             {
-                plus.onClick.AddListener(() => PlusOne(number));
+                int selectorIndex = Selectors.Count;
+
                 Selectors.Add(child.gameObject);
+                maxPerSelector.Add(0);
+
+                plusButtons.Add(plus);
+                minusButtons.Add(minus);
+
+                minus.onClick.RemoveAllListeners();
+                plus.onClick.RemoveAllListeners();
+
+                minus.onClick.AddListener(() => MinusOne(number));
+                plus.onClick.AddListener(() => PlusOne(selectorIndex, number));
             }
 
             child.gameObject.SetActive(false);
         }
     }
 
-    public GameObject GetSelector(int index)
-    {
-        return Selectors[index];
-    }
+    public GameObject GetSelector(int index) => Selectors[index];
 
     public int GetValue(int index)
     {
         GameObject selector = Selectors[index];
         TextMeshProUGUI number = selector.transform.Find("Number").GetComponent<TextMeshProUGUI>();
-        return int.Parse(number.text);
+        return int.TryParse(number.text, out int parsed) ? parsed : 0;
     }
 
     public int GetMoney()
     {
+        if (moneySelect == null) return 0;
         TextMeshProUGUI number = moneySelect.transform.Find("Number").GetComponent<TextMeshProUGUI>();
-        return int.Parse(number.text);
+        return int.TryParse(number.text, out int parsed) ? parsed : 0;
     }
 
     private void MinusOne(TextMeshProUGUI numberText)
     {
-        int number = int.Parse(numberText.text);
-        if (number > 0)
-        {
-            number--;
-        }
+        if (numberText == null) return;
+        int number = int.TryParse(numberText.text, out int parsed) ? parsed : 0;
+        if (number > 0) number--;
         numberText.text = number.ToString();
     }
 
-
-    private void PlusOne(TextMeshProUGUI numberText)
+    private void PlusOne(int selectorIndex, TextMeshProUGUI numberText)
     {
-        int number = int.Parse(numberText.text);
-        // add logic max number
-        if (number < 10)
-        {
-            number++;
-        }
+        if (numberText == null) return;
+
+        int number = int.TryParse(numberText.text, out int parsed) ? parsed : 0;
+        int max = GetMaxForSelector(selectorIndex);
+
+        if (number < max) number++;
         numberText.text = number.ToString();
-    }   
+    }
 
     private void MoneyPlusOne(TextMeshProUGUI numberText)
     {
-        int number = int.Parse(numberText.text);
-        // add logic max number
-        if (number < maxMoney)
-        {
-            number++;
-        }
+        if (numberText == null) return;
+
+        int number = int.TryParse(numberText.text, out int parsed) ? parsed : 0;
+        if (number < maxMoney) number++;
         numberText.text = number.ToString();
     }
 
     public void HideSelectors()
     {
         foreach (GameObject selector in Selectors)
-        {
-            selector.gameObject.SetActive(false);   
-        }
+            if (selector != null) selector.SetActive(false);
     }
 
     public void ResetValues()
     {
-        foreach (GameObject selector in Selectors)
+        for (int i = 0; i < Selectors.Count; i++)
         {
+            GameObject selector = Selectors[i];
+            if (selector == null) continue;
+
             TextMeshProUGUI number = selector.transform.Find("Number").GetComponent<TextMeshProUGUI>();
-            Image icon = selector.transform.Find("Icon").GetComponent<Image>();
-            icon.gameObject.SetActive(false);
-            number.text = "0";
+            if (number != null) number.text = "0";
+
+            Transform iconTf = selector.transform.Find("Icon");
+            if (iconTf != null)
+            {
+                Image icon = iconTf.GetComponent<Image>();
+                if (icon != null) icon.gameObject.SetActive(false);
+            }
+
+            // default interactive until Distribution sets max
+            SetSelectorInteractable(i, true);
         }
 
-        TextMeshProUGUI money = moneySelect.transform.Find("Number").GetComponent<TextMeshProUGUI>();
-        money.text = "0";
+        if (moneySelect != null)
+        {
+            TextMeshProUGUI money = moneySelect.transform.Find("Number").GetComponent<TextMeshProUGUI>();
+            if (money != null) money.text = "0";
+        }
     }
 
     public void ChangeMaxMoney(int max)
     {
-        maxMoney = max;
+        maxMoney = Mathf.Max(0, max);
+
+        if (moneySelect != null)
+        {
+            TextMeshProUGUI money = moneySelect.transform.Find("Number").GetComponent<TextMeshProUGUI>();
+            if (money != null && int.TryParse(money.text, out int current) && current > maxMoney)
+                money.text = maxMoney.ToString();
+        }
     }
 
     public void ShowHideMoneySelect(bool show)
     {
-        moneySelect.gameObject.SetActive(show);
+        if (moneySelect != null)
+            moneySelect.SetActive(show);
     }
-
 
     public void AddIcon(int index, Sprite newIcon)
     {
         GameObject selector = GetSelector(index);
-        Image icon = selector.transform.Find("Icon").GetComponent<Image>();
+        Transform iconTf = selector.transform.Find("Icon");
+        if (iconTf == null) return;
+
+        Image icon = iconTf.GetComponent<Image>();
+        if (icon == null) return;
+
         icon.gameObject.SetActive(true);
         icon.sprite = newIcon;
+    }
+
+    // ✅ Called by Distribution to cap selection (and disable when 0)
+    public void SetMaxForSelector(int index, int max)
+    {
+        if (index < 0 || index >= maxPerSelector.Count) return;
+
+        max = Mathf.Max(0, max);
+        maxPerSelector[index] = max;
+
+        // clamp current value
+        GameObject selector = Selectors[index];
+        if (selector != null)
+        {
+            TextMeshProUGUI number = selector.transform.Find("Number").GetComponent<TextMeshProUGUI>();
+            if (number != null && int.TryParse(number.text, out int current) && current > max)
+                number.text = max.ToString();
+        }
+
+        // disable if max == 0
+        SetSelectorInteractable(index, max > 0);
+    }
+
+    public int GetMaxForSelector(int index)
+    {
+        if (index < 0 || index >= maxPerSelector.Count) return 0;
+        return maxPerSelector[index];
+    }
+
+    private void SetSelectorInteractable(int index, bool enabled)
+    {
+        if (index < 0 || index >= plusButtons.Count) return;
+        if (plusButtons[index] != null) plusButtons[index].interactable = enabled;
+        if (minusButtons[index] != null) minusButtons[index].interactable = enabled;
     }
 }

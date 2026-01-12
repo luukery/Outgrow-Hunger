@@ -36,6 +36,7 @@ public class Inventory : MonoBehaviour
         return total;
     }
 
+    // Removes from ANY foods (not by type). Returns true if it removed the full requested amount.
     public bool TryRemoveFoodUnits(int amount)
     {
         if (amount <= 0) return true;
@@ -64,6 +65,58 @@ public class Inventory : MonoBehaviour
         return available >= amount;
     }
 
+    // ✅ TYPE ONLY: how many units of this category do we have (ignores quality)
+    public int GetAvailableUnits(FoodType.Type type)
+    {
+        int total = 0;
+        if (foods == null) return 0;
+
+        for (int i = 0; i < foods.Count; i++)
+        {
+            var f = foods[i];
+            if (f == null) continue;
+            if (f.foodType == type)
+                total += Mathf.Max(0, f.size);
+        }
+        return total;
+    }
+
+    // ✅ TYPE ONLY: remove up to amount from this category (ignores quality)
+    // returns how many units were actually removed
+    public int RemoveUnits(FoodType.Type type, int amount)
+    {
+        if (amount <= 0) return 0;
+        if (foods == null || foods.Count == 0) return 0;
+
+        int remaining = amount;
+        int removed = 0;
+
+        for (int i = foods.Count - 1; i >= 0 && remaining > 0; i--)
+        {
+            var f = foods[i];
+            if (f == null)
+            {
+                foods.RemoveAt(i);
+                continue;
+            }
+
+            if (f.foodType != type) continue;
+
+            int take = Mathf.Min(f.size, remaining);
+            f.size -= take;
+
+            remaining -= take;
+            removed += take;
+
+            currentCapacity = Mathf.Max(0, currentCapacity - take);
+
+            if (f.size <= 0)
+                foods.RemoveAt(i);
+        }
+
+        return removed;
+    }
+
     public bool TryAddFoodToInventory(Food food)
     {
         if (food == null) return false;
@@ -89,35 +142,17 @@ public class Inventory : MonoBehaviour
 
     public List<Food> GetFoodsByType(FoodType.Type type)
     {
-        return foods.FindAll(f => f.foodType == type);
+        return foods.FindAll(f => f != null && f.foodType == type);
     }
 
     public List<Food> GetFoodsByQuality(Food.Quality quality)
     {
-        return foods.FindAll(f => f.foodQuality == quality);
+        return foods.FindAll(f => f != null && f.foodQuality == quality);
     }
 
+    // If you still need this later, re-add it with your real Request structure.
     public List<Request> CanSatisfyOrder(List<Request> orderByNPC)
     {
-        foreach (Request r in orderByNPC)
-            r.Possible = CanSatisfyRequest(r.Amount, r.FoodType, r.Quality);
-
         return orderByNPC;
-    }
-
-    private bool CanSatisfyRequest(int amountRequested, FoodType.Type type, Food.Quality quality)
-    {
-        int totalAvailable = 0;
-
-        foreach (Food food in GetFoodsByType(type))
-        {
-            if (food.foodQuality == quality)
-            {
-                totalAvailable += food.size;
-                if (totalAvailable >= amountRequested)
-                    return true;
-            }
-        }
-        return false;
     }
 }

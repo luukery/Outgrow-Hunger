@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Distributionmanager : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class Distributionmanager : MonoBehaviour
 
     private Button feedButton, denyButton, continueButton;
     private TextMeshProUGUI dialogue;
-    private GameObject moneyselect;
+
     private NPC currentNPC;
     private NpcInfoDTO npcDTO;
     private int npcSpawnCount = 0;
@@ -19,31 +19,63 @@ public class Distributionmanager : MonoBehaviour
 
     public FoodSelectors foodselectors;
 
+    [Header("Scene Flow")]
+    public string marketSceneName = "MarketPlace";
+
+    private Button returnButton;
+
     void Start()
     {
         feedButton = canvas.transform.Find("FeedButton").GetComponent<Button>();
         denyButton = canvas.transform.Find("DenyButton").GetComponent<Button>();
         continueButton = canvas.transform.Find("ContinueButton").GetComponent<Button>();
+
         continueButton.onClick.AddListener(ContinueAfterInteraction);
         continueButton.gameObject.SetActive(false);
+
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
+
+        Transform returnTf = canvas.transform.Find("ReturnButton");
+        if (returnTf != null)
+        {
+            returnButton = returnTf.GetComponent<Button>();
+            returnButton.gameObject.SetActive(false);
+            returnButton.onClick.RemoveAllListeners();
+            returnButton.onClick.AddListener(ReturnToMarket);
+        }
+
         ChangeButtonFunction(1);
         TrySpawnNPC();
     }
 
     public bool TrySpawnNPC()
     {
-        Debug.Log(npcSpawnCount);
         if (npcSpawnCount < maxNPCs)
         {
             SpawnNPC();
             return true;
         }
-        else
-        {
-            dialogue.text = "No more people to feed";
-            return false;
-        }
+
+        dialogue.text = "No more people to feed";
+        OnDistributionFinished();
+        return false;
+    }
+
+    private void OnDistributionFinished()
+    {
+        feedButton.interactable = false;
+        denyButton.interactable = false;
+
+        continueButton.onClick.RemoveAllListeners();
+        continueButton.gameObject.SetActive(false);
+
+        if (returnButton != null) returnButton.gameObject.SetActive(true);
+        else ReturnToMarket();
+    }
+
+    private void ReturnToMarket()
+    {
+        SceneManager.LoadScene(marketSceneName);
     }
 
     private void SpawnNPC()
@@ -51,15 +83,16 @@ public class Distributionmanager : MonoBehaviour
         currentNPC = spawner.SpawnNPC();
         npcDTO = currentNPC.GetInfoDTO();
         DisplayOrder();
-        Debug.Log("Spawned NPC");
         npcSpawnCount++;
     }
 
     private void DespawnNPC()
     {
-        Destroy(currentNPC.gameObject);
-        currentNPC = null;
-        Debug.Log("Despawned NPC");
+        if (currentNPC != null)
+        {
+            Destroy(currentNPC.gameObject);
+            currentNPC = null;
+        }
     }
 
     private void HandleAccept()
@@ -72,19 +105,13 @@ public class Distributionmanager : MonoBehaviour
     {
         dialogue.text = "I want the following:\n";
         foreach (Request order in npcDTO.Order)
-        {
             dialogue.text += order.Amount + " " + order.FoodType + "\n";
-        }
+
         dialogue.text += "\nI can pay $" + npcDTO.Money;
     }
 
     private void ChangeButtonFunction(int select)
     {
-        // Select 1 = default
-        // Select 2 = selecting food
-        // select 3 = amount money
-        // Select 4 = final confirm before delivery
-
         feedButton.onClick.RemoveAllListeners();
         denyButton.onClick.RemoveAllListeners();
 
@@ -96,25 +123,27 @@ public class Distributionmanager : MonoBehaviour
             case 1:
                 feedbuttonText.text = "Select food";
                 denybuttonText.text = "Deny food";
-
                 feedButton.onClick.AddListener(HandleAccept);
                 denyButton.onClick.AddListener(Deny);
                 break;
+
             case 2:
                 feedbuttonText.text = "Next";
                 denybuttonText.text = "Cancel selection";
-
                 feedButton.onClick.AddListener(SelectMoney);
                 denyButton.onClick.AddListener(CancelSelection);
                 break;
+
             case 3:
                 feedbuttonText.text = "Confirm";
                 denybuttonText.text = "Return";
-
                 feedButton.onClick.AddListener(ConfirmBeforeDelivery);
                 denyButton.onClick.AddListener(CancelSelection);
                 break;
+
             case 4:
+                feedbuttonText.text = "Send";
+                denybuttonText.text = "Back";
                 feedButton.onClick.AddListener(SendDelivery);
                 denyButton.onClick.AddListener(HandleAccept);
                 break;
@@ -130,7 +159,6 @@ public class Distributionmanager : MonoBehaviour
 
     private void CancelSelection()
     {
-        Debug.Log("Selection cancelled");
         foodselectors.HideSelectors();
         foodselectors.ShowHideMoneySelect(false);
         dialogue.gameObject.SetActive(true);
@@ -148,18 +176,25 @@ public class Distributionmanager : MonoBehaviour
             GameObject selector = foodselectors.GetSelector(index);
             selector.SetActive(true);
 
-            TextMeshProUGUI ordertext =
-                selector.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
-
-            TextMeshProUGUI foodtype =
-                selector.transform.Find("TempFoodType").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI ordertext = selector.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI foodtype = selector.transform.Find("TempFoodType").GetComponent<TextMeshProUGUI>();
 
             Request order = npcDTO.Order[index];
             Request need = npcDTO.Needs.Find(n => n.FoodType == order.FoodType);
 
             int needAmount = need != null ? need.Amount : 0;
 
-            ordertext.text = "Need: " + needAmount + "\nOrder: " + order.Amount;
+            int available = Inventory.Instance != null
+                ? Inventory.Instance.GetAvailableUnits(order.FoodType) // ✅ TYPE ONLY
+                : 0;
+
+            // ✅ You can only give what they need and what you have
+            int maxGive = Mathf.Min(needAmount, available);
+
+            // disable + / - if 0
+            foodselectors.SetMaxForSelector(index, maxGive);
+
+            ordertext.text = "Need: " + needAmount + "\nHave: " + available;
             foodtype.text = order.FoodType.ToString();
         }
 
@@ -191,13 +226,12 @@ public class Distributionmanager : MonoBehaviour
         }
 
         dialogue.text += "\n\n For $" + foodselectors.GetMoney() + "?";
-
         ChangeButtonFunction(4);
     }
 
     private void SendDelivery()
     {
-        List<Request> requests = new();
+        List<Request> intended = new();
         bool emptydelivery = true;
 
         for (int index = 0; index < npcDTO.Order.Count; index++)
@@ -205,19 +239,11 @@ public class Distributionmanager : MonoBehaviour
             int value = foodselectors.GetValue(index);
             Request order = npcDTO.Order[index];
 
-            Request sendrequest = new Request(value, order.FoodType, order.Quality);
-            requests.Add(sendrequest);
-
-            Debug.Log("Value:" + value);
-
-            if (value != 0)
-            {
-                emptydelivery = false;
-            }
+            intended.Add(new Request(value, order.FoodType, order.Quality)); // quality kept for DTO consistency
+            if (value != 0) emptydelivery = false;
         }
 
         ChangeButtonFunction(1);
-
 
         if (emptydelivery)
         {
@@ -225,9 +251,44 @@ public class Distributionmanager : MonoBehaviour
             return;
         }
 
-        ShowResults(currentNPC.Transaction(requests));
-        foodselectors.HideSelectors();
+        List<Request> delivered = new();
+        bool deliveredAnything = false;
 
+        Inventory inv = Inventory.Instance;
+
+        for (int i = 0; i < intended.Count; i++)
+        {
+            Request r = intended[i];
+            int deliveredAmount = r.Amount;
+
+            if (inv != null && deliveredAmount > 0)
+            {
+                // ✅ TYPE ONLY removal
+                deliveredAmount = inv.RemoveUnits(r.FoodType, deliveredAmount);
+            }
+
+            delivered.Add(new Request(deliveredAmount, r.FoodType, r.Quality));
+            if (deliveredAmount > 0) deliveredAnything = true;
+        }
+
+        if (!deliveredAnything)
+        {
+            dialogue.text = "You have no food in those categories.";
+            foodselectors.HideSelectors();
+            EnableDisableConfirmButton(true);
+            DespawnNPC();
+            return;
+        }
+
+        DeliveryResult result = currentNPC.Transaction(delivered);
+
+        int earned = Mathf.Clamp(foodselectors.GetMoney(), 0, npcDTO.Money);
+        if (Wallet.Instance != null && earned > 0)
+            Wallet.Instance.AddMoney(earned);
+
+        ShowResults(result);
+
+        foodselectors.HideSelectors();
         EnableDisableConfirmButton(true);
         DespawnNPC();
     }
@@ -249,28 +310,20 @@ public class Distributionmanager : MonoBehaviour
         {
             resulttext += "Amount of food you didn't give: " + result.TotalFoodShortage;
             foreach (Request shortage in result.Shortages)
-            {
                 resulttext += "\n\t" + shortage.Amount + " " + shortage.FoodType;
-            }
             resulttext += "\n";
         }
-            
 
         if (result.TotalFoodExcess != 0)
         {
             resulttext += "Amount of extra food you gave: " + result.TotalFoodExcess;
             foreach (Request excess in result.Excesses)
-            {
                 resulttext += "\n\t" + excess.Amount + " " + excess.FoodType;
-            }
             resulttext += "\n";
         }
 
         resulttext += "Money earned: $" + foodselectors.GetMoney();
         dialogue.text = resulttext;
-
-        Debug.Log("Total Shortage: " + result.TotalFoodShortage);
-        Debug.Log("Total Total Excess: " + result.TotalFoodExcess);
     }
 
     public void Deny()
