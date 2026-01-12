@@ -11,8 +11,13 @@ public class RouteHandler : MonoBehaviour
     [Header("Popup UI (Info Box)")]
     public GameObject infoPopupPanel;
     public GameObject popupBackground;
-    public TMP_Text popupTitleText;
-    public TMP_Text popupBodyText;
+    
+    public TMP_Text popupLegText;
+    public TMP_Text popupEventTitleText;
+    public TMP_Text popupEventDescText;
+    public TMP_Text popupWhyText;
+    public TMP_Text totalRouteInfoText;
+
     public Button popupContinueButton;
 
     [Header("Journey Settings")]
@@ -457,37 +462,27 @@ public class RouteHandler : MonoBehaviour
         int roll = Random.Range(1, 101);
         bool eventHappened = roll <= route.EventTakePlaceChance;
 
-        string eventDescription;
+        RouteEvent occurredEvent = null;
 
         if (eventHappened)
         {
-            var e = route.EventData;
+            occurredEvent = route.EventData;
 
-            legTime += e.ExtraTime;
+            legTime += occurredEvent.ExtraTime;
 
-            ApplyFoodLoss(e.FoodLoss);
-            ApplyGoldLoss(e.GoldLoss);
-            ApplyFoodGain(e.FoodGain);
-
-            eventDescription =
-                $"<b>{e.Name}</b>\n\n" +
-                $"{FormatSituation(e)}\n" +
-                $"<i>{e.SystematicWhy}</i>";
+            ApplyFoodLoss(occurredEvent.FoodLoss);
+            ApplyGoldLoss(occurredEvent.GoldLoss);
+            ApplyFoodGain(occurredEvent.FoodGain);
         }
-        else
-        {
-            eventDescription =
-                $"<b>{route.EventData.Name}</b>\n\n" +
-                "You were not affected by this event.";
-        }
+
 
         timePassed += legTime;
-        ShowInfoPopup(route, legTime, eventDescription);
+        ShowInfoPopup(route, legTime, eventHappened, occurredEvent);
     }
 
 
     // ------------------ POPUP LOGIC ------------------
-    void ShowInfoPopup(Route route, float legTime, string eventDescription)
+    void ShowInfoPopup(Route route, float legTime, bool eventHappened, RouteEvent e)
     {
         if (infoPopupPanel == null)
         {
@@ -495,15 +490,40 @@ public class RouteHandler : MonoBehaviour
             return;
         }
 
-        if (popupTitleText != null && !journeyFinished)
+        // --- Leg header ---
+        if (popupLegText != null && !journeyFinished)
         {
-            popupTitleText.text = $"Leg {legsCompleted + 1}:\n{route.RouteName}";
+            popupLegText.text = $"Leg {legsCompleted + 1}:\n{route.RouteName}";
         }
 
-        if (popupBodyText != null)
+        // --- Event title ---
+        if (popupEventTitleText != null)
         {
-            popupBodyText.text =
-                $"{eventDescription}\n\n" +
+            popupEventTitleText.text = eventHappened && e != null
+                ? $"<b>{e.Name}</b>"
+                : "<b>No Event</b>";
+        }
+
+        // --- Event description ---
+        if (popupEventDescText != null)
+        {
+            popupEventDescText.text = eventHappened && e != null
+                ? FormatSituation(e) // keeps red colouring
+                : "You were not affected by this event.";
+        }
+
+        // --- Systematic why (italic stays) ---
+        if (popupWhyText != null)
+        {
+            popupWhyText.text = eventHappened && e != null
+                ? $"<i>{e.SystematicWhy}</i>"
+                : "";
+        }
+
+        // --- Route totals ---
+        if (totalRouteInfoText != null)
+        {
+            totalRouteInfoText.text =
                 $"Time this leg: {legTime}h\n" +
                 $"Total time travelled: {timePassed}h\n\n" +
                 $"Current Food: {GetFoodLive()}\n" +
@@ -515,6 +535,7 @@ public class RouteHandler : MonoBehaviour
         if (popupBackground != null)
             popupBackground.SetActive(true);
     }
+
 
     void OnPopupContinue()
     {
@@ -557,18 +578,28 @@ public class RouteHandler : MonoBehaviour
             return;
         }
 
-        if (popupTitleText != null)
-            popupTitleText.text = "Journey Complete";
+        if (popupEventTitleText != null)
+            popupEventTitleText.text = "<b>Journey Complete</b>";
 
-        if (popupBodyText != null)
+        if (popupEventDescText != null)
         {
-            popupBodyText.text =
+            popupEventDescText.text =
                 $"Total legs travelled: {legsCompleted}\n" +
-                $"Total time spent: {timePassed}h\n\n" +
-                $"Final Food: {GetFoodLive()}\n" +
-                $"Final Gold: {GetGoldLive()}\n\n" +
-                $"Press Continue to deliver.";
+                $"Total time spent: {timePassed}h";
         }
+
+        if (popupWhyText != null)
+        {
+            popupWhyText.text =
+                $"Final Food: {GetFoodLive()}\n" +
+                $"Final Gold: {GetGoldLive()}";
+        }
+
+        if (totalRouteInfoText != null)
+        {
+            totalRouteInfoText.text = "Press Continue to deliver.";
+        }
+
 
         infoPopupPanel.SetActive(true);
 
