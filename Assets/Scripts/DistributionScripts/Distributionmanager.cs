@@ -245,9 +245,9 @@ public class Distributionmanager : MonoBehaviour
     {
         string resulttext = string.Empty;
 
-        if (result.TotalFoodShortage != 0)
+        if (result.Shortages.Count != 0)
         {
-            resulttext += "Amount of food you didn't give: " + result.TotalFoodShortage;
+            resulttext += "Amount of food you didn't give: " + result.Shortages.Count;
             foreach (Request shortage in result.Shortages)
             {
                 resulttext += "\n\t" + shortage.Amount + " " + shortage.FoodType;
@@ -256,9 +256,9 @@ public class Distributionmanager : MonoBehaviour
         }
             
 
-        if (result.TotalFoodExcess != 0)
+        if (result.Excesses.Count != 0)
         {
-            resulttext += "Amount of extra food you gave: " + result.TotalFoodExcess;
+            resulttext += "Amount of extra food you gave: " + result.Excesses.Count;
             foreach (Request excess in result.Excesses)
             {
                 resulttext += "\n\t" + excess.Amount + " " + excess.FoodType;
