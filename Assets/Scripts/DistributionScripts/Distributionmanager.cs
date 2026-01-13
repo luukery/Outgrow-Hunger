@@ -75,7 +75,7 @@ public class Distributionmanager : MonoBehaviour
 
     private void ReturnToMarket()
     {
-        SceneManager.LoadScene(marketSceneName);
+        LoadingManager.Instance.LoadScene(marketSceneName);
     }
 
     private void SpawnNPC()

@@ -34,7 +34,8 @@ public class SceneScroller : MonoBehaviour
             //de check dat je niet een index.outofrange error krijgt
             currentSceneIndex = 0; 
         }
-        SceneManager.LoadScene(currentSceneIndex);
+        string sceneName = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(currentSceneIndex));
+        LoadingManager.Instance.LoadScene(sceneName);
 
     }
 
@@ -45,7 +46,8 @@ public class SceneScroller : MonoBehaviour
         if (currentSceneIndex < 0)
             currentSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
 
-        SceneManager.LoadScene(currentSceneIndex);
+        string sceneName = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(currentSceneIndex));
+        LoadingManager.Instance.LoadScene(sceneName);
     }
 
     // Update is called once per frame

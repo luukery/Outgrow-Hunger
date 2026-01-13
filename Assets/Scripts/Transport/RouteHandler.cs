@@ -370,7 +370,7 @@ public class RouteHandler : MonoBehaviour
 
         if (infoPopupPanel == null)
         {
-            SceneManager.LoadScene(distributionSceneName);
+            LoadingManager.Instance.LoadScene(distributionSceneName);
             return;
         }
 
@@ -398,7 +398,7 @@ public class RouteHandler : MonoBehaviour
             popupContinueButton.onClick.RemoveAllListeners();
             popupContinueButton.onClick.AddListener(() =>
             {
-                SceneManager.LoadScene(distributionSceneName);
+                LoadingManager.Instance.LoadScene(distributionSceneName);
             });
         }
     }
