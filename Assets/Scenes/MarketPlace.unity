@@ -27047,8 +27047,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Alles is vanochtend geplukt, zoet en rijp door de zon. Je proeft meteen
-    hoe vers het is. Neem gerust een kijkje, ik heb alleen het beste uitgezocht.
+  m_text: 'Lorem ipsum dolor sit amet. Quo voluptatum sequi eos iusto rerum aut sint
+    voluptatum. Et dolores voluptatem cum aliquam impedit et distinctio itaque. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
