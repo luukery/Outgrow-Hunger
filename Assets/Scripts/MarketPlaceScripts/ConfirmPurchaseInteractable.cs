@@ -33,6 +33,6 @@ public class ConfirmPurchaseInteractable : MonoBehaviour, IInteractable
                 yield return null;
         }
 
-        SceneManager.LoadScene(transportSceneName);
+        LoadingManager.Instance.LoadScene(transportSceneName);
     }
 }
