@@ -129,7 +129,7 @@ public class Distributionmanager : MonoBehaviour
             case 2:
                 feedbuttonText.text = "Next";
                 denybuttonText.text = "Cancel selection";
-                feedButton.onClick.AddListener(SelectMoney);
+                feedButton.onClick.AddListener(MoneyCheck);
                 denyButton.onClick.AddListener(CancelSelection);
                 break;
 
@@ -169,6 +169,7 @@ public class Distributionmanager : MonoBehaviour
     {
         dialogue.gameObject.SetActive(false);
         foodselectors.ResetValues();
+        bool emptydelivery = true;
 
         for (int index = 0; index < npcDTO.Order.Count; index++)
         {
@@ -196,13 +197,35 @@ public class Distributionmanager : MonoBehaviour
             ordertext.text = "Need: " + needAmount + "\nHave: " + available;
             foodtype.text = order.FoodType.ToString();
         }
-
         ChangeButtonFunction(2);
     }
 
-    private void SelectMoney()
+
+
+    private void MoneyCheck()
     {
         foodselectors.HideSelectors();
+
+        bool emptydelivery = true;
+        for (int index = 0; index < npcDTO.Order.Count; index++)
+        {
+            int value = foodselectors.GetValue(index);
+            if (value != 0) emptydelivery = false;
+
+        }
+
+        if (emptydelivery)
+        {
+            ConfirmEmptyDelivery();
+        }
+        else
+        {
+            MoneySelect();
+        }
+    }
+
+    private void MoneySelect()
+    {
         foodselectors.ShowHideMoneySelect(true);
         foodselectors.ChangeMaxMoney(npcDTO.Money);
         ChangeButtonFunction(3);
@@ -212,6 +235,7 @@ public class Distributionmanager : MonoBehaviour
     {
         foodselectors.ShowHideMoneySelect(false);
         dialogue.gameObject.SetActive(true);
+
 
         dialogue.text = "Are you sure you want to give the following?\n";
         for (int index = 0; index < npcDTO.Order.Count; index++)
@@ -228,10 +252,16 @@ public class Distributionmanager : MonoBehaviour
         ChangeButtonFunction(4);
     }
 
+    private void ConfirmEmptyDelivery()
+    {
+        dialogue.gameObject.SetActive(true);
+        dialogue.text = "Are you sure you don't want to give them anything?";
+        ChangeButtonFunction(4);
+    }
+
     private void SendDelivery()
     {
         List<Request> intended = new();
-        bool emptydelivery = true;
 
         for (int index = 0; index < npcDTO.Order.Count; index++)
         {
@@ -239,7 +269,7 @@ public class Distributionmanager : MonoBehaviour
             Request order = npcDTO.Order[index];
 
             intended.Add(new Request(value, order.FoodType, order.Quality)); // quality kept for DTO consistency
-            if (value != 0) emptydelivery = false;
+            
         }
 
         ChangeButtonFunction(1);
