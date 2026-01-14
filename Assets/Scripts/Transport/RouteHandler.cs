@@ -52,6 +52,10 @@ public class RouteHandler : MonoBehaviour
     private bool inputLocked = true;
     public bool CanSelectRoutes => !journeyFinished && !inputLocked;
 
+    // ✅ NEW: spoil tracking
+    int spoiledFoodThisJourney = 0;
+    int spoiledFoodLastLeg = 0;
+
     void Awake()
     {
         if (Instance == null)
@@ -320,10 +324,8 @@ public class RouteHandler : MonoBehaviour
     {
         if (amount <= 0) return;
 
-        // Efficient: add as generic food units (Water/Medium) so it fills inventory without needing more systems.
         if (Inventory.Instance != null)
         {
-            // Try to add as one stack; if your maxCapacity blocks it, it will fail gracefully.
             Inventory.Instance.TryAddFoodToInventory(new Food(FoodType.Type.Water, Food.Quality.Medium, amount, "Supplies", null));
         }
         else
@@ -349,7 +351,10 @@ public class RouteHandler : MonoBehaviour
         legsCompleted = 0;
         journeyFinished = false;
 
-        // NEW: input lock to prevent Market click selecting road in Transport
+        // ✅ reset spoil counters
+        spoiledFoodThisJourney = 0;
+        spoiledFoodLastLeg = 0;
+
         StartCoroutine(UnlockAfterMouseRelease());
 
         if (popupContinueButton != null)
@@ -372,7 +377,7 @@ public class RouteHandler : MonoBehaviour
     IEnumerator UnlockAfterMouseRelease()
     {
         inputLocked = true;
-        yield return null; // let UI settle
+        yield return null;
 
         if (Mouse.current != null)
         {
@@ -468,7 +473,9 @@ public class RouteHandler : MonoBehaviour
         {
             occurredEvent = route.EventData;
 
-            legTime += occurredEvent.ExtraTime;
+            ApplyFoodLoss(route.EventData.FoodLoss);
+            ApplyGoldLoss(route.EventData.GoldLoss);
+            ApplyFoodGain(route.EventData.FoodGain);
 
             ApplyFoodLoss(occurredEvent.FoodLoss);
             ApplyGoldLoss(occurredEvent.GoldLoss);
@@ -477,6 +484,15 @@ public class RouteHandler : MonoBehaviour
 
 
         timePassed += legTime;
+
+        // ✅ Spoilage advances ONLY here (transport time)
+        spoiledFoodLastLeg = 0;
+        if (SpoilageManager.Instance != null)
+        {
+            spoiledFoodLastLeg = SpoilageManager.Instance.AdvanceTravelTime(legTime);
+            spoiledFoodThisJourney += spoiledFoodLastLeg;
+        }
+
         ShowInfoPopup(route, legTime, eventHappened, occurredEvent);
     }
 
@@ -585,19 +601,21 @@ public class RouteHandler : MonoBehaviour
         {
             popupEventDescText.text =
                 $"Total legs travelled: {legsCompleted}\n" +
-                $"Total time spent: {timePassed}h";
+                $"Total time spent: {timePassed}h\n\n" +
+                $"Spoiled during journey: -{spoiledFoodThisJourney} Food\n";
         }
 
         if (popupWhyText != null)
         {
             popupWhyText.text =
-                $"Final Food: {GetFoodLive()}\n" +
-                $"Final Gold: {GetGoldLive()}";
+                $"Current Food: {GetFoodLive()}\n" +
+                $"Current Gold: {GetGoldLive()}\n\n" +
+                $"Press Continue to deliver.";
         }
 
         if (totalRouteInfoText != null)
         {
-            totalRouteInfoText.text = "Press Continue to deliver.";
+            totalRouteInfoText.text = "";
         }
 
 
@@ -606,7 +624,6 @@ public class RouteHandler : MonoBehaviour
         if (popupBackground != null)
             popupBackground.SetActive(true);
 
-        // ✅ Transition after journey when Continue is pressed
         if (popupContinueButton != null)
         {
             popupContinueButton.onClick.RemoveAllListeners();
@@ -732,8 +749,8 @@ public class RouteHandler : MonoBehaviour
         return new List<Route>
         {
             new("Short Route",  shortRouteTime, 100, GetRandomEvent(0)),
-            new("Medium Route", mediumRouteTime, 85, GetRandomEvent(1)),
-            new("Long Route",   longRouteTime, 70, GetRandomEvent(2))
+            new("Medium Route", mediumRouteTime, 80, GetRandomEvent(1)),
+            new("Long Route",   longRouteTime, 60, GetRandomEvent(2))
         };
     }
 }

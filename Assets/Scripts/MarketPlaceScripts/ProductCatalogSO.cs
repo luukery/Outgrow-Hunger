@@ -12,6 +12,12 @@ public class ProductDef
     [Min(0)] public int maxPrice = 10;
     public StallType type;
     [Min(1)] public int weight = 1;     // optioneel: kansgewicht
+
+    [Header("Spoilage")]
+    public bool isSpoilable = true;
+
+    [Tooltip("How many transport-hours until fully spoiled (only counts RouteHandler travel time).")]
+    [Min(0f)] public float spoilTimeInHours = 12f;
 }
 
 [CreateAssetMenu(menuName = "Market/Product Catalog", fileName = "ProductCatalog")]

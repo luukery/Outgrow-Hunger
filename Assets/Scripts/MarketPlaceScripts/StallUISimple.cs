@@ -111,14 +111,8 @@ public class StallUISimple : MonoBehaviour
             return;
         }
 
-        // Convert MarketStockItem -> Food (no lookup needed)
-        Food bought = new Food(
-            item.foodType,
-            item.foodQuality,
-            item.size,
-            item.name,
-            item.icon
-        );
+        // Convert MarketStockItem -> Food (includes spoilage data)
+        Food bought = item.ToFood();
 
         // Add to inventory (refund if full)
         if (!Inventory.Instance.TryAddFoodToInventory(bought))
