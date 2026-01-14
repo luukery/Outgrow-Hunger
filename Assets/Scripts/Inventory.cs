@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,15 @@ public class Inventory : MonoBehaviour
 
     public int maxCapacity;
     public int currentCapacity;
+
+    [Header("Debug")]
+    public bool debugSpoilageLogs = false;
+
+    /// <summary> Fired when an item spoils and is removed. </summary>
+    public event Action<Food, int> OnFoodSpoiledAndLost; // (food, unitsLost)
+
+    /// <summary> Fired whenever inventory contents change (add/remove/spoil). </summary>
+    public event Action OnInventoryChanged;
 
     private void Awake()
     {
@@ -36,6 +46,62 @@ public class Inventory : MonoBehaviour
         return total;
     }
 
+    /// <summary>
+    /// ONLY call this from transport-time (RouteHandler) via SpoilageManager.
+    /// Returns how many FOOD UNITS were lost due to spoilage.
+    /// </summary>
+    public int AdvanceTime(float travelHours)
+    {
+        if (travelHours <= 0f) return 0;
+        if (foods == null || foods.Count == 0) return 0;
+
+        int spoiledUnitsTotal = 0;
+        bool changed = false;
+
+        // Iterate backwards because we might remove.
+        for (int i = foods.Count - 1; i >= 0; i--)
+        {
+            var f = foods[i];
+            if (f == null)
+            {
+                foods.RemoveAt(i);
+                changed = true;
+                continue;
+            }
+
+            bool spoiledNow = f.AdvanceSpoilage(travelHours);
+            if (spoiledNow)
+            {
+                // Lose it: remove entire stack
+                int lostUnits = Mathf.Max(0, f.size);
+                spoiledUnitsTotal += lostUnits;
+
+                currentCapacity = Mathf.Max(0, currentCapacity - lostUnits);
+                foods.RemoveAt(i);
+                changed = true;
+
+                if (debugSpoilageLogs)
+                    Debug.Log($"[Inventory] Spoiled & removed: {f.name} ({lostUnits} units) after +{travelHours}h travel.");
+
+                OnFoodSpoiledAndLost?.Invoke(f, lostUnits);
+            }
+        }
+
+        if (changed)
+            NotifyChanged();
+
+        return spoiledUnitsTotal;
+    }
+
+    void NotifyChanged()
+    {
+        OnInventoryChanged?.Invoke();
+
+        // If your visualiser has a specific refresh method, call it here.
+        // If not, this is still useful for any UI script you write later.
+        // (Don’t guess method names, keep it safe.)
+    }
+
     // Removes from ANY foods (not by type). Returns true if it removed the full requested amount.
     public bool TryRemoveFoodUnits(int amount)
     {
@@ -43,6 +109,7 @@ public class Inventory : MonoBehaviour
 
         int available = GetTotalFoodUnits();
         int toRemove = Mathf.Min(amount, available);
+        bool changed = false;
 
         for (int i = foods.Count - 1; i >= 0 && toRemove > 0; i--)
         {
@@ -50,6 +117,7 @@ public class Inventory : MonoBehaviour
             if (f == null)
             {
                 foods.RemoveAt(i);
+                changed = true;
                 continue;
             }
 
@@ -57,10 +125,14 @@ public class Inventory : MonoBehaviour
             f.size -= take;
             toRemove -= take;
             currentCapacity = Mathf.Max(0, currentCapacity - take);
+            changed = true;
 
             if (f.size <= 0)
                 foods.RemoveAt(i);
         }
+
+        if (changed)
+            NotifyChanged();
 
         return available >= amount;
     }
@@ -90,6 +162,7 @@ public class Inventory : MonoBehaviour
 
         int remaining = amount;
         int removed = 0;
+        bool changed = false;
 
         for (int i = foods.Count - 1; i >= 0 && remaining > 0; i--)
         {
@@ -97,6 +170,7 @@ public class Inventory : MonoBehaviour
             if (f == null)
             {
                 foods.RemoveAt(i);
+                changed = true;
                 continue;
             }
 
@@ -109,10 +183,14 @@ public class Inventory : MonoBehaviour
             removed += take;
 
             currentCapacity = Mathf.Max(0, currentCapacity - take);
+            changed = true;
 
             if (f.size <= 0)
                 foods.RemoveAt(i);
         }
+
+        if (changed)
+            NotifyChanged();
 
         return removed;
     }
@@ -126,6 +204,8 @@ public class Inventory : MonoBehaviour
 
         foods.Add(food);
         currentCapacity += food.size;
+
+        NotifyChanged();
         return true;
     }
 
@@ -137,6 +217,8 @@ public class Inventory : MonoBehaviour
 
         foods.Remove(food);
         currentCapacity -= food.size;
+
+        NotifyChanged();
         return true;
     }
 

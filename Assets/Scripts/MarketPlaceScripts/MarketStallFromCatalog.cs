@@ -80,7 +80,12 @@ public class MarketStallFromCatalog : MonoBehaviour
                 icon = p.icon,
                 price = price,
                 foodType = MapStallToFoodType(p.type),
-                foodQuality = Food.Quality.Medium
+                foodQuality = Food.Quality.Medium,
+                size = 1,
+
+                // NEW: Spoilage config
+                isSpoilable = p.isSpoilable,
+                spoilTimeInHours = p.spoilTimeInHours
             });
         }
     }
