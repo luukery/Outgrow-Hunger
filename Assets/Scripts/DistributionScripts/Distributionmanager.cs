@@ -124,7 +124,6 @@ public class Distributionmanager : MonoBehaviour
                 feedbuttonText.text = "Select food";
                 denybuttonText.text = "Deny food";
                 feedButton.onClick.AddListener(HandleAccept);
-                denyButton.onClick.AddListener(Deny);
                 break;
 
             case 2:
@@ -245,12 +244,6 @@ public class Distributionmanager : MonoBehaviour
 
         ChangeButtonFunction(1);
 
-        if (emptydelivery)
-        {
-            Deny();
-            return;
-        }
-
         List<Request> delivered = new();
         bool deliveredAnything = false;
 
@@ -324,12 +317,5 @@ public class Distributionmanager : MonoBehaviour
 
         resulttext += "Money earned: $" + foodselectors.GetMoney();
         dialogue.text = resulttext;
-    }
-
-    public void Deny()
-    {
-        dialogue.text = "Denied NPC Food";
-        DespawnNPC();
-        EnableDisableConfirmButton(true);
     }
 }
