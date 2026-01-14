@@ -32,12 +32,23 @@ public class RoadClickable : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (isSelected) return;
         SetColor(hoverColor);
+
+        if (RouteHandler.Instance != null && RouteHandler.Instance.routes != null && routeIndex < RouteHandler.Instance.routes.Count)
+        {
+            var evt = RouteHandler.Instance.routes[routeIndex].EventData;
+            if (evt != null)
+                HoverTooltipManager.Instance.ShowTooltip(evt.Name);
+            else
+                HoverTooltipManager.Instance.ShowTooltip("No Event");
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         if (isSelected) return;
         SetColor(baseColor);
+
+        HoverTooltipManager.Instance.HideTooltip();
     }
 
     public void OnPointerClick(PointerEventData eventData)
