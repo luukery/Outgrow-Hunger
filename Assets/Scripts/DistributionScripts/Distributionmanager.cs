@@ -10,12 +10,12 @@ public class Distributionmanager : MonoBehaviour
     public Canvas canvas;
 
     private Button feedButton, denyButton, continueButton;
-    private TextMeshProUGUI dialogue;
+    private TextMeshProUGUI selecttext;
 
     private NPC currentNPC;
     private NpcInfoDTO npcDTO;
     private int npcSpawnCount = 0;
-    public int maxNPCs = 20;
+    public int maxNPCs = 8;
 
     public FoodSelectors foodselectors;
 
@@ -33,7 +33,7 @@ public class Distributionmanager : MonoBehaviour
         continueButton.onClick.AddListener(ContinueAfterInteraction);
         continueButton.gameObject.SetActive(false);
 
-        dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
+        selecttext = canvas.transform.Find("SelectText").GetComponent<TextMeshProUGUI>();
 
         Transform returnTf = canvas.transform.Find("ReturnButton");
         if (returnTf != null)
@@ -56,7 +56,7 @@ public class Distributionmanager : MonoBehaviour
             return true;
         }
 
-        dialogue.text = "No more people to feed";
+        selecttext.text = "No more people to feed";
         OnDistributionFinished();
         return false;
     }
@@ -97,17 +97,17 @@ public class Distributionmanager : MonoBehaviour
 
     private void HandleAccept()
     {
-        dialogue.text = "Accepted food";
+        selecttext.text = "Accepted food";
         FoodSelector();
     }
 
     private void DisplayOrder()
     {
-        dialogue.text = "I want the following:\n";
+        selecttext.text = "I want the following:\n";
         foreach (Request order in npcDTO.Order)
-            dialogue.text += order.Amount + " " + order.FoodType + "\n";
+            selecttext.text += order.Amount + " " + order.FoodType + "\n";
 
-        dialogue.text += "\nI can pay $" + npcDTO.Money;
+        selecttext.text += "\nI can pay " + npcDTO.Money + " coins";
     }
 
     private void ChangeButtonFunction(int select)
@@ -160,14 +160,14 @@ public class Distributionmanager : MonoBehaviour
     {
         foodselectors.HideSelectors();
         foodselectors.ShowHideMoneySelect(false);
-        dialogue.gameObject.SetActive(true);
+        selecttext.gameObject.SetActive(true);
         DisplayOrder();
         ChangeButtonFunction(1);
     }
 
     private void FoodSelector()
     {
-        dialogue.gameObject.SetActive(false);
+        selecttext.gameObject.SetActive(false);
         foodselectors.ResetValues();
         bool emptydelivery = true;
 
@@ -234,28 +234,28 @@ public class Distributionmanager : MonoBehaviour
     private void ConfirmBeforeDelivery()
     {
         foodselectors.ShowHideMoneySelect(false);
-        dialogue.gameObject.SetActive(true);
+        selecttext.gameObject.SetActive(true);
 
 
-        dialogue.text = "Are you sure you want to give the following?\n";
+        selecttext.text = "Are you sure you want to give the following?\n";
         for (int index = 0; index < npcDTO.Order.Count; index++)
         {
             int amount = foodselectors.GetValue(index);
             if (amount != 0)
             {
                 Request order = npcDTO.Order[index];
-                dialogue.text += amount + " " + order.FoodType + "\n";
+                selecttext.text += amount + " " + order.FoodType + "\n";
             }
         }
 
-        dialogue.text += "\n\n For $" + foodselectors.GetMoney() + "?";
+        selecttext.text += "\n\n For " + foodselectors.GetMoney() + " coins?";
         ChangeButtonFunction(4);
     }
 
     private void ConfirmEmptyDelivery()
     {
-        dialogue.gameObject.SetActive(true);
-        dialogue.text = "Are you sure you don't want to give them anything?";
+        selecttext.gameObject.SetActive(true);
+        selecttext.text = "Are you sure you don't want to give them anything?";
         ChangeButtonFunction(4);
     }
 
@@ -296,7 +296,7 @@ public class Distributionmanager : MonoBehaviour
 
         if (!deliveredAnything)
         {
-            dialogue.text = "You have no food in those categories.";
+            selecttext.text = "You have no food in those categories.";
             foodselectors.HideSelectors();
             EnableDisableConfirmButton(true);
             DespawnNPC();
@@ -345,7 +345,7 @@ public class Distributionmanager : MonoBehaviour
             resulttext += "\n";
         }
 
-        resulttext += "Money earned: $" + foodselectors.GetMoney();
-        dialogue.text = resulttext;
+        resulttext += "Money earned: " + foodselectors.GetMoney() + " coins";
+        selecttext.text = resulttext;
     }
 }
