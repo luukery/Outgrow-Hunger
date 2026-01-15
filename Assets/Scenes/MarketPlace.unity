@@ -1250,7 +1250,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: The contents of these crates change with the season. Everything comes
+    from nearby fields. Simple, fresh, and honest.
 --- !u!114 &439023715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,7 +1428,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: Not everything comes out of the oven at once. There is always something
+    fresh to be found. Take a look at what is available today.
 --- !u!114 &455251864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3809,7 +3811,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Koop
+  m_text: 'Buy
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
@@ -22984,7 +22988,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: Not every morning brings the same supply. What is here is fresh for
+    today. Take what suits you best.
 --- !u!114 &640074776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23373,7 +23378,7 @@ MonoBehaviour:
   playerCoins: 100
   coinsText: {fileID: 302958870}
   headerText: {fileID: 151469116}
-  descText: {fileID: 0}
+  descText: {fileID: 1585175680}
 --- !u!114 &731126626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23509,7 +23514,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: The contents of this stall vary each day. Everything is fresh and carefully
+    processed. Simple products, good quality.
 --- !u!114 &741841240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25891,7 +25897,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: What you see here was harvested by hand. No two days are exactly the
+    same. That is the nature of fresh produce.
 --- !u!114 &1048342418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27732,7 +27739,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: The contents of these crates change with the season. Everything comes
+    from nearby fields. Simple, fresh, and honest.
 --- !u!1 &1426288901
 GameObject:
   m_ObjectHideFlags: 0
@@ -28209,7 +28217,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: "What is available depends on today\u2019s supply. Each piece is carefully
+    prepared. Choose what fits your needs."
 --- !u!114 &1568611178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28545,7 +28554,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: What you see here was harvested by hand. No two days are exactly the
+    same. That is the nature of fresh produce.
 --- !u!114 &1603437434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29360,7 +29370,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: The selection changes regularly. Each aroma has its own character.
+    A small amount can make a big difference.
 --- !u!114 &1689885193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31708,7 +31719,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: The oven is used every day. What is available may vary, but it is always
+    freshly prepared. The smell usually says enough.
 --- !u!114 &1936554346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32062,7 +32074,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: The selection changes from day to day. Every cut is handled with care.
+    Quality always comes first.
 --- !u!114 &1967051623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32239,9 +32252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Koop
-
-'
+  m_text: Buy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
@@ -32531,7 +32542,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: Everything here is carefully selected. The mix varies from day to day.
+    Trust your senses.
 --- !u!114 &2089251507
 MonoBehaviour:
   m_ObjectHideFlags: 0
