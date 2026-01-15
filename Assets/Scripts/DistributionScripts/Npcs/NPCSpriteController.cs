@@ -1,25 +1,35 @@
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class NPCSpriteController : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
-    public Sprite[] idleSprites;
+    private SpriteRenderer spriteRenderer;
+    private NPCSprite spriteProfile;
 
-    private NPCSprite sprite;
-
-    public void Start()
+    void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        spriteRenderer.sprite = idleSprites[0]; 
+        if (spriteRenderer == null)
+            Debug.LogError("NPCSpriteController: Missing SpriteRenderer!");
     }
 
-    public void ApplySprite (NPCSprite newSprite)
+    public void ApplySprite(NPCSprite newSprite)
     {
-        sprite = newSprite;
+        if (newSprite == null)
+        {
+            Debug.LogError("NPCSpriteController: newSprite is NULL!");
+            return;
+        }
 
-        // Simple version (no animation yet)
-        if (sprite.idleSprites.Length > 0)
-            spriteRenderer.sprite = sprite.idleSprites[0];
+        spriteProfile = newSprite;
+
+        if (spriteProfile.idleSprites == null || spriteProfile.idleSprites.Length == 0)
+        {
+            Debug.LogError($"NPCSpriteController: Sprite '{spriteProfile.name}' has NO idle sprites!");
+            return;
+        }
+
+        spriteRenderer.sprite = spriteProfile.idleSprites[0];
     }
 }

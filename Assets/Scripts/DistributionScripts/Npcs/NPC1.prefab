@@ -135,9 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b64ea6e789f7b84fb5dae7b27cbb8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCSpriteController
-  spriteRenderer: {fileID: 0}
   idleSprites:
-  - {fileID: -2442385603566517382, guid: 3f4cc7c8c065978488b0cb117e633fec, type: 3}
   - {fileID: 3606162791768082845, guid: 449f9c4c5d845b240aeccf6af7877aaf, type: 3}
   - {fileID: 1529565396068100329, guid: f054c960beb943c41851a45e717b3744, type: 3}
   - {fileID: 1082127229837976108, guid: 58878ee555e7b114480276b081a233ff, type: 3}
@@ -146,5 +144,3 @@ MonoBehaviour:
   - {fileID: -9058231092216521316, guid: 877aa981a3cd1f94cb82c0ef54ab6cd0, type: 3}
   - {fileID: -8140530650816472209, guid: 5d2a5f20d3738f6428e92c4a3eead5cd, type: 3}
   - {fileID: 4762140868283910875, guid: dbae770788d9a2c41829cd232d7d79bb, type: 3}
-  - {fileID: 8356229409072422850, guid: 7e63f99180811be459963e0071f7e196, type: 3}
-  - {fileID: -4459630438476546775, guid: 23719a28aca435f45a506d40a33decf1, type: 3}
