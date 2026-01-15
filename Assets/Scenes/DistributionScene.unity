@@ -296,9 +296,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Needs 0:
-
-    Orders: 0'
+  m_text: 0 in inventory
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
@@ -333,7 +331,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -364,7 +362,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 9.229533, z: 97.18167, w: 5.972067}
+  m_margin: {x: 0, y: 9.229533, z: 41.33517, w: 5.972067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -866,7 +864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.35, y: -1.51}
+  m_AnchoredPosition: {x: 4.85, y: -1.51}
   m_SizeDelta: {x: 511.32, y: 71.1525}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183901884
@@ -933,7 +931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8871750365745515610, guid: 077f09d5c4f6ae94a9e1034f8788e272, type: 3}
+  m_Sprite: {fileID: 5917463740035535592, guid: 3d3eb66c8bc6ca4489fb922eca4e01ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1065,6 +1063,18 @@ MonoBehaviour:
   NPCs:
   - {fileID: 8714416078856817653, guid: e55b2e01208a7684db6595e27802353e, type: 3}
   maxNPCs: 8
+  npcSprites:
+  - {fileID: 11400000, guid: d2b20cab8127af54ab6a0ade0aedcd77, type: 2}
+  - {fileID: 11400000, guid: 923850170adb17e45a84100d55682809, type: 2}
+  - {fileID: 11400000, guid: a75581a894a56564dbea8a3749bdac0c, type: 2}
+  - {fileID: 11400000, guid: bf2bf6b89ae4bc044b71d95bda8eb5d3, type: 2}
+  - {fileID: 11400000, guid: f6ae9448e02188c408dd14c5826253b5, type: 2}
+  - {fileID: 11400000, guid: 7aa2b15ada57b67449dc635bca74f697, type: 2}
+  - {fileID: 11400000, guid: 46495c5739943414ba1514a7910b09f3, type: 2}
+  - {fileID: 11400000, guid: 97b94651486fdbe43ab2b730fe4ffa8b, type: 2}
+  - {fileID: 11400000, guid: 9ca6487becd90614680669d1c5878fa8, type: 2}
+  - {fileID: 11400000, guid: 5fad48396f329f94685d9c2b97e7917d, type: 2}
+  - {fileID: 11400000, guid: a1afad09d61a85347846db3eb0156b65, type: 2}
 --- !u!4 &296994702
 Transform:
   m_ObjectHideFlags: 0
@@ -1256,7 +1266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.01, y: 1.13}
+  m_AnchoredPosition: {x: -0.58, y: 0.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &379664149
@@ -1328,9 +1338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Needs 0:
-
-    Orders: 0'
+  m_text: 0 in inventory
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
@@ -1365,7 +1373,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -1396,7 +1404,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 9.229533, z: 97.18167, w: 5.972067}
+  m_margin: {x: 0, y: 9.229533, z: 54.319256, w: 5.972067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1436,14 +1444,14 @@ RectTransform:
   m_GameObject: {fileID: 408730714}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.6, y: 1.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 726788836}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.5, y: 2.29}
+  m_AnchoredPosition: {x: 4.75, y: 1.72}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &408730716
@@ -1495,7 +1503,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1384453476667227214, guid: 8426ce0dfc9e8ba48bf5c1cccd0fb5db, type: 3}
+  m_Sprite: {fileID: 4431449416557614730, guid: e69297fbdf5576040b9b5fb9ae74bc05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5064,9 +5072,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Needs 0:
-
-    Orders: 0'
+  m_text: 0 in inventory
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
@@ -5101,7 +5107,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -5132,7 +5138,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 9.229533, z: 97.18167, w: 5.972067}
+  m_margin: {x: 0, y: 9.229533, z: 71.13867, w: 5.972067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5271,7 +5277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.000008, y: 172.4}
+  m_AnchoredPosition: {x: 49, y: 172.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706958858
@@ -5893,7 +5899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.47, y: -1.49}
+  m_AnchoredPosition: {x: 6.78, y: -1.49}
   m_SizeDelta: {x: 205.231, y: 71.1525}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795324211
@@ -5960,7 +5966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1086331387851373080, guid: 52d1f9c7742536a4487ee978c85845b1, type: 3}
+  m_Sprite: {fileID: 5917463740035535592, guid: 3d3eb66c8bc6ca4489fb922eca4e01ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6575,7 +6581,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Name
+  m_text: Villager
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
@@ -7385,7 +7391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.15, y: 2.79}
+  m_AnchoredPosition: {x: 5.15, y: 1.61}
   m_SizeDelta: {x: 5.0274, y: 6.5129}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020141923
@@ -8867,9 +8873,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Needs 0:
-
-    Orders: 0'
+  m_text: 0 in inventory
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
@@ -8904,7 +8908,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -8935,7 +8939,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 9.229533, z: 97.18167, w: 5.972067}
+  m_margin: {x: 0, y: 9.229533, z: 84.76213, w: 5.972067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9540,7 +9544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.52, y: -1.49}
+  m_AnchoredPosition: {x: 2.83, y: -1.49}
   m_SizeDelta: {x: 205.231, y: 71.1525}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763549949
@@ -9607,7 +9611,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1086331387851373080, guid: 52d1f9c7742536a4487ee978c85845b1, type: 3}
+  m_Sprite: {fileID: 5917463740035535592, guid: 3d3eb66c8bc6ca4489fb922eca4e01ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9682,9 +9686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Needs 0:
-
-    Orders: 0'
+  m_text: 0 in inventory
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
@@ -9719,7 +9721,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -9750,7 +9752,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 9.229533, z: 97.18167, w: 5.972067}
+  m_margin: {x: 0, y: 9.229533, z: 59.739067, w: 5.972067}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
