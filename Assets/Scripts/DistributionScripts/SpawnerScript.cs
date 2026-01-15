@@ -20,6 +20,9 @@ public class SpawnerScript : MonoBehaviour
         FillQueue();
     }
 
+    public NPCSprite[] npcSprites;
+
+
     private void FillQueue()
     {
         for (int i = 0; i < queueSize && npcSpawnCount < maxNPCs; i++)
@@ -35,6 +38,14 @@ public class SpawnerScript : MonoBehaviour
 
         GameObject npcObj = Instantiate(NPCs[index], pos, Quaternion.identity);
         NPC npc = npcObj.GetComponent<NPC>();
+
+
+        NPCSpriteController sprite = npcObj.GetComponent<NPCSpriteController>();
+        if (sprite != null)
+        {
+            int v = Random.Range(0, npcSprites.Length);
+            sprite.ApplySprite(npcSprites[v]);
+        }
 
         npcQueue.Add(npc);
         npcSpawnCount++;

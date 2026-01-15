@@ -1063,6 +1063,8 @@ MonoBehaviour:
   NPCs:
   - {fileID: 8714416078856817653, guid: e55b2e01208a7684db6595e27802353e, type: 3}
   maxNPCs: 8
+  npcSprites:
+  - {fileID: 0}
 --- !u!4 &296994702
 Transform:
   m_ObjectHideFlags: 0
