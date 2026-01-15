@@ -5,7 +5,7 @@ public class SpawnerScript : MonoBehaviour
 {
     public GameObject[] NPCs;
 
-    private int queueSize = 6;
+    private int queueSize = 5;
     public int maxNPCs = 8;
 
     private List<NPC> npcQueue = new();

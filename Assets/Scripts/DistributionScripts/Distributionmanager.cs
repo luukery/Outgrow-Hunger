@@ -9,7 +9,7 @@ public class Distributionmanager : MonoBehaviour
     public SpawnerScript spawner;
     public Canvas canvas;
 
-    private Button feedButton, denyButton, continueButton;
+    private Button feedButton, cancelButton, continueButton;
     private TextMeshProUGUI selecttext;
 
     private NPC currentNPC;
@@ -24,8 +24,8 @@ public class Distributionmanager : MonoBehaviour
 
     void Start()
     {
-        feedButton = canvas.transform.Find("FeedButton").GetComponent<Button>();
-        denyButton = canvas.transform.Find("DenyButton").GetComponent<Button>();
+        feedButton = canvas.transform.Find("ConfirmButton").GetComponent<Button>();
+        cancelButton = canvas.transform.Find("CancelButton").GetComponent<Button>();
         continueButton = canvas.transform.Find("ContinueButton").GetComponent<Button>();
 
         continueButton.onClick.AddListener(ContinueAfterInteraction);
@@ -50,7 +50,7 @@ public class Distributionmanager : MonoBehaviour
     private void OnDistributionFinished()
     {
         feedButton.interactable = false;
-        denyButton.interactable = false;
+        cancelButton.interactable = false;
 
         continueButton.onClick.RemoveAllListeners();
         continueButton.gameObject.SetActive(false);
@@ -97,10 +97,10 @@ public class Distributionmanager : MonoBehaviour
     private void ChangeButtonFunction(int select)
     {
         feedButton.onClick.RemoveAllListeners();
-        denyButton.onClick.RemoveAllListeners();
+        cancelButton.onClick.RemoveAllListeners();
 
         TextMeshProUGUI feedbuttonText = feedButton.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI denybuttonText = denyButton.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI denybuttonText = cancelButton.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
 
         switch (select)
         {
@@ -114,21 +114,21 @@ public class Distributionmanager : MonoBehaviour
                 feedbuttonText.text = "Next";
                 denybuttonText.text = "Cancel selection";
                 feedButton.onClick.AddListener(MoneyCheck);
-                denyButton.onClick.AddListener(CancelSelection);
+                cancelButton.onClick.AddListener(CancelSelection);
                 break;
 
             case 3:
                 feedbuttonText.text = "Confirm";
                 denybuttonText.text = "Return";
                 feedButton.onClick.AddListener(ConfirmBeforeDelivery);
-                denyButton.onClick.AddListener(CancelSelection);
+                cancelButton.onClick.AddListener(CancelSelection);
                 break;
 
             case 4:
                 feedbuttonText.text = "Send";
                 denybuttonText.text = "Back";
                 feedButton.onClick.AddListener(SendDelivery);
-                denyButton.onClick.AddListener(HandleAccept);
+                cancelButton.onClick.AddListener(HandleAccept);
                 break;
         }
     }
@@ -137,7 +137,7 @@ public class Distributionmanager : MonoBehaviour
     {
         continueButton.gameObject.SetActive(enable);
         feedButton.gameObject.SetActive(!enable);
-        denyButton.gameObject.SetActive(!enable);
+        cancelButton.gameObject.SetActive(!enable);
     }
 
     private void CancelSelection()

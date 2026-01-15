@@ -1064,7 +1064,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   NPCs:
   - {fileID: 8714416078856817653, guid: e55b2e01208a7684db6595e27802353e, type: 3}
-  queueSize: 4
   maxNPCs: 8
 --- !u!4 &296994702
 Transform:
@@ -5871,7 +5870,7 @@ GameObject:
   - component: {fileID: 795324212}
   - component: {fileID: 795324211}
   m_Layer: 5
-  m_Name: DenyButton
+  m_Name: ReturnButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
