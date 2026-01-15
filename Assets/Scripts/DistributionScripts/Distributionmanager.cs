@@ -266,6 +266,7 @@ public class Distributionmanager : MonoBehaviour
             foodselectors.HideSelectors();
             ShowContinueOrCancelButtons(true);
             spawner.Despawn();
+            ChangeContinueButton(false);
             return;
         }
 
@@ -280,14 +281,13 @@ public class Distributionmanager : MonoBehaviour
         foodselectors.HideSelectors();
         ShowContinueOrCancelButtons(true);
         spawner.Despawn();
+        ChangeContinueButton(false);
     }
 
     private void ContinueAfterInteraction()
     {
         bool success = GetCurrentNPC();
-        if (success)
-            ShowContinueOrCancelButtons(false);
-        else
+        if (!success)
             continueButton.onClick.RemoveAllListeners();
     }
 
