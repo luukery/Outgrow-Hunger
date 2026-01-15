@@ -24,6 +24,10 @@ public class MarketStallFromCatalog : MonoBehaviour
     [Header("Events")]
     public UnityEvent onStockChanged;
 
+    [Header("Stall story (per kraam)")]
+    [TextArea(3, 6)]
+    public string stallStory;
+
     void OnValidate()
     {
         if (string.IsNullOrWhiteSpace(stallId))
@@ -74,38 +78,9 @@ public class MarketStallFromCatalog : MonoBehaviour
         foreach (var p in picks)
         {
             int price = Random.Range(p.minPrice, p.maxPrice + 1);
-            currentStock.Add(new MarketStockItem
-            {
-                name = p.name,
-                icon = p.icon,
-                price = price,
-                foodType = MapStallToFoodType(p.type),
-                foodQuality = Food.Quality.Medium,
-                size = 1,
+            currentStock.Add(new MarketStockItem { name = p.name, icon = p.icon, price = price });
+            //currentStock.Add(new MarketStockItem { name = p.name, icon = p.icon, price = price, foodType = p.foodType, foodQuality = Food.Quality.Medium, size = 1 });
 
-                // NEW: Spoilage config
-                isSpoilable = p.isSpoilable,
-                spoilTimeInHours = p.spoilTimeInHours
-            });
-        }
-    }
-
-    // Map stall category to inventory food type so we don't need a second dropdown per product.
-    FoodType.Type MapStallToFoodType(StallType stallType)
-    {
-        switch (stallType)
-        {
-            case StallType.Bakery: return FoodType.Type.Bread;
-            case StallType.Fish: return FoodType.Type.Fish;
-            case StallType.Vegetables: return FoodType.Type.Vegetable;
-            case StallType.Fruit: return FoodType.Type.Fruit;
-            case StallType.Meat: return FoodType.Type.Meat;
-            case StallType.Dairy: return FoodType.Type.Meat; // fallback: closest available category
-            case StallType.Spices: return FoodType.Type.Canned; // fallback bucket for uncategorized stalls
-            case StallType.EggsAndBeans: return FoodType.Type.Canned; // fallback bucket
-            default:
-                Debug.LogWarning($"[MarketStall] Onbekend stall type {stallType}, defaulting to Meat");
-                return FoodType.Type.Meat;
         }
     }
 }
