@@ -5,6 +5,7 @@ using TMPro;
 public class DialogManager : MonoBehaviour
 {
     public GameObject dialogBox;
+    public GameObject background;
     public TMP_Text dialogText;
 
     private string[] lines;
@@ -23,6 +24,7 @@ public class DialogManager : MonoBehaviour
         lines = dialogLines;
         index = 0;
         dialogBox.SetActive(true);
+        background.SetActive(true);
         dialogText.text = lines[index];
     }
 
@@ -36,6 +38,7 @@ public class DialogManager : MonoBehaviour
         else
         {
             dialogBox.SetActive(false);
+            background.SetActive(false);
         }
     }
 }
