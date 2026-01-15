@@ -14,8 +14,6 @@ public class Distributionmanager : MonoBehaviour
 
     private NPC currentNPC;
     private NpcInfoDTO npcDTO;
-    private int npcSpawnCount = 0;
-    public int maxNPCs = 8;
 
     public FoodSelectors foodselectors;
 
@@ -45,21 +43,9 @@ public class Distributionmanager : MonoBehaviour
         }
 
         ChangeButtonFunction(1);
-        TrySpawnNPC();
+        GetCurrentNPC();
     }
 
-    public bool TrySpawnNPC()
-    {
-        if (npcSpawnCount < maxNPCs)
-        {
-            SpawnNPC();
-            return true;
-        }
-
-        selecttext.text = "No more people to feed";
-        OnDistributionFinished();
-        return false;
-    }
 
     private void OnDistributionFinished()
     {
@@ -78,21 +64,19 @@ public class Distributionmanager : MonoBehaviour
         LoadingManager.Instance.LoadScene(marketSceneName);
     }
 
-    private void SpawnNPC()
+    private bool GetCurrentNPC()
     {
-        currentNPC = spawner.SpawnNPC();
+        currentNPC = spawner.CurrentNPC;
+
+        if (currentNPC == null)
+        {
+            OnDistributionFinished();
+            return false;
+        }
+
         npcDTO = currentNPC.GetInfoDTO();
         DisplayOrder();
-        npcSpawnCount++;
-    }
-
-    private void DespawnNPC()
-    {
-        if (currentNPC != null)
-        {
-            Destroy(currentNPC.gameObject);
-            currentNPC = null;
-        }
+        return true;
     }
 
     private void HandleAccept()
@@ -299,7 +283,7 @@ public class Distributionmanager : MonoBehaviour
             selecttext.text = "You have no food in those categories.";
             foodselectors.HideSelectors();
             EnableDisableConfirmButton(true);
-            DespawnNPC();
+            spawner.Despawn();
             return;
         }
 
@@ -313,12 +297,12 @@ public class Distributionmanager : MonoBehaviour
 
         foodselectors.HideSelectors();
         EnableDisableConfirmButton(true);
-        DespawnNPC();
+        spawner.Despawn();
     }
 
     private void ContinueAfterInteraction()
     {
-        bool success = TrySpawnNPC();
+        bool success = GetCurrentNPC();
         if (success)
             EnableDisableConfirmButton(false);
         else

@@ -933,7 +933,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5917463740035535592, guid: 3d3eb66c8bc6ca4489fb922eca4e01ac, type: 3}
+  m_Sprite: {fileID: 8871750365745515610, guid: 077f09d5c4f6ae94a9e1034f8788e272, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1064,6 +1064,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   NPCs:
   - {fileID: 8714416078856817653, guid: e55b2e01208a7684db6595e27802353e, type: 3}
+  queueSize: 4
+  maxNPCs: 8
 --- !u!4 &296994702
 Transform:
   m_ObjectHideFlags: 0
@@ -5230,7 +5232,7 @@ Transform:
   m_GameObject: {fileID: 696452218}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 4.05, z: 0}
+  m_LocalPosition: {x: 0, y: 4.05, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5959,7 +5961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5917463740035535592, guid: 3d3eb66c8bc6ca4489fb922eca4e01ac, type: 3}
+  m_Sprite: {fileID: 1086331387851373080, guid: 52d1f9c7742536a4487ee978c85845b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8064,7 +8066,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Distributionmanager
   spawner: {fileID: 296994701}
   canvas: {fileID: 726788835}
-  maxNPCs: 20
   foodselectors: {fileID: 379664149}
   marketSceneName: MarketPlace
 --- !u!1 &1447447625
@@ -9540,7 +9541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.36, y: -1.53}
+  m_AnchoredPosition: {x: 3.52, y: -1.49}
   m_SizeDelta: {x: 205.231, y: 71.1525}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763549949
@@ -9607,7 +9608,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5917463740035535592, guid: 3d3eb66c8bc6ca4489fb922eca4e01ac, type: 3}
+  m_Sprite: {fileID: 1086331387851373080, guid: 52d1f9c7742536a4487ee978c85845b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
