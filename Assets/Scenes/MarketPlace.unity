@@ -3807,7 +3807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Koop
+  m_text: Buy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
@@ -32222,7 +32222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Koop
+  m_text: 'Buy
 
 '
   m_isRightToLeft: 0
