@@ -23,40 +23,40 @@ MonoBehaviour:
     spoilTimeInHours: 0
   - name: Bread
     icon: {fileID: -1660761858345613354, guid: 5e762c15d1b647c468c5d1a15357ac78, type: 3}
-    minPrice: 4
-    maxPrice: 8
+    minPrice: 1
+    maxPrice: 3
     type: 0
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 72
   - name: Flour
     icon: {fileID: -7751777048443264340, guid: 1b9c7615ba7fd344390e192b11705f9e, type: 3}
-    minPrice: 3
-    maxPrice: 6
+    minPrice: 2
+    maxPrice: 4
     type: 0
     weight: 0
     isSpoilable: 0
-    spoilTimeInHours: 12
+    spoilTimeInHours: 0
   - name: Salmon
     icon: {fileID: -6967122372230043882, guid: f2b8281fef792104687b8c36c51e762e, type: 3}
-    minPrice: 5
-    maxPrice: 10
+    minPrice: 3
+    maxPrice: 6
     type: 1
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 24
   - name: Tuna
     icon: {fileID: -4895150494573996402, guid: 2bfd716247f1a5e41b23ef5087bc939d, type: 3}
-    minPrice: 5
-    maxPrice: 9
+    minPrice: 3
+    maxPrice: 6
     type: 1
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 24
   - name: Crab
     icon: {fileID: 2104901783972924173, guid: da5428a21d1f32049a5f1647e006eec2, type: 3}
-    minPrice: 7
-    maxPrice: 12
+    minPrice: 3
+    maxPrice: 6
     type: 1
     weight: 0
     isSpoilable: 1
@@ -71,16 +71,16 @@ MonoBehaviour:
     spoilTimeInHours: 30
   - name: Carrot
     icon: {fileID: -5859083586626064994, guid: 8ce0da399a803824c9cfa7bd8bb1eae1, type: 3}
-    minPrice: 1
-    maxPrice: 3
+    minPrice: 3
+    maxPrice: 5
     type: 2
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 168
   - name: Beetroot
     icon: {fileID: -2122261477782967425, guid: 9213e66d1e0c43b41a320fa62e8c5367, type: 3}
-    minPrice: 1
-    maxPrice: 3
+    minPrice: 3
+    maxPrice: 5
     type: 2
     weight: 0
     isSpoilable: 1
@@ -88,7 +88,7 @@ MonoBehaviour:
   - name: Onion
     icon: {fileID: 5465580561085644368, guid: b8ef5853ab9728d49a52cd77ce4b9c1c, type: 3}
     minPrice: 1
-    maxPrice: 2
+    maxPrice: 5
     type: 2
     weight: 0
     isSpoilable: 1
@@ -96,7 +96,7 @@ MonoBehaviour:
   - name: Lettuce
     icon: {fileID: -7523970955242101793, guid: 36da891f9b569a6438088bfea6ca695a, type: 3}
     minPrice: 1
-    maxPrice: 3
+    maxPrice: 1
     type: 2
     weight: 0
     isSpoilable: 1
@@ -104,15 +104,15 @@ MonoBehaviour:
   - name: Apple
     icon: {fileID: 7652308193091631280, guid: 617ee092fb9f52246a821b1261c4e2d6, type: 3}
     minPrice: 2
-    maxPrice: 4
+    maxPrice: 3
     type: 3
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 240
   - name: Pear
     icon: {fileID: -5670339388207800344, guid: 761125e9de20fdf4f9d6cfd2d392843c, type: 3}
-    minPrice: 2
-    maxPrice: 4
+    minPrice: 1
+    maxPrice: 3
     type: 3
     weight: 0
     isSpoilable: 1
@@ -120,30 +120,30 @@ MonoBehaviour:
   - name: Nuts
     icon: {fileID: -3400873790516057462, guid: ad92626df0604db4c943f9ff713d3ea2, type: 3}
     minPrice: 3
-    maxPrice: 6
+    maxPrice: 5
     type: 3
     weight: 0
     isSpoilable: 0
     spoilTimeInHours: 0
   - name: Berries
     icon: {fileID: -1792480258135571260, guid: fedc20fb588252344a7ee94a9902a09d, type: 3}
-    minPrice: 2
-    maxPrice: 5
+    minPrice: 1
+    maxPrice: 2
     type: 3
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 24
   - name: Cheese
     icon: {fileID: 6582011127417039112, guid: b93e8acf058a0ce4295d42c2dfd92915, type: 3}
-    minPrice: 5
-    maxPrice: 9
+    minPrice: 2
+    maxPrice: 3
     type: 4
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 72
   - name: Butter
     icon: {fileID: -2813729396058215785, guid: 7a45171ab4e0a624a965a5da55040b68, type: 3}
-    minPrice: 3
+    minPrice: 4
     maxPrice: 6
     type: 4
     weight: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   - name: Milk
     icon: {fileID: -321318036669055807, guid: 248c864a22c2f0b4e9dc8ca854387e4f, type: 3}
     minPrice: 2
-    maxPrice: 4
+    maxPrice: 3
     type: 4
     weight: 0
     isSpoilable: 1
@@ -168,22 +168,22 @@ MonoBehaviour:
   - name: Salt
     icon: {fileID: -673306825874429820, guid: 1c9835bcbe259af4dad845f9f6ca57ce, type: 3}
     minPrice: 4
-    maxPrice: 8
+    maxPrice: 6
     type: 5
     weight: 0
     isSpoilable: 0
     spoilTimeInHours: 0
   - name: Spices
     icon: {fileID: 2209444005019831115, guid: ddb713e06ed251a4ab3db2d7ed96bbb1, type: 3}
-    minPrice: 3
-    maxPrice: 7
+    minPrice: 4
+    maxPrice: 6
     type: 5
     weight: 0
     isSpoilable: 0
     spoilTimeInHours: 0
   - name: Vinager
     icon: {fileID: -6583524493842645155, guid: 314aac525fee8ac49ba21a6628950810, type: 3}
-    minPrice: 3
+    minPrice: 4
     maxPrice: 6
     type: 5
     weight: 0
@@ -192,31 +192,31 @@ MonoBehaviour:
   - name: Oil
     icon: {fileID: -6748384255609890082, guid: 868041fc09041a941adf46d620b4d766, type: 3}
     minPrice: 4
-    maxPrice: 9
+    maxPrice: 6
     type: 5
     weight: 0
     isSpoilable: 0
     spoilTimeInHours: 0
   - name: Beef
     icon: {fileID: -965513180393346931, guid: 6c3b84e8a51dd43478c6618858744a9c, type: 3}
-    minPrice: 7
-    maxPrice: 12
+    minPrice: 3
+    maxPrice: 6
     type: 7
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 48
   - name: Pork
     icon: {fileID: -2110104355339441885, guid: 652af0f0a434c294ea6c20da2a3d5d40, type: 3}
-    minPrice: 6
-    maxPrice: 11
+    minPrice: 3
+    maxPrice: 6
     type: 7
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 48
   - name: Chicken
     icon: {fileID: 5336855417275088078, guid: 1cab5a667ea90214a8f17b728c71a893, type: 3}
-    minPrice: 5
-    maxPrice: 9
+    minPrice: 3
+    maxPrice: 5
     type: 7
     weight: 0
     isSpoilable: 1

@@ -13,5 +13,42 @@ MonoBehaviour:
   m_Name: WorldFactsSO
   m_EditorClassIdentifier: Assembly-CSharp::LoadingTextDatabase
   texts:
-  - This is a test
-  - To see if it works
+  - Poor road infrastructure slows deliveries and causes food to spoil before it
+    reaches markets.
+  - When transport routes are damaged, food supplies become unreliable for entire
+    regions.
+  - Lack of road maintenance increases delays, raising costs and reducing available
+    food.
+  - In rural areas, broken roads often prevent food from reaching people who need
+    it most.
+  - Without reliable transport, farmers cannot sell food even when it is available.
+  - Long travel times increase waste, especially for fresh and perishable food.
+  - Weak infrastructure turns small disruptions into large food shortages.
+  - Heavy rain and flooding regularly block roads, cutting off food deliveries in
+    vulnerable regions.
+  - Extreme weather slows transport and increases food loss before it reaches consumers.
+  - Climate-driven weather events disrupt supply chains long after storms pass.
+  - Poorly built roads fail quickly under bad weather, isolating communities.
+  - Changing climate patterns make food transport increasingly unpredictable.
+  - When transport halts during storms, food prices rise due to scarcity.
+  - Delays during transport increase spoilage and reduce how much food survives the
+    journey.
+  - Perishable food often expires before arrival when transport is slow or unreliable.
+  - Longer routes mean higher losses, even when enough food is produced.
+  - Food waste during transport directly reduces what reaches markets and aid centers.
+  - Time lost on the road often determines whether food is usable or discarded.
+  - In unsafe regions, food is frequently lost to theft, damage, or forced abandonment.
+  - Conflict along trade routes reduces the amount of food that reaches civilians.
+  - Armed groups and crime increase transport costs and limit food access.
+  - Fear and insecurity force drivers to abandon routes entirely.
+  - Instability disrupts food movement even when supplies exist nearby.
+  - Extra transport costs raise food prices, making it unaffordable for many people.
+  - When moving food becomes expensive, low-income communities are hit first.
+  - High transport costs prevent food from reaching areas with the greatest need.
+  - Limited funding means fewer repairs, worsening long-term food access.
+  - Rising delivery costs reduce how much food aid organizations can distribute.
+  - Hunger often comes from failures in distribution, not a lack of food.
+  - Food shortages frequently result from broken systems rather than low production.
+  - When supply chains fail, surplus food exists alongside hunger.
+  - Reliable transport is as critical as food production in preventing hunger.
+  - Small disruptions compound across long routes, reducing food availability.

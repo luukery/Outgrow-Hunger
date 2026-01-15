@@ -42,6 +42,11 @@ public class RouteHandler : MonoBehaviour
     public RoadClickable mediumRoadClickable;
     public RoadClickable longRoadClickable;
 
+    [Header("Journey Progress UI")]
+    public GameObject cartIcon;
+    private Vector3 cartStartPosition;
+    private const float DOT_SPACING = 0.7f;
+
     public static RouteHandler Instance { get; private set; }
 
     float timePassed = 0f;
@@ -347,6 +352,13 @@ public class RouteHandler : MonoBehaviour
     // ------------------ UNITY LIFECYCLE ------------------
     void Start()
     {
+        if (cartIcon != null)
+        {
+            RectTransform cartRect = cartIcon.GetComponent<RectTransform>();
+            if (cartRect != null)
+                cartStartPosition = cartRect.localPosition;
+        }
+
         timePassed = 0f;
         legsCompleted = 0;
         journeyFinished = false;
@@ -571,6 +583,8 @@ public class RouteHandler : MonoBehaviour
         if (!journeyFinished)
             legsCompleted++;
 
+        UpdateCartPosition();
+
         if (legsCompleted >= legsPerJourney)
         {
             ShowFinalSummary();
@@ -608,6 +622,7 @@ public class RouteHandler : MonoBehaviour
         if (popupWhyText != null)
         {
             popupWhyText.text =
+                $"\n\n" +
                 $"Current Food: {GetFoodLive()}\n" +
                 $"Current Gold: {GetGoldLive()}\n\n" +
                 $"Press Continue to deliver.";
@@ -752,5 +767,19 @@ public class RouteHandler : MonoBehaviour
             new("Medium Route", mediumRouteTime, 80, GetRandomEvent(1)),
             new("Long Route",   longRouteTime, 60, GetRandomEvent(2))
         };
+    }
+
+    void UpdateCartPosition()
+    {
+        if (cartIcon != null)
+        {
+            RectTransform cartRect = cartIcon.GetComponent<RectTransform>();
+            if (cartRect != null)
+            {
+                Vector3 newPosition = cartStartPosition;
+                newPosition.x += legsCompleted * DOT_SPACING;
+                cartRect.localPosition = newPosition;
+            }
+        }
     }
 }
