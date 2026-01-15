@@ -1250,6 +1250,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &439023715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1426,6 +1427,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &455251864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3807,7 +3809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buy
+  m_text: Koop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
   m_sharedMaterial: {fileID: 9077111176343128545, guid: 2c49b1d8be1c16c4fbc239af52b5a251, type: 2}
@@ -22982,6 +22984,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &640074776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23367,6 +23370,7 @@ MonoBehaviour:
     nameText: {fileID: 1012489882}
     priceText: {fileID: 326939576}
     buyButton: {fileID: 828078838}
+  playerCoins: 100
   coinsText: {fileID: 302958870}
   headerText: {fileID: 151469116}
   descText: {fileID: 0}
@@ -23505,6 +23509,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &741841240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23656,9 +23661,9 @@ RectTransform:
   - {fileID: 1686904074}
   m_Father: {fileID: 1646777443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 500, y: -625}
   m_SizeDelta: {x: 920, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &753009572
@@ -25886,6 +25891,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &1048342418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27485,6 +27491,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78b9f1ba529f6d4d803fff925a2a5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConfirmPurchaseInteractable
+  confirmCanvas: {fileID: 1426288901}
+  confirmButton: {fileID: 1296328396}
+  cancelButton: {fileID: 1290872783}
   transportSceneName: TransportLevel
 --- !u!61 &1387966850
 BoxCollider2D:
@@ -27723,6 +27732,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!1 &1426288901
 GameObject:
   m_ObjectHideFlags: 0
@@ -27741,7 +27751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1426288902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28199,6 +28209,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &1568611178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28534,6 +28545,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &1603437434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29013,6 +29025,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &1677397366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29165,10 +29178,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 753009571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 450, y: 155}
+  m_SizeDelta: {x: 900, y: 48.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1686904075
 MonoBehaviour:
@@ -29347,6 +29360,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &1689885193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31694,6 +31708,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &1936554346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31870,6 +31885,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &1939262827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32046,6 +32062,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &1967051623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32222,7 +32239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Buy
+  m_text: 'Koop
 
 '
   m_isRightToLeft: 0
@@ -32514,6 +32531,7 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
+  stallStory: 
 --- !u!114 &2089251507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32696,3 +32714,4 @@ SceneRoots:
   - {fileID: 969732029}
   - {fileID: 1507001608}
   - {fileID: 1426288905}
+  - {fileID: 864224534}
