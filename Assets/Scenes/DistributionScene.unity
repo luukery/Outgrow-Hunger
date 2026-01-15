@@ -5870,7 +5870,7 @@ GameObject:
   - component: {fileID: 795324212}
   - component: {fileID: 795324211}
   m_Layer: 5
-  m_Name: ReturnButton
+  m_Name: CancelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9517,7 +9517,7 @@ GameObject:
   - component: {fileID: 1763549950}
   - component: {fileID: 1763549949}
   m_Layer: 5
-  m_Name: FeedButton
+  m_Name: ConfirmButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

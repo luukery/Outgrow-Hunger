@@ -1,5 +1,7 @@
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+
 
 public class SpawnerScript : MonoBehaviour
 {
@@ -44,28 +46,58 @@ public class SpawnerScript : MonoBehaviour
         return pos + Vector3.down * 1.3f * index;
     }
 
-    public bool Despawn()
+    public void Despawn()
+    {
+        StartCoroutine(AdvanceQueue());
+    }
+
+    private IEnumerator AdvanceQueue()
     {
         if (npcQueue.Count == 0)
-            return false;
+            yield break;
 
-        // Remove front NPC
         NPC removed = npcQueue[0];
         npcQueue.RemoveAt(0);
         Destroy(removed.gameObject);
 
-        // Move remaining NPCs up
+        List<IEnumerator> moves = new();
+
         for (int i = 0; i < npcQueue.Count; i++)
         {
-            npcQueue[i].transform.position = GetSlotPosition(i);
+            Vector3 target = GetSlotPosition(i);
+            NPCMovement movement = npcQueue[i].GetComponent<NPCMovement>();
+
+            if (movement != null)
+                moves.Add(movement.MoveTo(target));
+            else
+                npcQueue[i].transform.position = target;
         }
 
-        // Spawn new NPC at back if allowed
         if (npcSpawnCount < maxNPCs)
-        {
             SpawnAtSlot(queueSize - 1);
-        }
 
-        return npcQueue.Count > 0;
+        foreach (var move in moves)
+            StartCoroutine(move);
+
+        bool moving;
+        do
+        {
+            moving = false;
+            for (int i = 0; i < npcQueue.Count; i++)
+            {
+                if (Vector3.Distance(
+                    npcQueue[i].transform.position,
+                    GetSlotPosition(i)) > 0.01f)
+                {
+                    moving = true;
+                    break;
+                }
+            }
+            yield return null;
+        }
+        while (moving);
+
+        // invoke for hiding UI, needed later
+        // OnQueueAdvanceFinished?.Invoke();
     }
 }
