@@ -17,14 +17,16 @@ public class NpcInfoDTO
 
 public class DeliveryResult
 {
+    public List<Request> TotalOrder = new List<Request>();
+    public List<Request> TotalDelivered = new List<Request>();
+
     public List<Request> Shortages = new List<Request>();
     public List<Request> Excesses = new List<Request>();
 
-    public int TotalOrderedAmount;
-    public int TotalDeliveredAmount;
+    public List<Request> NeedsShortage = new List<Request>();
 
-    public int TotalFoodShortage;
-    public int TotalFoodExcess;
+    public string reaction = new string("default reaction");
+
 }
 
 public readonly struct CategoryConfig

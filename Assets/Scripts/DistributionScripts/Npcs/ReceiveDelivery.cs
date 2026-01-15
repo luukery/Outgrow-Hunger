@@ -2,89 +2,65 @@ using System.Collections.Generic;
 
 public class DeliveryResultService
 {
-    public DeliveryResult Transaction(List<Request> order, List<Request> given)
+    public DeliveryResult Transaction(List<Request> order, List<Request> needs, List<Request> given)
     {
         DeliveryResult result = new DeliveryResult();
 
-        List<Request> orderedTotals = new List<Request>();
-        List<Request> deliveredTotals = new List<Request>();
+       result.TotalOrder = order;
+       result.TotalDelivered = given;
+
+
 
         for (int i = 0; i < order.Count; i++)
         {
-            Request r = order[i];
-            Request existing = FindByType(orderedTotals, r.FoodType);
+            Request wanted = order[i];
+            int givenAmount = 0;
 
-            if (existing == null)
+            for (int j = 0; j < given.Count; j++)
             {
-                orderedTotals.Add(
-                    new Request(r.Amount, r.FoodType, r.Quality)
-                );
-            }
-            else
-            {
-                existing.Amount += r.Amount;
+                if (given[j].FoodType == wanted.FoodType)
+                {
+                    givenAmount += given[j].Amount;
+                }
             }
 
-            result.TotalOrderedAmount += r.Amount;
+            int diff = givenAmount - wanted.Amount;
+
+            if (diff < 0)
+            {
+                result.Shortages.Add(new Request(-diff, wanted.FoodType, wanted.Quality));
+            }
+            else if (diff > 0)
+            {
+                result.Excesses.Add(new Request(diff, wanted.FoodType, wanted.Quality));
+            }
         }
 
-        for (int i = 0; i < given.Count; i++)
+        for (int i = 0; i < needs.Count; i++)
         {
-            Request r = given[i];
-            Request existing = FindByType(deliveredTotals, r.FoodType);
+            Request need = needs[i];
+            int givenAmount = 0;
 
-            if (existing == null)
+            for (int j = 0; j < given.Count; j++)
             {
-                deliveredTotals.Add(
-                    new Request(r.Amount, r.FoodType, r.Quality)
-                );
-            }
-            else
-            {
-                existing.Amount += r.Amount;
+                if (given[j].FoodType == need.FoodType)
+                {
+                    givenAmount += given[j].Amount;
+                }
             }
 
-            result.TotalDeliveredAmount += r.Amount;
-        }
-
-        for (int i = 0; i < orderedTotals.Count; i++)
-        {
-            Request ordered = orderedTotals[i];
-            Request delivered = FindByType(deliveredTotals, ordered.FoodType);
-
-            int deliveredAmount = delivered != null ? delivered.Amount : 0;
-
-            if (deliveredAmount < ordered.Amount)
+            if (givenAmount < need.Amount)
             {
-                int shortage = ordered.Amount - deliveredAmount;
-                result.TotalFoodShortage += shortage;
-                result.Shortages.Add(
-                    new Request(shortage, ordered.FoodType, ordered.Quality)
-                );
-            }
-            else if (deliveredAmount > ordered.Amount)
-            {
-                int excess = deliveredAmount - ordered.Amount;
-                result.TotalFoodExcess += excess;
-                result.Excesses.Add(
-                    new Request(excess, ordered.FoodType, ordered.Quality)
-                );
+                int diff = need.Amount - givenAmount;
+                result.NeedsShortage.Add(new Request(diff, need.FoodType, need.Quality));
             }
         }
 
         return result;
     }
 
-    Request FindByType(List<Request> list, FoodType.Type type)
+    public string Reaction(DeliveryResult result)
     {
-        for (int i = 0; i < list.Count; i++)
-        {
-            if (list[i].FoodType == type)
-            {
-                return list[i];
-            }
-        }
 
-        return null;
-    }
+    } 
 }

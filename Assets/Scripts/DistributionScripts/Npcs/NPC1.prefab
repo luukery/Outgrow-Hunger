@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda36711891c768478d5e16f49aa0020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCScript
-  category: 0
+  category: 3
   Needs: []
   Order: []
   Money: 0
