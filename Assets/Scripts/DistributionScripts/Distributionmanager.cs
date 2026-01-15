@@ -162,7 +162,7 @@ public class Distributionmanager : MonoBehaviour
             // disable + / - if 0
             foodselectors.SetMaxForSelector(index, maxGive);
 
-            ordertext.text = "Need: " + needAmount + "\nHave: " + available;
+            ordertext.text = available + " in inventory";
             foodtype.text = order.FoodType.ToString();
         }
     }
