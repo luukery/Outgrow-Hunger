@@ -260,17 +260,6 @@ public class Distributionmanager : MonoBehaviour
             if (deliveredAmount > 0) deliveredAnything = true;
         }
 
-        if (!deliveredAnything)
-        {
-            selecttext.text = "You have no food in those categories.";
-            foodselectors.HideSelectors();
-            ShowContinueOrCancelButtons(true);
-            spawner.Despawn();
-            ChangeContinueButton(false);
-            dialogue.text = result.reaction;
-            return;
-        }
-
         DeliveryResult result = currentNPC.Transaction(delivered);
 
         int earned = Mathf.Clamp(foodselectors.GetMoney(), 0, npcDTO.Money);
