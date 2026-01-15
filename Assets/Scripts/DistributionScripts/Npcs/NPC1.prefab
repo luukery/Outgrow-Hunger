@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 711962845350228291}
   - component: {fileID: 1129066594933723849}
   - component: {fileID: -8891163510269370301}
+  - component: {fileID: 3294875091540765048}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: Untagged
@@ -96,7 +97,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -458348848963589288, guid: a319102095c1ebe4b8e344913b1a443a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -108,3 +109,16 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &3294875091540765048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8714416078856817653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
+  moveSpeed: 2.5
