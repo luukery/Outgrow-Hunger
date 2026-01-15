@@ -1,4 +1,5 @@
- public class NpcDialogue
+[System.Serializable] 
+public class NpcDialogue
 {
     public string delivered;
     public string littleShortage;

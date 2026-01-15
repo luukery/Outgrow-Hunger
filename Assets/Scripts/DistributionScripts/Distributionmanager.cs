@@ -267,6 +267,7 @@ public class Distributionmanager : MonoBehaviour
             ShowContinueOrCancelButtons(true);
             spawner.Despawn();
             ChangeContinueButton(false);
+            dialogue.text = result.reaction;
             return;
         }
 
@@ -313,5 +314,7 @@ public class Distributionmanager : MonoBehaviour
 
         resulttext += "Money earned: " + foodselectors.GetMoney() + " coins";
         selecttext.text = resulttext;
+
+        dialogue.text = result.reaction;
     }
 }

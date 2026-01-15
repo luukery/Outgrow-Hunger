@@ -1,22 +1,23 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class NPC : MonoBehaviour
 {
     [SerializeField] private NpcCategory category;
 
-    [SerializeField] public List<Request> Needs = new();
-    [SerializeField] public List<Request> Order = new();
+    [SerializeField] private List<Request> Needs = new();
+    [SerializeField] private List<Request> Order = new();
 
     public int Money;
 
-    public NpcDialogue dialogue;
+    [SerializeField] public NpcDialogue dialogue;
 
     private readonly DeliveryResultService deliveryService = new();
     private System.Random rng;
 
-    void Start()
+    void OnEnable()
     {
         rng = new System.Random(Guid.NewGuid().GetHashCode());
         GenerateProfile();
@@ -24,13 +25,37 @@ public class NPC : MonoBehaviour
 
     public DeliveryResult Transaction(List<Request> playerInput)
     {
-        return deliveryService.Transaction(Order, Needs, playerInput);
+        return deliveryService.Transaction(Order, Needs, playerInput, dialogue);
     }
+    public NpcInfoDTO GetInfoDTO()
+    {
+        List<Request> needsCopy = new(Needs.Count);
+        List<Request> orderCopy = new(Order.Count);
+
+        for (int i = 0; i < Needs.Count; i++)
+        {
+            Request r = Needs[i];
+            needsCopy.Add(new Request(r.Amount, r.FoodType, r.Quality));
+        }
+
+        for (int i = 0; i < Order.Count; i++)
+        {
+            Request r = Order[i];
+            orderCopy.Add(new Request(r.Amount, r.FoodType, r.Quality));
+        }
+
+        return new NpcInfoDTO
+        {
+            Needs = needsCopy,
+            Order = orderCopy,
+            Money = Money
+        };
+    }
+
 
     void GenerateProfile()
     {
         CategoryConfig config = GetCategoryConfig();
-
         GenerateNeeds(config);
         GenerateOrder(config);
         Money = RollMoney(config);
@@ -41,12 +66,21 @@ public class NPC : MonoBehaviour
         FoodType.Type[] foodTypes = (FoodType.Type[])Enum.GetValues(typeof(FoodType.Type));
         Food.Quality[] qualities = (Food.Quality[])Enum.GetValues(typeof(Food.Quality));
 
-        for (int i = 0; i < foodTypes.Length; i++)
-        {
-            int amount = rng.Next(config.MinNeedAmount, config.MaxNeedAmount + 1);
-            Food.Quality quality = qualities[rng.Next(qualities.Length)];
+        List<FoodType.Type> availableTypes = foodTypes.ToList();
 
-            Needs.Add(new Request(amount, foodTypes[i], quality));
+        int amountOfdistinctTypes = rng.Next(config.MinDistinctItems, config.MaxDistinctItems + 1);
+
+        for (int i = 0; i < amountOfdistinctTypes; i++)
+        {
+            int type = rng.Next(0, availableTypes.Count);
+
+            FoodType.Type selectedType = availableTypes[type];
+            availableTypes.Remove(availableTypes[type]);
+
+            int amount = rng.Next(config.MinNeedAmount, config.MaxNeedAmount + 1);
+            Food.Quality quality = Food.Quality.Good;       //temporary
+
+            Needs.Add(new Request(amount, selectedType, quality));
         }
     }
 
@@ -55,34 +89,36 @@ public class NPC : MonoBehaviour
         FoodType.Type[] foodTypes = (FoodType.Type[])Enum.GetValues(typeof(FoodType.Type));
         Food.Quality[] qualities = (Food.Quality[])Enum.GetValues(typeof(Food.Quality));
 
-        int distinctTypes = rng.Next(config.MinDistinctItems, config.MaxDistinctItems + 1);
-        distinctTypes = Math.Min(distinctTypes, foodTypes.Length);
+        List<FoodType.Type> availableTypes = foodTypes.ToList();
 
-        for (int i = 0; i < distinctTypes; i++)
+        int amountOfDistinctTypes = rng.Next(config.MinDistinctItems, config.MaxDistinctItems + 1);
+
+        for (int i = 0; i < amountOfDistinctTypes; i++)
         {
-            FoodType.Type type = foodTypes[rng.Next(foodTypes.Length)];
-            Food.Quality quality = qualities[rng.Next(qualities.Length)];
+            int index = rng.Next(availableTypes.Count);
+            FoodType.Type selectedType = availableTypes[index];
+            availableTypes.RemoveAt(index);
 
-            int needAmount = rng.Next(config.MinNeedAmount, config.MaxNeedAmount + 1);
-            Needs.Add(new Request(needAmount, type, quality));
+            Food.Quality quality = Food.Quality.Good; // temporary
 
-            int buffer = config.ExactMatch ? 0 : rng.Next(config.MinOrderBuffer, config.MaxOrderBuffer + 1);
-            int orderAmount = Math.Max(1, needAmount + buffer);
-
-            Order.Add(new Request(orderAmount, type, quality));
+            int amount = rng.Next(config.MinNeedAmount, config.MaxNeedAmount + 1);
+            Order.Add(new Request(amount, selectedType, quality));
         }
     }
-
+    //
     int RollMoney(CategoryConfig config)
     {
         return rng.Next(config.MinMoney, config.MaxMoney + 1);
     }
 
-  
+
 
     CategoryConfig GetCategoryConfig()
     {
-        NpcCategory category = (NpcCategory)rng.Next(0, Enum.GetValues(typeof(NpcCategory)).Length);
+        category = (NpcCategory)rng.Next(
+       0,
+       Enum.GetValues(typeof(NpcCategory)).Length
+   );
 
         switch (category)
         {
@@ -153,29 +189,5 @@ public class NPC : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
-    }
-    public NpcInfoDTO GetInfoDTO()
-    {
-        List<Request> needsCopy = new(Needs.Count);
-        List<Request> orderCopy = new(Order.Count);
-
-        for (int i = 0; i < Needs.Count; i++)
-        {
-            Request r = Needs[i];
-            needsCopy.Add(new Request(r.Amount, r.FoodType, r.Quality));
-        }
-
-        for (int i = 0; i < Order.Count; i++)
-        {
-            Request r = Order[i];
-            orderCopy.Add(new Request(r.Amount, r.FoodType, r.Quality));
-        }
-
-        return new NpcInfoDTO
-        {
-            Needs = needsCopy,
-            Order = orderCopy,
-            Money = Money
-        };
     }
 }

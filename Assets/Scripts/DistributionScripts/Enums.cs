@@ -22,6 +22,7 @@ public class DeliveryResult
 
     public List<Request> Shortages = new List<Request>();
     public List<Request> Excesses = new List<Request>();
+    public List<Request> WrongItems = new List<Request>();
 
     public List<Request> NeedsShortage = new List<Request>();
 
