@@ -58,10 +58,15 @@ public class FoodSelectors : MonoBehaviour
         }
     }
 
-    public GameObject GetSelector(int index) => Selectors[index];
+    public GameObject GetSelector(int index)
+    {
+        if (index < 0 || index >= Selectors.Count) return null;
+        return Selectors[index];
+    }
 
     public int GetValue(int index)
     {
+        if (index < 0 || index >= Selectors.Count) return 0;
         GameObject selector = Selectors[index];
         TextMeshProUGUI number = selector.transform.Find("Number").GetComponent<TextMeshProUGUI>();
         return int.TryParse(number.text, out int parsed) ? parsed : 0;
@@ -166,6 +171,8 @@ public class FoodSelectors : MonoBehaviour
         icon.gameObject.SetActive(true);
         icon.sprite = newIcon;
     }
+
+    public int SelectorCount => Selectors.Count;
 
     // ✅ Called by Distribution to cap selection (and disable when 0)
     public void SetMaxForSelector(int index, int max)

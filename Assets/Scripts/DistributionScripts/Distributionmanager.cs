@@ -139,9 +139,10 @@ public class Distributionmanager : MonoBehaviour
         selecttext.gameObject.SetActive(false);
         foodselectors.ResetValues();
 
-        for (int index = 0; index < npcDTO.Order.Count; index++)
+        for (int index = 0; index < npcDTO.Order.Count && index < foodselectors.SelectorCount; index++)
         {
             GameObject selector = foodselectors.GetSelector(index);
+            if (selector == null) break;
             selector.SetActive(true);
 
             TextMeshProUGUI ordertext = selector.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
