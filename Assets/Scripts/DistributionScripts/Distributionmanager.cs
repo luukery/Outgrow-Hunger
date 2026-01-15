@@ -28,8 +28,6 @@ public class Distributionmanager : MonoBehaviour
         cancelButton = canvas.transform.Find("CancelButton").GetComponent<Button>();
         continueButton = canvas.transform.Find("ContinueButton").GetComponent<Button>();
 
-        ShowContinueOrCancelButtons(true);
-
         selecttext = canvas.transform.Find("SelectText").GetComponent<TextMeshProUGUI>();
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
 
@@ -43,6 +41,7 @@ public class Distributionmanager : MonoBehaviour
         }
 
         ChangeContinueButton(true);
+        ChangeConfirmButtons(true);
         GetCurrentNPC();
     }
 
@@ -90,6 +89,8 @@ public class Distributionmanager : MonoBehaviour
         dialogue.text += "\nI can pay " + npcDTO.Money + " coins";
     }
 
+    // moneyselect screen = true, confirm sends to confirm before delivery screen, cancel returns to money select
+    // confirm delivery screen = false, if confirm it sends deliver, if false it goes back to prev screen
     private void ChangeConfirmButtons(bool confirmDelivery)
     {
         confirmButton.onClick.RemoveAllListeners();
@@ -98,7 +99,7 @@ public class Distributionmanager : MonoBehaviour
         if (confirmDelivery)
         {
             confirmButton.onClick.AddListener(ConfirmBeforeDelivery);
-            cancelButton.onClick.AddListener(CancelSelection);
+            cancelButton.onClick.AddListener(FoodSelector);
         }
         else
         {
@@ -107,8 +108,13 @@ public class Distributionmanager : MonoBehaviour
         }
     }
 
+    // foodselect screen = true, sends from food to money check
+    // resultscreen = false, sends from resultscreen to new npc/finish
     private void ChangeContinueButton(bool foodSelect)
     {
+        continueButton.onClick.RemoveAllListeners();
+
+
         if (foodSelect)
         {
             continueButton.onClick.AddListener(MoneyCheck);
@@ -126,16 +132,10 @@ public class Distributionmanager : MonoBehaviour
         cancelButton.gameObject.SetActive(!enable);
     }
 
-    private void CancelSelection()
-    {
-        foodselectors.HideSelectors();
-        foodselectors.ShowHideMoneySelect(false);
-        selecttext.gameObject.SetActive(true);
-        ChangeConfirmButtons(true);
-    }
-
     private void FoodSelector()
     {
+        ShowContinueOrCancelButtons(true);
+        ChangeContinueButton(true);
         selecttext.gameObject.SetActive(false);
         foodselectors.ResetValues();
 
