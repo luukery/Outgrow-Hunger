@@ -9,8 +9,8 @@ public class Distributionmanager : MonoBehaviour
     public SpawnerScript spawner;
     public Canvas canvas;
 
-    private Button feedButton, cancelButton, continueButton;
-    private TextMeshProUGUI selecttext;
+    private Button confirmButton, cancelButton, continueButton;
+    private TextMeshProUGUI dialogue, selecttext;
 
     private NPC currentNPC;
     private NpcInfoDTO npcDTO;
@@ -24,14 +24,14 @@ public class Distributionmanager : MonoBehaviour
 
     void Start()
     {
-        feedButton = canvas.transform.Find("ConfirmButton").GetComponent<Button>();
+        confirmButton = canvas.transform.Find("ConfirmButton").GetComponent<Button>();
         cancelButton = canvas.transform.Find("CancelButton").GetComponent<Button>();
         continueButton = canvas.transform.Find("ContinueButton").GetComponent<Button>();
 
-        continueButton.onClick.AddListener(ContinueAfterInteraction);
-        continueButton.gameObject.SetActive(false);
+        ShowContinueOrCancelButtons(true);
 
         selecttext = canvas.transform.Find("SelectText").GetComponent<TextMeshProUGUI>();
+        dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
 
         Transform returnTf = canvas.transform.Find("ReturnButton");
         if (returnTf != null)
@@ -42,14 +42,14 @@ public class Distributionmanager : MonoBehaviour
             returnButton.onClick.AddListener(ReturnToMarket);
         }
 
-        ChangeButtonFunction(1);
+        ChangeContinueButton(true);
         GetCurrentNPC();
     }
 
 
     private void OnDistributionFinished()
     {
-        feedButton.interactable = false;
+        confirmButton.interactable = false;
         cancelButton.interactable = false;
 
         continueButton.onClick.RemoveAllListeners();
@@ -76,67 +76,53 @@ public class Distributionmanager : MonoBehaviour
 
         npcDTO = currentNPC.GetInfoDTO();
         DisplayOrder();
-        return true;
-    }
-
-    private void HandleAccept()
-    {
-        selecttext.text = "Accepted food";
         FoodSelector();
+        return true;
     }
 
     private void DisplayOrder()
     {
-        selecttext.text = "I want the following:\n";
+        dialogue.text = "I want the following: ";
+        dialogue.text += "<b>";
         foreach (Request order in npcDTO.Order)
-            selecttext.text += order.Amount + " " + order.FoodType + "\n";
-
-        selecttext.text += "\nI can pay " + npcDTO.Money + " coins";
+            dialogue.text += order.Amount + " " + order.FoodType + " ";
+        dialogue.text += "</b>";
+        dialogue.text += "\nI can pay " + npcDTO.Money + " coins";
     }
 
-    private void ChangeButtonFunction(int select)
+    private void ChangeConfirmButtons(bool confirmDelivery)
     {
-        feedButton.onClick.RemoveAllListeners();
+        confirmButton.onClick.RemoveAllListeners();
         cancelButton.onClick.RemoveAllListeners();
 
-        TextMeshProUGUI feedbuttonText = feedButton.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI denybuttonText = cancelButton.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
-
-        switch (select)
+        if (confirmDelivery)
         {
-            case 1:
-                feedbuttonText.text = "Select food";
-                denybuttonText.text = "Deny food";
-                feedButton.onClick.AddListener(HandleAccept);
-                break;
-
-            case 2:
-                feedbuttonText.text = "Next";
-                denybuttonText.text = "Cancel selection";
-                feedButton.onClick.AddListener(MoneyCheck);
-                cancelButton.onClick.AddListener(CancelSelection);
-                break;
-
-            case 3:
-                feedbuttonText.text = "Confirm";
-                denybuttonText.text = "Return";
-                feedButton.onClick.AddListener(ConfirmBeforeDelivery);
-                cancelButton.onClick.AddListener(CancelSelection);
-                break;
-
-            case 4:
-                feedbuttonText.text = "Send";
-                denybuttonText.text = "Back";
-                feedButton.onClick.AddListener(SendDelivery);
-                cancelButton.onClick.AddListener(HandleAccept);
-                break;
+            confirmButton.onClick.AddListener(ConfirmBeforeDelivery);
+            cancelButton.onClick.AddListener(CancelSelection);
+        }
+        else
+        {
+            confirmButton.onClick.AddListener(SendDelivery);
+            cancelButton.onClick.AddListener(FoodSelector);
         }
     }
 
-    private void EnableDisableConfirmButton(bool enable)
+    private void ChangeContinueButton(bool foodSelect)
+    {
+        if (foodSelect)
+        {
+            continueButton.onClick.AddListener(MoneyCheck);
+        }
+        else
+        {
+            continueButton.onClick.AddListener(ContinueAfterInteraction);
+        }
+    }
+
+    private void ShowContinueOrCancelButtons(bool enable)
     {
         continueButton.gameObject.SetActive(enable);
-        feedButton.gameObject.SetActive(!enable);
+        confirmButton.gameObject.SetActive(!enable);
         cancelButton.gameObject.SetActive(!enable);
     }
 
@@ -145,15 +131,13 @@ public class Distributionmanager : MonoBehaviour
         foodselectors.HideSelectors();
         foodselectors.ShowHideMoneySelect(false);
         selecttext.gameObject.SetActive(true);
-        DisplayOrder();
-        ChangeButtonFunction(1);
+        ChangeConfirmButtons(true);
     }
 
     private void FoodSelector()
     {
         selecttext.gameObject.SetActive(false);
         foodselectors.ResetValues();
-        bool emptydelivery = true;
 
         for (int index = 0; index < npcDTO.Order.Count; index++)
         {
@@ -181,13 +165,13 @@ public class Distributionmanager : MonoBehaviour
             ordertext.text = "Need: " + needAmount + "\nHave: " + available;
             foodtype.text = order.FoodType.ToString();
         }
-        ChangeButtonFunction(2);
     }
 
 
 
     private void MoneyCheck()
     {
+        ShowContinueOrCancelButtons(false);
         foodselectors.HideSelectors();
 
         bool emptydelivery = true;
@@ -212,7 +196,7 @@ public class Distributionmanager : MonoBehaviour
     {
         foodselectors.ShowHideMoneySelect(true);
         foodselectors.ChangeMaxMoney(npcDTO.Money);
-        ChangeButtonFunction(3);
+        ChangeConfirmButtons(true);
     }
 
     private void ConfirmBeforeDelivery()
@@ -233,14 +217,14 @@ public class Distributionmanager : MonoBehaviour
         }
 
         selecttext.text += "\n\n For " + foodselectors.GetMoney() + " coins?";
-        ChangeButtonFunction(4);
+        ChangeConfirmButtons(false);
     }
 
     private void ConfirmEmptyDelivery()
     {
         selecttext.gameObject.SetActive(true);
         selecttext.text = "Are you sure you don't want to give them anything?";
-        ChangeButtonFunction(4);
+        ChangeConfirmButtons(false);
     }
 
     private void SendDelivery()
@@ -255,8 +239,6 @@ public class Distributionmanager : MonoBehaviour
             intended.Add(new Request(value, order.FoodType, order.Quality)); // quality kept for DTO consistency
             
         }
-
-        ChangeButtonFunction(1);
 
         List<Request> delivered = new();
         bool deliveredAnything = false;
@@ -282,7 +264,7 @@ public class Distributionmanager : MonoBehaviour
         {
             selecttext.text = "You have no food in those categories.";
             foodselectors.HideSelectors();
-            EnableDisableConfirmButton(true);
+            ShowContinueOrCancelButtons(true);
             spawner.Despawn();
             return;
         }
@@ -296,7 +278,7 @@ public class Distributionmanager : MonoBehaviour
         ShowResults(result);
 
         foodselectors.HideSelectors();
-        EnableDisableConfirmButton(true);
+        ShowContinueOrCancelButtons(true);
         spawner.Despawn();
     }
 
@@ -304,7 +286,7 @@ public class Distributionmanager : MonoBehaviour
     {
         bool success = GetCurrentNPC();
         if (success)
-            EnableDisableConfirmButton(false);
+            ShowContinueOrCancelButtons(false);
         else
             continueButton.onClick.RemoveAllListeners();
     }
