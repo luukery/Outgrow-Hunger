@@ -79877,6 +79877,82 @@ Transform:
   - {fileID: 2008451434}
   m_Father: {fileID: 918860970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4636517050302601135
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2844680091601009889, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_Name
+      value: TutorialPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919451223783055379, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.71791
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919451223783055379, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.41689
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919451223783055379, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919451223783055379, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919451223783055379, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919451223783055379, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919451223783055379, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919451223783055379, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919451223783055379, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919451223783055379, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760917152750317442, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760917152750317442, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: 'dialog.lines.Array.data[0]'
+      value: "\u201CYou\u2019ve waded your way through the markets, well done! Now
+        it\u2019s time to get back to our village. Routes can be long and winding,
+        so choosing the right paths is critical. Longer routes are usually safer,
+        but food won\u2019t last forever.\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760917152750317442, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
+      propertyPath: 'dialog.lines.Array.data[1]'
+      value: "\u201CBetween our village and here are five intersections. Here you
+        will need to look at your map and choose a road. You should be able to scout
+        ahead and see what events might happen on the roads. If you\u2019re lucky
+        the events wont affect you, but usually you\u2019ll lose time, or worse,
+        food and money.\u201D "
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 523b7493076a7474eb8e21542fefe3f0, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -79889,3 +79965,4 @@ SceneRoots:
   - {fileID: 1341252314}
   - {fileID: 588936575}
   - {fileID: 1135450659}
+  - {fileID: 4636517050302601135}
