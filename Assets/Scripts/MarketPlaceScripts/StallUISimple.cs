@@ -131,11 +131,35 @@ public class StallUISimple : MonoBehaviour
         if (index < 0 || index >= stall.currentStock.Count) return;
 
         var item = stall.currentStock[index];
-        if (playerCoins >= item.price)
+        
+        // Check if player has enough coins (use Wallet if available, fallback to local playerCoins)
+        int availableCoins = Wallet.Instance != null ? Wallet.Instance.Money : playerCoins;
+        
+        if (availableCoins >= item.price)
         {
-            playerCoins -= item.price;
+            // Deduct coins from Wallet
+            if (Wallet.Instance != null)
+            {
+                Wallet.Instance.CanSpendMoney(item.price);
+            }
+            else
+            {
+                playerCoins -= item.price;
+            }
+            
+            // Add item to Inventory
+            if (Inventory.Instance != null)
+            {
+                Food purchasedFood = item.ToFood();
+                Inventory.Instance.TryAddFoodToInventory(purchasedFood);
+                Debug.Log($"[StallUI] Gekocht: {item.name} voor {item.price} coins. Toegevoegd aan Inventory.");
+            }
+            else
+            {
+                Debug.LogWarning("[StallUI] Inventory.Instance is null!");
+            }
+            
             UpdateCoins();
-            Debug.Log($"[StallUI] Gekocht: {item.name} voor {item.price} coins");
 
             if (index < slots.Count && slots[index].buyButton != null)
                 StartCoroutine(FlashButton(slots[index].buyButton));
@@ -148,7 +172,8 @@ public class StallUISimple : MonoBehaviour
 
     void UpdateCoins()
     {
-        if (coinsText) coinsText.text = $"Coins: {playerCoins}";
+        int displayCoins = Wallet.Instance != null ? Wallet.Instance.Money : playerCoins;
+        if (coinsText) coinsText.text = $"Coins: {displayCoins}";
     }
 
     IEnumerator FlashButton(Button b)

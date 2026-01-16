@@ -32,6 +32,38 @@ public class ProductCatalogSO : ScriptableObject
         return pool;
     }
 
+    /// <summary>
+    /// Get all unique FoodTypes available in the catalog based on StallType mapping.
+    /// </summary>
+    public List<FoodType.Type> GetAvailableFoodTypes()
+    {
+        var availableTypes = new List<FoodType.Type>();
+        foreach (var p in products)
+        {
+            FoodType.Type foodType = StallTypeToFoodType(p.type);
+            if (!availableTypes.Contains(foodType))
+                availableTypes.Add(foodType);
+        }
+        return availableTypes;
+    }
+
+    /// <summary>
+    /// Map StallType to corresponding FoodType.
+    /// </summary>
+    public FoodType.Type StallTypeToFoodType(StallType stall)
+    {
+        return stall switch
+        {
+            StallType.Bakery => FoodType.Type.Bakery,
+            StallType.Fish => FoodType.Type.Fish,
+            StallType.Vegetables => FoodType.Type.Vegetable,
+            StallType.Fruit => FoodType.Type.Fruit,
+            StallType.Dairy => FoodType.Type.Dairy,
+            StallType.Spices => FoodType.Type.Spices,
+            StallType.Meat => FoodType.Type.Meat,
+        };
+    }
+
     public List<ProductDef> PickRandomUnique(List<ProductDef> pool, int count, bool weighted)
     {
         var result = new List<ProductDef>();

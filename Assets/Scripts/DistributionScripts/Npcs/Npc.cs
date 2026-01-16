@@ -13,6 +13,7 @@ public class NPC : MonoBehaviour
     public int Money;
 
     [SerializeField] public NpcDialogue dialogue;
+    [SerializeField] private ProductCatalogSO catalog;
 
     private readonly DeliveryResultService deliveryService = new();
     private System.Random rng;
@@ -27,6 +28,12 @@ public class NPC : MonoBehaviour
     {
         return deliveryService.Transaction(Order, Needs, playerInput, dialogue);
     }
+
+    public void SetCatalog(ProductCatalogSO newCatalog)
+    {
+        catalog = newCatalog;
+    }
+
     public NpcInfoDTO GetInfoDTO()
     {
         List<Request> needsCopy = new(Needs.Count);
@@ -63,19 +70,23 @@ public class NPC : MonoBehaviour
 
     void GenerateNeeds(CategoryConfig config)
     {
-        FoodType.Type[] foodTypes = (FoodType.Type[])Enum.GetValues(typeof(FoodType.Type));
+        // Get available FoodTypes from catalog, or use all if catalog not set
+        List<FoodType.Type> availableTypes = (catalog != null) 
+            ? catalog.GetAvailableFoodTypes() 
+            : new List<FoodType.Type>((FoodType.Type[])Enum.GetValues(typeof(FoodType.Type)));
+        
         Food.Quality[] qualities = (Food.Quality[])Enum.GetValues(typeof(Food.Quality));
 
-        List<FoodType.Type> availableTypes = foodTypes.ToList();
-
         int amountOfdistinctTypes = rng.Next(config.MinDistinctItems, config.MaxDistinctItems + 1);
+        // Clamp to available types
+        amountOfdistinctTypes = Mathf.Min(amountOfdistinctTypes, availableTypes.Count);
 
         for (int i = 0; i < amountOfdistinctTypes; i++)
         {
             int type = rng.Next(0, availableTypes.Count);
 
             FoodType.Type selectedType = availableTypes[type];
-            availableTypes.Remove(availableTypes[type]);
+            availableTypes.RemoveAt(type);
 
             int amount = rng.Next(config.MinNeedAmount, config.MaxNeedAmount + 1);
             Food.Quality quality = Food.Quality.Good;       //temporary
@@ -86,12 +97,16 @@ public class NPC : MonoBehaviour
 
     void GenerateOrder(CategoryConfig config)
     {
-        FoodType.Type[] foodTypes = (FoodType.Type[])Enum.GetValues(typeof(FoodType.Type));
+        // Get available FoodTypes from catalog, or use all if catalog not set
+        List<FoodType.Type> availableTypes = (catalog != null) 
+            ? catalog.GetAvailableFoodTypes() 
+            : new List<FoodType.Type>((FoodType.Type[])Enum.GetValues(typeof(FoodType.Type)));
+        
         Food.Quality[] qualities = (Food.Quality[])Enum.GetValues(typeof(Food.Quality));
 
-        List<FoodType.Type> availableTypes = foodTypes.ToList();
-
         int amountOfDistinctTypes = rng.Next(config.MinDistinctItems, config.MaxDistinctItems + 1);
+        // Clamp to available types
+        amountOfDistinctTypes = Mathf.Min(amountOfDistinctTypes, availableTypes.Count);
 
         for (int i = 0; i < amountOfDistinctTypes; i++)
         {

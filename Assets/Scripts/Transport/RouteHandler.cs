@@ -331,7 +331,20 @@ public class RouteHandler : MonoBehaviour
 
         if (Inventory.Instance != null)
         {
-            Inventory.Instance.TryAddFoodToInventory(new Food(FoodType.Type.Water, Food.Quality.Medium, amount, "Supplies", null));
+            // Get a random food type from available catalog
+            ProductCatalogSO catalog = Resources.Load<ProductCatalogSO>("ProductCatalog");
+            FoodType.Type randomFoodType = FoodType.Type.Meat; // default fallback
+            
+            if (catalog != null)
+            {
+                List<FoodType.Type> availableTypes = catalog.GetAvailableFoodTypes();
+                if (availableTypes.Count > 0)
+                {
+                    randomFoodType = availableTypes[Random.Range(0, availableTypes.Count)];
+                }
+            }
+            
+            Inventory.Instance.TryAddFoodToInventory(new Food(randomFoodType, Food.Quality.Medium, amount, "Supplies"));
         }
         else
         {
@@ -488,10 +501,6 @@ public class RouteHandler : MonoBehaviour
             ApplyFoodLoss(route.EventData.FoodLoss);
             ApplyGoldLoss(route.EventData.GoldLoss);
             ApplyFoodGain(route.EventData.FoodGain);
-
-            ApplyFoodLoss(occurredEvent.FoodLoss);
-            ApplyGoldLoss(occurredEvent.GoldLoss);
-            ApplyFoodGain(occurredEvent.FoodGain);
         }
 
 

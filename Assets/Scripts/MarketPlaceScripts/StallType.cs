@@ -6,6 +6,5 @@ public enum StallType
     Fruit,         // Fruitkraam
     Dairy,         // Zuivelkraam
     Spices,        // Zout- & Kruidkraam
-    EggsAndBeans,  // Eieren & Peulvruchtenkraam
     Meat           // Vleeskraam
 }

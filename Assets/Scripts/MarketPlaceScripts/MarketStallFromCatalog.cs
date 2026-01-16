@@ -78,9 +78,17 @@ public class MarketStallFromCatalog : MonoBehaviour
         foreach (var p in picks)
         {
             int price = Random.Range(p.minPrice, p.maxPrice + 1);
-            currentStock.Add(new MarketStockItem { name = p.name, icon = p.icon, price = price });
-            //currentStock.Add(new MarketStockItem { name = p.name, icon = p.icon, price = price, foodType = p.foodType, foodQuality = Food.Quality.Medium, size = 1 });
-
+            currentStock.Add(new MarketStockItem 
+            { 
+                name = p.name, 
+                icon = p.icon, 
+                price = price,
+                foodType = catalog.StallTypeToFoodType(p.type),
+                foodQuality = Food.Quality.Medium,
+                size = 1,
+                isSpoilable = p.isSpoilable,
+                spoilTimeInHours = p.spoilTimeInHours
+            });
         }
     }
 }

@@ -29035,7 +29035,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: What you see here was harvested by hand. No two days are exactly the
+    same. That is the nature of fresh produce. 
 --- !u!114 &1677397366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31897,7 +31898,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: 
+  stallStory: What is available depends on today's supply. Each piece is carefully
+    prepared. Choose what fits your needs. 
 --- !u!114 &1939262827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32692,7 +32694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7c70253ec5854458a155b10ea7a6dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wallet
-  Money: 50
+  Money: 100
 --- !u!4 &2096714975
 Transform:
   m_ObjectHideFlags: 0

@@ -39,6 +39,13 @@ public class SpawnerScript : MonoBehaviour
         GameObject npcObj = Instantiate(NPCs[index], pos, Quaternion.identity);
         NPC npc = npcObj.GetComponent<NPC>();
 
+        // ✅ Assign catalog to NPC so it only requests available food types
+        if (npc != null)
+        {
+            ProductCatalogSO catalog = Resources.Load<ProductCatalogSO>("ProductCatalog");
+            if (catalog != null)
+                npc.SetCatalog(catalog);
+        }
 
         NPCSpriteController sprite = npcObj.GetComponent<NPCSpriteController>();
         if (sprite != null)

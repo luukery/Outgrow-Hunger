@@ -137,6 +137,7 @@ public class Distributionmanager : MonoBehaviour
         ShowContinueOrCancelButtons(true);
         ChangeContinueButton(true);
         selecttext.gameObject.SetActive(false);
+        foodselectors.ShowHideMoneySelect(false);
         foodselectors.ResetValues();
 
         for (int index = 0; index < npcDTO.Order.Count && index < foodselectors.SelectorCount; index++)
@@ -149,16 +150,13 @@ public class Distributionmanager : MonoBehaviour
             TextMeshProUGUI foodtype = selector.transform.Find("TempFoodType").GetComponent<TextMeshProUGUI>();
 
             Request order = npcDTO.Order[index];
-            Request need = npcDTO.Needs.Find(n => n.FoodType == order.FoodType);
-
-            int needAmount = need != null ? need.Amount : 0;
 
             int available = Inventory.Instance != null
                 ? Inventory.Instance.GetAvailableUnits(order.FoodType) // ✅ TYPE ONLY
                 : 0;
 
-            // ✅ You can only give what they need and what you have
-            int maxGive = Mathf.Min(needAmount, available);
+            // ✅ You can only give what they ordered and what you have
+            int maxGive = Mathf.Min(order.Amount, available);
 
             // disable + / - if 0
             foodselectors.SetMaxForSelector(index, maxGive);

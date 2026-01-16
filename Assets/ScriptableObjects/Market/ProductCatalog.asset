@@ -225,7 +225,7 @@ MonoBehaviour:
     icon: {fileID: 4646649027328027380, guid: a43ccc382ea15c54cba559274d60945d, type: 3}
     minPrice: 2
     maxPrice: 4
-    type: 7
+    type: 0
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 96
