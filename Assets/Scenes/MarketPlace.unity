@@ -28803,7 +28803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MarketStallFromCatalog
   catalog: {fileID: 11400000, guid: e8fbb4ffb65298f429f1f03eaa7f22b2, type: 2}
-  stallType: 7
+  stallType: 6
   minItems: 1
   maxItems: 2
   useWeightedRandom: 0
@@ -32739,7 +32739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MarketStallFromCatalog
   catalog: {fileID: 11400000, guid: e8fbb4ffb65298f429f1f03eaa7f22b2, type: 2}
-  stallType: 7
+  stallType: 6
   minItems: 1
   maxItems: 2
   useWeightedRandom: 0
