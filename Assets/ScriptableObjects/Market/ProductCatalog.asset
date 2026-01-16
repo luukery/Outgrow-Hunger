@@ -201,7 +201,7 @@ MonoBehaviour:
     icon: {fileID: -965513180393346931, guid: 6c3b84e8a51dd43478c6618858744a9c, type: 3}
     minPrice: 3
     maxPrice: 6
-    type: 7
+    type: 6
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 48
@@ -209,7 +209,7 @@ MonoBehaviour:
     icon: {fileID: -2110104355339441885, guid: 652af0f0a434c294ea6c20da2a3d5d40, type: 3}
     minPrice: 3
     maxPrice: 6
-    type: 7
+    type: 6
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 48
@@ -217,7 +217,7 @@ MonoBehaviour:
     icon: {fileID: 5336855417275088078, guid: 1cab5a667ea90214a8f17b728c71a893, type: 3}
     minPrice: 3
     maxPrice: 5
-    type: 7
+    type: 6
     weight: 0
     isSpoilable: 1
     spoilTimeInHours: 36

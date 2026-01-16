@@ -1589,12 +1589,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490433189}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.71791, y: -3.41689, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 713713405}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &496186345
 GameObject:
@@ -23459,7 +23459,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1190696760}
-  - {fileID: 490433191}
   - {fileID: 837258298}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24087,6 +24086,67 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &837258297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837258298}
+  - component: {fileID: 837258299}
+  m_Layer: 0
+  m_Name: TutorialTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &837258298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837258297}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 713713405}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &837258299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837258297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbfc1b675d325546b1540a2139c5b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialTrigger
+  dialog:
+    lines:
+    - "\u201CGoodmorning son, the day is here. It\u2019s finally time for you to
+      make your first run to the foodmarket. My body isn\u2019t what it used to be
+      so the time for you to start taking over has come.\u201D "
+    - "\u201COur village has relied on our service for generations. We travel to
+      distant markets and make sure our village is well fed. You\u2019ll learn it\u2019s
+      hard to give everyone exactly what they want, so you\u2019ll have to make the
+      best of what you can get.\u201D "
+    - "\u201CThe first market you\u2019ll go to is a bit away. Once you\u2019re there,
+      there will be stalls selling all sorts of foods. You\u2019ll only be able to
+      carry a limited supply of stock, so choose carefully.\u201D"
+    - "\u201CEach salesman has his own goods to sell you, all with different prices.
+      Some food is of better quality and other foods spoil slowly. Striking a balance
+      and picking what you deem best is your goal.\u201D"
+  dialogManager: {fileID: 490433190}
+  tutorialID: Market_Tutorial01
 --- !u!1 &864224531
 GameObject:
   m_ObjectHideFlags: 0
@@ -24230,67 +24290,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &837258297
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 837258298}
-  - component: {fileID: 837258299}
-  m_Layer: 0
-  m_Name: TutorialTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &837258298
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837258297}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 713713405}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &837258299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837258297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dbfc1b675d325546b1540a2139c5b23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TutorialTrigger
-  dialog:
-    lines:
-    - "\u201CGoodmorning son, the day is here. It\u2019s finally time for you to
-      make your first run to the foodmarket. My body isn\u2019t what it used to be
-      so the time for you to start taking over has come.\u201D "
-    - "\u201COur village has relied on our service for generations. We travel to
-      distant markets and make sure our village is well fed. You\u2019ll learn it\u2019s
-      hard to give everyone exactly what they want, so you\u2019ll have to make the
-      best of what you can get.\u201D "
-    - "\u201CThe first market you\u2019ll go to is a bit away. Once you\u2019re there,
-      there will be stalls selling all sorts of foods. You\u2019ll only be able to
-      carry a limited supply of stock, so choose carefully.\u201D"
-    - "\u201CEach salesman has his own goods to sell you, all with different prices.
-      Some food is of better quality and other foods spoil slowly. Striking a balance
-      and picking what you deem best is your goal.\u201D"
-  dialogManager: {fileID: 490433190}
-  tutorialID: Market_Tutorial01
 --- !u!1 &899892516
 GameObject:
   m_ObjectHideFlags: 0
@@ -29631,8 +29630,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: What you see here was harvested by hand. No two days are exactly the
-    same. That is the nature of fresh produce. 
+  stallStory: 'What you see here was harvested by hand. No two days are exactly the
+    same. That is the nature of fresh produce. '
 --- !u!114 &1677397366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32571,8 +32570,8 @@ MonoBehaviour:
   onStockChanged:
     m_PersistentCalls:
       m_Calls: []
-  stallStory: What is available depends on today's supply. Each piece is carefully
-    prepared. Choose what fits your needs. 
+  stallStory: 'What is available depends on today''s supply. Each piece is carefully
+    prepared. Choose what fits your needs. '
 --- !u!114 &1939262827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33367,7 +33366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7c70253ec5854458a155b10ea7a6dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wallet
-  Money: 100
+  Money: 50
 --- !u!4 &2096714975
 Transform:
   m_ObjectHideFlags: 0
@@ -33402,4 +33401,5 @@ SceneRoots:
   - {fileID: 1507001608}
   - {fileID: 1426288905}
   - {fileID: 864224534}
+  - {fileID: 490433191}
   - {fileID: 713713405}

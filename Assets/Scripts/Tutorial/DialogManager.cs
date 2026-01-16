@@ -11,21 +11,37 @@ public class DialogManager : MonoBehaviour
     private string[] lines;
     private int index;
 
+    void Awake()
+    {
+        Debug.Log("DialogManager Awake - dialogBox assigned: " + (dialogBox != null));
+    }
+
     void Update()
     {
-        if (dialogBox.activeSelf && Input.GetKeyDown(KeyCode.Space))
+        // Check if we're currently displaying dialog (lines is not null and we have content)
+        if (lines != null && lines.Length > 0)
         {
-            NextLine();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                NextLine();
+            }
         }
     }
 
     public void StartDialog(string[] dialogLines)
     {
+        Debug.Log("StartDialog called with " + dialogLines.Length + " lines");
         lines = dialogLines;
         index = 0;
-        dialogBox.SetActive(true);
-        background.SetActive(true);
-        dialogText.text = lines[index];
+        Debug.Log("DialogBox null? " + (dialogBox == null));
+        if (dialogBox != null)
+        {
+            dialogBox.SetActive(true);
+            Debug.Log("DialogBox activated");
+        }
+        if (background != null) background.SetActive(true);
+        if (dialogText != null && lines.Length > 0) dialogText.text = lines[index];
+        Debug.Log("Dialog started with " + lines.Length + " lines");
     }
 
     void NextLine()
@@ -33,12 +49,15 @@ public class DialogManager : MonoBehaviour
         index++;
         if (index < lines.Length)
         {
-            dialogText.text = lines[index];
+            if (dialogText != null) dialogText.text = lines[index];
+            Debug.Log("Dialog line " + index);
         }
         else
         {
-            dialogBox.SetActive(false);
-            background.SetActive(false);
+            if (dialogBox != null) dialogBox.SetActive(false);
+            if (background != null) background.SetActive(false);
+            lines = null; // Clear the lines array so Update stops listening
+            Debug.Log("Dialog finished");
         }
     }
 }
