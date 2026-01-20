@@ -1266,6 +1266,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 439023714}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &439023716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1444,6 +1446,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 455251863}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &455251865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23126,6 +23130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 640074775}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &640074777
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23685,6 +23691,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 741841239}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &741841241
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26129,6 +26137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 1048342417}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &1048342419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27820,6 +27830,8 @@ MonoBehaviour:
   confirmCanvas: {fileID: 1426288901}
   confirmButton: {fileID: 1296328396}
   cancelButton: {fileID: 1290872783}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
   transportSceneName: TransportLevel
 --- !u!61 &1387966850
 BoxCollider2D:
@@ -27931,6 +27943,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 1417182942}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &1417182940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28828,6 +28842,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 1568611177}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &1568611179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29165,6 +29181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 1603437433}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &1603437435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29646,6 +29664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 1677397365}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &1677397367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29982,6 +30002,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 1689885192}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &1689885194
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32408,6 +32430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 1936554345}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &1936554347
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32586,6 +32610,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 1939262826}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &1939262828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32764,6 +32790,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 1967051622}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &1967051624
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33232,6 +33260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StallInteractable
   stall: {fileID: 2089251506}
   stallUIPanel: {fileID: 731126623}
+  tutorialDialogBox: {fileID: 1826959722}
+  tutorialBackground: {fileID: 516177149}
 --- !u!61 &2089251508
 BoxCollider2D:
   m_ObjectHideFlags: 0
