@@ -595,13 +595,14 @@ public class RouteHandler : MonoBehaviour
         UpdateCartPosition();
 
         if (legsCompleted >= legsPerJourney)
-        {
-            ShowFinalSummary();
-        }
-        else
-        {
-            RouteSetUp();
-        }
+    {
+        ShowFinalSummary();
+    }
+    else
+    {
+        StartCoroutine(ShowLegLoadingThenContinue());
+    }
+
     }
 
     void ShowFinalSummary()
@@ -657,6 +658,23 @@ public class RouteHandler : MonoBehaviour
             });
         }
     }
+
+    IEnumerator ShowLegLoadingThenContinue()
+{
+    // next split index should equal legsCompleted (since we already incremented)
+    int nextLegIndex = legsCompleted;
+
+    // show overlay (map + arrow)
+    LoadingManager.Instance.ShowTransportOverlay(nextLegIndex);
+
+    // Wait until the loading scene is unloaded (simple check)
+    while (UnityEngine.SceneManagement.SceneManager.GetSceneByName("Loading Screen").isLoaded)
+        yield return null;
+
+    // now continue journey
+    RouteSetUp();
+}
+
 
     // ------------------ EVENT ICON & HIGHLIGHT HELPERS ------------------
     void ShowIconsForCurrentRoutes()
