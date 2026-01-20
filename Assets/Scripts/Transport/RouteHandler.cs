@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
+// using System.Diagnostics;
+// using System.Numerics;
 
 public class RouteHandler : MonoBehaviour
 {
@@ -46,6 +48,13 @@ public class RouteHandler : MonoBehaviour
     public GameObject cartIcon;
     private Vector3 cartStartPosition;
     private const float DOT_SPACING = 0.7f;
+
+    [Header("Cart Sprite Animation Settings") ] 
+    public Transform cartSprite;
+    public List<Vector2> pathPoints;
+    public float speed = 3f;
+
+    private bool isMoving = false;
 
     public static RouteHandler Instance { get; private set; }
 
@@ -425,6 +434,12 @@ public class RouteHandler : MonoBehaviour
             if (!journeyFinished)
                 RouteSetUp();
         }
+
+        if (Keyboard.current != null && Keyboard.current.dKey.wasPressedThisFrame && !isMoving)
+        {
+            Debug.Log("test");
+            StartCoroutine(MoveCartAlongShortRoute());
+        }
     }
 
     // ------------------ MAIN SETUP ------------------
@@ -790,5 +805,28 @@ public class RouteHandler : MonoBehaviour
                 cartRect.localPosition = newPosition;
             }
         }
+    }
+
+    IEnumerator MoveCartAlongShortRoute()
+    {
+        isMoving = true;
+
+        foreach (Vector2 target in pathPoints)
+        {
+            while ((Vector2)cartSprite.position != target)
+            {
+                cartSprite.position = Vector2.MoveTowards(
+                    cartSprite.position,
+                    target,
+                    speed * Time.deltaTime
+                );
+
+                Debug.Log(cartSprite.position);
+
+                yield return null; // wait for next frame
+            }
+        }
+
+        isMoving = false;
     }
 }
