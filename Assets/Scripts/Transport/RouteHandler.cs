@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
+// using System.Numerics;
 // using System.Diagnostics;
 // using System.Numerics;
 
@@ -51,10 +52,13 @@ public class RouteHandler : MonoBehaviour
 
     [Header("Cart Sprite Animation Settings") ] 
     public Transform cartSprite;
-    public List<Vector2> pathPoints;
+    public List<Vector2> shortRoutePathPoints;
+    public List<Vector2> mediumRoutePathPoints;
+    public List<Vector2> longRoutePathPoints;
     public float speed = 3f;
 
     private bool isMoving = false;
+    private Coroutine moveCoroutine;
 
     public static RouteHandler Instance { get; private set; }
 
@@ -438,7 +442,7 @@ public class RouteHandler : MonoBehaviour
         if (Keyboard.current != null && Keyboard.current.dKey.wasPressedThisFrame && !isMoving)
         {
             Debug.Log("test");
-            StartCoroutine(MoveCartAlongShortRoute());
+            moveCoroutine = StartCoroutine(MoveCartAlongShortRoute());
         }
     }
 
@@ -502,6 +506,7 @@ public class RouteHandler : MonoBehaviour
     {
         if (!CanSelectRoutes) return;
 
+        moveCoroutine = StartCoroutine(MoveCartAlongShortRoute());
         float legTime = route.TravelTime;
 
         int roll = Random.Range(1, 101);
@@ -528,8 +533,15 @@ public class RouteHandler : MonoBehaviour
             spoiledFoodLastLeg = SpoilageManager.Instance.AdvanceTravelTime(legTime);
             spoiledFoodThisJourney += spoiledFoodLastLeg;
         }
+        
+        // Wait a second before showing popup
+        StartCoroutine(ShowPopupAfterDelay());
 
-        ShowInfoPopup(route, legTime, eventHappened, occurredEvent);
+        IEnumerator ShowPopupAfterDelay()
+        {
+            yield return new WaitForSeconds(2.5f);
+            ShowInfoPopup(route, legTime, eventHappened, occurredEvent);
+        }    
     }
 
 
@@ -608,6 +620,9 @@ public class RouteHandler : MonoBehaviour
             legsCompleted++;
 
         UpdateCartPosition();
+        ResetCartSpritePosition();
+        StopCoroutine(moveCoroutine);
+        moveCoroutine = null;
 
         if (legsCompleted >= legsPerJourney)
         {
@@ -811,7 +826,7 @@ public class RouteHandler : MonoBehaviour
     {
         isMoving = true;
 
-        foreach (Vector2 target in pathPoints)
+        foreach (Vector2 target in shortRoutePathPoints)
         {
             while ((Vector2)cartSprite.position != target)
             {
@@ -821,12 +836,18 @@ public class RouteHandler : MonoBehaviour
                     speed * Time.deltaTime
                 );
 
-                Debug.Log(cartSprite.position);
-
                 yield return null; // wait for next frame
             }
         }
 
         isMoving = false;
+    }
+
+    void ResetCartSpritePosition()
+    {
+        if (cartSprite != null && shortRoutePathPoints.Count > 0)
+        {
+            cartSprite.position = new Vector3(-8.5f, -0.3f, cartSprite.position.z);
+        }
     }
 }

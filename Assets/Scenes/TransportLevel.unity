@@ -24658,11 +24658,13 @@ MonoBehaviour:
   longRoadClickable: {fileID: 1712125522}
   cartIcon: {fileID: 108114463}
   cartSprite: {fileID: 1632708644}
-  pathPoints:
+  shortRoutePathPoints:
   - {x: -5.75, y: -0.3}
   - {x: -5.75, y: 0.5}
   - {x: -0.15, y: 0.5}
-  speed: 2
+  mediumRoutePathPoints: []
+  longRoutePathPoints: []
+  speed: 1
 --- !u!4 &690659301
 Transform:
   m_ObjectHideFlags: 0
@@ -48587,7 +48589,7 @@ Transform:
   m_GameObject: {fileID: 1285298917}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -54310,7 +54312,7 @@ Transform:
   m_GameObject: {fileID: 1429439557}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -60976,9 +60978,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -8178668466912647886, guid: 1ed9776b62882f74f8725e0a60106616, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
