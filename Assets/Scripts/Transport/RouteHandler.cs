@@ -442,7 +442,7 @@ public class RouteHandler : MonoBehaviour
         if (Keyboard.current != null && Keyboard.current.dKey.wasPressedThisFrame && !isMoving)
         {
             Debug.Log("test");
-            moveCoroutine = StartCoroutine(MoveCartAlongShortRoute());
+            moveCoroutine = StartCoroutine(MoveCartAlongRoute(0));
         }
     }
 
@@ -506,7 +506,7 @@ public class RouteHandler : MonoBehaviour
     {
         if (!CanSelectRoutes) return;
 
-        moveCoroutine = StartCoroutine(MoveCartAlongShortRoute());
+        moveCoroutine = StartCoroutine(MoveCartAlongRoute(routeIndex));
         float legTime = route.TravelTime;
 
         int roll = Random.Range(1, 101);
@@ -822,11 +822,19 @@ public class RouteHandler : MonoBehaviour
         }
     }
 
-    IEnumerator MoveCartAlongShortRoute()
+    IEnumerator MoveCartAlongRoute(int index)
     {
         isMoving = true;
 
-        foreach (Vector2 target in shortRoutePathPoints)
+        List<Vector2> pathPoints = index switch
+        {
+            0 => shortRoutePathPoints,
+            1 => mediumRoutePathPoints,
+            2 => longRoutePathPoints,
+            _ => shortRoutePathPoints
+        };
+
+        foreach (Vector2 target in pathPoints)
         {
             while ((Vector2)cartSprite.position != target)
             {
