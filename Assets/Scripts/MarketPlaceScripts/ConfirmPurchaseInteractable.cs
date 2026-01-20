@@ -82,6 +82,6 @@ public class ConfirmPurchaseInteractable : MonoBehaviour, IInteractable
         if (confirmCanvas != null)
             confirmCanvas.SetActive(false);
 
-        LoadingManager.Instance.LoadScene(transportSceneName);
+        LoadingManager.Instance.LoadTransportMap(transportSceneName, 0);
     }
 }
