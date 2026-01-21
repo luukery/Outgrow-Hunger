@@ -22,6 +22,7 @@ public class NPC : MonoBehaviour
     public AnimationClip idle;
     public AnimationClip walk;
     public string name;
+    [HideInInspector] public bool hasRetried;
     void OnEnable()
     {
         rng = new System.Random(Guid.NewGuid().GetHashCode());
@@ -163,7 +164,7 @@ public class NPC : MonoBehaviour
                 return new CategoryConfig(
                     minNeedAmount: 1,
                     maxNeedAmount: 3,
-                    minMoney: 0,
+                    minMoney: 2,
                     maxMoney: 5,
                     exactMatch: false,
                     qualityStrict: false,
