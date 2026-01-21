@@ -11,6 +11,7 @@ public class NPC : MonoBehaviour
     [SerializeField] private List<Request> Order = new();
 
     public int Money;
+    int paysPerItem;
 
     [SerializeField] public NpcDialogue dialogue;
     [SerializeField] private ProductCatalogSO catalog;
@@ -18,15 +19,41 @@ public class NPC : MonoBehaviour
     private readonly DeliveryResultService deliveryService = new();
     private System.Random rng;
 
+    public AnimationClip idle;
+    public AnimationClip walk;
+    public string name;
+    [HideInInspector] public bool hasRetried;
     void OnEnable()
     {
         rng = new System.Random(Guid.NewGuid().GetHashCode());
         GenerateProfile();
     }
 
-    public DeliveryResult Transaction(List<Request> playerInput)
+    public DeliveryResult Transaction(List<Request> playerInput, int askedAmount)
     {
-        return deliveryService.Transaction(Order, Needs, playerInput, dialogue);
+        if(FairPrice(playerInput, askedAmount))
+        {
+            return deliveryService.Transaction(Order, Needs, playerInput, dialogue);
+        }
+
+        DeliveryResult wrong = new DeliveryResult();
+        wrong.reaction = "I ain't paying for this";
+        return wrong;
+
+    }
+
+    public bool FairPrice(List<Request> playerInput, int askedAmount)
+    {
+        int givenAmount = 0;
+        for (int i = 0; i < playerInput.Count; i++)
+        {
+            givenAmount += playerInput[i].Amount;
+        }
+
+        int itemCap = givenAmount * paysPerItem;
+        int finalMaxSpend = Mathf.Min(Money, itemCap);
+
+        return askedAmount <= finalMaxSpend;
     }
 
     public void SetCatalog(ProductCatalogSO newCatalog)
@@ -130,18 +157,14 @@ public class NPC : MonoBehaviour
 
     CategoryConfig GetCategoryConfig()
     {
-        category = (NpcCategory)rng.Next(
-       0,
-       Enum.GetValues(typeof(NpcCategory)).Length
-   );
-
         switch (category)
         {
             case NpcCategory.Survival:
+                paysPerItem = 3;
                 return new CategoryConfig(
                     minNeedAmount: 1,
                     maxNeedAmount: 3,
-                    minMoney: 0,
+                    minMoney: 2,
                     maxMoney: 5,
                     exactMatch: false,
                     qualityStrict: false,
@@ -154,6 +177,7 @@ public class NPC : MonoBehaviour
                 );
 
             case NpcCategory.Precautious:
+                paysPerItem = 4;
                 return new CategoryConfig(
                     minNeedAmount: 4,
                     maxNeedAmount: 6,
@@ -170,6 +194,7 @@ public class NPC : MonoBehaviour
                 );
 
             case NpcCategory.ExactNeed:
+                paysPerItem = 5;
                 return new CategoryConfig(
                     minNeedAmount: 4,
                     maxNeedAmount: 6,
@@ -186,6 +211,7 @@ public class NPC : MonoBehaviour
                 );
 
             case NpcCategory.PreferenceDriven:
+                paysPerItem = 6;
                 return new CategoryConfig(
                     minNeedAmount: 4,
                     maxNeedAmount: 6,

@@ -10,7 +10,7 @@ public class Distributionmanager : MonoBehaviour
     public Canvas canvas;
 
     private Button confirmButton, cancelButton, continueButton;
-    private TextMeshProUGUI dialogue, selecttext;
+    private TextMeshProUGUI dialogue, selecttext, nameplate;
 
     private NPC currentNPC;
     private NpcInfoDTO npcDTO;
@@ -30,6 +30,7 @@ public class Distributionmanager : MonoBehaviour
 
         selecttext = canvas.transform.Find("SelectText").GetComponent<TextMeshProUGUI>();
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
+        nameplate = canvas.transform.Find("Nameplate").GetComponent<TextMeshProUGUI>();
 
         Transform returnTf = canvas.transform.Find("ReturnButton");
         if (returnTf != null)
@@ -81,6 +82,8 @@ public class Distributionmanager : MonoBehaviour
 
     private void DisplayOrder()
     {
+        currentNPC.gameObject.name = currentNPC.name;
+        nameplate.text = currentNPC.gameObject.name;
         dialogue.text = "I want the following: ";
         dialogue.text += "<b>";
         foreach (Request order in npcDTO.Order)
@@ -234,44 +237,62 @@ public class Distributionmanager : MonoBehaviour
         {
             int value = foodselectors.GetValue(index);
             Request order = npcDTO.Order[index];
-
-            intended.Add(new Request(value, order.FoodType, order.Quality)); // quality kept for DTO consistency
-            
+            intended.Add(new Request(value, order.FoodType, order.Quality));
         }
 
+        // 🔹 FASE 1: simulatie (NOG GEEN INVENTORY MUTATIE)
         List<Request> delivered = new();
-        bool deliveredAnything = false;
-
         Inventory inv = Inventory.Instance;
 
         for (int i = 0; i < intended.Count; i++)
         {
             Request r = intended[i];
-            int deliveredAmount = r.Amount;
 
-            if (inv != null && deliveredAmount > 0)
-            {
-                // ✅ TYPE ONLY removal
-                deliveredAmount = inv.RemoveUnits(r.FoodType, deliveredAmount);
-            }
+            int available = inv != null
+                ? inv.GetAvailableUnits(r.FoodType)
+                : 0;
 
+            int deliveredAmount = Mathf.Min(r.Amount, available);
             delivered.Add(new Request(deliveredAmount, r.FoodType, r.Quality));
-            if (deliveredAmount > 0) deliveredAnything = true;
         }
 
-        DeliveryResult result = currentNPC.Transaction(delivered);
+        DeliveryResult result = currentNPC.Transaction(delivered, foodselectors.GetMoney());
+        bool refused = result.reaction == "I ain't paying for this";
 
-        int earned = Mathf.Clamp(foodselectors.GetMoney(), 0, npcDTO.Money);
-        if (Wallet.Instance != null && earned > 0)
-            Wallet.Instance.AddMoney(earned);
+        if (!refused)
+        {
+            for (int i = 0; i < delivered.Count; i++)
+            {
+                Request r = delivered[i];
+                if (r.Amount > 0 && inv != null)
+                    inv.RemoveUnits(r.FoodType, r.Amount);
+            }
 
+            int earned = Mathf.Clamp(foodselectors.GetMoney(), 0, npcDTO.Money);
+            if (Wallet.Instance != null && earned > 0)
+                Wallet.Instance.AddMoney(earned);
+        }
+
+        if (refused && !currentNPC.hasRetried)
+        {
+            currentNPC.hasRetried = true;
+            dialogue.text = result.reaction;
+
+            FoodSelector();
+            ChangeContinueButton(true);
+            return;
+        }
+
+       
+        // 🚶 Acceptatie OF tweede weigering
         ShowResults(result);
-
         foodselectors.HideSelectors();
         ShowContinueOrCancelButtons(true);
         spawner.Despawn();
         ChangeContinueButton(false);
     }
+
+
 
     private void ContinueAfterInteraction()
     {
@@ -300,7 +321,15 @@ public class Distributionmanager : MonoBehaviour
             resulttext += "\n";
         }
 
-        resulttext += "Money earned: " + foodselectors.GetMoney() + " coins";
+        if (result.reaction != ("I ain't paying for this"))
+        {
+            resulttext += "Money earned: " + foodselectors.GetMoney() + " coins";
+        }
+        else
+        {
+            resulttext += "The customer walked away.";
+
+        }
         selecttext.text = resulttext;
 
         dialogue.text = result.reaction;

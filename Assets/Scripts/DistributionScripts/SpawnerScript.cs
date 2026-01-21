@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 
 public class SpawnerScript : MonoBehaviour
 {
-    public GameObject[] NPCs;
+    public List<GameObject> NPCs = new List<GameObject>();
+    private List<GameObject> availableNPCS = new List<GameObject>();
 
     private int queueSize = 5;
     public int maxNPCs = 8;
@@ -17,11 +19,11 @@ public class SpawnerScript : MonoBehaviour
 
     void Start()
     {
+        availableNPCS = new List<GameObject>(NPCs);
+        ShuffleNPCs();
         FillQueue();
+
     }
-
-    public NPCSprite[] npcSprites;
-
 
     private void FillQueue()
     {
@@ -33,13 +35,16 @@ public class SpawnerScript : MonoBehaviour
 
     private void SpawnAtSlot(int slotIndex)
     {
-        int index = Random.Range(0, NPCs.Length);
+        if (availableNPCS.Count == 0)
+            return;
+
+        GameObject npcPrefab = availableNPCS[0];
+        availableNPCS.RemoveAt(0);
+
         Vector3 pos = GetSlotPosition(slotIndex);
+        GameObject npcObj = Instantiate(npcPrefab, pos, Quaternion.identity);
 
-        GameObject npcObj = Instantiate(NPCs[index], pos, Quaternion.identity);
         NPC npc = npcObj.GetComponent<NPC>();
-
-        // ✅ Assign catalog to NPC so it only requests available food types
         if (npc != null)
         {
             ProductCatalogSO catalog = Resources.Load<ProductCatalogSO>("ProductCatalog");
@@ -47,16 +52,13 @@ public class SpawnerScript : MonoBehaviour
                 npc.SetCatalog(catalog);
         }
 
-        NPCSpriteController sprite = npcObj.GetComponent<NPCSpriteController>();
-        if (sprite != null)
-        {
-            int v = Random.Range(0, npcSprites.Length);
-            sprite.ApplySprite(npcSprites[v]);
-        }
+        NPCSpriteController spriteController = npcObj.GetComponent<NPCSpriteController>();
+        spriteController.ApplyAnimations(npc.idle, npc.walk);
 
         npcQueue.Add(npc);
         npcSpawnCount++;
     }
+
 
     private Vector3 GetSlotPosition(int index)
     {
@@ -118,4 +120,16 @@ public class SpawnerScript : MonoBehaviour
         // invoke for hiding UI, needed later
         // OnQueueAdvanceFinished?.Invoke();
     }
+    private void ShuffleNPCs()
+    {
+        for (int i = availableNPCS.Count - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+
+            GameObject temp = availableNPCS[i];
+            availableNPCS[i] = availableNPCS[j];
+            availableNPCS[j] = temp;
+        }
+    }
+
 }

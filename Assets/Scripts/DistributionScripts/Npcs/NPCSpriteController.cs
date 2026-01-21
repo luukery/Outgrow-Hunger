@@ -1,35 +1,32 @@
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Animator))]
 public class NPCSpriteController : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
-    private NPCSprite spriteProfile;
+    private Animator animator;
+    private AnimatorOverrideController overrideController;
 
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
-        if (spriteRenderer == null)
-            Debug.LogError("NPCSpriteController: Missing SpriteRenderer!");
+        overrideController =
+            new AnimatorOverrideController(animator.runtimeAnimatorController);
+
+        animator.runtimeAnimatorController = overrideController;
     }
 
-    public void ApplySprite(NPCSprite newSprite)
+    public void ApplyAnimations(AnimationClip idle, AnimationClip walk)
     {
-        if (newSprite == null)
-        {
-            Debug.LogError("NPCSpriteController: newSprite is NULL!");
-            return;
-        }
+        if (idle != null)
+            overrideController["NPC_Idle"] = idle;
 
-        spriteProfile = newSprite;
+        if (walk != null)
+            overrideController["NPC_Walk"] = walk;
+    }
 
-        if (spriteProfile.idleSprites == null || spriteProfile.idleSprites.Length == 0)
-        {
-            Debug.LogError($"NPCSpriteController: Sprite '{spriteProfile.name}' has NO idle sprites!");
-            return;
-        }
-
-        spriteRenderer.sprite = spriteProfile.idleSprites[0];
+    public void SetWalking(bool walking)
+    {
+        animator.SetBool("Walking", walking);
     }
 }
