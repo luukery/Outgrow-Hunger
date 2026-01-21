@@ -244,10 +244,10 @@ TextureImporter:
       name: Villager 01 48_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 576
-        width: 42
-        height: 192
+        x: 0
+        y: 720
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: Villager 01 48_1
       rect:
         serializedVersion: 2
-        x: 54
+        x: 48
         y: 720
-        width: 36
-        height: 45
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,10 +288,10 @@ TextureImporter:
       name: Villager 01 48_2
       rect:
         serializedVersion: 2
-        x: 102
+        x: 96
         y: 720
-        width: 36
-        height: 45
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,10 +310,10 @@ TextureImporter:
       name: Villager 01 48_3
       rect:
         serializedVersion: 2
-        x: 147
-        y: 336
-        width: 42
-        height: 432
+        x: 144
+        y: 720
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -332,10 +332,10 @@ TextureImporter:
       name: Villager 01 48_4
       rect:
         serializedVersion: 2
-        x: 198
-        y: 690
-        width: 36
-        height: 45
+        x: 192
+        y: 720
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,10 +354,10 @@ TextureImporter:
       name: Villager 01 48_5
       rect:
         serializedVersion: 2
-        x: 246
-        y: 687
-        width: 36
-        height: 45
+        x: 240
+        y: 720
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,10 +376,10 @@ TextureImporter:
       name: Villager 01 48_6
       rect:
         serializedVersion: 2
-        x: 294
-        y: 687
-        width: 36
-        height: 45
+        x: 288
+        y: 720
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,10 +398,10 @@ TextureImporter:
       name: Villager 01 48_7
       rect:
         serializedVersion: 2
-        x: 342
-        y: 690
-        width: 36
-        height: 45
+        x: 336
+        y: 720
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: Villager 01 48_8
       rect:
         serializedVersion: 2
-        x: 51
+        x: 0
         y: 672
-        width: 39
-        height: 45
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,10 +442,10 @@ TextureImporter:
       name: Villager 01 48_9
       rect:
         serializedVersion: 2
-        x: 99
+        x: 48
         y: 672
-        width: 39
-        height: 45
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -464,10 +464,10 @@ TextureImporter:
       name: Villager 01 48_10
       rect:
         serializedVersion: 2
-        x: 54
-        y: 624
-        width: 39
-        height: 45
+        x: 96
+        y: 672
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -486,10 +486,10 @@ TextureImporter:
       name: Villager 01 48_11
       rect:
         serializedVersion: 2
-        x: 102
-        y: 624
-        width: 39
-        height: 45
+        x: 144
+        y: 672
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,9 +509,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 615
-        width: 39
-        height: 42
+        y: 672
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -531,9 +531,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 612
-        width: 39
-        height: 42
+        y: 672
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -553,9 +553,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 612
-        width: 39
-        height: 42
+        y: 672
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,9 +575,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 615
-        width: 39
-        height: 42
+        y: 672
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -596,10 +596,10 @@ TextureImporter:
       name: Villager 01 48_16
       rect:
         serializedVersion: 2
-        x: 51
-        y: 336
-        width: 42
-        height: 285
+        x: 0
+        y: 624
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -618,10 +618,10 @@ TextureImporter:
       name: Villager 01 48_17
       rect:
         serializedVersion: 2
-        x: 102
-        y: 576
-        width: 36
-        height: 45
+        x: 48
+        y: 624
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -640,10 +640,10 @@ TextureImporter:
       name: Villager 01 48_18
       rect:
         serializedVersion: 2
-        x: 6
-        y: 528
-        width: 36
-        height: 45
+        x: 96
+        y: 624
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -662,10 +662,10 @@ TextureImporter:
       name: Villager 01 48_19
       rect:
         serializedVersion: 2
-        x: 102
-        y: 528
-        width: 36
-        height: 45
+        x: 144
+        y: 624
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -684,10 +684,10 @@ TextureImporter:
       name: Villager 01 48_20
       rect:
         serializedVersion: 2
-        x: 201
-        y: 519
-        width: 39
-        height: 42
+        x: 192
+        y: 624
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -706,10 +706,10 @@ TextureImporter:
       name: Villager 01 48_21
       rect:
         serializedVersion: 2
-        x: 249
-        y: 516
-        width: 39
-        height: 42
+        x: 240
+        y: 624
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -728,10 +728,10 @@ TextureImporter:
       name: Villager 01 48_22
       rect:
         serializedVersion: 2
-        x: 297
-        y: 516
-        width: 39
-        height: 42
+        x: 288
+        y: 624
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -750,10 +750,10 @@ TextureImporter:
       name: Villager 01 48_23
       rect:
         serializedVersion: 2
-        x: 345
-        y: 519
-        width: 39
-        height: 42
+        x: 336
+        y: 624
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -772,10 +772,10 @@ TextureImporter:
       name: Villager 01 48_24
       rect:
         serializedVersion: 2
-        x: 3
-        y: 480
-        width: 39
-        height: 45
+        x: 0
+        y: 576
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -794,10 +794,10 @@ TextureImporter:
       name: Villager 01 48_25
       rect:
         serializedVersion: 2
-        x: 99
-        y: 480
-        width: 39
-        height: 45
+        x: 48
+        y: 576
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -816,10 +816,10 @@ TextureImporter:
       name: Villager 01 48_26
       rect:
         serializedVersion: 2
-        x: 6
-        y: 432
-        width: 39
-        height: 45
+        x: 96
+        y: 576
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -838,10 +838,10 @@ TextureImporter:
       name: Villager 01 48_27
       rect:
         serializedVersion: 2
-        x: 102
-        y: 432
-        width: 39
-        height: 45
+        x: 144
+        y: 576
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -860,9 +860,9 @@ TextureImporter:
       name: Villager 01 48_28
       rect:
         serializedVersion: 2
-        x: 198
-        y: 417
-        width: 36
+        x: 192
+        y: 576
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -882,9 +882,9 @@ TextureImporter:
       name: Villager 01 48_29
       rect:
         serializedVersion: 2
-        x: 246
-        y: 414
-        width: 36
+        x: 240
+        y: 576
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -904,9 +904,9 @@ TextureImporter:
       name: Villager 01 48_30
       rect:
         serializedVersion: 2
-        x: 294
-        y: 414
-        width: 36
+        x: 288
+        y: 576
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -926,9 +926,9 @@ TextureImporter:
       name: Villager 01 48_31
       rect:
         serializedVersion: 2
-        x: 342
-        y: 417
-        width: 36
+        x: 336
+        y: 576
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -948,10 +948,10 @@ TextureImporter:
       name: Villager 01 48_32
       rect:
         serializedVersion: 2
-        x: 6
-        y: 384
-        width: 36
-        height: 45
+        x: 0
+        y: 528
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -970,10 +970,10 @@ TextureImporter:
       name: Villager 01 48_33
       rect:
         serializedVersion: 2
-        x: 102
-        y: 384
-        width: 36
-        height: 45
+        x: 48
+        y: 528
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -992,9 +992,9 @@ TextureImporter:
       name: Villager 01 48_34
       rect:
         serializedVersion: 2
-        x: 195
-        y: 336
-        width: 39
+        x: 96
+        y: 528
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1014,9 +1014,9 @@ TextureImporter:
       name: Villager 01 48_35
       rect:
         serializedVersion: 2
-        x: 291
-        y: 336
-        width: 45
+        x: 144
+        y: 528
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1036,9 +1036,9 @@ TextureImporter:
       name: Villager 01 48_36
       rect:
         serializedVersion: 2
-        x: 6
-        y: 192
-        width: 39
+        x: 192
+        y: 528
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1058,9 +1058,9 @@ TextureImporter:
       name: Villager 01 48_37
       rect:
         serializedVersion: 2
-        x: 102
-        y: 192
-        width: 39
+        x: 240
+        y: 528
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1080,9 +1080,9 @@ TextureImporter:
       name: Villager 01 48_38
       rect:
         serializedVersion: 2
-        x: 246
-        y: 192
-        width: 39
+        x: 288
+        y: 528
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1103,8 +1103,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 336
-        y: 192
-        width: 45
+        y: 528
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1124,10 +1124,10 @@ TextureImporter:
       name: Villager 01 48_40
       rect:
         serializedVersion: 2
-        x: 6
-        y: 144
-        width: 39
-        height: 45
+        x: 0
+        y: 480
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1146,10 +1146,10 @@ TextureImporter:
       name: Villager 01 48_41
       rect:
         serializedVersion: 2
-        x: 102
-        y: 144
-        width: 42
-        height: 45
+        x: 48
+        y: 480
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1168,10 +1168,10 @@ TextureImporter:
       name: Villager 01 48_42
       rect:
         serializedVersion: 2
-        x: 198
-        y: 96
-        width: 42
-        height: 45
+        x: 96
+        y: 480
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1190,10 +1190,10 @@ TextureImporter:
       name: Villager 01 48_43
       rect:
         serializedVersion: 2
-        x: 294
-        y: 96
-        width: 39
-        height: 45
+        x: 144
+        y: 480
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1212,10 +1212,10 @@ TextureImporter:
       name: Villager 01 48_44
       rect:
         serializedVersion: 2
-        x: 240
-        y: 48
-        width: 42
-        height: 45
+        x: 192
+        y: 480
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1234,10 +1234,10 @@ TextureImporter:
       name: Villager 01 48_45
       rect:
         serializedVersion: 2
-        x: 339
-        y: 48
-        width: 39
-        height: 45
+        x: 240
+        y: 480
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1256,10 +1256,10 @@ TextureImporter:
       name: Villager 01 48_46
       rect:
         serializedVersion: 2
-        x: 51
-        y: 0
-        width: 39
-        height: 45
+        x: 288
+        y: 480
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1278,10 +1278,10 @@ TextureImporter:
       name: Villager 01 48_47
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
-        width: 42
-        height: 45
+        x: 336
+        y: 480
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1292,6 +1292,710 @@ TextureImporter:
       bones: []
       spriteID: 7501a7202d5e59750800000000000000
       internalID: 6311203142977065047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56531db173eea004ca1ea73881dd4f60
+      internalID: 445456018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_49
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e5781718341c5409fcf20cf728a26d
+      internalID: 83475337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfe90a043fee354b9bc7b0d70af2dad
+      internalID: -1124573802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_51
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1ff75e08413a14e82bb2467aa6248d
+      internalID: -169952290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_52
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01f60e90d1f8464e879cfcd4c5c2050
+      internalID: -1384499359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_53
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2077f9a3eb2d88b42ad5381f9649220e
+      internalID: 466820119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_54
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c87a0e09c29004795c5bf84ad615ba
+      internalID: 298766590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_55
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5b2c4121668d849b713794666e9b77
+      internalID: -2130820098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097bdf1dd73adb44aad66b8ddd2e0c82
+      internalID: 667379290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_57
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823cd550839e496428733e3c7c12af39
+      internalID: 537654669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_58
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960b86b8e8636b14486bda0cc5c7e0af
+      internalID: -533879037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_59
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de57fd85db257414fa4a09fab4582c49
+      internalID: 1964601924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_60
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb8abdab7a29264b9e9b6fccc7cd3b4
+      internalID: -1833298515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_61
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46e01b90b2cf7747ab466270bf7db03
+      internalID: -1245882065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_62
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbb259e7ea62c84491db16407afe561
+      internalID: 622660248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_63
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556f089523252144dabc337c2fdbe6bf
+      internalID: -1361998256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_64
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420127e69ebcc1d4bb350e19f097f002
+      internalID: -572264267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_65
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86ced9587911d94498dc08d5a4fa40b
+      internalID: 1515796063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_66
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4028bc89d15c65439e610866e340da1
+      internalID: -1108388916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_67
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bcd67d24ff0aa46b6d9c9da1b1863f
+      internalID: 94883078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5170a4a468d428449907d7361f35b696
+      internalID: -1219954309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_69
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd46e105b59390c4fa52878e9ed0aaaa
+      internalID: -426980035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_70
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5259ccde4e23147af7ab573754f27b
+      internalID: -27889638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_71
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f07b54ca51f7248abc8ab13a5d5bcf
+      internalID: -1507029363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc477696266729348ae5cd4d1b98c894
+      internalID: -1755556004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_73
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e73399f88b734b45a9d32dc9493b975
+      internalID: 1001585511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_74
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8d0f977257e1d4e8a63f9648f9b669
+      internalID: 1429959071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_75
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860a6ac9a55cc094d924d13e86fb6f4b
+      internalID: -1250730269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_76
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094f44fe8c719b347875a4a445de9095
+      internalID: 1608553703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_77
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047b84aa8db858e44a8105029407b838
+      internalID: 1917493029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_78
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d9cab605f10324f8a0259ea2e073cb
+      internalID: -1370070394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Villager 01 48_79
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6210efc6c7afb434cb7a6f7bd139fc0a
+      internalID: 1712383171
       vertices: []
       indices: 
       edges: []
@@ -1310,7 +2014,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":48.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
     nameFileIdTable:
       Villager 01 48_0: 47607427273147401
       Villager 01 48_1: -3720318131132947284
@@ -1355,9 +2061,41 @@ TextureImporter:
       Villager 01 48_45: -7193994779761207145
       Villager 01 48_46: -5301956343429711668
       Villager 01 48_47: 6311203142977065047
+      Villager 01 48_48: 445456018
+      Villager 01 48_49: 83475337
       Villager 01 48_5: 3583301680432213599
+      Villager 01 48_50: -1124573802
+      Villager 01 48_51: -169952290
+      Villager 01 48_52: -1384499359
+      Villager 01 48_53: 466820119
+      Villager 01 48_54: 298766590
+      Villager 01 48_55: -2130820098
+      Villager 01 48_56: 667379290
+      Villager 01 48_57: 537654669
+      Villager 01 48_58: -533879037
+      Villager 01 48_59: 1964601924
       Villager 01 48_6: -8990795902408402363
+      Villager 01 48_60: -1833298515
+      Villager 01 48_61: -1245882065
+      Villager 01 48_62: 622660248
+      Villager 01 48_63: -1361998256
+      Villager 01 48_64: -572264267
+      Villager 01 48_65: 1515796063
+      Villager 01 48_66: -1108388916
+      Villager 01 48_67: 94883078
+      Villager 01 48_68: -1219954309
+      Villager 01 48_69: -426980035
       Villager 01 48_7: -2474096820813529590
+      Villager 01 48_70: -27889638
+      Villager 01 48_71: -1507029363
+      Villager 01 48_72: -1755556004
+      Villager 01 48_73: 1001585511
+      Villager 01 48_74: 1429959071
+      Villager 01 48_75: -1250730269
+      Villager 01 48_76: 1608553703
+      Villager 01 48_77: 1917493029
+      Villager 01 48_78: -1370070394
+      Villager 01 48_79: 1712383171
       Villager 01 48_8: -7543405262872613644
       Villager 01 48_9: -3233005642416745828
   mipmapLimitGroupName: 

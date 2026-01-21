@@ -58,9 +58,4 @@ public class DeliveryResultService
 
         return result;
     }
-
-    public string Reaction(DeliveryResult result)
-    {
-
-    } 
 }
