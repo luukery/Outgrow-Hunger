@@ -52,14 +52,17 @@ MonoBehaviour:
   Order: []
   Money: 0
   dialogue:
-    delivered: Thank you!
-    littleShortage: Not exactly what I asked but thanks
-    littleExcess: Thanks for the extras
-    bigExcess: Wow thanks a lot!!!
-    giveNothing: I see...
-    onlyWrongItems: That's not what I asked for
-    fewWrongItems: I needed something else but okay
-    allNeedsFilled: Thank you so much!!
+    delivered: This is how it should be
+    littleShortage: "This isn\u2019t complete"
+    littleExcess: This is unnecessary.
+    bigExcess: "This doesn\u2019t really belong here."
+    giveNothing: Then the system fails.
+    onlyWrongItems: "This isn\u2019t correct."
+    fewWrongItems: Not everything is right
+    allNeedsFilled: This was handled correctly.
+  catalog: {fileID: 0}
+  idle: {fileID: 0}
+  walk: {fileID: 0}
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -144,12 +147,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b64ea6e789f7b84fb5dae7b27cbb8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCSpriteController
-  idleSprites:
-  - {fileID: 3606162791768082845, guid: 449f9c4c5d845b240aeccf6af7877aaf, type: 3}
-  - {fileID: 1529565396068100329, guid: f054c960beb943c41851a45e717b3744, type: 3}
-  - {fileID: 1082127229837976108, guid: 58878ee555e7b114480276b081a233ff, type: 3}
-  - {fileID: -3368953373813732316, guid: 356ab1a3d337cdd47b4f3aad917ebbca, type: 3}
-  - {fileID: -458348848963589288, guid: a319102095c1ebe4b8e344913b1a443a, type: 3}
-  - {fileID: -9058231092216521316, guid: 877aa981a3cd1f94cb82c0ef54ab6cd0, type: 3}
-  - {fileID: -8140530650816472209, guid: 5d2a5f20d3738f6428e92c4a3eead5cd, type: 3}
-  - {fileID: 4762140868283910875, guid: dbae770788d9a2c41829cd232d7d79bb, type: 3}

@@ -10,7 +10,7 @@ public class Distributionmanager : MonoBehaviour
     public Canvas canvas;
 
     private Button confirmButton, cancelButton, continueButton;
-    private TextMeshProUGUI dialogue, selecttext;
+    private TextMeshProUGUI dialogue, selecttext, nameplate;
 
     private NPC currentNPC;
     private NpcInfoDTO npcDTO;
@@ -81,6 +81,7 @@ public class Distributionmanager : MonoBehaviour
 
     private void DisplayOrder()
     {
+        nameplate.text = 
         dialogue.text = "I want the following: ";
         dialogue.text += "<b>";
         foreach (Request order in npcDTO.Order)

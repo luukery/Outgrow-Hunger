@@ -1062,7 +1062,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   NPCs:
   - {fileID: 8714416078856817653, guid: e55b2e01208a7684db6595e27802353e, type: 3}
-  maxNPCs: 8
+  - {fileID: 8714416078856817653, guid: 2ec87c4a84c21174c94823f15d6757b6, type: 3}
+  - {fileID: 8714416078856817653, guid: 91893aa5da7831e41b8e506a4dd4bde4, type: 3}
+  - {fileID: 8714416078856817653, guid: b7d4bc991106cdb4ab8db3581360b381, type: 3}
+  - {fileID: 8714416078856817653, guid: 9e65d6c3dacf893459877c129ce0f15e, type: 3}
+  - {fileID: 8714416078856817653, guid: a3718e1cf378f57418e66cad3511585e, type: 3}
+  - {fileID: 8714416078856817653, guid: 1407e73531c3e694c8911cf67a0bad29, type: 3}
+  - {fileID: 8714416078856817653, guid: 102e2b7ea93da134bbdfdef9db622133, type: 3}
+  - {fileID: 8714416078856817653, guid: b74724092df542245a63b8776bb6a662, type: 3}
+  - {fileID: 8714416078856817653, guid: 0db71110185072f499179fc8c3ab318f, type: 3}
+  - {fileID: 8714416078856817653, guid: b1b921dea47ce8748a77301578f0da04, type: 3}
+  - {fileID: 8714416078856817653, guid: 789e90e06c988664787ebaaa005b5a6d, type: 3}
+  - {fileID: 8714416078856817653, guid: a6bbf3560e96adb4a90890ac31ebd31d, type: 3}
+  - {fileID: 8714416078856817653, guid: 7bc53c1ec10bc4e459ac985dee82c1de, type: 3}
+  maxNPCs: 5
   npcSprites:
   - {fileID: 11400000, guid: d2b20cab8127af54ab6a0ade0aedcd77, type: 2}
   - {fileID: 11400000, guid: 923850170adb17e45a84100d55682809, type: 2}
