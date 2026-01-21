@@ -52,6 +52,9 @@ public class SpawnerScript : MonoBehaviour
                 npc.SetCatalog(catalog);
         }
 
+        NPCSpriteController spriteController = npcObj.GetComponent<NPCSpriteController>();
+        spriteController.ApplyAnimations(npc.idle, npc.walk);
+
         npcQueue.Add(npc);
         npcSpawnCount++;
     }
