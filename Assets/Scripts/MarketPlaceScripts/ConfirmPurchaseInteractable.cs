@@ -10,6 +10,13 @@ public class ConfirmPurchaseInteractable : MonoBehaviour, IInteractable
     [SerializeField] private Button confirmButton;
     [SerializeField] private Button cancelButton;
 
+    [Header("Tutorial lock")]
+    [Tooltip("Sleep hier Canvas/DialogBox in (van je tutorial).")]
+    [SerializeField] private GameObject tutorialDialogBox;
+
+    [Tooltip("Sleep hier Canvas/Background in (van je tutorial).")]
+    [SerializeField] private GameObject tutorialBackground;
+
     [Header("Scene")]
     [SerializeField] private string transportSceneName = "Transport";
 
@@ -19,13 +26,10 @@ public class ConfirmPurchaseInteractable : MonoBehaviour, IInteractable
     {
         // Auto-find buttons if not assigned
         if (confirmCanvas != null && confirmButton == null)
-        {
             confirmButton = confirmCanvas.transform.Find("ConfirmButton")?.GetComponent<Button>();
-        }
+
         if (confirmCanvas != null && cancelButton == null)
-        {
             cancelButton = confirmCanvas.transform.Find("CancelButton")?.GetComponent<Button>();
-        }
 
         // Wire up button listeners
         if (confirmButton != null)
@@ -43,6 +47,15 @@ public class ConfirmPurchaseInteractable : MonoBehaviour, IInteractable
     public void Interact()
     {
         if (loading) return;
+
+        // ❌ tutorial nog zichtbaar → niet klikbaar
+        if ((tutorialDialogBox != null && tutorialDialogBox.activeInHierarchy) ||
+            (tutorialBackground != null && tutorialBackground.activeInHierarchy))
+            return;
+
+        // ❌ als stall UI open is, ook geen travel confirm openen
+        if (StallUISimple.IsAnyStallOpen)
+            return;
 
         if (confirmCanvas != null)
             confirmCanvas.SetActive(true);
