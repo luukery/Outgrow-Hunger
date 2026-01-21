@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -8891163510269370301}
   - component: {fileID: 3294875091540765048}
   - component: {fileID: -5451136786452935614}
+  - component: {fileID: 2008245958110704700}
   m_Layer: 0
   m_Name: Willem
   m_TagString: Untagged
@@ -61,9 +62,9 @@ MonoBehaviour:
     fewWrongItems: This partially deviates.
     allNeedsFilled: This was executed exactly.
   catalog: {fileID: 0}
-  idle: {fileID: 0}
-  walk: {fileID: 0}
-  name: William
+  idle: {fileID: 7400000, guid: 239860b54aab0a6419409e4e6aa57a85, type: 2}
+  walk: {fileID: 7400000, guid: 6e7b07fcf938c5142bc6f071167d7b3c, type: 2}
+  name: Willem
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -148,3 +149,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b64ea6e789f7b84fb5dae7b27cbb8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCSpriteController
+--- !u!95 &2008245958110704700
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8714416078856817653}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 837588e1ef1623f4e9c1a539eb8187e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

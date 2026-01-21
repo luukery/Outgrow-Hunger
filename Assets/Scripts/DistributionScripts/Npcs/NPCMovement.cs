@@ -3,7 +3,7 @@ using System.Collections;
 
 public class NPCMovement : MonoBehaviour
 {
-    public float moveSpeed = 2.5f;
+    public float moveSpeed = 0.75f;
     private NPCSpriteController spriteController;
 
     void Awake()
