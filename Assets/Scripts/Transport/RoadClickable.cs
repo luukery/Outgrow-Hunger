@@ -52,16 +52,15 @@ public class RoadClickable : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     }
 
     public void OnPointerClick(PointerEventData eventData)
-{
-    if (RouteHandler.Instance == null) return;
-    if (!RouteHandler.Instance.CanSelectRoutes) return;
+    {
+        if (RouteHandler.Instance == null) return;
+        if (!RouteHandler.Instance.CanSelectRoutes) return;
 
-    RouteHandler.Instance.SelectRouteByIndex(routeIndex);
+        RouteHandler.Instance.SelectRouteByIndex(routeIndex);
 
-    isSelected = true;
-    SetColor(selectedColor);
-}
-
+        isSelected = true;
+        SetColor(selectedColor);
+    }
 
 
     private void SetColor(Color color)
