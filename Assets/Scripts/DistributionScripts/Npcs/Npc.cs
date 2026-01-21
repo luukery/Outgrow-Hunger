@@ -20,6 +20,7 @@ public class NPC : MonoBehaviour
 
     public Animation idle;
     public Animation walk;
+    public string name;
 
     void OnEnable()
     {

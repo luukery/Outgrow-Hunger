@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda36711891c768478d5e16f49aa0020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCScript
-  category: 3
+  category: 0
   Needs: []
   Order: []
   Money: 0
@@ -63,6 +63,7 @@ MonoBehaviour:
   catalog: {fileID: 0}
   idle: {fileID: 0}
   walk: {fileID: 0}
+  name: Anja
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2

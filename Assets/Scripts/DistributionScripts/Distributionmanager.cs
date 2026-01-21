@@ -82,9 +82,8 @@ public class Distributionmanager : MonoBehaviour
 
     private void DisplayOrder()
     {
-        string name = currentNPC.gameObject.name;
-        name = name.Replace("(clone)", "").Trim();
-        nameplate.text = name;
+        currentNPC.gameObject.name = currentNPC.name;
+        nameplate.text = currentNPC.gameObject.name;
         dialogue.text = "I want the following: ";
         dialogue.text += "<b>";
         foreach (Request order in npcDTO.Order)
