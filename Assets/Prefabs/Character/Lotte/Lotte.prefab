@@ -52,14 +52,14 @@ MonoBehaviour:
   Order: []
   Money: 0
   dialogue:
-    delivered: Thank you!
-    littleShortage: Not exactly what I asked but thanks
-    littleExcess: Thanks for the extras
-    bigExcess: Wow thanks a lot!!!
-    giveNothing: I see...
-    onlyWrongItems: That's not what I asked for
-    fewWrongItems: I needed something else but okay
-    allNeedsFilled: Thank you so much!!
+    delivered: Okay, this works.
+    littleShortage: "I\u2019ll need to adjust something."
+    littleExcess: I can take this.
+    bigExcess: "I\u2019ll have to deal with this."
+    giveNothing: Then everything stalls.
+    onlyWrongItems: "This wasn\u2019t intended."
+    fewWrongItems: It partly fits.
+    allNeedsFilled: Yes, this is good.
   catalog: {fileID: 0}
   idle: {fileID: 0}
   walk: {fileID: 0}
