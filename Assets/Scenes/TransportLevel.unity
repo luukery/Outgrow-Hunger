@@ -24713,7 +24713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa44014e84d7b7442bb0494727f944be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RouteHandler
-  playerInput: {fileID: 0}
   infoPopupPanel: {fileID: 152222078}
   popupBackground: {fileID: 879960430}
   popupLegText: {fileID: 591828523}
