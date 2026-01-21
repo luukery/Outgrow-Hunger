@@ -5,9 +5,7 @@ using System.Diagnostics;
 public class DeliveryResultService
 
 {
-
     public DeliveryResult Transaction(List<Request> order, List<Request> needs, List<Request> given, NpcDialogue reactions)
-
     {
 
         DeliveryResult result = new DeliveryResult();
@@ -151,7 +149,6 @@ public class DeliveryResultService
     public string Reaction(DeliveryResult result, NpcDialogue reactions)
 
     {
-
         // Niets geleverd
 
         if (result.TotalDelivered.Count == 0)

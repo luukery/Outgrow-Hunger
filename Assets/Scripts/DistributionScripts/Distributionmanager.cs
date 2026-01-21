@@ -262,7 +262,7 @@ public class Distributionmanager : MonoBehaviour
             if (deliveredAmount > 0) deliveredAnything = true;
         }
 
-        DeliveryResult result = currentNPC.Transaction(delivered);
+        DeliveryResult result = currentNPC.Transaction(delivered, foodselectors.GetMoney());
 
         int earned = Mathf.Clamp(foodselectors.GetMoney(), 0, npcDTO.Money);
         if (Wallet.Instance != null && earned > 0)
