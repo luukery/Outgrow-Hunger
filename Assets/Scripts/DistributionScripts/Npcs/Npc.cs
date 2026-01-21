@@ -133,11 +133,6 @@ public class NPC : MonoBehaviour
 
     CategoryConfig GetCategoryConfig()
     {
-        category = (NpcCategory)rng.Next(
-       0,
-       Enum.GetValues(typeof(NpcCategory)).Length
-   );
-
         switch (category)
         {
             case NpcCategory.Survival:
