@@ -1078,16 +1078,7 @@ MonoBehaviour:
   maxNPCs: 14
   npcSprites:
   - {fileID: 11400000, guid: d2b20cab8127af54ab6a0ade0aedcd77, type: 2}
-  - {fileID: 11400000, guid: 923850170adb17e45a84100d55682809, type: 2}
-  - {fileID: 11400000, guid: a75581a894a56564dbea8a3749bdac0c, type: 2}
-  - {fileID: 11400000, guid: bf2bf6b89ae4bc044b71d95bda8eb5d3, type: 2}
-  - {fileID: 11400000, guid: f6ae9448e02188c408dd14c5826253b5, type: 2}
-  - {fileID: 11400000, guid: 7aa2b15ada57b67449dc635bca74f697, type: 2}
-  - {fileID: 11400000, guid: 46495c5739943414ba1514a7910b09f3, type: 2}
-  - {fileID: 11400000, guid: 97b94651486fdbe43ab2b730fe4ffa8b, type: 2}
-  - {fileID: 11400000, guid: 9ca6487becd90614680669d1c5878fa8, type: 2}
-  - {fileID: 11400000, guid: 5fad48396f329f94685d9c2b97e7917d, type: 2}
-  - {fileID: 11400000, guid: a1afad09d61a85347846db3eb0156b65, type: 2}
+  - {fileID: 11400000, guid: 4fab2c3a2e1935245b8d3356539febc2, type: 2}
 --- !u!4 &296994702
 Transform:
   m_ObjectHideFlags: 0

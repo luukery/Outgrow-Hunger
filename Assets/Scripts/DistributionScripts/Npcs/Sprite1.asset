@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d213dbfc0ddd4148863f6bde2b233ca, type: 3}
   m_Name: Sprite1
   m_EditorClassIdentifier: Assembly-CSharp::NPCSprite
-  idleSprites:
-  - {fileID: -2442385603566517382, guid: 3f4cc7c8c065978488b0cb117e633fec, type: 3}
-  walkSprites: []
+  idle: {fileID: 7400000, guid: adc0bffa4acdc6e43ba3b66c8d47fb26, type: 2}
+  walk: {fileID: 7400000, guid: 82466de1452be16458e13278098a6ed2, type: 2}
