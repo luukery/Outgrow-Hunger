@@ -30,6 +30,7 @@ public class Distributionmanager : MonoBehaviour
 
         selecttext = canvas.transform.Find("SelectText").GetComponent<TextMeshProUGUI>();
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
+        nameplate = canvas.transform.Find("Nameplate").GetComponent<TextMeshProUGUI>();
 
         Transform returnTf = canvas.transform.Find("ReturnButton");
         if (returnTf != null)
@@ -81,7 +82,9 @@ public class Distributionmanager : MonoBehaviour
 
     private void DisplayOrder()
     {
-        nameplate.text = 
+        string name = currentNPC.gameObject.name;
+        name = name.Replace("(clone)", "").Trim();
+        nameplate.text = name;
         dialogue.text = "I want the following: ";
         dialogue.text += "<b>";
         foreach (Request order in npcDTO.Order)
