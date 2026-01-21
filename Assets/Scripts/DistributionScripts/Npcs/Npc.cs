@@ -18,8 +18,8 @@ public class NPC : MonoBehaviour
     private readonly DeliveryResultService deliveryService = new();
     private System.Random rng;
 
-    public Animation idle;
-    public Animation walk;
+    public AnimationClip idle;
+    public AnimationClip walk;
     public string name;
 
     void OnEnable()

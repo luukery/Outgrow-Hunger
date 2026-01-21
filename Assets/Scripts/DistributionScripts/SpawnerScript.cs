@@ -25,9 +25,6 @@ public class SpawnerScript : MonoBehaviour
 
     }
 
-    public NPCSprite[] npcSprites;
-
-
     private void FillQueue()
     {
         for (int i = 0; i < queueSize && npcSpawnCount < maxNPCs; i++)
@@ -53,13 +50,6 @@ public class SpawnerScript : MonoBehaviour
             ProductCatalogSO catalog = Resources.Load<ProductCatalogSO>("ProductCatalog");
             if (catalog != null)
                 npc.SetCatalog(catalog);
-        }
-
-        NPCSpriteController sprite = npcObj.GetComponent<NPCSpriteController>();
-        if (sprite != null)
-        {
-            int v = Random.Range(0, npcSprites.Length);
-            sprite.ApplySprite(npcSprites[v]);
         }
 
         npcQueue.Add(npc);
