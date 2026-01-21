@@ -7,6 +7,7 @@ using UnityEngine.Rendering;
 public class SpawnerScript : MonoBehaviour
 {
     public List<GameObject> NPCs = new List<GameObject>();
+    private List<GameObject> availableNPCS = new List<GameObject>();
 
     private int queueSize = 5;
     public int maxNPCs = 8;
@@ -18,7 +19,10 @@ public class SpawnerScript : MonoBehaviour
 
     void Start()
     {
+        availableNPCS = new List<GameObject>(NPCs);
+        ShuffleNPCs();
         FillQueue();
+
     }
 
     public NPCSprite[] npcSprites;
@@ -26,7 +30,6 @@ public class SpawnerScript : MonoBehaviour
 
     private void FillQueue()
     {
-        ShuffleNPCs();
         for (int i = 0; i < queueSize && npcSpawnCount < maxNPCs; i++)
         {
             SpawnAtSlot(i);
@@ -35,11 +38,11 @@ public class SpawnerScript : MonoBehaviour
 
     private void SpawnAtSlot(int slotIndex)
     {
-        if (NPCs.Count == 0)
+        if (availableNPCS.Count == 0)
             return;
 
-        GameObject npcPrefab = NPCs[0];
-        NPCs.RemoveAt(0);
+        GameObject npcPrefab = availableNPCS[0];
+        availableNPCS.RemoveAt(0);
 
         Vector3 pos = GetSlotPosition(slotIndex);
         GameObject npcObj = Instantiate(npcPrefab, pos, Quaternion.identity);
@@ -126,13 +129,13 @@ public class SpawnerScript : MonoBehaviour
     }
     private void ShuffleNPCs()
     {
-        for (int i = NPCs.Count - 1; i > 0; i--)
+        for (int i = availableNPCS.Count - 1; i > 0; i--)
         {
             int j = Random.Range(0, i + 1);
 
-            GameObject temp = NPCs[i];
-            NPCs[i] = NPCs[j];
-            NPCs[j] = temp;
+            GameObject temp = availableNPCS[i];
+            availableNPCS[i] = availableNPCS[j];
+            availableNPCS[j] = temp;
         }
     }
 
