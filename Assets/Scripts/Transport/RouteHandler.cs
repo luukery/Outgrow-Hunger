@@ -66,6 +66,9 @@ public class RouteHandler : MonoBehaviour
     int legsCompleted = 0;
     bool journeyFinished = false;
 
+    // Prevents double-selecting a route while the popup is pending
+    bool selectionInProgress = false;
+
     // --- NEW: prevents click carryover from Market selecting a road immediately ---
     private bool inputLocked = true;
     public bool CanSelectRoutes => !journeyFinished && !inputLocked;
@@ -465,11 +468,16 @@ public class RouteHandler : MonoBehaviour
         if (!CanSelectRoutes)
             return;
 
+        if (selectionInProgress)
+            return;
+
         if (routes == null || routes.Count <= index)
         {
             Debug.LogWarning("Route index out of range.");
             return;
         }
+
+        selectionInProgress = true;
 
         HandleRouteSelection(routes[index], index);
     }
@@ -534,12 +542,12 @@ public class RouteHandler : MonoBehaviour
             spoiledFoodThisJourney += spoiledFoodLastLeg;
         }
         
-        // Wait a second before showing popup
+        // Wait a moment before showing popup; unscaled so timescale changes don't stall UI
         StartCoroutine(ShowPopupAfterDelay());
 
         IEnumerator ShowPopupAfterDelay()
         {
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSecondsRealtime(2.5f);
             ShowInfoPopup(route, legTime, eventHappened, occurredEvent);
         }    
     }
@@ -616,13 +624,19 @@ public class RouteHandler : MonoBehaviour
 
     void ContinueAfterPopup()
     {
+        selectionInProgress = false;
+
         if (!journeyFinished)
             legsCompleted++;
 
         UpdateCartPosition();
         ResetCartSpritePosition();
-        StopCoroutine(moveCoroutine);
-        moveCoroutine = null;
+
+        if (moveCoroutine != null)
+        {
+            StopCoroutine(moveCoroutine);
+            moveCoroutine = null;
+        }
 
         if (legsCompleted >= legsPerJourney)
     {
@@ -632,6 +646,9 @@ public class RouteHandler : MonoBehaviour
     {
         StartCoroutine(ShowLegLoadingThenContinue());
     }
+
+        // wait for mouse release so a held click can't immediately trigger another route
+        StartCoroutine(UnlockAfterMouseRelease());
 
     }
 
@@ -859,7 +876,7 @@ public class RouteHandler : MonoBehaviour
                 cartSprite.position = Vector2.MoveTowards(
                     cartSprite.position,
                     target,
-                    speed * Time.deltaTime
+                    speed * Time.unscaledDeltaTime
                 );
 
                 yield return null; // wait for next frame
