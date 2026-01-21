@@ -18,6 +18,9 @@ public class NPC : MonoBehaviour
     private readonly DeliveryResultService deliveryService = new();
     private System.Random rng;
 
+    public Animation idle;
+    public Animation walk;
+
     void OnEnable()
     {
         rng = new System.Random(Guid.NewGuid().GetHashCode());
