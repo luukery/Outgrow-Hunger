@@ -7,6 +7,9 @@ public class DialogManager : MonoBehaviour
     public GameObject dialogBox;
     public GameObject background;
     public TMP_Text dialogText;
+    public GameObject dadSprite1;
+    public GameObject dadSprite2;
+
 
     private string[] lines;
     private int index;
@@ -23,6 +26,16 @@ public class DialogManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                if (dadSprite1.activeSelf)
+                {
+                    dadSprite1.SetActive(false);
+                    dadSprite2.SetActive(true);
+                }
+                else
+                {
+                    dadSprite1.SetActive(true);
+                    dadSprite2.SetActive(false);
+                }
                 NextLine();
             }
         }
@@ -40,6 +53,7 @@ public class DialogManager : MonoBehaviour
             Debug.Log("DialogBox activated");
         }
         if (background != null) background.SetActive(true);
+        if (dadSprite1 != null) dadSprite1.SetActive(true);
         if (dialogText != null && lines.Length > 0) dialogText.text = lines[index];
         Debug.Log("Dialog started with " + lines.Length + " lines");
     }
@@ -56,6 +70,8 @@ public class DialogManager : MonoBehaviour
         {
             if (dialogBox != null) dialogBox.SetActive(false);
             if (background != null) background.SetActive(false);
+            if (dadSprite1 != null) dadSprite1.SetActive(false);
+            if (dadSprite2 != null) dadSprite2.SetActive(false);  
             lines = null; // Clear the lines array so Update stops listening
             Debug.Log("Dialog finished");
         }
