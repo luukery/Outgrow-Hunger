@@ -65,6 +65,9 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: b57897054cb58c141b98a76f4b88342a, type: 2}
   walk: {fileID: 7400000, guid: f7fe06299c0e36c4090ccdad2d307551, type: 2}
   name: Kevin
+  orderTalk: "Work stopped last month. Food has become uncertain.\\n<b>{ORDER}</b>\\nThat\u2019s
+    all I can pay: {MONEY} coins. "
+  hasRetried: 0
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -136,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  moveSpeed: 2.5
 --- !u!114 &-5451136786452935614
 MonoBehaviour:
   m_ObjectHideFlags: 0

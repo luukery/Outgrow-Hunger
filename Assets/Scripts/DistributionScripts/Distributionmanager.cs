@@ -84,13 +84,19 @@ public class Distributionmanager : MonoBehaviour
     {
         currentNPC.gameObject.name = currentNPC.name;
         nameplate.text = currentNPC.gameObject.name;
-        dialogue.text = "I want the following: ";
-        dialogue.text += "<b>";
+
+        string orderText = "";
+
         foreach (Request order in npcDTO.Order)
-            dialogue.text += order.Amount + " " + order.FoodType + " ";
-        dialogue.text += "</b>";
-        dialogue.text += "\nI can pay " + npcDTO.Money + " coins";
+        {
+            orderText += $"{order.Amount} {order.FoodType} ";
+        }
+
+        dialogue.text = currentNPC.orderTalk
+            .Replace("{ORDER}", orderText)
+            .Replace("{MONEY}", npcDTO.Money.ToString());
     }
+
 
     // moneyselect screen = true, confirm sends to confirm before delivery screen, cancel returns to money select
     // confirm delivery screen = false, if confirm it sends deliver, if false it goes back to prev screen

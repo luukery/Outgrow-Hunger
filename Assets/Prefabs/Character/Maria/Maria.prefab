@@ -65,6 +65,9 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: 5c1641c79e9feb94a939d9370a4ac96d, type: 2}
   walk: {fileID: 7400000, guid: d3f36c74b7586bb41bc3510036e42fdc, type: 2}
   name: Maria
+  orderTalk: "I don\u2019t care what it is, as long as it helps me get through today.\\n<b>{ORDER}</b>\\nI
+    have {MONEY} coins. "
+  hasRetried: 0
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -136,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  moveSpeed: 2.5
 --- !u!114 &-5451136786452935614
 MonoBehaviour:
   m_ObjectHideFlags: 0
