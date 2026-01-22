@@ -9950,8 +9950,8 @@ MonoBehaviour:
   dialogBox: {fileID: 8016395161656649981}
   background: {fileID: 8762337609589610028}
   dialogText: {fileID: 636078255018064991}
-  dadSprite1: {fileID: 0}
-  dadSprite2: {fileID: 0}
+  dadSprite1: {fileID: 1452698764}
+  dadSprite2: {fileID: 1061723558}
 --- !u!114 &636078255018064991
 MonoBehaviour:
   m_ObjectHideFlags: 0
