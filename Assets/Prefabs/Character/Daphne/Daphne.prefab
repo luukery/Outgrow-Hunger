@@ -65,6 +65,9 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: 93b025fa06c954d46b698a6f4514dd13, type: 2}
   walk: {fileID: 7400000, guid: cfbc3ad9e13e6c24ab73e39f5a4f1be2, type: 2}
   name: Daphne
+  orderTalk: "I can manage, but I care about what I eat.\\n<b>{ORDER}</b>\\nI\u2019ll
+    pay {MONEY} coins. "
+  hasRetried: 0
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -136,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  moveSpeed: 2.5
 --- !u!114 &-5451136786452935614
 MonoBehaviour:
   m_ObjectHideFlags: 0

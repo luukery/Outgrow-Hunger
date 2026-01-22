@@ -65,6 +65,8 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: c70ac4f27de57e34bb5f5d1f6ce3379c, type: 2}
   walk: {fileID: 7400000, guid: dec1f12a440e30646bf15bcf7cc5f727, type: 2}
   name: Anja
+  orderTalk: "I haven\u2019t eaten properly in days. I just need:\\n<b>{ORDER}</b>\\nI
+    can only pay {MONEY} coins. "
   hasRetried: 0
 --- !u!114 &3294875091540765048
 MonoBehaviour:

@@ -65,6 +65,9 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: 976ba3fc3f48efa42a184469754859c8, type: 2}
   walk: {fileID: 7400000, guid: 9a314b8c19c5af74e89a7d613078e2c4, type: 2}
   name: Victor
+  orderTalk: "I want quality and I want plenty.\\n<b>{ORDER}</b>\\nI\u2019m paying
+    {MONEY} coins, so I expect no compromises. "
+  hasRetried: 0
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -136,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  moveSpeed: 2.5
 --- !u!114 &-5451136786452935614
 MonoBehaviour:
   m_ObjectHideFlags: 0

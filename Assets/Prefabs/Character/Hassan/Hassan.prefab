@@ -65,6 +65,9 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: e6ca46c4e63f5f246b6b6251d0c79368, type: 2}
   walk: {fileID: 7400000, guid: 7e38cfe46c2a3d9449bf64955a766af7, type: 2}
   name: Hassan
+  orderTalk: 'Most days I skip meals so my kids can eat.\nI need:\n<b>{ORDER}</b>\nI
+    have {MONEY} coins. '
+  hasRetried: 0
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -136,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  moveSpeed: 2.5
 --- !u!114 &-5451136786452935614
 MonoBehaviour:
   m_ObjectHideFlags: 0

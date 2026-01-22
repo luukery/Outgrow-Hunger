@@ -65,6 +65,9 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: 239860b54aab0a6419409e4e6aa57a85, type: 2}
   walk: {fileID: 7400000, guid: 6e7b07fcf938c5142bc6f071167d7b3c, type: 2}
   name: Willem
+  orderTalk: 'I calculated this carefully.\n<b>{ORDER}</b>\nI have exactly {MONEY}
+    coins. '
+  hasRetried: 0
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -136,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  moveSpeed: 2.5
 --- !u!114 &-5451136786452935614
 MonoBehaviour:
   m_ObjectHideFlags: 0

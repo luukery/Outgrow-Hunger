@@ -65,6 +65,9 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: 6d4793719d7a52f47b6d9dffd313e155, type: 2}
   walk: {fileID: 7400000, guid: 528586fd0d616e44baffaa6a408ed000, type: 2}
   name: Mark
+  orderTalk: "I keep track of what we have left.\\n<b>{ORDER}</b>\\nI\u2019ve set
+    aside {MONEY} coins. "
+  hasRetried: 0
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -136,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  moveSpeed: 2.5
 --- !u!114 &-5451136786452935614
 MonoBehaviour:
   m_ObjectHideFlags: 0
