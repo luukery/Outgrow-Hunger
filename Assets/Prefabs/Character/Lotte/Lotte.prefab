@@ -65,6 +65,9 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: 06302533dc5eb9a4b984e8882d10b42f, type: 2}
   walk: {fileID: 7400000, guid: 68b14e5fee938b04da0ad2aed2258b8a, type: 2}
   name: Lotte
+  orderTalk: "Things can change fast. I\u2019d rather be prepared.\\n<b>{ORDER}</b>\\nI
+    can pay {MONEY} coins. "
+  hasRetried: 0
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -136,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  moveSpeed: 2.5
 --- !u!114 &-5451136786452935614
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -65,6 +65,9 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: 539ac5d99aaaaa142b3c46226b1e0899, type: 2}
   walk: {fileID: 7400000, guid: 21a6c2960c32ff04e9f8563d6ce6ab43, type: 2}
   name: Yara
+  orderTalk: 'This should be enough, no more, no less.\n<b>{ORDER}</b>\n{MONEY} coins
+    is my limit. '
+  hasRetried: 0
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -136,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  moveSpeed: 2.5
 --- !u!114 &-5451136786452935614
 MonoBehaviour:
   m_ObjectHideFlags: 0

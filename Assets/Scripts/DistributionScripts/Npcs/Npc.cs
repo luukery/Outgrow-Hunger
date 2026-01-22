@@ -21,7 +21,10 @@ public class NPC : MonoBehaviour
 
     public AnimationClip idle;
     public AnimationClip walk;
+
     public string name;
+    public string orderTalk;
+
     [HideInInspector] public bool hasRetried;
     void OnEnable()
     {
@@ -97,57 +100,98 @@ public class NPC : MonoBehaviour
 
     void GenerateNeeds(CategoryConfig config)
     {
-        // Get available FoodTypes from catalog, or use all if catalog not set
-        List<FoodType.Type> availableTypes = (catalog != null) 
-            ? catalog.GetAvailableFoodTypes() 
+        List<FoodType.Type> availableTypes = (catalog != null)
+            ? catalog.GetAvailableFoodTypes()
             : new List<FoodType.Type>((FoodType.Type[])Enum.GetValues(typeof(FoodType.Type)));
-        
-        Food.Quality[] qualities = (Food.Quality[])Enum.GetValues(typeof(Food.Quality));
 
-        int amountOfdistinctTypes = rng.Next(config.MinDistinctItems, config.MaxDistinctItems + 1);
-        // Clamp to available types
-        amountOfdistinctTypes = Mathf.Min(amountOfdistinctTypes, availableTypes.Count);
+        int totalItems = rng.Next(config.MinTotalItems, config.MaxTotalItems + 1);
 
-        for (int i = 0; i < amountOfdistinctTypes; i++)
+        int distinctTypes = rng.Next(
+            config.MinDistinctItems,
+            Mathf.Min(config.MaxDistinctItems, availableTypes.Count) + 1
+        );
+
+        availableTypes = availableTypes.OrderBy(x => rng.Next()).ToList();
+
+        int remaining = totalItems;
+
+        for (int i = 0; i < distinctTypes; i++)
         {
-            int type = rng.Next(0, availableTypes.Count);
+            FoodType.Type type = availableTypes[i];
 
-            FoodType.Type selectedType = availableTypes[type];
-            availableTypes.RemoveAt(type);
+            int amount;
 
-            int amount = rng.Next(config.MinNeedAmount, config.MaxNeedAmount + 1);
-            Food.Quality quality = Food.Quality.Good;       //temporary
+            if (i == distinctTypes - 1)
+            {
+                amount = remaining;
+            }
+            else
+            {
+                int maxForThisType = remaining - (distinctTypes - i - 1);
+                amount = rng.Next(1, maxForThisType + 1);
+            }
 
-            Needs.Add(new Request(amount, selectedType, quality));
+            remaining -= amount;
+
+            Needs.Add(new Request(amount, type, Food.Quality.Good));
         }
     }
 
     void GenerateOrder(CategoryConfig config)
     {
-        // Get available FoodTypes from catalog, or use all if catalog not set
-        List<FoodType.Type> availableTypes = (catalog != null) 
-            ? catalog.GetAvailableFoodTypes() 
+        Order.Clear();
+
+        List<FoodType.Type> availableTypes = (catalog != null)
+            ? catalog.GetAvailableFoodTypes()
             : new List<FoodType.Type>((FoodType.Type[])Enum.GetValues(typeof(FoodType.Type)));
-        
-        Food.Quality[] qualities = (Food.Quality[])Enum.GetValues(typeof(Food.Quality));
 
-        int amountOfDistinctTypes = rng.Next(config.MinDistinctItems, config.MaxDistinctItems + 1);
-        // Clamp to available types
-        amountOfDistinctTypes = Mathf.Min(amountOfDistinctTypes, availableTypes.Count);
+        int totalItems = rng.Next(config.MinTotalItems, config.MaxTotalItems + 1);
 
-        for (int i = 0; i < amountOfDistinctTypes; i++)
+        int maxDistinctAllowed = Mathf.Min(
+            config.MaxDistinctItems,
+            availableTypes.Count,
+            totalItems
+        );
+
+        if (maxDistinctAllowed <= 0)
         {
-            int index = rng.Next(availableTypes.Count);
-            FoodType.Type selectedType = availableTypes[index];
-            availableTypes.RemoveAt(index);
+            return;
+        }
 
-            Food.Quality quality = Food.Quality.Good; // temporary
+        int minDistinct = Mathf.Min(config.MinDistinctItems, maxDistinctAllowed);
+        int distinctTypes = rng.Next(minDistinct, maxDistinctAllowed + 1);
 
-            int amount = rng.Next(config.MinNeedAmount, config.MaxNeedAmount + 1);
-            Order.Add(new Request(amount, selectedType, quality));
+        availableTypes = availableTypes.OrderBy(x => rng.Next()).ToList();
+
+        int remaining = totalItems;
+
+        for (int i = 0; i < distinctTypes; i++)
+        {
+            FoodType.Type type = availableTypes[i];
+
+            int amount;
+
+            if (i == distinctTypes - 1)
+            {
+                amount = remaining;
+            }
+            else
+            {
+                int maxForThisType = remaining - (distinctTypes - i - 1);
+                amount = rng.Next(1, maxForThisType + 1);
+            }
+
+            remaining -= amount;
+
+            if (amount > 0)
+            {
+                Order.Add(new Request(amount, type, Food.Quality.Good));
+            }
         }
     }
-    //
+
+
+
     int RollMoney(CategoryConfig config)
     {
         return rng.Next(config.MinMoney, config.MaxMoney + 1);
@@ -187,9 +231,9 @@ public class NPC : MonoBehaviour
                     qualityStrict: false,
                     minOrderBuffer: 0,
                     maxOrderBuffer: 1,
-                    minTotalItems: 4,
-                    maxTotalItems: 6,
-                    minDistinctItems: 2,
+                    minTotalItems: 2,
+                    maxTotalItems: 4,
+                    minDistinctItems: 1,
                     maxDistinctItems: 3
                 );
 
@@ -205,9 +249,9 @@ public class NPC : MonoBehaviour
                     minOrderBuffer: 0,
                     maxOrderBuffer: 0,
                     minTotalItems: 4,
-                    maxTotalItems: 6,
-                    minDistinctItems: 3,
-                    maxDistinctItems: 4
+                    maxTotalItems: 5,
+                    minDistinctItems: 2,
+                    maxDistinctItems: 3
                 );
 
             case NpcCategory.PreferenceDriven:
@@ -223,8 +267,8 @@ public class NPC : MonoBehaviour
                     maxOrderBuffer: 4,
                     minTotalItems: 6,
                     maxTotalItems: 10,
-                    minDistinctItems: 4,
-                    maxDistinctItems: 6
+                    minDistinctItems: 2,
+                    maxDistinctItems: 4
                 );
 
             default:
