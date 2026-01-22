@@ -12,6 +12,12 @@ public class ProductDef
     [Min(0)] public int maxPrice = 10;
     public StallType type;
     [Min(1)] public int weight = 1;     // optioneel: kansgewicht
+
+    [Header("Spoilage")]
+    public bool isSpoilable = true;
+
+    [Tooltip("How many transport-hours until fully spoiled (only counts RouteHandler travel time).")]
+    [Min(0f)] public float spoilTimeInHours = 12f;
 }
 
 [CreateAssetMenu(menuName = "Market/Product Catalog", fileName = "ProductCatalog")]
@@ -24,6 +30,38 @@ public class ProductCatalogSO : ScriptableObject
         var pool = new List<ProductDef>();
         foreach (var p in products) if (p.type == t) pool.Add(p);
         return pool;
+    }
+
+    /// <summary>
+    /// Get all unique FoodTypes available in the catalog based on StallType mapping.
+    /// </summary>
+    public List<FoodType.Type> GetAvailableFoodTypes()
+    {
+        var availableTypes = new List<FoodType.Type>();
+        foreach (var p in products)
+        {
+            FoodType.Type foodType = StallTypeToFoodType(p.type);
+            if (!availableTypes.Contains(foodType))
+                availableTypes.Add(foodType);
+        }
+        return availableTypes;
+    }
+
+    /// <summary>
+    /// Map StallType to corresponding FoodType.
+    /// </summary>
+    public FoodType.Type StallTypeToFoodType(StallType stall)
+    {
+        return stall switch
+        {
+            StallType.Bakery => FoodType.Type.Bakery,
+            StallType.Fish => FoodType.Type.Fish,
+            StallType.Vegetables => FoodType.Type.Vegetable,
+            StallType.Fruit => FoodType.Type.Fruit,
+            StallType.Dairy => FoodType.Type.Dairy,
+            StallType.Spices => FoodType.Type.Spices,
+            StallType.Meat => FoodType.Type.Meat,
+        };
     }
 
     public List<ProductDef> PickRandomUnique(List<ProductDef> pool, int count, bool weighted)

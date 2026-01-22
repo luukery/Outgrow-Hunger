@@ -1,66 +1,337 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Distributionmanager : MonoBehaviour
 {
     public SpawnerScript spawner;
     public Canvas canvas;
 
-    private Button feedButton, denyButton;
-    private TextMeshProUGUI dialogue;
+    private Button confirmButton, cancelButton, continueButton;
+    private TextMeshProUGUI dialogue, selecttext, nameplate;
 
     private NPC currentNPC;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private NpcInfoDTO npcDTO;
+
+    public FoodSelectors foodselectors;
+
+    [Header("Scene Flow")]
+    public string marketSceneName = "MarketPlace";
+
+    private Button returnButton;
+
     void Start()
     {
-        StartCoroutine(SpawnNPC());
+        confirmButton = canvas.transform.Find("ConfirmButton").GetComponent<Button>();
+        cancelButton = canvas.transform.Find("CancelButton").GetComponent<Button>();
+        continueButton = canvas.transform.Find("ContinueButton").GetComponent<Button>();
 
-        feedButton = canvas.transform.Find("FeedButton").GetComponent<Button>();
-        denyButton = canvas.transform.Find("DenyButton").GetComponent<Button>();
+        selecttext = canvas.transform.Find("SelectText").GetComponent<TextMeshProUGUI>();
         dialogue = canvas.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
+        nameplate = canvas.transform.Find("Nameplate").GetComponent<TextMeshProUGUI>();
 
-        feedButton.onClick.AddListener(HandleAccept);
-        denyButton.onClick.AddListener(Deny);
+        Transform returnTf = canvas.transform.Find("ReturnButton");
+        if (returnTf != null)
+        {
+            returnButton = returnTf.GetComponent<Button>();
+            returnButton.gameObject.SetActive(false);
+            returnButton.onClick.RemoveAllListeners();
+            returnButton.onClick.AddListener(ReturnToMarket);
+        }
+
+        ChangeContinueButton(true);
+        ChangeConfirmButtons(true);
+        GetCurrentNPC();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (currentNPC != null)
-        {
 
+    private void OnDistributionFinished()
+    {
+        confirmButton.interactable = false;
+        cancelButton.interactable = false;
+
+        continueButton.onClick.RemoveAllListeners();
+        continueButton.gameObject.SetActive(false);
+
+        if (returnButton != null) returnButton.gameObject.SetActive(true);
+        else ReturnToMarket();
+    }
+
+    private void ReturnToMarket()
+    {
+        LoadingManager.Instance.LoadScene(marketSceneName);
+    }
+
+    private bool GetCurrentNPC()
+    {
+        currentNPC = spawner.CurrentNPC;
+
+        if (currentNPC == null)
+        {
+            OnDistributionFinished();
+            return false;
+        }
+
+        npcDTO = currentNPC.GetInfoDTO();
+        DisplayOrder();
+        FoodSelector();
+        return true;
+    }
+
+    private void DisplayOrder()
+    {
+        currentNPC.gameObject.name = currentNPC.name;
+        nameplate.text = currentNPC.gameObject.name;
+        dialogue.text = "I want the following: ";
+        dialogue.text += "<b>";
+        foreach (Request order in npcDTO.Order)
+            dialogue.text += order.Amount + " " + order.FoodType + " ";
+        dialogue.text += "</b>";
+        dialogue.text += "\nI can pay " + npcDTO.Money + " coins";
+    }
+
+    // moneyselect screen = true, confirm sends to confirm before delivery screen, cancel returns to money select
+    // confirm delivery screen = false, if confirm it sends deliver, if false it goes back to prev screen
+    private void ChangeConfirmButtons(bool confirmDelivery)
+    {
+        confirmButton.onClick.RemoveAllListeners();
+        cancelButton.onClick.RemoveAllListeners();
+
+        if (confirmDelivery)
+        {
+            confirmButton.onClick.AddListener(ConfirmBeforeDelivery);
+            cancelButton.onClick.AddListener(FoodSelector);
+        }
+        else
+        {
+            confirmButton.onClick.AddListener(SendDelivery);
+            cancelButton.onClick.AddListener(FoodSelector);
         }
     }
-    
-    private IEnumerator SpawnNPC()
+
+    // foodselect screen = true, sends from food to money check
+    // resultscreen = false, sends from resultscreen to new npc/finish
+    private void ChangeContinueButton(bool foodSelect)
     {
-        // despawns NPC and waits 5 seconds before spawning a new one if an NPC is already spawned
-        if (currentNPC != null) 
+        continueButton.onClick.RemoveAllListeners();
+
+
+        if (foodSelect)
         {
-            Destroy(currentNPC.gameObject);
-            currentNPC = null;
-            Debug.Log("Despawned NPC");
-            yield return new WaitForSeconds(4);
+            continueButton.onClick.AddListener(MoneyCheck);
         }
-        // Temp text
-        currentNPC = spawner.SpawnNPC();
-        Debug.Log("Spawned NPC");
+        else
+        {
+            continueButton.onClick.AddListener(ContinueAfterInteraction);
+        }
     }
 
-    private void HandleAccept()
+    private void ShowContinueOrCancelButtons(bool enable)
     {
-        // still needs code to handle the accepting of the food
-        dialogue.text = "Accepted food";
-        StartCoroutine(SpawnNPC());
+        continueButton.gameObject.SetActive(enable);
+        confirmButton.gameObject.SetActive(!enable);
+        cancelButton.gameObject.SetActive(!enable);
     }
 
-    public void Deny()
+    private void FoodSelector()
     {
-        // temp text
-        dialogue.text = "Denied NPC Food";
-        StartCoroutine(SpawnNPC());
+        ShowContinueOrCancelButtons(true);
+        ChangeContinueButton(true);
+        selecttext.gameObject.SetActive(false);
+        foodselectors.ShowHideMoneySelect(false);
+        foodselectors.ResetValues();
+
+        for (int index = 0; index < npcDTO.Order.Count && index < foodselectors.SelectorCount; index++)
+        {
+            GameObject selector = foodselectors.GetSelector(index);
+            if (selector == null) break;
+            selector.SetActive(true);
+
+            TextMeshProUGUI ordertext = selector.transform.Find("OrderText").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI foodtype = selector.transform.Find("TempFoodType").GetComponent<TextMeshProUGUI>();
+
+            Request order = npcDTO.Order[index];
+
+            int available = Inventory.Instance != null
+                ? Inventory.Instance.GetAvailableUnits(order.FoodType) // ✅ TYPE ONLY
+                : 0;
+
+            // ✅ You can only give what they ordered and what you have
+            int maxGive = Mathf.Min(order.Amount, available);
+
+            // disable + / - if 0
+            foodselectors.SetMaxForSelector(index, maxGive);
+
+            ordertext.text = available + " in inventory";
+            foodtype.text = order.FoodType.ToString();
+        }
+    }
+
+
+
+    private void MoneyCheck()
+    {
+        ShowContinueOrCancelButtons(false);
+        foodselectors.HideSelectors();
+
+        bool emptydelivery = true;
+        for (int index = 0; index < npcDTO.Order.Count; index++)
+        {
+            int value = foodselectors.GetValue(index);
+            if (value != 0) emptydelivery = false;
+
+        }
+
+        if (emptydelivery)
+        {
+            ConfirmEmptyDelivery();
+        }
+        else
+        {
+            MoneySelect();
+        }
+    }
+
+    private void MoneySelect()
+    {
+        foodselectors.ShowHideMoneySelect(true);
+        foodselectors.ChangeMaxMoney(npcDTO.Money);
+        ChangeConfirmButtons(true);
+    }
+
+    private void ConfirmBeforeDelivery()
+    {
+        foodselectors.ShowHideMoneySelect(false);
+        selecttext.gameObject.SetActive(true);
+
+
+        selecttext.text = "Are you sure you want to give the following?\n";
+        for (int index = 0; index < npcDTO.Order.Count; index++)
+        {
+            int amount = foodselectors.GetValue(index);
+            if (amount != 0)
+            {
+                Request order = npcDTO.Order[index];
+                selecttext.text += amount + " " + order.FoodType + "\n";
+            }
+        }
+
+        selecttext.text += "\n\n For " + foodselectors.GetMoney() + " coins?";
+        ChangeConfirmButtons(false);
+    }
+
+    private void ConfirmEmptyDelivery()
+    {
+        selecttext.gameObject.SetActive(true);
+        selecttext.text = "Are you sure you don't want to give them anything?";
+        ChangeConfirmButtons(false);
+    }
+
+    private void SendDelivery()
+    {
+        List<Request> intended = new();
+
+        for (int index = 0; index < npcDTO.Order.Count; index++)
+        {
+            int value = foodselectors.GetValue(index);
+            Request order = npcDTO.Order[index];
+            intended.Add(new Request(value, order.FoodType, order.Quality));
+        }
+
+        // 🔹 FASE 1: simulatie (NOG GEEN INVENTORY MUTATIE)
+        List<Request> delivered = new();
+        Inventory inv = Inventory.Instance;
+
+        for (int i = 0; i < intended.Count; i++)
+        {
+            Request r = intended[i];
+
+            int available = inv != null
+                ? inv.GetAvailableUnits(r.FoodType)
+                : 0;
+
+            int deliveredAmount = Mathf.Min(r.Amount, available);
+            delivered.Add(new Request(deliveredAmount, r.FoodType, r.Quality));
+        }
+
+        DeliveryResult result = currentNPC.Transaction(delivered, foodselectors.GetMoney());
+        bool refused = result.reaction == "I ain't paying for this";
+
+        if (!refused)
+        {
+            for (int i = 0; i < delivered.Count; i++)
+            {
+                Request r = delivered[i];
+                if (r.Amount > 0 && inv != null)
+                    inv.RemoveUnits(r.FoodType, r.Amount);
+            }
+
+            int earned = Mathf.Clamp(foodselectors.GetMoney(), 0, npcDTO.Money);
+            if (Wallet.Instance != null && earned > 0)
+                Wallet.Instance.AddMoney(earned);
+        }
+
+        if (refused && !currentNPC.hasRetried)
+        {
+            currentNPC.hasRetried = true;
+            dialogue.text = result.reaction;
+
+            FoodSelector();
+            ChangeContinueButton(true);
+            return;
+        }
+
+       
+        // 🚶 Acceptatie OF tweede weigering
+        ShowResults(result);
+        foodselectors.HideSelectors();
+        ShowContinueOrCancelButtons(true);
+        spawner.Despawn();
+        ChangeContinueButton(false);
+    }
+
+
+
+    private void ContinueAfterInteraction()
+    {
+        bool success = GetCurrentNPC();
+        if (!success)
+            continueButton.onClick.RemoveAllListeners();
+    }
+
+    private void ShowResults(DeliveryResult result)
+    {
+        string resulttext = string.Empty;
+
+        if (result.Shortages.Count != 0)
+        {
+            resulttext += "Amount of food you didn't give: " + result.Shortages.Count;
+            foreach (Request shortage in result.Shortages)
+                resulttext += "\n\t" + shortage.Amount + " " + shortage.FoodType;
+            resulttext += "\n";
+        }
+
+        if (result.Excesses.Count != 0)
+        {
+            resulttext += "Amount of extra food you gave: " + result.Excesses.Count;
+            foreach (Request excess in result.Excesses)
+                resulttext += "\n\t" + excess.Amount + " " + excess.FoodType;
+            resulttext += "\n";
+        }
+
+        if (result.reaction != ("I ain't paying for this"))
+        {
+            resulttext += "Money earned: " + foodselectors.GetMoney() + " coins";
+        }
+        else
+        {
+            resulttext += "The customer walked away.";
+
+        }
+        selecttext.text = resulttext;
+
+        dialogue.text = result.reaction;
     }
 }

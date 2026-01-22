@@ -1,98 +1,234 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class NPC : MonoBehaviour
 {
-    [SerializeField]
-    public Dictionary<FoodTypes, int> Request = new Dictionary<FoodTypes, int>();
-    [SerializeField]
-    public Dictionary<FoodTypes, int> Needs = new Dictionary<FoodTypes, int>();
+    [SerializeField] private NpcCategory category;
 
-    public List<Request> Order = new List<Request>();
-    public int money;
+    [SerializeField] private List<Request> Needs = new();
+    [SerializeField] private List<Request> Order = new();
 
-    [Range(0f, 1f)]
-    public float OverRequestChance = 0.125f;
+    public int Money;
+    int paysPerItem;
 
-    void Start()
+    [SerializeField] public NpcDialogue dialogue;
+    [SerializeField] private ProductCatalogSO catalog;
+
+    private readonly DeliveryResultService deliveryService = new();
+    private System.Random rng;
+
+    public AnimationClip idle;
+    public AnimationClip walk;
+    public string name;
+    [HideInInspector] public bool hasRetried;
+    void OnEnable()
     {
+        rng = new System.Random(Guid.NewGuid().GetHashCode());
         GenerateProfile();
-        DebugPrint();
-        PopulateOrder();
-        Inventory inv = new Inventory();
-        Order = inv.CanSatisfyOrder(Order);
-
     }
 
-    public void PopulateOrder()
+    public DeliveryResult Transaction(List<Request> playerInput, int askedAmount)
     {
-        Order.Add(new Request(4, FoodType.Type.Meat, Food.Quality.Good));
+        if(FairPrice(playerInput, askedAmount))
+        {
+            return deliveryService.Transaction(Order, Needs, playerInput, dialogue);
+        }
+
+        DeliveryResult wrong = new DeliveryResult();
+        wrong.reaction = "I ain't paying for this";
+        return wrong;
+
     }
+
+    public bool FairPrice(List<Request> playerInput, int askedAmount)
+    {
+        int givenAmount = 0;
+        for (int i = 0; i < playerInput.Count; i++)
+        {
+            givenAmount += playerInput[i].Amount;
+        }
+
+        int itemCap = givenAmount * paysPerItem;
+        int finalMaxSpend = Mathf.Min(Money, itemCap);
+
+        return askedAmount <= finalMaxSpend;
+    }
+
+    public void SetCatalog(ProductCatalogSO newCatalog)
+    {
+        catalog = newCatalog;
+    }
+
+    public NpcInfoDTO GetInfoDTO()
+    {
+        List<Request> needsCopy = new(Needs.Count);
+        List<Request> orderCopy = new(Order.Count);
+
+        for (int i = 0; i < Needs.Count; i++)
+        {
+            Request r = Needs[i];
+            needsCopy.Add(new Request(r.Amount, r.FoodType, r.Quality));
+        }
+
+        for (int i = 0; i < Order.Count; i++)
+        {
+            Request r = Order[i];
+            orderCopy.Add(new Request(r.Amount, r.FoodType, r.Quality));
+        }
+
+        return new NpcInfoDTO
+        {
+            Needs = needsCopy,
+            Order = orderCopy,
+            Money = Money
+        };
+    }
+
 
     void GenerateProfile()
     {
-        Array types = Enum.GetValues(typeof(FoodTypes));
-        System.Random rng = new System.Random();
-        int extramoney = 0;
-
-        foreach (FoodTypes type in types)
-        {
-            int need = rng.Next(0, 4);
-            Needs[type] = need;
-
-            int request = need;
-
-            if (rng.NextDouble() < 0.125f)
-            {
-                request += rng.Next(1, 3);
-                extramoney = 10;
-            }
-
-            Request[type] = request;
-        }
-
-
-        money =  extramoney + rng.Next(0, 21);
+        CategoryConfig config = GetCategoryConfig();
+        GenerateNeeds(config);
+        GenerateOrder(config);
+        Money = RollMoney(config);
     }
 
-    public DeliveryResult HandleDelivery(Dictionary<FoodTypes, int> given)
+    void GenerateNeeds(CategoryConfig config)
     {
-        DeliveryResult result = new DeliveryResult();
-        int cost = 0;
+        // Get available FoodTypes from catalog, or use all if catalog not set
+        List<FoodType.Type> availableTypes = (catalog != null) 
+            ? catalog.GetAvailableFoodTypes() 
+            : new List<FoodType.Type>((FoodType.Type[])Enum.GetValues(typeof(FoodType.Type)));
+        
+        Food.Quality[] qualities = (Food.Quality[])Enum.GetValues(typeof(Food.Quality));
 
-        foreach (KeyValuePair<FoodTypes, int> entry in Needs)
+        int amountOfdistinctTypes = rng.Next(config.MinDistinctItems, config.MaxDistinctItems + 1);
+        // Clamp to available types
+        amountOfdistinctTypes = Mathf.Min(amountOfdistinctTypes, availableTypes.Count);
+
+        for (int i = 0; i < amountOfdistinctTypes; i++)
         {
-            FoodTypes type = entry.Key;
-            int need = entry.Value;
+            int type = rng.Next(0, availableTypes.Count);
 
-            int amountGiven = given.ContainsKey(type) ? given[type] : 0;
-            int requested = Request[type];
+            FoodType.Type selectedType = availableTypes[type];
+            availableTypes.RemoveAt(type);
 
-            if (amountGiven < need)
-                result.Shortage += need - amountGiven;
+            int amount = rng.Next(config.MinNeedAmount, config.MaxNeedAmount + 1);
+            Food.Quality quality = Food.Quality.Good;       //temporary
 
-            if (amountGiven > need)
-                result.Over += amountGiven - need;
-
-            cost += amountGiven;
+            Needs.Add(new Request(amount, selectedType, quality));
         }
-
-        result.CanPay = money > cost;
-        return result;
     }
 
-    public void DebugPrint()
+    void GenerateOrder(CategoryConfig config)
     {
-        foreach (KeyValuePair<FoodTypes, int> entry in Needs)
+        // Get available FoodTypes from catalog, or use all if catalog not set
+        List<FoodType.Type> availableTypes = (catalog != null) 
+            ? catalog.GetAvailableFoodTypes() 
+            : new List<FoodType.Type>((FoodType.Type[])Enum.GetValues(typeof(FoodType.Type)));
+        
+        Food.Quality[] qualities = (Food.Quality[])Enum.GetValues(typeof(Food.Quality));
+
+        int amountOfDistinctTypes = rng.Next(config.MinDistinctItems, config.MaxDistinctItems + 1);
+        // Clamp to available types
+        amountOfDistinctTypes = Mathf.Min(amountOfDistinctTypes, availableTypes.Count);
+
+        for (int i = 0; i < amountOfDistinctTypes; i++)
         {
-            FoodTypes type = entry.Key;
-            int need = entry.Value;
-            int request = Request[type];
+            int index = rng.Next(availableTypes.Count);
+            FoodType.Type selectedType = availableTypes[index];
+            availableTypes.RemoveAt(index);
 
-            Debug.Log(type + " | Need: " + need + " | Request: " + request);
+            Food.Quality quality = Food.Quality.Good; // temporary
+
+            int amount = rng.Next(config.MinNeedAmount, config.MaxNeedAmount + 1);
+            Order.Add(new Request(amount, selectedType, quality));
         }
-
+    }
+    //
+    int RollMoney(CategoryConfig config)
+    {
+        return rng.Next(config.MinMoney, config.MaxMoney + 1);
     }
 
+
+
+    CategoryConfig GetCategoryConfig()
+    {
+        switch (category)
+        {
+            case NpcCategory.Survival:
+                paysPerItem = 3;
+                return new CategoryConfig(
+                    minNeedAmount: 1,
+                    maxNeedAmount: 3,
+                    minMoney: 2,
+                    maxMoney: 5,
+                    exactMatch: false,
+                    qualityStrict: false,
+                    minOrderBuffer: 0,
+                    maxOrderBuffer: 1,
+                    minTotalItems: 1,
+                    maxTotalItems: 2,
+                    minDistinctItems: 1,
+                    maxDistinctItems: 2
+                );
+
+            case NpcCategory.Precautious:
+                paysPerItem = 4;
+                return new CategoryConfig(
+                    minNeedAmount: 4,
+                    maxNeedAmount: 6,
+                    minMoney: 5,
+                    maxMoney: 10,
+                    exactMatch: false,
+                    qualityStrict: false,
+                    minOrderBuffer: 0,
+                    maxOrderBuffer: 1,
+                    minTotalItems: 4,
+                    maxTotalItems: 6,
+                    minDistinctItems: 2,
+                    maxDistinctItems: 3
+                );
+
+            case NpcCategory.ExactNeed:
+                paysPerItem = 5;
+                return new CategoryConfig(
+                    minNeedAmount: 4,
+                    maxNeedAmount: 6,
+                    minMoney: 8,
+                    maxMoney: 12,
+                    exactMatch: true,
+                    qualityStrict: true,
+                    minOrderBuffer: 0,
+                    maxOrderBuffer: 0,
+                    minTotalItems: 4,
+                    maxTotalItems: 6,
+                    minDistinctItems: 3,
+                    maxDistinctItems: 4
+                );
+
+            case NpcCategory.PreferenceDriven:
+                paysPerItem = 6;
+                return new CategoryConfig(
+                    minNeedAmount: 4,
+                    maxNeedAmount: 6,
+                    minMoney: 20,
+                    maxMoney: 30,
+                    exactMatch: false,
+                    qualityStrict: true,
+                    minOrderBuffer: 2,
+                    maxOrderBuffer: 4,
+                    minTotalItems: 6,
+                    maxTotalItems: 10,
+                    minDistinctItems: 4,
+                    maxDistinctItems: 6
+                );
+
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
 }

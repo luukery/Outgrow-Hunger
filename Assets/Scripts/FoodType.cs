@@ -11,12 +11,11 @@ public class FoodType : MonoBehaviour
     {
         Meat,
         Fish,
-        Canned,
         Fruit,
         Vegetable,
-        Bread,
+        Bakery,
         Dairy,
-        Water
+        Spices
     }
 
 
