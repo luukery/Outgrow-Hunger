@@ -9,6 +9,9 @@ public class StartButtonLoader : MonoBehaviour
     // Hook this up to the Button's OnClick OR call from code
     public void StartGame()
     {
+        PlayerPrefs.DeleteKey(Distribution_Tutorial01);
+        PlayerPrefs.DeleteKey(Market_Tutorial01);
+        PlayerPrefs.DeleteKey(Transport_Tutorial01);
         SceneManager.LoadScene(marketSceneName);
     }
 
