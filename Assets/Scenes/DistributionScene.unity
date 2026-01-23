@@ -1075,7 +1075,7 @@ MonoBehaviour:
   - {fileID: 8714416078856817653, guid: 789e90e06c988664787ebaaa005b5a6d, type: 3}
   - {fileID: 8714416078856817653, guid: a6bbf3560e96adb4a90890ac31ebd31d, type: 3}
   - {fileID: 8714416078856817653, guid: 7bc53c1ec10bc4e459ac985dee82c1de, type: 3}
-  maxNPCs: 14
+  maxNPCs: 6
 --- !u!4 &296994702
 Transform:
   m_ObjectHideFlags: 0
