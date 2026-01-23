@@ -263,7 +263,7 @@ public class Distributionmanager : MonoBehaviour
         }
 
         DeliveryResult result = currentNPC.Transaction(delivered, foodselectors.GetMoney());
-        bool refused = result.reaction == "I ain't paying for this";
+        bool refused = result.reaction == "I ain't paying this much";
 
         if (!refused)
         {

@@ -65,6 +65,9 @@ MonoBehaviour:
   idle: {fileID: 7400000, guid: fd13b664e5fad6341ba399c1faa2ab70, type: 2}
   walk: {fileID: 7400000, guid: b6f44af1d8d0f61469585f458427e20f, type: 2}
   name: Sophie
+  orderTalk: "I like to keep things organized. That way, I don\u2019t have to worry
+    later.\\n<b>{ORDER}</b>\\nI\u2019ve set aside {MONEY} coins. "
+  hasRetried: 0
 --- !u!212 &-8891163510269370301
 SpriteRenderer:
   serializedVersion: 2
@@ -136,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4557bb3fccfdf9d4bb2df87246f2c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCMovement
-  moveSpeed: 2.5
 --- !u!114 &-5451136786452935614
 MonoBehaviour:
   m_ObjectHideFlags: 0

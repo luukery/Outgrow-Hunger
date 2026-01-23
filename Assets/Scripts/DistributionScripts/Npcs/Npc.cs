@@ -40,7 +40,7 @@ public class NPC : MonoBehaviour
         }
 
         DeliveryResult wrong = new DeliveryResult();
-        wrong.reaction = "I ain't paying for this";
+        wrong.reaction = "I ain't paying this much";
         return wrong;
 
     }
